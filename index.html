@@ -3,238 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thananop Kullapan - Portfolio</title>
-    <style>
-        /* CSS Variables for Light Blue Theme */
-        :root {
-            --bg-color: #f4f9f9;
-            --container-bg: #ffffff;
-            --primary-text: #2c3e50;
-            --secondary-text: #546e7a;
-            --accent-blue: #0277bd;
-            --light-blue: #e1f5fe;
-            --hover-blue: #b3e5fc;
-            --border-color: #eceff1;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--primary-text);
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--accent-blue);
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #01579b;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Header Section */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            color: var(--primary-text);
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--secondary-text);
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-        }
-
-        .contact-links a {
-            padding: 8px 16px;
-            border: 1px solid var(--accent-blue);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .contact-links a:hover {
-            background-color: var(--accent-blue);
-            color: #ffffff;
-        }
-
-        /* Section Styles */
-        section {
-            background-color: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            color: var(--accent-blue);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--light-blue);
-            padding-bottom: 10px;
-        }
-
-        p.summary {
-            font-size: 1.05rem;
-            color: var(--secondary-text);
-        }
-
-        /* Skills Tags */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background-color: var(--light-blue);
-            color: var(--accent-blue);
-            padding: 6px 14px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            transform: translateY(-2px);
-            background-color: var(--hover-blue);
-        }
-
-        /* Cards for Experience & Projects */
-        .card {
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 25px rgba(0, 119, 189, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 10px;
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .card-subtitle {
-            font-size: 0.9rem;
-            color: var(--secondary-text);
-            font-weight: 500;
-        }
-
-        .card-date {
-            font-size: 0.85rem;
-            color: var(--secondary-text);
-        }
-
-        .card ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            color: var(--secondary-text);
-            font-size: 0.95rem;
-        }
-
-        .card ul li {
-            margin-bottom: 6px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: var(--secondary-text);
-            font-size: 0.85rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 600px) {
-            .card-header {
-                flex-direction: column;
-            }
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <title>Thananop Kullapan - Data Scientist Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
         
-        <header>
-            <h1>Thananop Kullapan</h1>
-            <h2>Data Scientist / Junior Developer</h2>
-            
-            <div class="contact-links">
-                <a href="https://github.com/SKY-TKP" target="_blank">GitHub Profile</a>
-                <a href="https://linkedin.com/in/thananop-kullapan" target="_blank">LinkedIn</a>
-                <a href="https://tkp39.wordpress.com/" target="_blank">Personal Blog</a> </div>
+        <header class="profile-header">
+            <div class="profile-image-container">
+                <img src="https://via.placeholder.com/150" alt="Thananop Kullapan" class="profile-pic">
+            </div>
+            <div class="profile-info">
+                <h1>Thananop Kullapan</h1>
+                <h2>Data Scientist / Junior Developer</h2>
+                <div class="contact-links">
+                    <a href="https://github.com/SKY-TKP" target="_blank">GitHub Profile</a>
+                    <a href="https://linkedin.com/in/thananop-kullapan" target="_blank">LinkedIn</a>
+                    <a href="https://tkp39.wordpress.com/" target="_blank">Personal Blog</a>
+                </div>
+            </div>
         </header>
 
-        <section>
-            <h3 class="section-title">About Me</h3>
+        <section class="content-section">
+            <h3 class="section-title">About</h3>
             <p class="summary">
                 Highly analytical Industrial Engineering student transitioning into Data Science. Proven ability to bridge rigorous mathematical optimization (MILP, CP) with machine learning techniques to solve complex real-world problems. Demonstrated success in delivering measurable impact, including a 30% cost reduction at TOYOTA and a 34% resource utilization boost at King Chulalongkorn Memorial Hospital. Seeking to leverage data-driven strategies for scalable business growth.
             </p>
         </section>
 
-        <section>
-            <h3 class="section-title">Technical Skills</h3>
+        <section class="content-section">
+            <h3 class="section-title">Skills</h3>
             <div class="skills-container">
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">SQL</span>
@@ -248,17 +47,18 @@
             </div>
         </section>
 
-        <section>
+        <section class="content-section">
             <h3 class="section-title">Experience</h3>
             
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">Data Scientist Intern</div>
+                    <div class="card-title-group">
+                        <h4 class="card-title">Data Scientist Intern</h4>
+                        <span class="card-subtitle">BOTNOI</span>
+                    </div>
                     <div class="card-date">Jun 2025 - Nov 2025</div>
                 </div>
-                <div class="card-subtitle">BOTNOI</div>
-                <br>
-                <ul>
+                <ul class="card-list">
                     <li>Developed ML solutions, achieving 72.9% accuracy in customer classification (SVM) and optimizing a TTS chatbot.</li>
                     <li>Built an end-to-end data pipeline using SQL for extraction and Power BI for interactive visualization.</li>
                 </ul>
@@ -266,12 +66,13 @@
 
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">Logistics Support Intern</div>
+                    <div class="card-title-group">
+                        <h4 class="card-title">Logistics Support Intern</h4>
+                        <span class="card-subtitle">TOYOTA MOTOR ASIA</span>
+                    </div>
                     <div class="card-date">Dec 2025 - Feb 2026</div>
                 </div>
-                <div class="card-subtitle">TOYOTA MOTOR ASIA</div>
-                <br>
-                <ul>
+                <ul class="card-list">
                     <li>Engineered mathematical optimization and SARIMAX time-series models in Python to streamline logistics operations.</li>
                     <li>Automated data extraction and reporting workflows using Excel VBA, significantly reducing manual processing time.</li>
                     <li>Identified supply chain bottlenecks to achieve a 30% cost reduction and a 34.6% increase in prediction accuracy.</li>
@@ -279,17 +80,18 @@
             </div>
         </section>
 
-        <section>
+        <section class="content-section">
             <h3 class="section-title">Selected Projects</h3>
             
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">Operating Room Scheduling Optimization</div>
+                    <div class="card-title-group">
+                        <h4 class="card-title">Operating Room Scheduling Optimization</h4>
+                        <span class="card-subtitle">King Chulalongkorn Memorial Hospital</span>
+                    </div>
                     <div class="card-date">Jan 2026 - Mar 2026</div>
                 </div>
-                <div class="card-subtitle">King Chulalongkorn Memorial Hospital</div>
-                <br>
-                <ul>
+                <ul class="card-list">
                     <li>Formulated a Constraint Programming (CP) model to optimize heart surgery schedules.</li>
                     <li>Applied Regression models to predict surgery durations based on patient symptoms.</li>
                     <li>Boosted operating room utilization by 34% and reduced patient waiting times by 30%.</li>
@@ -298,12 +100,13 @@
 
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">Sentiment Analysis on Movie Reviews</div>
+                    <div class="card-title-group">
+                        <h4 class="card-title">Sentiment Analysis on Movie Reviews</h4>
+                        <span class="card-subtitle">Natural Language Processing</span>
+                    </div>
                     <div class="card-date">Personal Project</div>
                 </div>
-                <div class="card-subtitle">Natural Language Processing</div>
-                <br>
-                <ul>
+                <ul class="card-list">
                     <li>Preprocessed 50,000 reviews using NLTK and extracted numerical features via TF-IDF Vectorizer.</li>
                     <li>Built and evaluated a Logistic Regression model for sentiment classification.</li>
                 </ul>

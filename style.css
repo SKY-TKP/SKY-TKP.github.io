@@ -637,3 +637,70 @@ footer {
         left: 25px;
     }
 }
+
+/* =========================================
+   Sidebar Stats & Languages UI 
+   ========================================= */
+.stats-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.stat-box-mini {
+    background-color: var(--bg-color);
+    padding: 10px 5px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-num {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--accent-blue);
+}
+
+.stat-lbl {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--secondary-text);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.lang-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.lang-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.lang-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.lang-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+.lang-level {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    background-color: var(--light-blue);
+    padding: 2px 10px;
+    border-radius: 20px;
+}

@@ -1,13 +1,13 @@
 /* CSS Variables for Minimal Light Blue Theme */
 :root {
-    --bg-color: #fcfdfe;
+    --bg-color: #f8fafc; /* Very light cool grey/blue background */
     --container-bg: #ffffff;
-    --primary-text: #1f2937;
-    --secondary-text: #4b5563;
+    --primary-text: #1e293b;
+    --secondary-text: #475569;
     --accent-blue: #0284c7;
     --light-blue: #e0f2fe;
     --hover-blue: #0369a1;
-    --border-color: #f3f4f6;
+    --border-color: #e2e8f0;
 }
 
 * {
@@ -35,7 +35,7 @@ a:hover {
 }
 
 .container {
-    max-width: 800px; /* Slimmer width for better reading experience */
+    max-width: 760px; /* Slimmer for better readability */
     margin: 0 auto;
     padding: 60px 20px;
 }
@@ -44,21 +44,22 @@ a:hover {
 .profile-header {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
     margin-bottom: 60px;
     animation: fadeInDown 0.8s ease-out;
 }
 
 .profile-pic {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--light-blue);
+    border: 3px solid var(--border-color); /* Subtle border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .profile-info h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: 700;
     color: var(--primary-text);
     letter-spacing: -0.5px;
@@ -67,7 +68,7 @@ a:hover {
 
 .profile-info h2 {
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--secondary-text);
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -81,42 +82,43 @@ a:hover {
 }
 
 .contact-links a {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
 }
 
 .contact-links a:hover {
-    border-bottom: 1px solid var(--hover-blue);
+    border-bottom: 2px solid var(--accent-blue);
 }
 
 /* Sections */
 .content-section {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
     animation: fadeInUp 0.8s ease-out forwards;
     opacity: 0;
 }
 
-/* Staggered animation delays for sections */
+/* Staggered animation delays */
 .content-section:nth-child(2) { animation-delay: 0.1s; }
 .content-section:nth-child(3) { animation-delay: 0.2s; }
 .content-section:nth-child(4) { animation-delay: 0.3s; }
+.content-section:nth-child(5) { animation-delay: 0.4s; }
 
 .section-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--primary-text);
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     position: relative;
 }
 
-/* Minimal subtle underline for section titles */
 .section-title::after {
     content: '';
     display: block;
-    width: 30px;
+    width: 35px;
     height: 3px;
     background-color: var(--accent-blue);
     margin-top: 8px;
@@ -140,27 +142,32 @@ p.summary {
     background-color: var(--light-blue);
     color: var(--hover-blue);
     padding: 6px 14px;
-    border-radius: 4px; /* Flatter edges for minimal look */
+    border-radius: 6px;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-/* Cards (Minimalist, no heavy borders) */
+/* Cards (Experience & Projects) */
 .card {
     background-color: var(--container-bg);
-    padding: 25px 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:last-child {
-    border-bottom: none;
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 12px;
+    align-items: flex-start;
+    margin-bottom: 15px;
 }
 
 .card-title {
@@ -173,7 +180,7 @@ p.summary {
     display: block;
     font-size: 0.95rem;
     color: var(--accent-blue);
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 4px;
 }
 
@@ -181,18 +188,57 @@ p.summary {
     font-size: 0.85rem;
     color: var(--secondary-text);
     font-weight: 500;
+    background: var(--bg-color);
+    padding: 4px 10px;
+    border-radius: 20px;
 }
 
 .card-list {
-    list-style-type: disc;
-    margin-left: 18px;
+    list-style-type: none; /* Removed default bullets for cleaner look */
     color: var(--secondary-text);
     font-size: 0.95rem;
     line-height: 1.7;
 }
 
 .card-list li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card-list li::before {
+    content: '•';
+    color: var(--accent-blue);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+/* Card Actions (Links for Source Code / Methodology) */
+.card-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border-color);
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.action-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.action-link:hover {
+    color: var(--hover-blue);
+    transform: translateX(4px); /* Slight move right on hover */
 }
 
 /* Footer */
@@ -227,8 +273,9 @@ footer {
     }
     .card-header {
         flex-direction: column;
+        gap: 10px;
     }
     .card-date {
-        margin-top: 5px;
+        align-self: flex-start;
     }
 }

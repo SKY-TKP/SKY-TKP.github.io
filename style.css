@@ -1,13 +1,15 @@
-/* CSS Variables for Minimal Light Blue Theme */
+/* Premium Modern Light Theme Variables */
 :root {
-    --bg-color: #f8fafc;
+    --bg-color: #f1f5f9; /* Soft slate fluid background */
     --container-bg: #ffffff;
-    --primary-text: #1e293b;
+    --primary-text: #0f172a; /* Deep elegant dark slate */
     --secondary-text: #475569;
     --accent-blue: #0284c7;
     --light-blue: #e0f2fe;
     --hover-blue: #0369a1;
     --border-color: #e2e8f0;
+    --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 16px -6px rgba(15, 23, 42, 0.05);
 }
 
 * {
@@ -17,7 +19,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg-color);
     color: var(--primary-text);
     line-height: 1.6;
@@ -27,120 +29,184 @@ body {
 a {
     text-decoration: none;
     color: var(--accent-blue);
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
-    max-width: 800px;
+    max-width: 840px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
-/* Header & Profile Section */
+/* Header & Profile Configurations */
 .profile-header {
     display: flex;
     align-items: center;
-    gap: 35px;
-    margin-bottom: 60px;
-    animation: fadeInDown 0.8s ease-out;
+    gap: 40px;
+    margin-bottom: 50px;
+    background-color: var(--container-bg);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    animation: fadeInDown 0.6s ease-out;
 }
 
 .profile-pic {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--border-color);
+    border: 4px solid var(--light-blue);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
 }
 
 .profile-info h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--primary-text);
-    letter-spacing: -0.5px;
-    margin-bottom: 5px;
+    letter-spacing: -0.75px;
+    margin-bottom: 6px;
 }
 
 .profile-info h2 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--secondary-text);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Adjective Badges Row */
+.adjective-badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.adj-badge {
+    background-color: #f0fdf4; /* Light green tint for soft positive vibe */
+    color: #166534;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 .contact-links {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
     flex-wrap: wrap;
 }
 
-.contact-links a {
+.contact-links .social-link {
     font-size: 0.9rem;
     font-weight: 500;
+    color: var(--secondary-text);
+    border-bottom: 2px solid transparent;
 }
 
-.contact-links a:hover {
-    color: var(--hover-blue);
+.contact-links .social-link:hover {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--accent-blue);
 }
 
-/* Primary Button for Resume Link */
+/* Premium Primary Action Button Setup */
 .btn-resume {
     background-color: var(--accent-blue);
     color: #ffffff !important;
-    padding: 6px 16px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(2, 132, 199, 0.2);
-    transition: all 0.2s ease !important;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
 }
 
 .btn-resume:hover {
     background-color: var(--hover-blue);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.25);
 }
 
-/* Sections */
+/* Two-Column Hybrid Layout Grid */
+.main-layout-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
 .content-section {
-    margin-bottom: 50px;
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
+    background-color: var(--container-bg);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 25px;
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Staggered entry animation delays */
-.content-section:nth-child(2) { animation-delay: 0.1s; }
-.content-section:nth-child(3) { animation-delay: 0.2s; }
-.content-section:nth-child(4) { animation-delay: 0.3s; }
-.content-section:nth-child(5) { animation-delay: 0.4s; }
+.info-card-compact {
+    padding: 25px 30px;
+    margin-bottom: 20px;
+}
 
 .section-title {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--primary-text);
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 35px;
+    width: 28px;
     height: 3px;
     background-color: var(--accent-blue);
-    margin-top: 8px;
+    margin-top: 6px;
     border-radius: 2px;
 }
 
 p.summary {
     font-size: 1.05rem;
     color: var(--secondary-text);
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
-/* Skills Tags */
+/* Modern Rounded Meta Tags for Side Information Panels */
+.meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-interest {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    color: var(--primary-text);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.tag-hobby {
+    background-color: #fef4e5; /* Soft warm tone for personal life hobbies */
+    color: #b45309;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Skills Layout Setup */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -150,36 +216,26 @@ p.summary {
 .skill-tag {
     background-color: var(--light-blue);
     color: var(--hover-blue);
-    padding: 5px 12px;
-    border-radius: 6px;
+    padding: 6px 14px;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 600;
 }
 
-/* Cards & Project Structural Layout */
-.card {
-    background-color: var(--container-bg);
-    padding: 25px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.card:last-child {
-    border-bottom: none;
-}
-
-/* Advanced Project Card Styling */
+/* Card Project Elements Details */
 .project-card {
-    padding: 25px;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    border: 1px solid transparent;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 25px;
+    background-color: var(--container-bg);
+    border-radius: 16px;
+    padding: 30px;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px) scale(1.005);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-color);
 }
 
 .card-header {
@@ -190,9 +246,10 @@ p.summary {
 }
 
 .card-title {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--primary-text);
+    letter-spacing: -0.3px;
 }
 
 .card-subtitle {
@@ -204,32 +261,32 @@ p.summary {
 }
 
 .card-date {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--secondary-text);
-    font-weight: 500;
+    font-weight: 600;
     background: var(--bg-color);
     padding: 4px 12px;
-    border-radius: 20px;
+    border-radius: 30px;
     white-space: nowrap;
 }
 
 .project-brief {
     font-size: 0.95rem;
     color: var(--secondary-text);
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .card-list {
     list-style-type: none;
     color: var(--secondary-text);
     font-size: 0.95rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card-list li {
     margin-bottom: 8px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .card-list li::before {
@@ -243,31 +300,37 @@ p.summary {
 .courses-list {
     font-size: 0.9rem;
     color: var(--secondary-text);
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
-/* Action Links and Advanced Methodology Tooltip Configuration */
+/* Clean Pill Buttons Configuration - Arrows completely omitted */
 .card-actions {
     display: flex;
-    gap: 20px;
+    gap: 12px;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 15px;
-    padding-top: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
     border-top: 1px dashed var(--border-color);
 }
 
-.action-link {
+.action-pill {
     font-size: 0.85rem;
     font-weight: 600;
+    color: var(--secondary-text);
+    background-color: var(--bg-color);
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.action-pill:hover {
     color: var(--accent-blue);
+    background-color: #ffffff;
+    border-color: var(--accent-blue);
 }
 
-.action-link:hover {
-    color: var(--hover-blue);
-}
-
-/* Floating Tooltip Component on Hover */
+/* Tooltip Interactive System - Floating scale effect on hover */
 .tooltip-container {
     position: relative;
     display: inline-block;
@@ -276,28 +339,29 @@ p.summary {
 .hover-trigger {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #059669; /* Discrete slate green */
+    color: #059669; /* Soft discrete emerald */
     border-bottom: 1px dashed #059669;
-    cursor: pointer;
+    cursor: help;
+    padding-bottom: 2px;
 }
 
 .tooltip-box {
     visibility: hidden;
     opacity: 0;
-    width: 280px;
-    background-color: #1e293b;
+    width: 290px;
+    background-color: #0f172a; /* Sophisticated deep dark slate */
     color: #f8fafc;
-    padding: 14px;
-    border-radius: 8px;
+    padding: 16px;
+    border-radius: 12px;
     font-size: 0.8rem;
     position: absolute;
-    z-index: 50;
-    bottom: 130%;
+    z-index: 99;
+    bottom: 140%;
     left: 50%;
-    transform: translateX(-50%) translateY(8px);
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    line-height: 1.5;
+    transform: translateX(-50%) scale(0.95);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bounce animation */
+    box-shadow: 0 10px 25px -3px rgba(0,0,0,0.3);
+    line-height: 1.6;
 }
 
 .tooltip-box::after {
@@ -308,62 +372,92 @@ p.summary {
     margin-left: -6px;
     border-width: 6px;
     border-style: solid;
-    border-color: #1e293b transparent transparent transparent;
+    border-color: #0f172a transparent transparent transparent;
 }
 
 .tooltip-container:hover .tooltip-box {
     visibility: visible;
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) scale(1); /* Floats and pops out smoothly */
 }
 
-/* CSS Flow Pipeline Diagram Configuration */
+/* Sleek Horizontal Flow Diagram Pipeline Layout */
 .pipeline-diagram {
     display: flex;
     align-items: center;
-    gap: 10px;
-    background-color: var(--bg-color);
-    padding: 12px;
-    border-radius: 8px;
-    margin: 15px 0;
-    border: 1px dashed var(--border-color);
+    gap: 12px;
+    background-color: #fafafa;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 18px 0;
+    border: 1px solid #f0f0f0;
     overflow-x: auto;
 }
 
 .diagram-step {
     background-color: #ffffff;
     border: 1px solid var(--border-color);
-    padding: 4px 10px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    border-radius: 6px;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--secondary-text);
     white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
 }
 
+/* Minimal Custom CSS Line instead of a text character arrow symbol */
 .diagram-arrow {
-    color: var(--accent-blue);
-    font-weight: bold;
-    font-size: 0.9rem;
+    width: 15px;
+    height: 2px;
+    background-color: var(--border-color);
+    flex-shrink: 0;
+    position: relative;
 }
 
-/* Activities Grid Layout */
+.diagram-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+    transform: rotate(45deg);
+}
+
+/* Activities Grid and Clickable CTA Effects */
 .activities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
+}
+
+.activity-card-link {
+    display: block;
+    color: inherit;
 }
 
 .activity-item {
     background-color: #ffffff;
     border: 1px solid var(--border-color);
-    padding: 16px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 12px;
+    height: 100%;
+    transition: all 0.2s ease;
+}
+
+.clickable-activity:hover {
+    border-color: var(--accent-blue);
+    background-color: #fafffe;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
 }
 
 .activity-item h5 {
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-text);
     margin-bottom: 4px;
 }
@@ -372,8 +466,8 @@ p.summary {
     display: block;
     font-size: 0.8rem;
     color: var(--accent-blue);
-    font-weight: 500;
-    margin-bottom: 6px;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .activity-date {
@@ -382,7 +476,17 @@ p.summary {
     color: var(--secondary-text);
 }
 
-/* Footer & Page State Trackers */
+.activity-action-text {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Section */
 footer {
     text-align: center;
     padding: 40px 0 20px;
@@ -394,28 +498,33 @@ footer {
 
 .update-tag {
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-text);
     margin-top: 4px;
 }
 
-/* Animations declarations */
+/* Custom Soft Animations Definitions */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-10px); }
+    from { opacity: 0; transform: translateY(-12px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive UI Breakpoints */
-@media (max-width: 680px) {
+/* Smooth Adaptive Breakpoints UI */
+@media (max-width: 720px) {
+    .main-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
     .profile-header {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        padding: 25px;
     }
     .contact-links {
         justify-content: center;
@@ -429,13 +538,13 @@ footer {
     }
     .tooltip-box {
         left: 0;
-        transform: translateX(0) translateY(8px);
-        width: 240px;
+        transform: translateX(0) scale(0.95);
+        width: 250px;
     }
     .tooltip-container:hover .tooltip-box {
-        transform: translateX(0) translateY(0);
+        transform: translateX(0) scale(1);
     }
     .tooltip-box::after {
-        left: 25px;
+        left: 30px;
     }
 }

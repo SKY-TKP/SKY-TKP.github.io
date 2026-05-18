@@ -3,210 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thananop Kullapan - Professional Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <title>Thananop Kullapan - Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
-    <div class="container">
+    <div class="portfolio-container">
         
-        <header class="profile-header">
-            <div class="profile-image-container">
-                <img src="profile.png" alt="Thananop Kullapan" class="profile-pic">
-            </div>
-            <div class="profile-info">
-                <h1>Thananop Kullapan</h1>
-                <h2>Data Scientist / Junior Developer</h2>
+        <aside class="left-sidebar">
+            <div class="sidebar-sticky-content">
                 
-                <div class="adjective-badges">
-                    <span class="adj-badge">Affectionate</span>
-                    <span class="adj-badge">Neat</span>
-                    <span class="adj-badge">Friendly</span>
+                <div class="profile-section">
+                    <img src="profile.png" alt="Thananop Kullapan" class="profile-pic">
+                    <h1>Thananop Kullapan</h1>
+                    <h2>Data Scientist / Developer</h2>
+                    
+                    <div class="adjective-badges">
+                        <span class="adj-badge">Affectionate</span>
+                        <span class="adj-badge">Neat</span>
+                        <span class="adj-badge">Friendly</span>
+                    </div>
+                    
+                    <p class="sidebar-email">thananop.klp@gmail.com</p>
                 </div>
 
-                <div class="contact-links">
-                    <a href="https://drive.google.com/file/d/1ZS1z-xhVEBA6WY0RUPt-FlNPWoPjDbXU/view?usp=sharing" target="_blank" class="btn-primary">Resume</a>
+                <div class="sidebar-actions">
+                    <a href="https://drive.google.com/file/d/1ZS1z-xhVEBA6WY0RUPt-FlNPWoPjDbXU/view?usp=sharing" target="_blank" class="btn-primary">Download Resume</a>
                     <a href="https://drive.google.com/file/d/1_TKbTB-g7gUFKflN8OcImn6CUK0yJgO9/view?usp=sharing" target="_blank" class="btn-outline">Transcript</a>
-                    <a href="https://github.com/SKY-TKP" target="_blank" class="social-link">GitHub</a>
-                    <a href="https://linkedin.com/in/thananop-kullapan" target="_blank" class="social-link">LinkedIn</a>
-                    <a href="https://tkp39.wordpress.com/" target="_blank" class="social-link">Personal Blog</a>
                 </div>
-            </div>
-        </header>
 
-        <div class="main-layout-grid">
+                <nav class="sidebar-nav">
+                    
+                    <div class="nav-item">
+                        <a href="#about" class="nav-link">About Me</a>
+                        <div class="nav-tooltip">
+                            <span class="tooltip-title">Inside About</span>
+                            <a href="#about">Bio Summary</a>
+                            <a href="#terminal-intro">Terminal Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#interests" class="nav-link">Interests & Hobbies</a>
+                        <div class="nav-tooltip">
+                            <span class="tooltip-title">Inside Interests</span>
+                            <a href="#interests">Interested Areas</a>
+                            <a href="#hobbies">Hobbies & Traits</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                        <div class="nav-tooltip">
+                            <span class="tooltip-title">Capabilities</span>
+                            <a href="#tech-stack">Proficient Tools</a>
+                            <a href="#tech-stack">Currently Exploring</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#projects" class="nav-link">Selected Projects</a>
+                        <div class="nav-tooltip">
+                            <span class="tooltip-title">Project List</span>
+                            <a href="#p-toyota">Toyota Logistics</a>
+                            <a href="#p-cherry">Cherry Express</a>
+                            <a href="#p-microgrid">Microgrid Sizing</a>
+                            <a href="#p-nlp">Sentiment Analysis</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#experience" class="nav-link">Experience</a>
+                        <div class="nav-tooltip">
+                            <span class="tooltip-title">History</span>
+                            <a href="#experience">Teaching Assistant</a>
+                            <a href="#experience">Research Assistant</a>
+                            <a href="#experience">Data Science Intern</a>
+                            <a href="#experience">Academic Contributor</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#awards" class="nav-link">Awards & Education</a>
+                        <div class="nav-tooltip">
+                            <span class="tooltip-title">Achievements</span>
+                            <a href="#awards">Movie Reviewer Award</a>
+                            <a href="#awards">Batch Tutor</a>
+                            <a href="#education">Chulalongkorn University</a>
+                        </div>
+                    </div>
+
+                </nav>
+
+                <div class="sidebar-socials">
+                    <a href="https://github.com/SKY-TKP" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/thananop-kullapan" target="_blank">LinkedIn</a>
+                    <a href="https://tkp39.wordpress.com/" target="_blank">Blog</a>
+                </div>
+
+            </div>
+        </aside>
+
+        <main class="right-content">
             
-            <div class="left-column">
+            <section id="about" class="content-section">
+                <h3 class="section-title">About</h3>
+                <p class="summary">
+                    Highly analytical Industrial Engineering student transitioning into Data Science. Proven ability to bridge rigorous mathematical optimization (MILP, CP) with machine learning techniques to solve complex real-world problems. Demonstrated success in delivering measurable impact, including a 30% cost reduction at TOYOTA and a 34% resource utilization boost at King Chulalongkorn Memorial Hospital. Seeking to leverage data-driven strategies for scalable business growth.
+                </p>
+
+                <div id="terminal-intro" class="terminal-card">
+                    <div class="terminal-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <span class="terminal-title">guest@sky-tkp: ~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">❯</span> 👋 Hi, I’m Gun, but you can call me <strong>SKY</strong> (a.k.a).</p>
+                        <p><span class="prompt">❯</span> 👀 I’m interested in data science, animation, and film lovers.</p>
+                        <p><span class="prompt">❯</span> 🌱 I’m currently learning data science and machine learning.</p>
+                        <p><span class="prompt">❯</span> 📫 How to reach me via <a href="mailto:thananop.klp@gmail.com" class="terminal-link">email</a>, or instagram.</p>
+                        <p><span class="prompt">❯</span> 😄 Pronouns: He</p>
+                        <p><span class="prompt">❯</span> ⚡ Fun fact: I like matcha, but like sleep more than wake up :D</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="interests" class="dashboard-widgets-grid">
                 
-                <section class="content-section">
-                    <h3 class="section-title">About</h3>
-                    <p class="summary">
-                        Highly analytical Industrial Engineering student transitioning into Data Science. Proven ability to bridge rigorous mathematical optimization (MILP, CP) with machine learning techniques to solve complex real-world problems. Demonstrated success in delivering measurable impact, including a 30% cost reduction at TOYOTA and a 34% resource utilization boost at King Chulalongkorn Memorial Hospital. Seeking to leverage data-driven strategies for scalable business growth.
-                    </p>
-
-                    <div class="terminal-card">
-                        <div class="terminal-header">
-                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                            <span class="terminal-title">guest@sky-tkp: ~</span>
-                        </div>
-                        <div class="terminal-body">
-                            <p><span class="prompt">❯</span> 👋 Hi, I’m Gun, but you can call me <strong>SKY</strong> (a.k.a).</p>
-                            <p><span class="prompt">❯</span> 👀 I’m interested in data science, animation, and film lovers.</p>
-                            <p><span class="prompt">❯</span> 🌱 I’m currently learning data science and machine learning.</p>
-                            <p><span class="prompt">❯</span> 📫 How to reach me via <a href="mailto:thananop.klp@gmail.com" class="terminal-link">email</a>, or instagram.</p>
-                            <p><span class="prompt">❯</span> 😄 Pronouns: He</p>
-                            <p><span class="prompt">❯</span> ⚡ Fun fact: I like matcha, but like sleep more than wake up :D</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h3 class="section-title">Tech Stack & Capabilities</h3>
-                    <div class="stack-grid">
-                        <div class="stack-box">
-                            <div class="stack-header">
-                                <span class="status-indicator proficient"></span>
-                                <h4>Proficient Tools & Languages</h4>
-                            </div>
-                            <div class="stack-tags">
-                                <span class="stack-tag">Python</span><span class="stack-tag">SQL</span>
-                                <span class="stack-tag">R</span><span class="stack-tag">Java</span>
-                                <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span>
-                                <span class="stack-tag">Tableau</span><span class="stack-tag">Power BI</span>
-                                <span class="stack-tag">Google Data Studio</span>
-                                <span class="stack-tag">Mathematical Optimization</span>
-                                <span class="stack-tag">Time Series Analysis</span>
-                                <span class="stack-tag">A/B Testing</span><span class="stack-tag">Git</span>
-                            </div>
-                        </div>
-                        <div class="stack-box learning-box">
-                            <div class="stack-header">
-                                <span class="status-indicator learning"></span>
-                                <h4>Currently Exploring</h4>
-                            </div>
-                            <div class="stack-tags">
-                                <span class="stack-tag exploring">Hadoop</span>
-                                <span class="stack-tag exploring">Spark</span>
-                                <span class="stack-tag exploring">Cloud Computing</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h3 class="section-title">Experience & Contributions</h3>
-                    
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Teaching Assistant (Linear Algebra)</h4>
-                                <span class="card-subtitle">Chulalongkorn University</span>
-                            </div>
-                            <div class="card-date">Academic Term</div>
-                        </div>
-                        <div class="clean-list">
-                            <p> Coordinated and addressed student inquiries, acting as the primary liaison between students and the faculty.</p>
-                            <p> Designed and administered course evaluation surveys to gather actionable feedback for curriculum improvement.</p>
-                            <p> Collaborated with the professor to prepare instructional materials and jointly evaluated student performance.</p>
-                        </div>
-                    </div>
-
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Undergraduate Research Assistant (Operations Research)</h4>
-                                <span class="card-subtitle">Chulalongkorn University</span>
-                            </div>
-                            <div class="card-date">Jan 2026 - May 2026</div>
-                        </div>
-                        <p class="project-brief">Assisted faculty and researchers in designing optimization algorithms and evaluating data models for operations research workflows.</p>
-                    </div>
-
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Data Scientist Intern</h4>
-                                <span class="card-subtitle">BOTNOI</span>
-                            </div>
-                            <div class="card-date">Jun 2025 - Nov 2025</div>
-                        </div>
-                        <div class="clean-list">
-                            <p> Developed machine learning solutions, achieving 72.9% accuracy in customer classification tasks via SVM models.</p>
-                            <p> Built robust data pipelines using SQL for extraction and Power BI for delivering interactive visualizations.</p>
-                        </div>
-                    </div>
-
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Academic Knowledge Base Contributor</h4>
-                                <span class="card-subtitle">Open Source & Curriculum Development</span>
-                            </div>
-                        </div>
-                        <div class="clean-list">
-                            <p> <strong>Machine Learning for IE:</strong> Created and maintained a comprehensive GitHub repository (<a href="https://github.com/SKY-TKP/Machine-Learning-for-IE" target="_blank" class="embedded-link">ML for CUIE</a>) serving as a foundational database for Industrial Engineering students.</p>
-                            <p> <strong>Probability & Statistics for Engineers:</strong> Co-authored and compiled academic practice exercises in collaboration with faculty to enhance student learning material (<a href="https://github.com/SKY-TKP/Machine-Learning-for-IE/blob/main/2100-xxx%3A%20PROB%20%26%20STAT%20ENG/PROB_STAT_ENG_PracExercise.pdf" target="_blank" class="embedded-link">View Document</a>).</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h3 class="section-title">Awards & Recognitions</h3>
-                    
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Independent Movie Reviewer of the Year</h4>
-                                <span class="card-subtitle">National Federation of Motion Pictures and Contents Associations</span>
-                            </div>
-                            <div class="card-date">2024</div>
-                        </div>
-                        <p class="project-brief">Awarded for outstanding cinematic analysis and independent film reviews by the Thai Film Association.</p>
-                    </div>
-
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Academic Supporter (Batch Tutor)</h4>
-                                <span class="card-subtitle">Industrial Engineering Department</span>
-                            </div>
-                        </div>
-                        <p class="project-brief">Volunteered as the primary peer-tutor for the engineering cohort throughout university years. Conducted intensive review sessions for complex quantitative subjects, significantly contributing to the improvement of the batch's overall academic performance.</p>
-                    </div>
-
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Certified Data Scientist</h4>
-                                <span class="card-subtitle">depa & Daydev Bootcamp</span>
-                            </div>
-                            <div class="card-date">Nov 2025</div>
-                        </div>
-                        <p class="project-brief">Successfully completed the rigorous Data Scientist Roadmap Bootcamp, mastering end-to-end data workflows, machine learning model deployment, and real-world business analytics applications.</p>
-                    </div>
-                </section>
-
-                <section class="content-section">
-                    <h3 class="section-title">Education</h3>
-                    <div class="card item-interactive-card">
-                        <div class="card-header">
-                            <div class="card-title-group">
-                                <h4 class="card-title">Bachelor of Engineering in Industrial Engineering</h4>
-                                <span class="card-subtitle">Chulalongkorn University</span>
-                            </div>
-                            <div class="card-date">May 2022 - May 2026</div>
-                        </div>
-                        <p class="project-brief">Expected 1st Class Honors &bull; GPAX 3.79</p>
-                        <p class="project-brief" style="margin-top: 8px;"><strong>Relevant Coursework:</strong> Engineering Statistics, Operations Research, Statistical Inference and Modeling, Artificial Intelligence for Engineers, Decision-Making for Engineers.</p>
-                    </div>
-                </section>
-
-            </div>
-
-            <div class="right-column">
-                
-                <section class="content-section info-card-compact">
-                    <h3 class="section-title">Interested Areas</h3>
+                <div class="widget-box">
+                    <h4 class="widget-title">Interested Areas</h4>
                     <div class="meta-tags">
                         <span class="tag-interest">Data Analytics</span>
                         <span class="tag-interest">Big Data</span>
@@ -214,19 +139,19 @@
                         <span class="tag-interest">Linear Programming</span>
                         <span class="tag-interest">Machine Learning</span>
                     </div>
-                </section>
+                </div>
 
-                <section class="content-section info-card-compact">
-                    <h3 class="section-title">Hobbies</h3>
+                <div id="hobbies" class="widget-box">
+                    <h4 class="widget-title">Hobbies</h4>
                     <div class="meta-tags">
                         <span class="tag-hobby">Movie</span>
                         <span class="tag-hobby">Reading</span>
                         <span class="tag-hobby">Picture</span>
                     </div>
-                </section>
+                </div>
 
-                <section class="content-section info-card-compact">
-                    <h3 class="section-title">Quick Stats</h3>
+                <div class="widget-box">
+                    <h4 class="widget-title">Quick Stats</h4>
                     <div class="stats-mini-grid">
                         <div class="stat-box-mini">
                             <p class="stat-num">3.79</p>
@@ -241,188 +166,345 @@
                             <p class="stat-lbl">Movie Award</p>
                         </div>
                     </div>
-                </section>
+                </div>
 
-                <section class="content-section info-card-compact">
-                    <h3 class="section-title">Languages</h3>
+                <div class="widget-box">
+                    <h4 class="widget-title">Languages</h4>
                     <div class="lang-container">
-                        <div class="lang-row">
-                            <span class="lang-name">Thai</span>
-                            <span class="lang-level">Native</span>
-                        </div>
-                        <div class="lang-row">
-                            <span class="lang-name">English</span>
-                            <span class="lang-level">Intermediate</span>
-                        </div>
-                        <div class="lang-row">
-                            <span class="lang-name">Japanese</span>
-                            <span class="lang-level">Basic</span>
-                        </div>
-                        <div class="lang-row">
-                            <span class="lang-name">Chinese</span>
-                            <span class="lang-level">Basic</span>
-                        </div>
+                        <div class="lang-row"><span class="lang-name">Thai</span><span class="lang-level">Native</span></div>
+                        <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Intermediate</span></div>
+                        <div class="lang-row"><span class="lang-name">Japanese</span><span class="lang-level">Basic</span></div>
+                        <div class="lang-row"><span class="lang-name">Chinese</span><span class="lang-level">Basic</span></div>
                     </div>
-                </section>
-
-            </div>
-
-        </div>
-
-        <section class="content-section full-width-section">
-            <h3 class="section-title">Selected Projects Portfolio</h3>
-            
-            <div class="card project-card">
-                <div class="card-header">
-                    <div class="card-title-group">
-                        <h4 class="card-title">Logistics Operations Optimization</h4>
-                        <span class="card-subtitle">Senior Project &bull; TOYOTA MOTOR ASIA</span>
-                    </div>
-                    <div class="card-date">Dec 2025 - Feb 2026</div>
                 </div>
-                <p class="project-brief">Engineered mathematical optimization and SARIMAX time-series models in Python to streamline complex logistics operations and identify supply chain bottlenecks.</p>
+
+            </section>
+
+            <section id="tech-stack" class="content-section">
+                <h3 class="section-title">Tech Stack & Capabilities</h3>
+                <div class="stack-grid">
+                    <div class="stack-box">
+                        <div class="stack-header">
+                            <span class="status-indicator proficient"></span>
+                            <h4>Proficient Tools & Languages</h4>
+                        </div>
+                        <div class="stack-tags">
+                            <span class="stack-tag">Python</span><span class="stack-tag">SQL</span>
+                            <span class="stack-tag">R</span><span class="stack-tag">Java</span>
+                            <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span>
+                            <span class="stack-tag">Tableau</span><span class="stack-tag">Power BI</span>
+                            <span class="stack-tag">Google Data Studio</span>
+                            <span class="stack-tag">Mathematical Optimization</span>
+                            <span class="stack-tag">Time Series Analysis</span>
+                            <span class="stack-tag">A/B Testing</span><span class="stack-tag">Git</span>
+                        </div>
+                    </div>
+                    <div class="stack-box learning-box">
+                        <div class="stack-header">
+                            <span class="status-indicator learning"></span>
+                            <h4>Currently Exploring</h4>
+                        </div>
+                        <div class="stack-tags">
+                            <span class="stack-tag exploring">Hadoop</span>
+                            <span class="stack-tag exploring">Spark</span>
+                            <span class="stack-tag exploring">Cloud Computing</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="content-section">
+                <h3 class="section-title">Selected Projects Portfolio</h3>
                 
-                <div class="pipeline-diagram">
-                    <div class="diagram-step">Supply Chain Data</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">Excel VBA Extraction</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">SARIMAX & MILP Modeling</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">Optimization Insights</div>
-                </div>
-
-                <div class="clean-list">
-                    <p> Achieved a 30% cost reduction and a 34.6% increase in prediction accuracy.</p>
-                    <p> Automated data extraction and reporting workflows using Excel VBA, significantly cutting manual processing time.</p>
-                </div>
-                <div class="card-actions">
-                    <a href="https://drive.google.com/file/d/1XWBnACBB75bHEkfc3Mr4rwlAe-ccgJNm/view?usp=sharing" target="_blank" class="action-pill">Slide</a>
-                    <a href="https://drive.google.com/file/d/1xxgIgDuLlNwpGlJQVq6u9aFEXdnlJRfW/view?usp=sharing" target="_blank" class="action-pill">Video Presentation</a>
-                    <a href="https://drive.google.com/file/d/1xfcBrh-udrdytblYvOh_dOPAusDUTreD/view?usp=sharing" target="_blank" class="action-pill">Executive Summary</a>
+                <div id="p-toyota" class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Logistics Operations Optimization</h4>
+                            <span class="card-subtitle">Senior Project &bull; TOYOTA MOTOR ASIA</span>
+                        </div>
+                        <div class="card-date">May 2025 - Nov 2025</div>
+                    </div>
+                    <p class="project-brief">Engineered mathematical optimization and SARIMAX time-series models in Python to streamline complex logistics operations and identify supply chain bottlenecks.</p>
                     
-                    <div class="tooltip-container">
-                        <span class="hover-trigger">Methodology & Tools</span>
-                        <div class="tooltip-box">
-                            <strong>Methodology & Tools:</strong><br>
-                            - Python & SARIMAX for time-series predictive modeling.<br>
-                            - Mathematical optimization for resource allocation.<br>
-                            - Excel VBA for end-to-end data workflow automation.
+                    <div class="pipeline-diagram">
+                        <div class="diagram-step">Supply Chain Data</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">Excel VBA Extraction</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">SARIMAX & MILP Modeling</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">Optimization Insights</div>
+                    </div>
+
+                    <div class="clean-list">
+                        <p> Achieved a 30% cost reduction and a 34.6% increase in prediction accuracy.</p>
+                        <p> Automated data extraction and reporting workflows using Excel VBA, significantly cutting manual processing time.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://drive.google.com/file/d/1XWBnACBB75bHEkfc3Mr4rwlAe-ccgJNm/view?usp=sharing" target="_blank" class="action-pill">Slide</a>
+                        <a href="https://drive.google.com/file/d/1xxgIgDuLlNwpGlJQVq6u9aFEXdnlJRfW/view?usp=sharing" target="_blank" class="action-pill">Video Presentation</a>
+                        <a href="https://drive.google.com/file/d/1xfcBrh-udrdytblYvOh_dOPAusDUTreD/view?usp=sharing" target="_blank" class="action-pill">Executive Summary</a>
+                        <div class="tooltip-container">
+                            <span class="hover-trigger">Methodology & Tools</span>
+                            <div class="tooltip-box">
+                                <strong>Methodology & Tools:</strong><br>
+                                - Python & SARIMAX for time-series predictive modeling.<br>
+                                - Mathematical optimization for resource allocation.<br>
+                                - Excel VBA for end-to-end data workflow automation.
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="card project-card">
-                <div class="card-header">
-                    <div class="card-title-group">
-                        <h4 class="card-title">Cherry Express Delivery Database System</h4>
-                        <span class="card-subtitle">Academic Project &bull; Database & Information Tech in IE</span>
+                <div id="p-cherry" class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Cherry Express Delivery Database System</h4>
+                            <span class="card-subtitle">Academic Project &bull; Database & Information Tech in IE</span>
+                        </div>
+                        <div class="card-date">Academic Term</div>
                     </div>
-                    <div class="card-date">Academic Term</div>
+                    <p class="project-brief">Designed and implemented a relational database system and application logic for a parcel delivery service to manage tracking, users, and logistics flow.</p>
+                    
+                    <div class="pipeline-diagram">
+                        <div class="diagram-step">Business Requirements</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">ER Diagram Design</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">Relational DB Implementation</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">SQL Operations</div>
+                    </div>
+
+                    <div class="clean-list">
+                        <p> Designed comprehensive Entity-Relationship (ER) models tailored for specific logistics delivery structures.</p>
+                        <p> Developed structured SQL query scripts for database generation, system integration, and data schema management.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/SKY-TKP/Cherry-Express-Project" target="_blank" class="action-pill">Source Code</a>
+                        <div class="tooltip-container">
+                            <span class="hover-trigger">Methodology & Tools</span>
+                            <div class="tooltip-box">
+                                <strong>Methodology & Tools:</strong><br>
+                                - Database Systems, Relational Algebra.<br>
+                                - SQL for Backend Query operations.<br>
+                                - Entity-Relationship (ER) Schema Modeling rules.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="project-brief">Designed and implemented a relational database system and application logic for a parcel delivery service to manage tracking, users, and logistics flow.</p>
+
+                <div id="p-microgrid" class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Optimal Microgrid Sizing under Uncertainty</h4>
+                            <span class="card-subtitle">Academic Project &bull; Chulalongkorn University</span>
+                        </div>
+                        <div class="card-date">Jan 2026 - May 2026</div>
+                    </div>
+                    <p class="project-brief">Formulated a Stochastic Mixed-Integer Linear Programming (MILP) model using Python to optimize Solar PV and Battery ESS capacity settings.</p>
+                    <div class="clean-list">
+                        <p> Achieved a simulated 28.7% cost reduction (12.01M THB/year) while mitigating peak demand penalties.</p>
+                        <p> Applied K-Means Clustering to extract weather and demand scenarios, reducing computational complexity.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb" target="_blank" class="action-pill">Jupyter Notebook</a>
+                        <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/DecisionEng_GroupAssignment_Slide.pdf" target="_blank" class="action-pill">Slide</a>
+                        <div class="tooltip-container">
+                            <span class="hover-trigger">Methodology & Tools</span>
+                            <div class="tooltip-box">
+                                <strong>Methodology & Tools:</strong><br>
+                                - Python (Pyomo, GLPK solver)<br>
+                                - K-Means Clustering for scenario modeling<br>
+                                - Conditional Value at Risk (CVaR) for tail-risk management
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="p-nlp" class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Sentiment Analysis on Movie Reviews</h4>
+                            <span class="card-subtitle">Personal Project &bull; Natural Language Processing</span>
+                        </div>
+                        <div class="card-date">Personal Project</div>
+                    </div>
+                    <p class="project-brief">Built and evaluated an end-to-end NLP classification pipeline using a dataset of 50,000 movie reviews to extract text sentiments.</p>
+                    
+                    <div class="pipeline-diagram">
+                        <div class="diagram-step">Raw Reviews</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">NLTK Preprocessing</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">TF-IDF Vectorizer</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">Logistic Regression</div>
+                    </div>
+
+                    <div class="clean-list">
+                        <p> Preprocessed raw textual data via tokenization and lemmatization using NLTK features.</p>
+                        <p> Extracted numerical features via Scikit-learn's TF-IDF Vectorizer for classification mapping.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb" target="_blank" class="action-pill">Jupyter Notebook</a>
+                        <div class="tooltip-container">
+                            <span class="hover-trigger">Methodology & Tools</span>
+                            <div class="tooltip-box">
+                                <strong>Methodology & Tools:</strong><br>
+                                - Python, NLTK, Scikit-learn<br>
+                                - TF-IDF Vectorization<br>
+                                - Logistic Regression classification model
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="content-section">
+                <h3 class="section-title">Experience & Contributions</h3>
                 
-                <div class="pipeline-diagram">
-                    <div class="diagram-step">Business Requirements</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">ER Diagram Design</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">Relational DB Implementation</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">SQL Operations</div>
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Teaching Assistant (Linear Algebra)</h4>
+                            <span class="card-subtitle">Chulalongkorn University</span>
+                        </div>
+                        <div class="card-date">Academic Term</div>
+                    </div>
+                    <div class="clean-list">
+                        <p> Coordinated and addressed student inquiries, acting as the primary liaison between students and the faculty.</p>
+                        <p> Designed and administered course evaluation surveys to gather actionable feedback for curriculum improvement.</p>
+                        <p> Collaborated with the professor to prepare instructional materials and jointly evaluated student performance.</p>
+                    </div>
                 </div>
 
-                <div class="clean-list">
-                    <p> Designed comprehensive Entity-Relationship (ER) models tailored for specific logistics delivery structures.</p>
-                    <p> Developed structured SQL query scripts for database generation, system integration, and data schema management.</p>
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Undergraduate Research Assistant (Operations Research)</h4>
+                            <span class="card-subtitle">Chulalongkorn University</span>
+                        </div>
+                        <div class="card-date">Jan 2026 - May 2026</div>
+                    </div>
+                    <p class="project-brief">Assisted faculty and researchers in designing optimization algorithms and evaluating data models for operations research workflows.</p>
                 </div>
-                <div class="card-actions">
-                    <a href="https://github.com/SKY-TKP/Cherry-Express-Project" target="_blank" class="action-pill">Source Code</a>
-                    <div class="tooltip-container">
-                        <span class="hover-trigger">Methodology & Tools</span>
-                        <div class="tooltip-box">
-                            <strong>Methodology & Tools:</strong><br>
-                            - Database Systems, Relational Algebra.<br>
-                            - SQL for Backend Query operations.<br>
-                            - Entity-Relationship (ER) Schema Modeling rules.
+
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Data Scientist Intern</h4>
+                            <span class="card-subtitle">BOTNOI</span>
+                        </div>
+                        <div class="card-date">Jun 2025 - Nov 2025</div>
+                    </div>
+                    <div class="clean-list">
+                        <p> Developed machine learning solutions, achieving 72.9% accuracy in customer classification tasks via SVM models.</p>
+                        <p> Built robust data pipelines using SQL for extraction and Power BI for delivering interactive visualizations.</p>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Academic Knowledge Base Contributor</h4>
+                            <span class="card-subtitle">Open Source & Curriculum Development</span>
                         </div>
                     </div>
+                    <div class="clean-list">
+                        <p> <strong>Machine Learning for IE:</strong> Created and maintained a comprehensive GitHub repository (<a href="https://github.com/SKY-TKP/Machine-Learning-for-IE" target="_blank" class="embedded-link">ML for CUIE</a>) serving as a foundational database for Industrial Engineering students.</p>
+                        <p> <strong>Probability & Statistics for Engineers:</strong> Co-authored and compiled academic practice exercises in collaboration with faculty to enhance student learning material (<a href="https://github.com/SKY-TKP/Machine-Learning-for-IE/blob/main/2100-xxx%3A%20PROB%20%26%20STAT%20ENG/PROB_STAT_ENG_PracExercise.pdf" target="_blank" class="embedded-link">View Document</a>).</p>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="card project-card">
-                <div class="card-header">
-                    <div class="card-title-group">
-                        <h4 class="card-title">Optimal Microgrid Sizing under Uncertainty</h4>
-                        <span class="card-subtitle">Academic Project &bull; Chulalongkorn University</span>
-                    </div>
-                    <div class="card-date">Jan 2026 - May 2026</div>
-                </div>
-                <p class="project-brief">Formulated a Stochastic Mixed-Integer Linear Programming (MILP) model using Python to optimize Solar PV and Battery ESS capacity settings.</p>
-                <div class="clean-list">
-                    <p> Achieved a simulated 28.7% cost reduction (12.01M THB/year) while mitigating peak demand penalties.</p>
-                    <p> Applied K-Means Clustering to extract weather and demand scenarios, reducing computational complexity.</p>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb" target="_blank" class="action-pill">Jupyter Notebook</a>
-                    <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/DecisionEng_GroupAssignment_Slide.pdf" target="_blank" class="action-pill">Slide</a>
-                    <div class="tooltip-container">
-                        <span class="hover-trigger">Methodology & Tools</span>
-                        <div class="tooltip-box">
-                            <strong>Methodology & Tools:</strong><br>
-                            - Python (Pyomo, GLPK solver)<br>
-                            - K-Means Clustering for scenario modeling<br>
-                            - Conditional Value at Risk (CVaR) for tail-risk management
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card project-card">
-                <div class="card-header">
-                    <div class="card-title-group">
-                        <h4 class="card-title">Sentiment Analysis on Movie Reviews</h4>
-                        <span class="card-subtitle">Personal Project &bull; Natural Language Processing</span>
-                    </div>
-                    <div class="card-date">Personal Project</div>
-                </div>
-                <p class="project-brief">Built and evaluated an end-to-end NLP classification pipeline using a dataset of 50,000 movie reviews to extract text sentiments.</p>
+            <section id="awards" class="content-section">
+                <h3 class="section-title">Awards & Recognitions</h3>
                 
-                <div class="pipeline-diagram">
-                    <div class="diagram-step">Raw Reviews</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">NLTK Preprocessing</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">TF-IDF Vectorizer</div>
-                    <div class="diagram-line"></div>
-                    <div class="diagram-step">Logistic Regression</div>
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Independent Movie Reviewer of the Year</h4>
+                            <span class="card-subtitle">National Federation of Motion Pictures and Contents Associations</span>
+                        </div>
+                        <div class="card-date">2024</div>
+                    </div>
+                    <p class="project-brief">Awarded for outstanding cinematic analysis and independent film reviews by the Thai Film Association.</p>
                 </div>
 
-                <div class="clean-list">
-                    <p> Preprocessed raw textual data via tokenization and lemmatization using NLTK features.</p>
-                    <p> Extracted numerical features via Scikit-learn's TF-IDF Vectorizer for classification mapping.</p>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb" target="_blank" class="action-pill">Jupyter Notebook</a>
-                    <div class="tooltip-container">
-                        <span class="hover-trigger">Methodology & Tools</span>
-                        <div class="tooltip-box">
-                            <strong>Methodology & Tools:</strong><br>
-                            - Python, NLTK, Scikit-learn<br>
-                            - TF-IDF Vectorization<br>
-                            - Logistic Regression classification model
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Academic Supporter (Batch Tutor)</h4>
+                            <span class="card-subtitle">Industrial Engineering Department</span>
                         </div>
+                        <div class="card-date">Aug 2023 - May 2026</div>
+                    </div>
+                    <p class="project-brief">Volunteered as the primary peer-tutor for the engineering cohort throughout university years. Conducted intensive review sessions for complex quantitative subjects, significantly contributing to the improvement of the batch's overall academic performance.</p>
+                </div>
+
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Certified Data Scientist</h4>
+                            <span class="card-subtitle">depa & Daydev Bootcamp</span>
+                        </div>
+                        <div class="card-date">Nov 2025</div>
+                    </div>
+                    <p class="project-brief">Successfully completed the rigorous Data Scientist Roadmap Bootcamp, mastering end-to-end data workflows, machine learning model deployment, and real-world business analytics applications.</p>
+                </div>
+            </section>
+
+            <section id="education" class="content-section">
+                <h3 class="section-title">Education</h3>
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Bachelor of Engineering in Industrial Engineering</h4>
+                            <span class="card-subtitle">Chulalongkorn University</span>
+                        </div>
+                        <div class="card-date">May 2022 - May 2026</div>
+                    </div>
+                    <p class="project-brief">Expected 1st Class Honors &bull; GPAX 3.79</p>
+                    <p class="project-brief" style="margin-top: 8px;"><strong>Relevant Coursework:</strong> Engineering Statistics, Operations Research, Statistical Inference and Modeling, Artificial Intelligence for Engineers, Decision-Making for Engineers.</p>
+                </div>
+            </section>
+
+            <section id="leadership" class="content-section">
+                <h3 class="section-title">Leadership & Activities</h3>
+                <div class="activities-grid">
+                    <a href="https://canva.link/gz5sqq86lmg9bsg" target="_blank" class="activity-card-link">
+                        <div class="activity-item clickable-activity">
+                            <h5>Chief Technology Officer</h5>
+                            <span class="activity-sub">Nanoki (Capstone Company)</span>
+                            <span class="activity-date">Mar 2026 - May 2026</span>
+                            <span class="activity-action-text">View Project</span>
+                        </div>
+                    </a>
+                    <div class="activity-item">
+                        <h5>Data Analyst</h5>
+                        <span class="activity-sub">Student Government of CU</span>
+                        <span class="activity-date">Jan 2025 - May 2026</span>
+                    </div>
+                    <div class="activity-item">
+                        <h5>Head of Registration</h5>
+                        <span class="activity-sub">The 24th LarnGear Camp</span>
+                        <span class="activity-date">Jul 2024 - Jan 2025</span>
+                    </div>
+                    <div class="activity-item">
+                        <h5>Participant</h5>
+                        <span class="activity-sub">IE Hackathon</span>
+                        <span class="activity-date">Jun 2023</span>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <footer>
-            <p>&copy; 2026 Thananop Kullapan. All rights reserved.</p>
-            <p class="update-tag" id="last-updated">Last Updated: Loading...</p>
-        </footer>
+            <footer>
+                <p>&copy; 2026 Thananop Kullapan. All rights reserved.</p>
+                <p class="update-tag" id="last-updated">Last Updated: Loading...</p>
+            </footer>
 
+        </main>
     </div>
 
     <script>

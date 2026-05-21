@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thananop Kullapan - Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=8">
+    <title>Thananop Kullapan - Portfolio Dashboard</title>
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
+
+    <div class="scroll-progress" id="progress-bar"></div>
 
     <div class="portfolio-container">
         
         <aside class="left-sidebar">
+            
+            <button class="theme-toggle" id="theme-btn" title="Toggle Theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.243 16.243l.707.707M6.343 6.343l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </button>
+
             <div class="profile-section">
                 <img src="profile.png" alt="Thananop Kullapan" class="profile-pic">
                 <h1>Thananop Kullapan</h1>
                 <h2>Data Scientist / Developer</h2>
+                
+                <div class="adjective-badges">
+                    <span class="adj-badge">Affectionate</span>
+                    <span class="adj-badge">Neat</span>
+                    <span class="adj-badge">Friendly</span>
+                </div>
+                
                 <a href="mailto:thananop.klp@gmail.com" class="sidebar-email">thananop.klp@gmail.com</a>
             </div>
 
@@ -24,33 +39,33 @@
             </div>
 
             <nav class="sidebar-nav">
-                
                 <div class="nav-item">
-                    <a href="#about-section" class="nav-link">About Me</a>
+                    <a href="#about-section" class="nav-link" id="nav-about">About Me</a>
                     <div class="nav-submenu">
                         <a href="#about-section">Bio Summary</a>
-                        <a href="#terminal-intro">Terminal Profile</a>
+                        <a href="#terminal-card-target">Terminal Profile</a>
                     </div>
                 </div>
 
                 <div class="nav-item">
-                    <a href="#interests-section" class="nav-link">Interests & Hobbies</a>
+                    <a href="#interests-section" class="nav-link" id="nav-interests">Interests & Hobbies</a>
                     <div class="nav-submenu">
                         <a href="#interests-section">Interested Areas</a>
-                        <a href="#interests-section">Hobbies & Traits</a>
+                        <a href="#interests-section">Quick Stats</a>
+                        <a href="#interests-section">Languages</a>
                     </div>
                 </div>
 
                 <div class="nav-item">
-                    <a href="#tech-stack-section" class="nav-link">Tech Stack</a>
+                    <a href="#tech-stack-section" class="nav-link" id="nav-tech-stack">Tech Stack</a>
                     <div class="nav-submenu">
                         <a href="#tech-stack-section">Proficient Tools</a>
-                        <a href="#tech-stack-section">Currently Exploring</a>
+                        <a href="#github-activity-target">GitHub Activity</a>
                     </div>
                 </div>
 
                 <div class="nav-item">
-                    <a href="#projects-section" class="nav-link">Selected Projects</a>
+                    <a href="#projects-section" class="nav-link" id="nav-projects">Selected Projects</a>
                     <div class="nav-submenu">
                         <a href="#p-toyota">Toyota Logistics</a>
                         <a href="#p-cherry">Cherry Express DB</a>
@@ -60,24 +75,23 @@
                 </div>
 
                 <div class="nav-item">
-                    <a href="#experience-section" class="nav-link">Experience</a>
+                    <a href="#experience-section" class="nav-link" id="nav-experience">Experience</a>
                     <div class="nav-submenu">
                         <a href="#experience-section">Teaching Assistant</a>
                         <a href="#experience-section">Research Assistant</a>
-                        <a href="#experience-section">Data Science Intern</a>
-                        <a href="#experience-section">Academic Contributor</a>
+                        <a href="#experience-section">Botnoi Intern</a>
+                        <a href="#experience-section">Knowledge Base</a>
                     </div>
                 </div>
 
                 <div class="nav-item">
-                    <a href="#education-section" class="nav-link">Awards & Education</a>
+                    <a href="#education-section" class="nav-link" id="nav-education">Awards & Education</a>
                     <div class="nav-submenu">
                         <a href="#education-section">Movie Reviewer Award</a>
                         <a href="#education-section">Batch Tutor</a>
                         <a href="#education-section">Chulalongkorn University</a>
                     </div>
                 </div>
-
             </nav>
 
             <div class="sidebar-socials">
@@ -89,28 +103,23 @@
 
         <main class="right-content">
             
-            <section id="about-section" class="content-section">
+            <section id="about-section" class="content-section target-section">
                 <h3 class="section-title">About</h3>
                 <p class="summary">
                     Highly analytical Industrial Engineering student transitioning into Data Science. Proven ability to bridge rigorous mathematical optimization (MILP, CP) with machine learning techniques to solve complex real-world problems. Demonstrated success in delivering measurable impact, including a 30% cost reduction at TOYOTA and a 34% resource utilization boost at King Chulalongkorn Memorial Hospital. Seeking to leverage data-driven strategies for scalable business growth.
                 </p>
 
-                <div id="terminal-intro" class="terminal-card">
+                <div id="terminal-card-target" class="terminal-card">
                     <div class="terminal-header">
                         <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                         <span class="terminal-title">guest@sky-tkp: ~</span>
                     </div>
-                    <div class="terminal-body">
-                        <p><span class="prompt">❯</span> 👋 Hi, I’m Gun, but you can call me <strong>SKY</strong> (a.k.a).</p>
-                        <p><span class="prompt">❯</span> 👀 I’m interested in data science, animation, and film lovers.</p>
-                        <p><span class="prompt">❯</span> 🌱 I’m currently learning data science and machine learning.</p>
-                        <p><span class="prompt">❯</span> 😄 Pronouns: He</p>
-                        <p><span class="prompt">❯</span> ⚡ Fun fact: I like matcha, but like sleep more than wake up :D</p>
-                    </div>
+                    <div class="terminal-body" id="terminal-typewriter">
+                        </div>
                 </div>
             </section>
 
-            <section id="interests-section" class="dashboard-widgets-grid">
+            <section id="interests-section" class="dashboard-widgets-grid target-section">
                 <div class="widget-box">
                     <h4 class="widget-title">Interested Areas</h4>
                     <div class="meta-tags">
@@ -123,14 +132,11 @@
                 </div>
 
                 <div class="widget-box">
-                    <h4 class="widget-title">Hobbies & Traits</h4>
+                    <h4 class="widget-title">Hobbies</h4>
                     <div class="meta-tags">
                         <span class="tag-hobby">Movie</span>
                         <span class="tag-hobby">Reading</span>
-                        <span class="tag-hobby">Photography</span>
-                        <span class="adj-badge" style="margin-left:auto;">Affectionate</span>
-                        <span class="adj-badge">Neat</span>
-                        <span class="adj-badge">Friendly</span>
+                        <span class="tag-hobby">Picture</span>
                     </div>
                 </div>
 
@@ -163,7 +169,7 @@
                 </div>
             </section>
 
-            <section id="tech-stack-section" class="content-section">
+            <section id="tech-stack-section" class="content-section target-section">
                 <h3 class="section-title">Tech Stack & Capabilities</h3>
                 <div class="stack-grid">
                     <div class="stack-box">
@@ -179,7 +185,7 @@
                             <span class="stack-tag">Google Data Studio</span>
                             <span class="stack-tag">Mathematical Optimization</span>
                             <span class="stack-tag">Time Series Analysis</span>
-                            <span class="stack-tag">Git</span>
+                            <span class="stack-tag">A/B Testing</span><span class="stack-tag">Git</span>
                         </div>
                     </div>
                     <div class="stack-box learning-box">
@@ -194,9 +200,16 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="github-activity-target" class="github-chart-container">
+                    <h4 class="widget-title" style="margin-bottom: 12px; font-size: 0.95rem;">Open Source Contribution Matrix</h4>
+                    <div class="gh-graph-wrapper">
+                        <img src="https://ghchart.rshah.org/0ea5e9/SKY-TKP" alt="SKY-TKP's GitHub Contributions Grid" class="github-chart-img">
+                    </div>
+                </div>
             </section>
 
-            <section id="projects-section" class="content-section">
+            <section id="projects-section" class="content-section target-section">
                 <h3 class="section-title">Selected Projects Portfolio</h3>
                 
                 <div id="p-toyota" class="card project-card">
@@ -234,7 +247,7 @@
                     <div class="card-header">
                         <div class="card-title-group">
                             <h4 class="card-title">Cherry Express Delivery Database System</h4>
-                            <span class="card-subtitle">Academic Project &bull; Database & Information Tech</span>
+                            <span class="card-subtitle">Academic Project &bull; Database & Information Tech in IE</span>
                         </div>
                         <div class="card-date">Academic Term</div>
                     </div>
@@ -245,7 +258,9 @@
                         <div class="diagram-line"></div>
                         <div class="diagram-step">ER Diagram Design</div>
                         <div class="diagram-line"></div>
-                        <div class="diagram-step">Relational DB (SQL)</div>
+                        <div class="diagram-step">Relational DB Implementation</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">SQL Operations</div>
                     </div>
 
                     <div class="clean-list">
@@ -306,7 +321,7 @@
                 </div>
             </section>
 
-            <section id="experience-section" class="content-section">
+            <section id="experience-section" class="content-section target-section">
                 <h3 class="section-title">Experience & Contributions</h3>
                 
                 <div class="card project-card">
@@ -363,7 +378,7 @@
                 </div>
             </section>
 
-            <section id="education-section" class="content-section">
+            <section id="education-section" class="content-section target-section">
                 <h3 class="section-title">Awards & Recognitions</h3>
                 
                 <div class="card project-card">
@@ -388,6 +403,16 @@
                     <p class="project-brief">Volunteered as the primary peer-tutor for the engineering cohort throughout university years. Conducted intensive review sessions for complex quantitative subjects, significantly contributing to the improvement of the batch's overall academic performance.</p>
                 </div>
 
+                <div class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Certified Data Scientist</h4>
+                            <span class="card-subtitle">depa & Daydev Bootcamp</span>
+                        </div>
+                        <div class="card-date">Nov 2025</div>
+                    </div>
+                </div>
+
                 <h3 class="section-title" style="margin-top: 40px;">Education</h3>
                 <div class="card project-card">
                     <div class="card-header">
@@ -400,19 +425,9 @@
                     <p class="project-brief">Expected 1st Class Honors &bull; GPAX 3.79</p>
                     <p class="project-brief" style="margin-top: 8px;"><strong>Relevant Coursework:</strong> Engineering Statistics, Operations Research, Statistical Inference and Modeling, Artificial Intelligence for Engineers, Decision-Making for Engineers.</p>
                 </div>
-
-                <div class="card project-card">
-                    <div class="card-header">
-                        <div class="card-title-group">
-                            <h4 class="card-title">Certified Data Scientist</h4>
-                            <span class="card-subtitle">depa & Daydev Bootcamp</span>
-                        </div>
-                        <div class="card-date">Nov 2025</div>
-                    </div>
-                </div>
             </section>
 
-            <section id="leadership-section" class="content-section">
+            <section id="leadership-section" class="content-section target-section">
                 <h3 class="section-title">Leadership & Activities</h3>
                 <div class="activities-grid">
                     <a href="https://canva.link/gz5sqq86lmg9bsg" target="_blank" class="activity-card-link">
@@ -446,9 +461,117 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            
+            // A. UPDATE TIMESTAMPS
             let lastMod = new Date(document.lastModified);
             let options = { year: 'numeric', month: 'long', day: 'numeric' };
             document.getElementById('last-updated').textContent = "Last Updated: " + lastMod.toLocaleDateString('en-US', options);
+
+            // B. SCROLL PROGRESS BAR LOGIC
+            window.addEventListener('scroll', () => {
+                const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('progress-bar').style.width = scrolled + '%';
+            });
+
+            // C. DARK / LIGHT MODE CONTROLLER
+            const themeBtn = document.getElementById('theme-btn');
+            
+            // เช็กระบบความจำเดิมของผู้ใช้
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // D. PERFORMANCE TERMINAL TYPEWRITER EFFECT
+            const lines = [
+                '<span>❯</span> 👋 Hi, I’m Gun, but you can call me <strong>SKY</strong> (a.k.a).',
+                '<span>❯</span> 👀 I’m interested in data science, animation, and film lovers.',
+                '<span>❯</span> 🌱 I’m currently learning data science and machine learning.',
+                '<span>❯</span> 😄 Pronouns: He',
+                '<span>❯</span> ⚡ Fun fact: I like matcha, but like sleep more than wake up :D'
+            ];
+            
+            const terminalContainer = document.getElementById('terminal-typewriter');
+            let lineIdx = 0;
+            let charIdx = 0;
+            let currentLineHtml = '';
+
+            function typeEffect() {
+                if (lineIdx < lines.length) {
+                    if (charIdx === 0) {
+                        // สร้างพารากราฟใหม่สำหรับการเริ่มบรรทัดใหม่
+                        const p = document.createElement('p');
+                        p.className = 'typewriter-line';
+                        terminalContainer.appendChild(p);
+                    }
+                    
+                    const activeLine = terminalContainer.lastChild;
+                    const fullText = lines[lineIdx];
+                    
+                    // ข้ามสัญลักษณ์คำสั่งระบบ HTML Tag ในลูปสเปซ
+                    if (fullText.charAt(charIdx) === '<') {
+                        let tagCloseIdx = fullText.indexOf('>', charIdx);
+                        charIdx = tagCloseIdx + 1;
+                    } else {
+                        charIdx++;
+                    }
+                    
+                    activeLine.innerHTML = fullText.substring(0, charIdx) + '<span class="cursor">|</span>';
+                    
+                    if (charIdx >= fullText.length) {
+                        // ปลดเคอร์เซอร์บรรทัดที่พิมพ์เสร็จแล้วออก
+                        activeLine.innerHTML = fullText; 
+                        lineIdx++;
+                        charIdx = 0;
+                        setTimeout(typeEffect, 400); // พักช่วงขึ้นบรรทัดใหม่
+                    } else {
+                        setTimeout(typeEffect, 15); // ความเร็วในการดีดตัวอักษร
+                    }
+                }
+            }
+            
+            // เริ่มต้นระบบสคริปต์พิมพ์ดีดหลังโหลดหน้าเพจ
+            setTimeout(typeEffect, 800);
+
+            // E. HIGH-PERFORMANCE ACTIVE SCROLL SPY LOGIC
+            const sections = document.querySelectorAll('.target-section');
+            const navLinks = {
+                'about-section': document.getElementById('nav-about'),
+                'interests-section': document.getElementById('nav-interests'),
+                'tech-stack-section': document.getElementById('nav-tech-stack'),
+                'projects-section': document.getElementById('nav-projects'),
+                'experience-section': document.getElementById('nav-experience'),
+                'education-section': document.getElementById('nav-education')
+            };
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px', // ดักจับพื้นที่กึ่งกลางสายตาของผู้ใช้งาน
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // ลบคลาส active เก่าทั้งหมดออก
+                        Object.values(navLinks).forEach(link => link?.classList.remove('active'));
+                        // ใส่คลาส active ให้เนวิเกเตอร์ฝั่งซ้ายปัจจุบัน
+                        navLinks[entry.target.id]?.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(sec => observer.observe(sec));
         });
     </script>
 

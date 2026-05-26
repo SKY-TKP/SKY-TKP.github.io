@@ -1,3 +1,6 @@
+/* ==========================================================================
+   PREMIUM MODERN ARCHITECTURE VARIABLES (LIGHT & DARK VARIATIONS)
+   ========================================================================== */
 :root {
     /* LIGHT MODE CONFIGURATION */
     --bg-color: #f1f5f9; 
@@ -57,7 +60,9 @@ a {
     transition: all 0.25s ease;
 }
 
-/* 1. TOP SCROLL PROGRESS BAR DESIGN */
+/* =========================================
+   TOP SCROLL PROGRESS BAR
+   ========================================= */
 .scroll-progress {
     position: fixed;
     top: 0;
@@ -69,19 +74,21 @@ a {
     transition: width 0.1s ease-out;
 }
 
-/* CORE TWO-COLUMN MASTER FRAMEWORK */
+/* =========================================
+   CORE TWO-COLUMN MASTER FRAMEWORK
+   ========================================= */
 .portfolio-container {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; /* สำคัญ: ป้องกัน Sidebar ยืดตามเนื้อหาฝั่งขวา */
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* ==========================================================================
+/* =========================================
    LEFT COLUMN: STICKY SIDEBAR CONTROLLER
-   ========================================================================== */
+   ========================================= */
 .left-sidebar {
     flex: 0 0 320px;
     position: sticky;
@@ -92,7 +99,7 @@ a {
     box-shadow: var(--shadow-sm);
     height: calc(100vh - 60px);
     overflow-y: auto;
-    scrollbar-width: none;
+    scrollbar-width: none; /* ซ่อน scrollbar ฝั่งซ้ายให้ดูคลีน */
     border: 1px solid var(--border-color);
     transition: background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
@@ -123,6 +130,7 @@ a {
 body.dark-mode .sun-icon { display: none; }
 body.dark-mode .moon-icon { display: block; }
 
+/* PROFILE SECTION */
 .profile-section { text-align: center; margin-bottom: 20px; }
 .profile-pic { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--light-blue); margin-bottom: 12px; }
 .profile-section h1 { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 4px; }
@@ -134,6 +142,7 @@ body.dark-mode .adj-badge { background-color: #064e3b; color: #34d399; }
 
 .sidebar-email { font-size: 0.85rem; color: var(--secondary-text); font-weight: 600; font-family: monospace; }
 
+/* BUTTONS */
 .sidebar-actions { display: flex; flex-direction: column; gap: 10px; margin: 25px 0; }
 .btn-primary, .btn-outline { width: 100%; text-align: center; padding: 10px 0; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
 .btn-primary { background-color: var(--accent-blue); color: #ffffff !important; }
@@ -155,7 +164,7 @@ body.dark-mode .adj-badge { background-color: #064e3b; color: #34d399; }
     transition: all 0.25s ease;
 }
 
-/* เอฟเฟกต์สีเมื่อระบบตรวจจับการเปิดหน้าเว็บ Active */
+/* Scroll Spy Active State */
 .nav-link.active {
     color: var(--hover-blue) !important;
     background-color: var(--light-blue);
@@ -163,6 +172,7 @@ body.dark-mode .adj-badge { background-color: #064e3b; color: #34d399; }
     padding-left: 11px;
 }
 
+/* Accordion Hover Logic */
 .nav-submenu {
     max-height: 0; overflow: hidden; opacity: 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -181,7 +191,7 @@ body.dark-mode .adj-badge { background-color: #064e3b; color: #34d399; }
 .sidebar-socials a:hover { color: var(--accent-blue); }
 
 /* ==========================================================================
-   RIGHT COLUMN: SCROLLABLE CORE MATRIX CONTENT
+   RIGHT COLUMN: SCROLLABLE CORE CONTENT
    ========================================================================== */
 .right-content { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 30px; }
 
@@ -204,13 +214,8 @@ p.summary { color: var(--secondary-text); font-size: 1rem; }
 }
 .widget-title { font-size: 0.95rem; text-transform: uppercase; font-weight: 700; margin-bottom: 15px; letter-spacing: 0.5px; border-bottom: 1px dashed var(--border-color); padding-bottom: 10px; }
 
-/* TYPEWRITER CURSOR BLINK ANIMATION */
-.cursor {
-    color: #10b981;
-    font-weight: bold;
-    animation: blink 0.9s infinite;
-    margin-left: 2px;
-}
+/* TYPEWRITER TERMINAL */
+.cursor { color: #10b981; font-weight: bold; animation: blink 0.9s infinite; margin-left: 2px; }
 @keyframes blink { 50% { opacity: 0; } }
 
 .terminal-card { background-color: var(--terminal-bg); border-radius: 10px; overflow: hidden; margin-top: 25px; border: 1px solid #2e2e2e; }
@@ -223,26 +228,25 @@ body.dark-mode .terminal-card { border-color: var(--border-color); }
 .prompt { color: #10b981; margin-right: 8px; font-weight: bold; }
 .terminal-link { color: #38bdf8; text-decoration: underline; }
 
-/* Metadata Tags Row mapping */
+/* Tags & Mini Stats */
 .meta-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag-interest { background-color: var(--light-blue); color: var(--accent-blue); padding: 5px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
 .tag-hobby { background-color: #fff7ed; color: #ea580c; padding: 5px 12px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
 body.dark-mode .tag-hobby { background-color: #451a03; color: #fb923c; }
 
-/* Quick Metric widgets */
 .stats-mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; }
 .stat-box-mini { background-color: var(--widget-bg); padding: 12px 4px; border-radius: 10px; border: 1px solid var(--border-color); }
 .stat-num { font-size: 1.2rem; font-weight: 800; color: var(--accent-blue); }
 .stat-lbl { font-size: 0.65rem; font-weight: 700; color: var(--secondary-text); text-transform: uppercase; margin-top: 3px; }
 
-/* Language List UI Box */
+/* Languages */
 .lang-container { display: flex; flex-direction: column; gap: 10px; }
 .lang-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px dashed var(--border-color); }
 .lang-row:last-child { border-bottom: none; padding-bottom: 0; }
 .lang-name { font-size: 0.9rem; font-weight: 700; }
 .lang-level { font-size: 0.75rem; font-weight: 600; color: var(--accent-blue); background-color: var(--light-blue); padding: 2px 10px; border-radius: 20px; }
 
-/* Tech Capabilities Setup Elements Dashboard */
+/* Tech Capabilities */
 .stack-grid { display: flex; flex-direction: column; gap: 15px; }
 .stack-box { background-color: var(--widget-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; }
 .learning-box { background-color: transparent; border-style: dashed; }
@@ -255,7 +259,7 @@ body.dark-mode .tag-hobby { background-color: #451a03; color: #fb923c; }
 .stack-tag { background-color: var(--container-bg); border: 1px solid var(--border-color); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
 .stack-tag.exploring { background-color: transparent; border: 1px dashed var(--border-color); color: var(--secondary-text); }
 
-/* GITHUB RENDERING CHART DASHBOARD CARD */
+/* GITHUB CHART */
 .github-chart-container {
     margin-top: 25px;
     background-color: var(--widget-bg);
@@ -263,23 +267,11 @@ body.dark-mode .tag-hobby { background-color: #451a03; color: #fb923c; }
     padding: 24px;
     border-radius: 12px;
 }
-.gh-graph-wrapper {
-    width: 100%;
-    overflow-x: auto; /* เปิดแฮนเดิลสกรอลในมือถือหากจุดกว้างเกินขนาดจอ */
-    padding: 10px 0;
-}
-.github-chart-img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-    /* ฟิลเตอร์ปรับสีสันตารางจุดเขียวให้สว่างสู้แสงในโหมดมืดอัตโนมัติ */
-    filter: drop-shadow(0 2px 4px rgba(14, 165, 233, 0.05));
-}
-body.dark-mode .github-chart-img {
-    filter: invert(0.05) sepia(0.2) saturate(1.5) hue-rotate(170deg) drop-shadow(0 4px 12px rgba(56, 189, 248, 0.15));
-}
+.gh-graph-wrapper { width: 100%; overflow-x: auto; padding: 10px 0; }
+.github-chart-img { max-width: 100%; display: block; height: auto; filter: drop-shadow(0 2px 4px rgba(14, 165, 233, 0.05)); }
+body.dark-mode .github-chart-img { filter: invert(0.9) hue-rotate(180deg) brightness(1.2) contrast(1.1); } /* ฟิลเตอร์โหมดมืด */
 
-/* Adaptable Standard Project Layout Cards */
+/* Project Cards */
 .project-card { border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; margin-bottom: 25px; background: var(--container-bg); transition: all 0.3s ease; }
 .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent-blue); }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
@@ -290,18 +282,18 @@ body.dark-mode .github-chart-img {
 .clean-list p { font-size: 0.95rem; color: var(--secondary-text); margin-bottom: 8px; }
 .embedded-link { text-decoration: underline; font-weight: 600; color: var(--accent-blue); }
 
-/* Pipeline flow vector mapping diagram */
+/* Pipeline diagram */
 .pipeline-diagram { display: flex; align-items: center; gap: 10px; background-color: var(--widget-bg); padding: 14px; border-radius: 10px; margin: 15px 0; border: 1px solid var(--border-color); overflow-x: auto; scrollbar-width: none; }
 .pipeline-diagram::-webkit-scrollbar { display: none; }
 .diagram-step { background-color: var(--container-bg); border: 1px solid var(--border-color); padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; color: var(--secondary-text); white-space: nowrap; }
 .diagram-line { width: 15px; height: 2px; background-color: var(--border-color); flex-shrink: 0; }
 
-/* Pill Actions layout setup (Omitted extra arrows symbol characters) */
+/* Action Pills */
 .card-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color); }
 .action-pill { background-color: var(--bg-color); color: var(--secondary-text); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
 .action-pill:hover { background-color: var(--light-blue); color: var(--accent-blue); }
 
-/* Leadership Activites block mapping Dashboard */
+/* Activities Grid */
 .activities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
 .activity-card-link { display: block; color: inherit; }
 .activity-item { background-color: var(--container-bg); border: 1px solid var(--border-color); padding: 18px; border-radius: 12px; height: 100%; transition: all 0.3s ease; }
@@ -311,15 +303,17 @@ body.dark-mode .github-chart-img {
 .activity-date { display: block; font-size: 0.7rem; color: var(--secondary-text); }
 .activity-action-text { display: block; margin-top: 10px; font-size: 0.7rem; font-weight: 700; color: var(--accent-blue); text-transform: uppercase; }
 
-/* Page state structural footers tracker */
+/* Footer */
 footer { text-align: center; padding: 40px 0 20px; color: var(--secondary-text); font-size: 0.85rem; border-top: 1px solid var(--border-color); margin-top: 25px; }
 .update-tag { font-weight: 700; color: var(--primary-text); margin-top: 5px; }
 
-/* Adaptive Responsive UI Layout System Breaks */
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
+   ========================================================================== */
 @media (max-width: 900px) {
     .portfolio-container { flex-direction: column; }
     .left-sidebar { flex: 1 1 100%; position: static; height: auto; overflow-y: visible; width: 100%; }
     .card-header { flex-direction: column; gap: 8px; }
     .card-date { align-self: flex-start; }
-    .nav-submenu { max-height: 200px; opacity: 1; padding: 10px; margin: 5px 10px 10px; } /* ปลดล็อกเลเยอร์ย่อยบนโมบายล์ให้อ่านง่ายขึ้น */
+    .nav-submenu { max-height: 200px; opacity: 1; padding: 10px; margin: 5px 10px 10px; }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thananop Kullapan - Portfolio Dashboard</title>
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -67,6 +67,7 @@
                 <div class="nav-item">
                     <a href="#projects-section" class="nav-link" id="nav-projects">Selected Projects</a>
                     <div class="nav-submenu">
+                        <a href="#p-m5-forecast">Walmart M5 Forecast</a>
                         <a href="#p-toyota">Toyota Logistics</a>
                         <a href="#p-cherry">Cherry Express DB</a>
                         <a href="#p-microgrid">Microgrid Sizing</a>
@@ -212,6 +213,37 @@
             <section id="projects-section" class="content-section target-section">
                 <h3 class="section-title">Selected Projects Portfolio</h3>
                 
+                <div id="p-m5-forecast" class="card project-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <h4 class="card-title">Walmart M5 Forecasting Analytics</h4>
+                            <span class="card-subtitle">Personal Project &bull; Retail Demand Forecasting</span>
+                        </div>
+                        <div class="card-date">May 23 - May 26, 2026</div>
+                    </div>
+                    <p class="project-brief">Developed an advanced predictive analytics framework leveraging the M5 dataset (over 30,000 time series) to forecast 28-day retail demand and optimize supply chain resilience.</p>
+                    
+                    <div class="pipeline-diagram">
+                        <div class="diagram-step">Transactional Data</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">Feature Engineering</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">LightGBM Architecture</div>
+                        <div class="diagram-line"></div>
+                        <div class="diagram-step">28-Day Demand Forecast</div>
+                    </div>
+
+                    <div class="clean-list">
+                        <p> Engineered millions of transactional records and implemented a highly optimized LightGBM model to navigate intermittent demand and zero-sales days.</p>
+                        <p> Explored exogenous data integration (e.g., pandemic stringency, mobility matrices) to transition infrastructure from historical tracking to crisis-resilient ecosystems.</p>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/SKY-TKP/PROJECT/tree/main/python/m5%20forecast%20acc" target="_blank" class="action-pill">GitHub Repo</a>
+                        <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/m5%20forecast%20acc/M5%20Analytics%20Report%20-%20Part%201.pdf" target="_blank" class="action-pill">Analytics Report</a>
+                        <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/m5%20forecast%20acc/figures/10_InteractiveDashboard.png" target="_blank" class="action-pill">Dashboard View</a>
+                    </div>
+                </div>
+
                 <div id="p-toyota" class="card project-card">
                     <div class="card-header">
                         <div class="card-title-group">

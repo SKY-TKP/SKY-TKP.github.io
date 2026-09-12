@@ -2,7 +2,7 @@
    PORTFOLIO - DARK SIDEBAR THEME (OPTIMIZED & FULLY RESPONSIVE)
    ========================================================================== */
 :root {
-    --sidebar-width: 300px;  /* กำหนดขนาด Sidebar ให้ชัดเจน */
+    --sidebar-width: 300px;
     --sidebar-bg: #040b14;
     --sidebar-text: #a8a9b4;
     --accent: #149ddd;
@@ -19,7 +19,7 @@
 
 html { 
     scroll-behavior: smooth;
-    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน (Horizontal Scroll) */
+    overflow-x: hidden; 
 }
 
 body {
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #fff; }
     overflow-y: auto;
     border-right: 1px solid #111a24;
     display: flex;
-    flex-direction: column; /* จัดให้เนื้อหาเต็มความสูงพอดี */
+    flex-direction: column;
 }
 #header::-webkit-scrollbar { display: none; }
 
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #fff; }
 }
 @keyframes blinker { 50% { opacity: 0; } }
 
-/* Social Links - FIXED ALIGNMENT */
+/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #fff; }
 .social-links a {
     display: flex;
     align-items: center;
-    justify-content: center; /* จัดไอคอนให้อยู่กึ่งกลางเป๊ะ */
+    justify-content: center;
     background: #212431;
     color: #fff;
     border-radius: 50%;
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #fff; }
 .social-links a:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
 
 /* Navigation Menu */
-.nav-menu { padding: 30px 0; flex-grow: 1; /* ดัน Footer ลงไปด้านล่าง */ }
+.nav-menu { padding: 30px 0; flex-grow: 1; }
 .nav-menu ul { list-style: none; padding: 0; margin: 0; }
 .nav-menu li { margin-bottom: 5px; }
 .nav-menu a {
@@ -149,13 +149,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #fff; }
 .btn-outline:hover { background: var(--accent); color: #fff; }
 
 /* =========================================
-   HERO SECTION (Image Background)
+   HERO SECTION (Image Background & CTA)
    ========================================= */
 #hero {
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(5, 13, 24, 0.5), rgba(5, 13, 24, 0.8)), url("background.jpg") top center/cover no-repeat;
-    /* ป้องกันการซ้อนทับ: บังคับให้ Margin ซ้ายเท่ากับความกว้าง Sidebar เสมอ */
     margin-left: var(--sidebar-width);
     width: calc(100% - var(--sidebar-width)); 
     position: relative;
@@ -170,23 +169,35 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: #fff; }
 #hero p span { color: #fff; padding-bottom: 4px; letter-spacing: 1px; border-bottom: 3px solid var(--accent); }
 .typed-cursor { opacity: 1; animation: blink 0.7s infinite; color: #fff; font-weight: bold; border-bottom: none !important; }
 
+/* Hero CTA Buttons */
+.hero-buttons { display: flex; gap: 15px; margin-top: 35px; flex-wrap: wrap; }
+.btn-hero-primary, .btn-hero-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-hero-primary { background: var(--accent); color: #fff; border: 2px solid var(--accent); }
+.btn-hero-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; transform: translateY(-3px); }
+.btn-hero-outline { background: transparent; color: #fff; border: 2px solid rgba(255, 255, 255, 0.7); }
+.btn-hero-outline:hover { background: #fff; color: var(--bg-main); border-color: #fff; transform: translateY(-3px); }
+
 /* =========================================
    MAIN CONTENT (RIGHT SIDE)
    ========================================= */
 #main { 
-    /* ป้องกันการซ้อนทับเนื้อหา: */
     margin-left: var(--sidebar-width); 
-    width: calc(100% - var(--sidebar-width)); /* บังคับให้เนื้อหากว้างแค่พื้นที่ที่เหลือ */
+    width: calc(100% - var(--sidebar-width)); 
 }
 
 section { padding: 80px 0; overflow: hidden; }
 .section-bg { background-color: var(--bg-alt); }
-.container { 
-    max-width: 1100px; 
-    margin: 0 auto; 
-    padding: 0 40px; 
-    width: 100%; 
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 40px; width: 100%; }
 
 .section-title { padding-bottom: 40px; }
 .section-title h2 { font-size: 32px; font-weight: bold; margin-bottom: 20px; padding-bottom: 15px; position: relative; color: #fff; }
@@ -214,7 +225,7 @@ section { padding: 80px 0; overflow: hidden; }
 .github-contribution { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; scrollbar-width: none; }
 .github-contribution::-webkit-scrollbar { display: none; }
 .github-contribution h4 { font-size: 16px; margin-bottom: 20px; }
-.github-contribution img { max-width: 100%; min-width: 700px; /* ป้องกันภาพหดจนดูไม่ได้ */ filter: invert(0.85) hue-rotate(180deg) brightness(1.2); }
+.github-contribution img { max-width: 100%; min-width: 700px; filter: invert(0.85) hue-rotate(180deg) brightness(1.2); }
 
 /* Portfolio / Projects */
 .portfolio-item { background: var(--card-bg); border-radius: 12px; padding: 35px; margin-bottom: 30px; border: 1px solid var(--border-color); transition: 0.3s; }
@@ -251,7 +262,18 @@ section { padding: 80px 0; overflow: hidden; }
 .pb-0 { padding-bottom: 0 !important; }
 
 /* =========================================
-   MOBILE RESPONSIVENESS (Optimized for Zoom & Small Screens)
+   CONTACT SECTION
+   ========================================= */
+.contact-info { display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; margin-top: 30px; }
+.contact-card { flex: 1; min-width: 250px; background: var(--card-bg); padding: 35px 20px; border-radius: 12px; text-align: center; border: 1px solid var(--border-color); transition: 0.3s; }
+.contact-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.contact-card i { font-size: 36px; color: var(--accent); margin-bottom: 20px; background: rgba(20, 157, 221, 0.1); width: 80px; height: 80px; line-height: 80px; border-radius: 50%; display: inline-block; }
+.contact-card h3 { font-size: 20px; margin-bottom: 10px; color: #fff; }
+.contact-card p, .contact-card a { font-size: 15px; color: var(--text-muted); transition: 0.3s; }
+.contact-card a:hover { color: var(--accent); }
+
+/* =========================================
+   MOBILE RESPONSIVENESS 
    ========================================= */
 .mobile-nav-toggle {
     position: fixed;
@@ -276,29 +298,18 @@ section { padding: 80px 0; overflow: hidden; }
 }
 .d-xl-none { display: none; }
 
-/* Breakpoint 1199px (Tablet, Small Laptops, or Zoomed in screens) */
 @media (max-width: 1199px) {
     .d-xl-none { display: inline-flex; }
-    
-    /* ซ่อน Sidebar ออกไปด้านซ้าย */
     #header { left: -var(--sidebar-width); }
+    #main, #hero { margin-left: 0; width: 100vw; }
     
-    /* Main Content และ Hero ขยายเต็มจอ */
-    #main, #hero { 
-        margin-left: 0; 
-        width: 100vw; 
-    }
-    
-    /* ปรับแต่ง Hero */
     #hero { align-items: center; text-align: center; }
     .hero-container { padding: 0 30px; display: flex; flex-direction: column; align-items: center; }
     
-    /* เมื่อเมนูถูกเปิด (Mobile/Tablet Mode) */
     .mobile-nav-active #header { left: 0; }
-    .mobile-nav-active body { overflow: hidden; } /* ล็อคหน้าจอไม่ให้เลื่อนเวลาเปิดเมนู */
+    .mobile-nav-active body { overflow: hidden; }
 }
 
-/* Breakpoint 768px (Mobile) */
 @media (max-width: 768px) {
     #hero h1 { font-size: 42px; line-height: 50px; }
     #hero p { font-size: 20px; line-height: 28px; }

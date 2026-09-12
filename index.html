@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thananop Kullapan - Data Scientist</title>
     
-    <!-- นำเข้า Icon จาก Boxicons -->
+    <!-- Primary Meta Tags -->
+    <title>Thananop Kullapan - Data Scientist & Analyst</title>
+    <meta name="title" content="Thananop Kullapan - Data Scientist & Analyst">
+    <meta name="description" content="Portfolio of Thananop Kullapan, a Data Scientist blending Machine Learning and Operations Research to solve business problems.">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://SKY-TKP.github.io/">
+    <meta property="og:title" content="Thananop Kullapan - Data Portfolio">
+    <meta property="og:description" content="Proven track record in Python, SQL, Machine Learning, and driving 30% cost reduction through optimization.">
+    <meta property="og:image" content="https://SKY-TKP.github.io/background.jpg">
+
+    <!-- นำเข้า Icon จาก Boxicons และระบบ AOS Animation -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=14">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 
@@ -44,6 +56,7 @@
                     <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
                     <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
                     <li><a href="#education" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Education</span></a></li>
+                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
                 </ul>
             </nav>
             
@@ -58,10 +71,16 @@
     <!-- ==============================================
          HERO SECTION (RIGHT SIDE - FULL SCREEN)
          ============================================== -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container">
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-start">
+        <div class="hero-container" data-aos="fade-in">
             <h1>Thananop Kullapan</h1>
             <p>I'm <span id="typewriter" class="typed"></span><span class="typed-cursor">|</span></p>
+            
+            <!-- CTA Buttons -->
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="#portfolio" class="btn-hero-primary scrollto"><i class="bx bx-briefcase"></i> View Projects</a>
+                <a href="#contact" class="btn-hero-outline scrollto"><i class="bx bx-envelope"></i> Contact Me</a>
+            </div>
         </div>
     </section>
 
@@ -73,23 +92,23 @@
         <!-- ABOUT SECTION -->
         <section id="about" class="about section-bg">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>About Me</h2>
                     <p>Highly analytical Industrial Engineering graduate with 1st Class Honors from Chulalongkorn University, transitioning into Data Science and Analytics. Proven track record in bridging mathematical optimization (MILP, CP) and machine learning with practical business problem-solving. Delivered measurable impact including a 30% cost reduction at TOYOTA, 97% data reconciliation accuracy at AIA, and robust automated data pipelines.</p>
                 </div>
 
                 <div class="row about-stats">
-                    <div class="stat-box">
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
                         <i class="bx bx-award"></i>
                         <h3>3.81</h3>
                         <p>GPAX (1st Class)</p>
                     </div>
-                    <div class="stat-box">
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
                         <i class="bx bx-line-chart-down"></i>
                         <h3>30%</h3>
                         <p>Max Cost Reduction</p>
                     </div>
-                    <div class="stat-box">
+                    <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
                         <i class="bx bx-check-shield"></i>
                         <h3>97%</h3>
                         <p>Data Accuracy</p>
@@ -101,21 +120,39 @@
         <!-- TECH STACK SECTION -->
         <section id="skills" class="skills">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Tech Stack & Capabilities</h2>
                 </div>
 
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3><i class="bx bx-code-alt"></i> Proficient Tools & Languages</h3>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="bx bx-code-alt"></i> Proficient Tools</h3>
                         <div class="tag-cloud">
                             <span>Python</span><span>SQL (CTE, Window Func)</span><span>R</span>
                             <span>Excel VBA / Power Query</span><span>Power BI</span><span>Tableau</span>
-                            <span>LightGBM & scikit-learn</span><span>Mathematical Optimization</span>
-                            <span>Time Series (SARIMAX)</span><span>Git</span>
+                            <span>LightGBM & scikit-learn</span><span>Pyomo</span><span>Git</span>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3><i class="bx bx-buildings"></i> Domain Expertise</h3>
+                        <div class="tag-cloud">
+                            <span>Supply Chain Optimization</span><span>Retail Demand Forecasting</span>
+                            <span>Financial Risk Analytics</span><span>Logistics Management</span>
+                            <span>Time Series Analysis (SARIMAX)</span><span>Mathematical Optimization</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3><i class="bx bx-user-voice"></i> Soft Skills</h3>
+                        <div class="tag-cloud">
+                            <span>Cross-functional Collaboration</span><span>Business Requirement Analysis (BRD)</span>
+                            <span>Data Storytelling</span><span>Stakeholder Management</span>
+                            <span>Problem Solving</span><span>Process Automation</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
                         <h3><i class="bx bx-cloud"></i> Currently Exploring</h3>
                         <div class="tag-cloud exploring">
                             <span>Data Engineering</span><span>Big Data</span>
@@ -125,7 +162,7 @@
                 </div>
 
                 <!-- GitHub Chart -->
-                <div class="github-contribution mt-4">
+                <div class="github-contribution mt-4" data-aos="fade-up" data-aos-delay="500">
                     <h4>Open Source Contribution Matrix</h4>
                     <img src="https://ghchart.rshah.org/149ddd/SKY-TKP" alt="GitHub Contributions">
                 </div>
@@ -135,12 +172,12 @@
         <!-- PROJECTS PORTFOLIO SECTION -->
         <section id="portfolio" class="portfolio section-bg">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Selected Projects</h2>
                 </div>
 
                 <!-- PROJECT 1: AIA -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-info">
                         <h3>Financial Data Automation & eTR Streamlining <span>May - Aug 2026</span></h3>
                         <p class="subtitle">Contract Project &bull; AIA Investment Management (Thailand)</p>
@@ -153,7 +190,7 @@
                 </div>
 
                 <!-- PROJECT 2: TOYOTA -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="portfolio-info">
                         <h3>Logistics & Returnable Packaging Optimization <span>Jun - Nov 2025</span></h3>
                         <p class="subtitle">Cooperative Education &bull; TOYOTA MOTOR ASIA</p>
@@ -171,7 +208,7 @@
                 </div>
 
                 <!-- PROJECT 3: WALMART -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-info">
                         <h3>Walmart M5 Forecasting Analytics <span>May 2026</span></h3>
                         <p class="subtitle">Personal Project &bull; Retail Demand Forecasting</p>
@@ -189,12 +226,12 @@
 
                 <!-- 2 Column Grid for smaller projects -->
                 <div class="portfolio-grid">
-                    <div class="portfolio-item-small">
+                    <div class="portfolio-item-small" data-aos="fade-up" data-aos-delay="100">
                         <h4>Optimal Microgrid Sizing</h4>
                         <p>Stochastic MILP model in Python/Pyomo to optimize Solar PV/ESS capacities. Simulated 28.7% cost reduction (12.01M THB/year).</p>
                         <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb" target="_blank">Notebook</a>
                     </div>
-                    <div class="portfolio-item-small">
+                    <div class="portfolio-item-small" data-aos="fade-up" data-aos-delay="200">
                         <h4>Sentiment Analysis (NLP)</h4>
                         <p>Built an end-to-end NLP classification pipeline using 50,000 movie reviews. Preprocessed with NLTK and vectorized via TF-IDF.</p>
                         <a href="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb" target="_blank">Notebook</a>
@@ -206,13 +243,13 @@
         <!-- EXPERIENCE SECTION -->
         <section id="resume" class="resume">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Experience</h2>
                 </div>
 
                 <div class="resume-timeline">
                     
-                    <div class="resume-item">
+                    <div class="resume-item" data-aos="fade-up" data-aos-delay="100">
                         <h4>Data Analyst (Contract)</h4>
                         <h5>May 2026 - Aug 2026</h5>
                         <p><em>AIA Investment Management (Thailand) Limited</em></p>
@@ -230,7 +267,7 @@
                         </ul>
                     </div>
                     
-                    <div class="resume-item">
+                    <div class="resume-item" data-aos="fade-up" data-aos-delay="200">
                         <h4>Logistics Support (Cooperative Education)</h4>
                         <h5>Jun 2025 - Nov 2025</h5>
                         <p><em>TOYOTA MOTOR ASIA (THAILAND)</em></p>
@@ -240,7 +277,7 @@
                         </ul>
                     </div>
 
-                    <div class="resume-item">
+                    <div class="resume-item" data-aos="fade-up" data-aos-delay="300">
                         <h4>Data Scientist Intern</h4>
                         <h5>Dec 2025 - Feb 2026</h5>
                         <p><em>BOTNOI Company Limited</em></p>
@@ -256,12 +293,12 @@
         <!-- EDUCATION SECTION -->
         <section id="education" class="resume section-bg">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Education & Activities</h2>
                 </div>
 
                 <div class="resume-timeline">
-                    <div class="resume-item">
+                    <div class="resume-item" data-aos="fade-up" data-aos-delay="100">
                         <h4>Bachelor of Engineering in Industrial Engineering</h4>
                         <h5>2022 - 2026</h5>
                         <p><em>Chulalongkorn University</em></p>
@@ -269,14 +306,14 @@
                         Coursework: Operations Research, Statistical Inference, AI for Engineers.</p>
                     </div>
                     
-                    <div class="resume-item">
+                    <div class="resume-item" data-aos="fade-up" data-aos-delay="200">
                         <h4>Chief Technology Officer</h4>
                         <h5>Mar 2026 - May 2026</h5>
                         <p><em>Nanoki Capstone Company (15 team members)</em></p>
                         <p>Led Innovation, Data Analytics, and IT Infrastructure teams. Overseen System Architecture, BI Dashboards, and Data Validation to achieve ~95% adoption rate.</p>
                     </div>
 
-                    <div class="resume-item pb-0">
+                    <div class="resume-item pb-0" data-aos="fade-up" data-aos-delay="300">
                         <h4>Awards & Recognitions</h4>
                         <ul>
                             <li><strong>Independent Movie Reviewer of the Year (2024):</strong> Thai Film Association.</li>
@@ -287,12 +324,52 @@
             </div>
         </section>
 
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Contact Me</h2>
+                    <p>I am actively seeking new opportunities in Data Analytics, Data Science, and Business Analysis. If you have an exciting project or role, feel free to reach out!</p>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:thananop.klp@gmail.com">thananop.klp@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:0887683950">088-768-3950</a></p>
+                    </div>
+                    
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bxl-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://linkedin.com/in/thananop-kullapan" target="_blank">Connect with me</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Script ควบคุมระบบ Typewriter และ ScrollSpy -->
+    <!-- Script ควบคุมระบบ Typewriter, ScrollSpy และ AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 1. Mobile Menu Toggle
+            // Initialize AOS Animation
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false,
+                offset: 50
+            });
+
+            // Mobile Menu Toggle
             const mobileToggle = document.getElementById('mobile-nav-toggle');
             const body = document.querySelector('body');
             
@@ -302,7 +379,7 @@
                 this.classList.toggle('bx-x');
             });
 
-            // 2. Typewriter Effect
+            // Typewriter Effect
             const words = ["Data Scientist", "Data Analyst", "Business Analyst", "Problem Solver"];
             let i = 0;
             let timer;
@@ -339,7 +416,7 @@
             }
             typeWriter();
 
-            // 3. Scroll Spy (Highlight menu on scroll)
+            // Scroll Spy (Highlight menu on scroll)
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 
@@ -361,7 +438,7 @@
                 });
             });
 
-            // 4. Close mobile menu on link click
+            // Close mobile menu on link click
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     if (body.classList.contains('mobile-nav-active')) {

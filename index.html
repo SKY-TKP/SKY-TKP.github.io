@@ -3,376 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thananop Kullapan - Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=12">
+    <title>Thananop Kullapan - Data Scientist</title>
+    
+    <!-- นำเข้า Icon จาก Boxicons เพื่อให้เหมือนในภาพตัวอย่าง -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 
-    <!-- สัญลักษณ์ปุ่มเปิด/ปิด Sidebar บนมือถือ -->
-    <div class="mobile-nav-toggle" id="mobile-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-    </div>
+    <!-- Mobile Navigation Toggle Button -->
+    <i class="bx bx-menu mobile-nav-toggle d-xl-none" id="mobile-nav-toggle"></i>
 
-    <!-- LEFT SIDEBAR -->
-    <aside id="sidebar" class="sidebar">
-        <div class="profile-section">
-            <img src="profile.png" alt="Thananop Kullapan" class="profile-pic">
-            <h1 class="profile-name">Thananop Kullapan</h1>
+    <!-- ==============================================
+         LEFT SIDEBAR (HEADER)
+         ============================================== -->
+    <header id="header">
+        <div class="d-flex flex-column">
             
-            <div class="availability-badge">
-                <span class="pulse-dot"></span> Open to Work
+            <div class="profile">
+                <img src="profile.png" alt="Thananop Kullapan" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="#hero">Thananop Kullapan</a></h1>
+                
+                <!-- Open to Work Badge -->
+                <div class="open-to-work">
+                    <span class="status-dot"></span> Open to Work
+                </div>
+
+                <div class="social-links mt-3 text-center">
+                    <a href="https://github.com/SKY-TKP" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+                    <a href="https://linkedin.com/in/thananop-kullapan" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://tkp39.wordpress.com/" target="_blank" class="blog"><i class="bx bx-world"></i></a>
+                </div>
             </div>
-            <div class="sidebar-socials">
-                <a href="https://github.com/SKY-TKP" target="_blank" title="GitHub">GH</a>
-                <a href="https://linkedin.com/in/thananop-kullapan" target="_blank" title="LinkedIn">IN</a>
-                <a href="https://tkp39.wordpress.com/" target="_blank" title="Blog">BL</a>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                    <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Tech Stack</span></a></li>
+                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
+                    <li><a href="#education" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Education</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="https://drive.google.com/file/d/19DB4BCYS7MgXvUIIOOG7CzUTSdguUIKy/view?usp=sharing" target="_blank" class="btn-sidebar">Resume</a>
+                <a href="https://drive.google.com/file/d/1P1sdmQiR6sK0nheJJZVZZA-sCzFoShZ4/view?usp=sharing" target="_blank" class="btn-sidebar btn-outline">Transcript</a>
             </div>
+
         </div>
+    </header>
 
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#hero" class="nav-link scrollto active" id="nav-hero"><span class="nav-icon">⌂</span> Home</a></li>
-                <li><a href="#about-section" class="nav-link scrollto" id="nav-about"><span class="nav-icon">👤</span> About</a></li>
-                <li><a href="#tech-stack-section" class="nav-link scrollto" id="nav-tech-stack"><span class="nav-icon">⚙️</span> Tech Stack</a></li>
-                <li><a href="#projects-section" class="nav-link scrollto" id="nav-projects"><span class="nav-icon">📁</span> Projects</a></li>
-                <li><a href="#experience-section" class="nav-link scrollto" id="nav-experience"><span class="nav-icon">💼</span> Experience</a></li>
-                <li><a href="#education-section" class="nav-link scrollto" id="nav-education"><span class="nav-icon">🎓</span> Education</a></li>
-            </ul>
-        </nav>
-
-        <div class="sidebar-footer">
-            <a href="https://drive.google.com/file/d/19DB4BCYS7MgXvUIIOOG7CzUTSdguUIKy/view?usp=sharing" target="_blank" class="btn-primary">Resume</a>
-            <a href="https://drive.google.com/file/d/1P1sdmQiR6sK0nheJJZVZZA-sCzFoShZ4/view?usp=sharing" target="_blank" class="btn-outline">Transcript</a>
+    <!-- ==============================================
+         HERO SECTION (RIGHT SIDE - FULL SCREEN)
+         ============================================== -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-container">
+            <h1>Thananop Kullapan</h1>
+            <p>I'm <span id="typewriter" class="typed"></span><span class="typed-cursor">|</span></p>
         </div>
-    </aside>
+    </section>
 
-    <!-- MAIN CONTENT -->
-    <main id="main-content" class="main-content">
-        
-        <!-- HERO SECTION (Full Screen) -->
-        <section id="hero" class="hero-section target-section">
-            <div class="hero-container">
-                <h1>Thananop Kullapan</h1>
-                <p>I'm <span id="hero-typewriter" class="typed-text"></span><span class="cursor">|</span></p>
-                <a href="#about-section" class="scroll-down-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
-                </a>
+    <!-- ==============================================
+         MAIN CONTENT AREA
+         ============================================== -->
+    <main id="main">
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                    <p>Highly analytical Industrial Engineering graduate with 1st Class Honors from Chulalongkorn University, transitioning into Data Science and Analytics. Proven track record in bridging mathematical optimization (MILP, CP) and machine learning with practical business problem-solving. Delivered measurable impact including a 30% cost reduction at TOYOTA, 97% data reconciliation accuracy at AIA, and robust automated data pipelines.</p>
+                </div>
+
+                <div class="row about-stats">
+                    <div class="stat-box">
+                        <i class="bx bx-award"></i>
+                        <h3>3.81</h3>
+                        <p>GPAX (1st Class)</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="bx bx-line-chart-down"></i>
+                        <h3>30%</h3>
+                        <p>Max Cost Reduction</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="bx bx-check-shield"></i>
+                        <h3>97%</h3>
+                        <p>Data Accuracy</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- CONTENT WRAPPER -->
-        <div class="content-wrapper">
-            
-            <section id="about-section" class="content-section target-section">
-                <h3 class="section-title">About Me</h3>
-                <p class="summary">
-                    Highly analytical Industrial Engineering graduate with 1st Class Honors from Chulalongkorn University, transitioning into Data Science and Analytics. Proven track record in bridging mathematical optimization (MILP, CP) and machine learning with practical business problem-solving. Delivered measurable impact including a 30% cost reduction at TOYOTA, 97% data reconciliation accuracy at AIA, and robust automated data pipelines.
-                </p>
-
-                <div class="dashboard-widgets-grid" style="margin-top: 30px;">
-                    <div class="widget-box">
-                        <h4 class="widget-title">Quick Stats</h4>
-                        <div class="stats-mini-grid">
-                            <div class="stat-box-mini">
-                                <p class="stat-num">3.81</p>
-                                <p class="stat-lbl">GPAX (1st Class)</p>
-                            </div>
-                            <div class="stat-box-mini">
-                                <p class="stat-num">30%</p>
-                                <p class="stat-lbl">Max Cost Cut</p>
-                            </div>
-                            <div class="stat-box-mini">
-                                <p class="stat-num">97%</p>
-                                <p class="stat-lbl">Data Accuracy</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="widget-box">
-                        <h4 class="widget-title">Interested Areas</h4>
-                        <div class="meta-tags">
-                            <span class="tag-interest">Data Analytics</span>
-                            <span class="tag-interest">Data Science</span>
-                            <span class="tag-interest">Optimization</span>
-                            <span class="tag-interest">Time Series</span>
-                            <span class="tag-interest">Data Engineering</span>
-                        </div>
-                    </div>
+        <!-- TECH STACK SECTION -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Tech Stack & Capabilities</h2>
                 </div>
-            </section>
 
-            <section id="tech-stack-section" class="content-section target-section">
-                <h3 class="section-title">Tech Stack & Capabilities</h3>
-                <div class="stack-grid">
-                    <div class="stack-box">
-                        <div class="stack-header">
-                            <span class="status-indicator proficient"></span>
-                            <h4>Proficient Tools & Languages</h4>
-                        </div>
-                        <div class="stack-tags">
-                            <span class="stack-tag">Python</span>
-                            <span class="stack-tag">SQL (CTE, Window Func)</span>
-                            <span class="stack-tag">R</span>
-                            <span class="stack-tag">Excel VBA / Power Query</span>
-                            <span class="stack-tag">Power BI</span>
-                            <span class="stack-tag">Tableau / Data Studio</span>
-                            <span class="stack-tag">LightGBM & scikit-learn</span>
-                            <span class="stack-tag">Mathematical Optimization</span>
-                            <span class="stack-tag">Time Series (SARIMAX)</span>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="bx bx-code-alt"></i> Proficient Tools & Languages</h3>
+                        <div class="tag-cloud">
+                            <span>Python</span><span>SQL (CTE, Window Func)</span><span>R</span>
+                            <span>Excel VBA / Power Query</span><span>Power BI</span><span>Tableau</span>
+                            <span>LightGBM & scikit-learn</span><span>Mathematical Optimization</span>
+                            <span>Time Series (SARIMAX)</span><span>Git</span>
                         </div>
                     </div>
-                    <div class="stack-box learning-box">
-                        <div class="stack-header">
-                            <span class="status-indicator learning"></span>
-                            <h4>Currently Exploring (Data Engineering)</h4>
-                        </div>
-                        <div class="stack-tags">
-                            <span class="stack-tag exploring">Big Data</span>
-                            <span class="stack-tag exploring">Cloud Data Lake</span>
-                            <span class="stack-tag exploring">Databricks</span>
-                            <span class="stack-tag exploring">Spark</span>
+                    <div class="skill-category">
+                        <h3><i class="bx bx-cloud"></i> Currently Exploring</h3>
+                        <div class="tag-cloud exploring">
+                            <span>Data Engineering</span><span>Big Data</span>
+                            <span>Cloud Data Lake</span><span>Databricks</span><span>Spark</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="github-chart-container">
-                    <h4 class="widget-title" style="margin-bottom: 12px; font-size: 0.95rem; border: none;">Open Source Contribution Matrix</h4>
-                    <div class="gh-graph-wrapper">
-                        <img src="https://ghchart.rshah.org/0ea5e9/SKY-TKP" alt="GitHub Contributions" class="github-chart-img">
+                <!-- GitHub Chart -->
+                <div class="github-contribution mt-4">
+                    <h4>Open Source Contribution Matrix</h4>
+                    <img src="https://ghchart.rshah.org/149ddd/SKY-TKP" alt="GitHub Contributions">
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS PORTFOLIO SECTION -->
+        <section id="portfolio" class="portfolio section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Selected Projects</h2>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-info">
+                        <h3>Walmart M5 Forecasting Analytics <span>May 2026</span></h3>
+                        <p class="subtitle">Personal Project &bull; Retail Demand Forecasting</p>
+                        <p class="desc">Processed 60M+ transactional records and 30,490 hierarchical time series to build an advanced LightGBM 28-day demand forecasting pipeline.</p>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> Reduced memory usage by 78.5% through optimized data type casting.</li>
+                            <li><i class="bx bx-chevron-right"></i> Developed robust sliding-window validation metrics achieving reliable out-of-fold RMSE performance.</li>
+                        </ul>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/SKY-TKP/PROJECT/tree/main/python/m5%20forecast%20acc" target="_blank"><i class="bx bxl-github"></i> Repo</a>
+                            <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/m5%20forecast%20acc/M5%20Analytics%20Report%20-%20Part%201.pdf" target="_blank"><i class="bx bxs-file-pdf"></i> Report</a>
+                        </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="projects-section" class="content-section target-section">
-                <h3 class="section-title">Selected Projects Portfolio</h3>
-                
-                <div class="card project-card">
-                    <div class="card-header">
-                        <div class="card-title-group">
-                            <h4 class="card-title">Walmart M5 Forecasting Analytics</h4>
-                            <span class="card-subtitle">Personal Project &bull; Retail Demand Forecasting</span>
+                <div class="portfolio-item">
+                    <div class="portfolio-info">
+                        <h3>Logistics & Returnable Packaging Optimization <span>Jun - Nov 2025</span></h3>
+                        <p class="subtitle">Cooperative Education &bull; TOYOTA MOTOR ASIA</p>
+                        <p class="desc">Engineered mathematical optimization and SARIMAX time-series models to eliminate inventory excesses and streamline logistics networks.</p>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> Achieved a <strong>30% cost reduction</strong> (~THB 3M/year saved on warehouse storage and logistics).</li>
+                            <li><i class="bx bx-chevron-right"></i> Improved forecasting accuracy by <strong>34.6%</strong>, reducing RMSE from 447,315 to 292,544.</li>
+                            <li><i class="bx bx-chevron-right"></i> Automated manual reporting workflows reducing workload from 30 hrs/month to 1.8 hrs/month (94% drop).</li>
+                        </ul>
+                        <div class="portfolio-links">
+                            <a href="https://drive.google.com/file/d/1XWBnACBB75bHEkfc3Mr4rwlAe-ccgJNm/view?usp=sharing" target="_blank"><i class="bx bx-slideshow"></i> Slide</a>
+                            <a href="https://drive.google.com/file/d/1xxgIgDuLlNwpGlJQVq6u9aFEXdnlJRfW/view?usp=sharing" target="_blank"><i class="bx bx-video"></i> Video</a>
                         </div>
-                        <div class="card-date">May 2026</div>
                     </div>
-                    <p class="project-brief">Processed 60M+ transactional records and 30,490 hierarchical time series to build an advanced LightGBM 28-day demand forecasting pipeline.</p>
+                </div>
+
+                <!-- 2 Column Grid for smaller projects -->
+                <div class="portfolio-grid">
+                    <div class="portfolio-item-small">
+                        <h4>Optimal Microgrid Sizing</h4>
+                        <p>Stochastic MILP model in Python/Pyomo to optimize Solar PV/ESS capacities. Simulated 28.7% cost reduction (12.01M THB/year).</p>
+                        <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb" target="_blank">Notebook</a>
+                    </div>
+                    <div class="portfolio-item-small">
+                        <h4>Sentiment Analysis (NLP)</h4>
+                        <p>Built an end-to-end NLP classification pipeline using 50,000 movie reviews. Preprocessed with NLTK and vectorized via TF-IDF.</p>
+                        <a href="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb" target="_blank">Notebook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Experience</h2>
+                </div>
+
+                <div class="resume-timeline">
+                    <div class="resume-item">
+                        <h4>Data Analyst (Contract)</h4>
+                        <h5>May 2026 - Aug 2026</h5>
+                        <p><em>AIA Investment Management (Thailand) Limited</em></p>
+                        <ul>
+                            <li><strong>Upload 6 Banks Automation:</strong> Automated barcode decoding and transaction reconciliation using Excel, Power Automate, and MS Access. Increased data accuracy from ~60% to <strong>97%</strong> and reduced daily processing time from 2–3 hours to <strong>~15 minutes</strong>.</li>
+                            <li><strong>eTR Process Streamlining:</strong> Streamlined processing time from 7 days to 4 days (-43%), reducing staff document workload by 23% and paper usage by 34%.</li>
+                            <li><strong>BI & SQL Reporting:</strong> Built Power BI dashboards, utilizing SQL queries (JOINs, CTEs, Window Functions) to extract and validate 50k+ transactions.</li>
+                        </ul>
+                    </div>
                     
-                    <div class="pipeline-diagram">
-                        <div class="diagram-step">60M+ Transactions</div>
-                        <div class="diagram-line"></div>
-                        <div class="diagram-step">Feature Engineering (42 Features)</div>
-                        <div class="diagram-line"></div>
-                        <div class="diagram-step">LightGBM Modeling</div>
-                        <div class="diagram-line"></div>
-                        <div class="diagram-step">28-Day Forecast (RMSE ~0.59)</div>
+                    <div class="resume-item">
+                        <h4>Logistics Support (Cooperative Education)</h4>
+                        <h5>Jun 2025 - Nov 2025</h5>
+                        <p><em>TOYOTA MOTOR ASIA (THAILAND)</em></p>
+                        <ul>
+                            <li>Spearheaded supply-chain optimization initiatives combining Python, SARIMAX, and Linear Programming, achieving a <strong>30% cost reduction</strong> (~THB 3M saved).</li>
+                            <li>Enhanced route planning and automated logistics workflows, cutting total transit time/cost by 17% and manual effort by 94%.</li>
+                        </ul>
                     </div>
 
-                    <div class="clean-list">
-                        <p> Reduced memory usage by 78.5% through optimized data type casting.</p>
-                        <p> Developed robust sliding-window validation metrics achieving reliable out-of-fold RMSE performance.</p>
-                    </div>
-                    <div class="card-actions">
-                        <a href="https://github.com/SKY-TKP/PROJECT/tree/main/python/m5%20forecast%20acc" target="_blank" class="action-pill">GitHub Repo</a>
-                        <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/m5%20forecast%20acc/M5%20Analytics%20Report%20-%20Part%201.pdf" target="_blank" class="action-pill">Analytics Report</a>
+                    <div class="resume-item">
+                        <h4>Data Scientist Intern</h4>
+                        <h5>Dec 2025 - Feb 2026</h5>
+                        <p><em>BOTNOI Company Limited</em></p>
+                        <ul>
+                            <li>Developed an SVM customer classification model achieving <strong>72.9% accuracy</strong>.</li>
+                            <li>Extracted data via SQL and delivered interactive Power BI dashboards translating customer analytics into actionable business insights.</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="card project-card">
-                    <div class="card-header">
-                        <div class="card-title-group">
-                            <h4 class="card-title">Logistics & Returnable Packaging Optimization</h4>
-                            <span class="card-subtitle">Cooperative Education &bull; TOYOTA MOTOR ASIA</span>
-                        </div>
-                        <div class="card-date">Jun 2025 - Nov 2025</div>
-                    </div>
-                    <p class="project-brief">Engineered mathematical optimization and SARIMAX time-series models to eliminate inventory excesses and streamline logistics networks.</p>
-                    <div class="clean-list">
-                        <p> Achieved a <strong>30% cost reduction</strong> (~THB 3M/year saved on warehouse storage and logistics inefficiencies).</p>
-                        <p> Improved forecasting accuracy by <strong>34.6%</strong>, reducing RMSE from 447,315 to 292,544.</p>
-                        <p> Automated manual reporting workflows with Python, VBA, and Power Automate, reducing manual workload from 30 hrs/month to 1.8 hrs/month (94% drop).</p>
-                    </div>
-                    <div class="card-actions">
-                        <a href="https://drive.google.com/file/d/1XWBnACBB75bHEkfc3Mr4rwlAe-ccgJNm/view?usp=sharing" target="_blank" class="action-pill">Slide</a>
-                        <a href="https://drive.google.com/file/d/1xxgIgDuLlNwpGlJQVq6u9aFEXdnlJRfW/view?usp=sharing" target="_blank" class="action-pill">Video Presentation</a>
-                    </div>
-                </div>
-                
-                <!-- Microgrid & NLP Cards -->
-                <div class="dashboard-widgets-grid">
-                    <div class="card project-card" style="margin-bottom: 0;">
-                        <h4 class="card-title" style="font-size: 1rem;">Optimal Microgrid Sizing</h4>
-                        <span class="card-subtitle" style="margin-bottom: 15px;">Academic Project</span>
-                        <p class="project-brief" style="font-size: 0.85rem;">Stochastic MILP model in Python/Pyomo to optimize Solar PV/ESS capacities. Simulated 28.7% cost reduction (12.01M THB/year).</p>
-                        <div class="card-actions">
-                            <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb" target="_blank" class="action-pill">Notebook</a>
-                        </div>
-                    </div>
-                    <div class="card project-card" style="margin-bottom: 0;">
-                        <h4 class="card-title" style="font-size: 1rem;">Sentiment Analysis (NLP)</h4>
-                        <span class="card-subtitle" style="margin-bottom: 15px;">Personal Project</span>
-                        <p class="project-brief" style="font-size: 0.85rem;">Built an end-to-end NLP classification pipeline using 50,000 movie reviews. Preprocessed with NLTK and vectorized via TF-IDF.</p>
-                        <div class="card-actions">
-                            <a href="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb" target="_blank" class="action-pill">Notebook</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="experience-section" class="content-section target-section">
-                <h3 class="section-title">Experience</h3>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">May 2026 - Aug 2026</div>
-                    <h4 class="card-title">Data Analyst (Contract)</h4>
-                    <span class="card-subtitle">AIA Investment Management (Thailand) Limited</span>
-                    <div class="clean-list mt-3">
-                        <p><strong>Upload 6 Banks Automation:</strong> Automated barcode decoding and transaction reconciliation using Excel, Power Automate, and MS Access. Increased data accuracy from ~60% to <strong>97%</strong> and reduced daily processing time from 2–3 hours to <strong>~15 minutes</strong>.</p>
-                        <p><strong>eTR Process Streamlining:</strong> Streamlined processing time from 7 days to 4 days (-43%), reducing staff document workload by 23% and paper usage by 34%.</p>
-                        <p><strong>BI & SQL Reporting:</strong> Built Power BI dashboards, utilizing SQL queries (JOINs, CTEs, Window Functions) to extract and validate 50k+ transactions.</p>
-                    </div>
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="resume section-bg">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Education & Activities</h2>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Jun 2025 - Nov 2025</div>
-                    <h4 class="card-title">Logistics Support (Co-op)</h4>
-                    <span class="card-subtitle">TOYOTA MOTOR ASIA (THAILAND)</span>
-                    <div class="clean-list mt-3">
-                        <p>Spearheaded supply-chain optimization initiatives combining Python, SARIMAX, and Linear Programming, achieving a <strong>30% cost reduction</strong> (~THB 3M saved).</p>
-                        <p>Enhanced route planning and automated logistics workflows, cutting total transit time/cost by 17% and manual effort by 94%.</p>
+                <div class="resume-timeline">
+                    <div class="resume-item">
+                        <h4>Bachelor of Engineering in Industrial Engineering</h4>
+                        <h5>2022 - 2026</h5>
+                        <p><em>Chulalongkorn University</em></p>
+                        <p><strong>1st Class Honors &bull; GPAX 3.81</strong><br>
+                        Coursework: Operations Research, Statistical Inference, AI for Engineers.</p>
+                    </div>
+                    
+                    <div class="resume-item">
+                        <h4>Chief Technology Officer</h4>
+                        <h5>Mar 2026 - May 2026</h5>
+                        <p><em>Nanoki Capstone Company (15 team members)</em></p>
+                        <p>Led Innovation, Data Analytics, and IT Infrastructure teams. Overseen System Architecture, BI Dashboards, and Data Validation to achieve ~95% adoption rate.</p>
+                    </div>
+
+                    <div class="resume-item pb-0">
+                        <h4>Awards & Recognitions</h4>
+                        <ul>
+                            <li><strong>Independent Movie Reviewer of the Year (2024):</strong> Thai Film Association.</li>
+                            <li><strong>Batch Tutor (2023 - 2026):</strong> Conducted intensive review sessions for engineering cohort.</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Dec 2025 - Feb 2026</div>
-                    <h4 class="card-title">Data Scientist Intern</h4>
-                    <span class="card-subtitle">BOTNOI Company Limited</span>
-                    <div class="clean-list mt-3">
-                        <p>Developed an SVM customer classification model achieving <strong>72.9% accuracy</strong>.</p>
-                        <p>Extracted data via SQL and delivered interactive Power BI dashboards translating customer analytics into actionable business insights.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="education-section" class="content-section target-section">
-                <h3 class="section-title">Education & Activities</h3>
-                
-                <div class="card project-card">
-                    <div class="card-header">
-                        <div class="card-title-group">
-                            <h4 class="card-title">B.Eng. in Industrial Engineering</h4>
-                            <span class="card-subtitle">Chulalongkorn University</span>
-                        </div>
-                        <div class="card-date">2022 - 2026</div>
-                    </div>
-                    <p class="project-brief"><strong>1st Class Honors &bull; GPAX 3.81</strong></p>
-                    <p class="project-brief" style="font-size: 0.9rem;">Coursework: Operations Research, Statistical Inference, AI for Engineers.</p>
-                </div>
-
-                <div class="activities-grid">
-                    <a href="https://canva.link/gz5sqq86lmg9bsg" target="_blank" class="activity-card-link">
-                        <div class="activity-item clickable-activity">
-                            <h5>Chief Technology Officer</h5>
-                            <span class="activity-sub">Nanoki Capstone Company (15 team members)</span>
-                            <span class="activity-date">Mar 2026 - May 2026</span>
-                            <span class="activity-action-text">View Project</span>
-                        </div>
-                    </a>
-                    <div class="activity-item">
-                        <h5>Batch Tutor</h5>
-                        <span class="activity-sub">Industrial Engineering Department</span>
-                        <span class="activity-date">2023 - 2026</span>
-                    </div>
-                    <div class="activity-item">
-                        <h5>Movie Reviewer of the Year</h5>
-                        <span class="activity-sub">Thai Film Association</span>
-                        <span class="activity-date">2024</span>
-                    </div>
-                </div>
-            </section>
-
-            <footer>
-                <p>&copy; 2026 Thananop Kullapan. All rights reserved.</p>
-                <p class="update-tag" id="last-updated">Last Updated: Loading...</p>
-            </footer>
-
-        </div>
     </main>
 
+    <!-- Script ควบคุมระบบ Typewriter และ ScrollSpy -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Update Date
-            let lastMod = new Date(document.lastModified);
-            let options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('last-updated').textContent = "Last Updated: " + lastMod.toLocaleDateString('en-US', options);
-
-            // Mobile Nav Toggle
-            const toggleBtn = document.getElementById('mobile-toggle');
-            const sidebar = document.getElementById('sidebar');
-            toggleBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
+            // 1. Mobile Menu Toggle
+            const mobileToggle = document.getElementById('mobile-nav-toggle');
+            const body = document.querySelector('body');
+            
+            mobileToggle.addEventListener('click', function(e) {
+                body.classList.toggle('mobile-nav-active');
+                this.classList.toggle('bx-menu');
+                this.classList.toggle('bx-x');
             });
 
-            // Typewriter Effect (Hero Section)
-            const words = ["a Data Scientist.", "a Data Analyst.", "a Business Analyst.", "a Problem Solver.", "SKY."];
-            let wordIndex = 0;
-            let charIndex = 0;
+            // 2. Typewriter Effect
+            const words = ["Data Scientist", "Data Analyst", "Business Analyst", "Problem Solver"];
+            let i = 0;
+            let timer;
             let isDeleting = false;
-            const typedTextElement = document.getElementById("hero-typewriter");
+            let txt = '';
+            const speed = 80;
+            const delay = 2000;
+            const element = document.getElementById("typewriter");
 
-            function typeEffect() {
-                const currentWord = words[wordIndex];
+            function typeWriter() {
+                let fullTxt = words[i];
+
                 if (isDeleting) {
-                    typedTextElement.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
+                    txt = fullTxt.substring(0, txt.length - 1);
                 } else {
-                    typedTextElement.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
+                    txt = fullTxt.substring(0, txt.length + 1);
                 }
 
-                let typingSpeed = isDeleting ? 50 : 100;
+                element.innerHTML = txt;
 
-                if (!isDeleting && charIndex === currentWord.length) {
-                    typingSpeed = 2000; // Pause at the end of word
+                let typeSpeed = speed;
+                if (isDeleting) { typeSpeed /= 2; }
+
+                if (!isDeleting && txt === fullTxt) {
+                    typeSpeed = delay;
                     isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
+                } else if (isDeleting && txt === '') {
                     isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    typingSpeed = 500; // Pause before typing new word
+                    i++;
+                    if (i >= words.length) i = 0;
+                    typeSpeed = 500;
                 }
-
-                setTimeout(typeEffect, typingSpeed);
+                setTimeout(typeWriter, typeSpeed);
             }
-            setTimeout(typeEffect, 1000);
+            typeWriter();
 
-            // Active Scroll Spy
-            const sections = document.querySelectorAll('.target-section');
-            const navLinks = document.querySelectorAll('.nav-link.scrollto');
+            // 3. Scroll Spy (Highlight menu on scroll)
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '-30% 0px -70% 0px',
-                threshold: 0
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => link.classList.remove('active'));
-                        const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-                        if (activeLink) {
-                            activeLink.classList.add('active');
-                        }
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
                     }
                 });
-            }, observerOptions);
 
-            sections.forEach(sec => observer.observe(sec));
-            
-            // Close sidebar on mobile after clicking link
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // 4. Close mobile menu on link click
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    if (window.innerWidth <= 991) {
-                        sidebar.classList.remove('active');
+                    if (body.classList.contains('mobile-nav-active')) {
+                        body.classList.remove('mobile-nav-active');
+                        mobileToggle.classList.add('bx-menu');
+                        mobileToggle.classList.remove('bx-x');
                     }
                 });
             });

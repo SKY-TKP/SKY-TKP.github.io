@@ -212,14 +212,53 @@ section { padding: 80px 0; overflow: hidden; }
 .stat-box h3 { font-size: 32px; margin-bottom: 5px; }
 .stat-box p { font-size: 13px; color: var(--text-muted); margin: 0; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
 
-/* Skills & Tags */
+/* =========================================
+   TECH STACK & CAPABILITIES (UPGRADED UI)
+   ========================================= */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-.skill-category { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); }
+.skill-category { 
+    background: linear-gradient(145deg, #0a1626, #060e18);
+    padding: 30px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(255,255,255,0.03); 
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3), -2px -2px 10px rgba(255,255,255,0.01);
+    transition: all 0.3s ease;
+}
+.skill-category:hover {
+    border-color: rgba(20, 157, 221, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
 .skill-category h3 { font-size: 18px; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; }
 .skill-category h3 i { color: var(--accent); font-size: 26px; }
+
 .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
-.tag-cloud span { background: var(--bg-main); color: var(--text-muted); padding: 8px 16px; border-radius: 6px; font-size: 14px; border: 1px solid var(--border-color); font-weight: 500; }
-.tag-cloud.exploring span { border-style: dashed; opacity: 0.8; }
+.tag-cloud span { 
+    background: rgba(20, 157, 221, 0.08); 
+    color: #e2e8f0; 
+    padding: 8px 16px; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    border: 1px solid rgba(20, 157, 221, 0.2); 
+    font-weight: 500; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tag-cloud span:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(20, 157, 221, 0.3);
+    border-color: var(--accent);
+}
+.tag-cloud.exploring span { 
+    background: transparent;
+    border: 1px dashed rgba(255,255,255,0.15);
+    color: #94a3b8; 
+}
+.tag-cloud.exploring span:hover {
+    border-color: var(--accent);
+    color: #fff;
+}
 
 /* GitHub Chart */
 .github-contribution { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; scrollbar-width: none; }
@@ -227,19 +266,65 @@ section { padding: 80px 0; overflow: hidden; }
 .github-contribution h4 { font-size: 16px; margin-bottom: 20px; }
 .github-contribution img { max-width: 100%; min-width: 700px; filter: invert(0.85) hue-rotate(180deg) brightness(1.2); }
 
-/* Portfolio / Projects */
+/* =========================================
+   PORTFOLIO / PROJECTS
+   ========================================= */
 .portfolio-item { background: var(--card-bg); border-radius: 12px; padding: 35px; margin-bottom: 30px; border: 1px solid var(--border-color); transition: 0.3s; }
 .portfolio-item:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
 .portfolio-info h3 { font-size: 22px; display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }
 .portfolio-info h3 span { font-size: 12px; background: rgba(20, 157, 221, 0.1); padding: 5px 12px; border-radius: 20px; color: var(--accent); border: 1px solid var(--accent); font-weight: 600; white-space: nowrap; }
 .portfolio-info .subtitle { color: var(--accent); font-size: 14px; font-weight: 600; margin-bottom: 20px; }
 .portfolio-info .desc { color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; }
+
+/* Custom Layout for Project Details (Fixes Layout Issues) */
+.project-feature {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 2px solid rgba(20, 157, 221, 0.4);
+}
+.project-feature h4 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+.project-feature h4 i {
+    color: var(--accent);
+    margin-right: 8px;
+    font-size: 20px;
+}
+.project-feature p {
+    color: var(--text-muted);
+    font-size: 14.5px;
+    padding-left: 28px;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* Original ul list style fallback */
 .portfolio-info ul { list-style: none; padding: 0; margin-bottom: 25px; }
 .portfolio-info ul li { margin-bottom: 12px; color: var(--text-muted); display: flex; align-items: flex-start; }
 .portfolio-info ul li i { color: var(--accent); margin-right: 8px; font-size: 20px; margin-top: 3px; }
-.portfolio-links { display: flex; gap: 15px; flex-wrap: wrap; }
+
+/* Portfolio Links */
+.portfolio-links { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px;}
 .portfolio-links a { background: var(--bg-main); border: 1px solid var(--border-color); color: #fff; padding: 8px 18px; border-radius: 6px; font-size: 14px; display: flex; align-items: center; gap: 8px; font-weight: 500; transition: 0.3s; }
 .portfolio-links a:hover { background: var(--accent); border-color: var(--accent); }
+
+/* Primary Highlight Link (Live App) */
+.portfolio-links .btn-live-app {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 4px 15px rgba(20, 157, 221, 0.2);
+}
+.portfolio-links .btn-live-app:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(20, 157, 221, 0.4);
+}
 
 /* Small Grid Projects */
 .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
@@ -250,7 +335,9 @@ section { padding: 80px 0; overflow: hidden; }
 .portfolio-item-small a { font-size: 14px; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 5px; }
 .portfolio-item-small a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
-/* Resume Timeline */
+/* =========================================
+   RESUME TIMELINE
+   ========================================= */
 .resume-timeline { position: relative; padding-left: 25px; border-left: 2px solid var(--border-color); margin-top: 10px; }
 .resume-item { padding-bottom: 40px; position: relative; }
 .resume-item::before { content: ""; position: absolute; width: 16px; height: 16px; border-radius: 50%; left: -34px; top: 5px; background: var(--bg-main); border: 2px solid var(--accent); }

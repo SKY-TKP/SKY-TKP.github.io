@@ -20,10 +20,12 @@
     <link rel="icon" href="profile.png">
 
     <!-- Fonts, Icons (Boxicons) and AOS Animation: bundled in assets/vendor so the site works on its own -->
+    <link rel="preload" href="assets/vendor/fonts/Inter-latin-1.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/vendor/fonts/PlusJakartaSans-latin-5.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/vendor/fonts/fonts.css">
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-    <link rel="stylesheet" href="style.css?v=18">
+    <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 
@@ -127,18 +129,18 @@
         <section id="about" class="section section-alt">
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
-                    <p class="section-eyebrow"><span aria-hidden="true">👋</span> Who I Am</p>
+                    <p class="section-eyebrow">Who I Am</p>
                     <h2>About Me</h2>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-text" data-aos="fade-up">
                         <p>Highly analytical Industrial Engineering graduate with 1st Class Honors from Chulalongkorn University, transitioning into Data Science and Analytics. Proven track record in bridging mathematical optimization (MILP, CP) and machine learning with practical business problem-solving. Delivered measurable impact including a <strong>30% cost reduction at TOYOTA</strong>, <strong>97% data reconciliation accuracy at AIA</strong>, and robust automated data pipelines.</p>
-                        <p>Beyond analysis, I design and build working products: as a part-time AI Developer at <strong>VIBES LAB</strong> I designed the system behind its AI music-curation platform, alongside a bilingual influencer-matching web app and an AI sales assistant on LINE built with n8n.</p>
+                        <p>Beyond analysis, I build working products: as a part-time AI Developer at <strong>VIBES LAB</strong> I built a B2B music app and n8n automation workflows, and I design web apps like <strong>MATCHROOM</strong>, a bilingual influencer-matching platform.</p>
                     </div>
 
                     <aside class="facts-card" data-aos="fade-up" data-aos-delay="100">
-                        <h3>⚡ At a Glance</h3>
+                        <h3>At a Glance</h3>
                         <dl>
                             <div><dt>Current Role</dt><dd>Business Analyst @ Grab TH</dd></div>
                             <div><dt>Previously</dt><dd>AI Developer (Part-time) @ VIBES LAB</dd></div>
@@ -174,28 +176,28 @@
 
                 <!-- How I Work -->
                 <div class="process" data-aos="fade-up">
-                    <h3 class="process-title">🛠️ How I Work</h3>
+                    <h3 class="process-title">How I Work</h3>
                     <ol class="process-steps">
                         <li>
-                            <span class="process-emoji" aria-hidden="true">🔍</span>
+                            <span class="process-emoji" aria-hidden="true"><i class="bx bx-search"></i></span>
                             <span class="process-num">01</span>
                             <h4>Understand</h4>
                             <p>Start from the business question, the process and the people who will use the result.</p>
                         </li>
                         <li>
-                            <span class="process-emoji" aria-hidden="true">📊</span>
+                            <span class="process-emoji" aria-hidden="true"><i class="bx bx-bar-chart-alt-2"></i></span>
                             <span class="process-num">02</span>
                             <h4>Analyze &amp; Model</h4>
                             <p>Clean the data, then forecast, optimize or classify, whichever fits the problem.</p>
                         </li>
                         <li>
-                            <span class="process-emoji" aria-hidden="true">⚙️</span>
+                            <span class="process-emoji" aria-hidden="true"><i class="bx bx-cog"></i></span>
                             <span class="process-num">03</span>
                             <h4>Automate &amp; Build</h4>
                             <p>Turn the answer into a pipeline, dashboard or app that keeps running on its own.</p>
                         </li>
                         <li>
-                            <span class="process-emoji" aria-hidden="true">📈</span>
+                            <span class="process-emoji" aria-hidden="true"><i class="bx bx-trending-up"></i></span>
                             <span class="process-num">04</span>
                             <h4>Measure</h4>
                             <p>Prove the impact in numbers: cost saved, accuracy gained, hours given back.</p>
@@ -211,7 +213,7 @@
         <section id="skills" class="section">
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
-                    <p class="section-eyebrow"><span aria-hidden="true">🧰</span> What I Use</p>
+                    <p class="section-eyebrow">What I Use</p>
                     <h2>Tech Stack &amp; Capabilities</h2>
                 </div>
 
@@ -280,7 +282,7 @@
         <section id="portfolio" class="section section-alt">
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
-                    <p class="section-eyebrow"><span aria-hidden="true">🚀</span> What I've Built</p>
+                    <p class="section-eyebrow">What I've Built</p>
                     <h2>Selected Projects</h2>
                     <p>Analytics, optimization, automation and AI products, each with the measurable result behind it.</p>
                 </div>
@@ -295,124 +297,34 @@
 
                 <div class="project-list">
 
-                    <!-- PROJECT: VIBES LAB (Music Director app) -->
-                    <article class="project-card project-featured" id="project-vibeslab" data-category="product ml" data-aos="fade-up">
-                        <div class="project-top">
-                            <div class="project-icon" aria-hidden="true"><i class="bx bx-music"></i></div>
-                            <div class="project-heading">
-                                <p class="project-kicker">B2B SaaS Architecture &amp; AI Prototype &bull; Music Director App</p>
-                                <h3>VIBES LAB · Enterprise AI Music Curator</h3>
-                            </div>
-                            <div class="project-meta"><span class="badge badge-live"><span class="status-dot" aria-hidden="true"></span> Live</span><span class="badge">Oct – Nov 2026</span></div>
-                        </div>
-                        <p class="project-desc">Designed the enterprise architecture and developed a functional AI prototype for a B2B commercial music management platform. The system leverages LLMs and vector databases to automate music curation based on brand identity and psychological acoustics. The product, the <strong>VIBES LAB Music Director app</strong>, lets a Music Director program brand-fit background music for hotels, restaurants and shops, while clients simply listen and follow the schedule.</p>
-
-                        <div class="project-metrics">
-                            <div class="metric"><strong>3–4 hrs → secs</strong><span>Manual curation time</span></div>
-                            <div class="metric"><strong>7-factor</strong><span>One engine for every pick</span></div>
-                            <div class="metric"><strong>Multi-tenant</strong><span>Row Level Security isolation</span></div>
-                            <div class="metric"><strong>150+</strong><span>Automated UI checks</span></div>
-                        </div>
-
-                        <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
-                            <ol>
-                                <li><span>📘 Brand book</span></li>
-                                <li><span>🧠 VIBES profile</span></li>
-                                <li><span>⚙️ Engine builds playlists</span></li>
-                                <li><span>✅ Director approves</span></li>
-                                <li><span>🔊 Plays in the shop</span></li>
-                            </ol>
-                        </div>
-
-                        <div class="project-features">
-                            <div class="project-feature">
-                                <h4>AI Semantic Curation &amp; Emotion Mapping</h4>
-                                <p>Implemented Dimensional Emotion AI (Valence-Arousal) and Vector Similarity Search to automatically match audio tracks to brand vibes, reducing manual curation time from 3-4 hours to mere seconds.</p>
-                            </div>
-                            <div class="project-feature">
-                                <h4>Enterprise Security &amp; Architecture</h4>
-                                <p>Architected a multi-tenant database using PostgreSQL (Supabase) with Row Level Security (RLS) ensuring strict data isolation. Enforced Deterministic JSON payloads from the LLM for seamless frontend integration.</p>
-                            </div>
-                            <div class="project-feature">
-                                <h4>Brand Book → Weekly Program</h4>
-                                <p>A client's brand book (PDF) is read into a VIBES profile (brand archetype, energy by time of day, BPM range, Thai-language share), which drafts day types and a full week of 1–2 hour playlists for the Director to review.</p>
-                            </div>
-                            <div class="project-feature">
-                                <h4>Director-First Workflow</h4>
-                                <p>Every week moves from AI draft to Director review to publish. Clients only listen, pick a Pool mood (Normal / Softer / Livelier) on premium plans, and send likes or requests that feed back into the engine.</p>
-                            </div>
-                        </div>
-
-                        <!-- Screens from the live app -->
-                        <div class="shots">
-                            <p class="shots-label">🖼️ Inside the app <span>· click to enlarge</span></p>
-                            <div class="shot-grid" data-gallery>
-                                <a class="shot" href="assets/vibeslab/today.jpg" data-caption="Client app · Today: what's playing now, mood Pool and quick requests">
-                                    <img src="assets/vibeslab/thumbs/today.jpg" alt="VIBES LAB Music Director client app, Today screen" loading="lazy" width="520" height="325">
-                                    <span>Client · Today</span>
-                                </a>
-                                <a class="shot" href="assets/vibeslab/week.jpg" data-caption="Client app · Weekly schedule by day type, with PDF / Excel export">
-                                    <img src="assets/vibeslab/thumbs/week.jpg" alt="Weekly music schedule screen" loading="lazy" width="520" height="325">
-                                    <span>Client · Weekly schedule</span>
-                                </a>
-                                <a class="shot" href="assets/vibeslab/today-mobile.jpg" data-caption="Client app on mobile">
-                                    <img src="assets/vibeslab/thumbs/today-mobile.jpg" alt="Client app on a phone" loading="lazy" width="360" height="779">
-                                    <span>Client · Mobile</span>
-                                </a>
-                                <a class="shot" href="assets/vibeslab/studio-program.jpg" data-caption="Director Studio · Program: AI draft → MD review → publish">
-                                    <img src="assets/vibeslab/thumbs/studio-program.jpg" alt="Director Studio program screen" loading="lazy" width="520" height="325">
-                                    <span>Studio · Program</span>
-                                </a>
-                                <a class="shot" href="assets/vibeslab/studio-recommend.jpg" data-caption="Director Studio · AI Recommend: songs ranked for a slot, with reasons in words">
-                                    <img src="assets/vibeslab/thumbs/studio-recommend.jpg" alt="AI song recommendation screen" loading="lazy" width="520" height="325">
-                                    <span>Studio · AI Recommend</span>
-                                </a>
-                                <a class="shot" href="assets/vibeslab/studio-reports.jpg" data-caption="Director Studio · Reports across all shops (sample figures)">
-                                    <img src="assets/vibeslab/thumbs/studio-reports.jpg" alt="Reports overview screen" loading="lazy" width="520" height="325">
-                                    <span>Studio · Reports</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-bottom">
-                            <ul class="chip-list" aria-label="Technologies">
-                                <li>System Design</li><li>LLM</li><li>Vector Search</li><li>Next.js</li><li>PostgreSQL</li><li>Supabase RLS</li><li>JSON Schema</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://3950_.oneapp.dev/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bx-link-external" aria-hidden="true"></i> Try Live Prototype</a>
-                                <button type="button" class="btn btn-secondary btn-sm" data-open="system-design"><i class="bx bx-sitemap" aria-hidden="true"></i> View System Design</button>
-                                <a href="https://github.com/SKY-TKP/PROJECT/blob/main/sql-database/vibes_lab/VIBES_LAB-presentation.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxs-file-pdf" aria-hidden="true"></i> Architecture Presentation</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- PROJECT: MATCHROOM -->
-                    <article class="project-card" data-category="product" data-aos="fade-up">
+                    <!-- PROJECT: MATCHROOM (public version of the Music Director system) -->
+                    <article class="project-card project-featured" id="project-matchroom" data-category="product" data-aos="fade-up">
                         <div class="project-top">
                             <div class="project-icon" aria-hidden="true"><i class="bx bx-group"></i></div>
                             <div class="project-heading">
-                                <p class="project-kicker">Web App Prototype &bull; Product Design</p>
+                                <p class="project-kicker">Web App Prototype &bull; Product &amp; System Design</p>
                                 <h3>MATCHROOM · AI Influencer Director</h3>
                             </div>
                             <div class="project-meta"><span class="badge">Oct 2026</span></div>
                         </div>
                         <p class="project-desc">A bilingual (Thai / English) web app that runs a weekly influencer program for every brand: a Director picks creators with AI help, and the brand simply watches its schedule. It applies the VIBES LAB Music Director service model to a new domain to prove the model travels. All data in the prototype is fictional.</p>
+                        <p class="project-note"><i class="bx bx-info-circle" aria-hidden="true"></i> MATCHROOM is the public version of the system behind the B2B music app I built at VIBES LAB: the same engine and the same Director workflow, applied to matching creators with brands.</p>
 
                         <div class="project-metrics">
                             <div class="metric"><strong>7-factor</strong><span>Weighted ranking engine</span></div>
                             <div class="metric"><strong>140</strong><span>Automated UI checks</span></div>
                             <div class="metric"><strong>TH / EN</strong><span>Every screen bilingual</span></div>
+                            <div class="metric"><strong>2 sides</strong><span>Brand app + Director studio</span></div>
                         </div>
 
                         <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <p class="mini-flow-label">How it flows</p>
                             <ol>
-                                <li><span>🏷️ Brand rules</span></li>
-                                <li><span>🗓️ Day types × slots</span></li>
-                                <li><span>⚙️ Engine ranks creators</span></li>
-                                <li><span>✅ Director approves</span></li>
-                                <li><span>📣 Creators post in rotation</span></li>
+                                <li><span>Brand rules</span></li>
+                                <li><span>Day types × slots</span></li>
+                                <li><span>Engine ranks creators</span></li>
+                                <li><span>Director approves</span></li>
+                                <li><span>Creators post in rotation</span></li>
                             </ol>
                         </div>
 
@@ -429,14 +341,58 @@
                                 <h4>AI Guardrails &amp; Testing</h4>
                                 <p>AI can only pick creators from the roster, misquoted numbers are replaced and logged, and brands see plain-language reasons instead of scores. Built in vanilla HTML, CSS and JavaScript, covered by 140 automated click-through checks in headless Chrome.</p>
                             </div>
+                            <div class="project-feature">
+                                <h4>Built on the Music Director Model</h4>
+                                <p>Every piece maps one to one: shops become brands, the song library becomes a creator roster, playlists become shortlists and royalties become creator fees. The engine keeps the same weights, and AI drafts and explains but never decides.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="shots">
+                            <p class="shots-label"><i class="bx bx-images" aria-hidden="true"></i> Inside the app <span>· click to enlarge</span></p>
+                            <div class="shot-grid" data-gallery>
+                                <a class="shot" href="assets/matchroom/today.jpg" data-caption="Brand app · Today: who is posting now, the slot's tone and recent posts">
+                                    <img src="assets/matchroom/thumbs/today.jpg" alt="MATCHROOM brand app, Today screen" loading="lazy">
+                                    <span>Brand · Today</span>
+                                </a>
+                                <a class="shot" href="assets/matchroom/week.jpg" data-caption="Brand app · Weekly posting schedule by day type, with PDF / Excel export">
+                                    <img src="assets/matchroom/thumbs/week.jpg" alt="Weekly posting schedule screen" loading="lazy">
+                                    <span>Brand · Weekly schedule</span>
+                                </a>
+                                <a class="shot" href="assets/matchroom/today-mobile.jpg" data-caption="Brand app on mobile">
+                                    <img src="assets/matchroom/thumbs/today-mobile.jpg" alt="Brand app on a phone" loading="lazy">
+                                    <span>Brand · Mobile</span>
+                                </a>
+                                <a class="shot" href="assets/matchroom/program.jpg" data-caption="Director Studio · Program: AI draft → Director review → publish">
+                                    <img src="assets/matchroom/thumbs/program.jpg" alt="Director Studio program screen" loading="lazy">
+                                    <span>Studio · Program</span>
+                                </a>
+                                <a class="shot" href="assets/matchroom/rec.jpg" data-caption="Director Studio · Recommend: creators ranked for a slot, with reasons instead of scores">
+                                    <img src="assets/matchroom/thumbs/rec.jpg" alt="Creator recommendation screen" loading="lazy">
+                                    <span>Studio · Recommend</span>
+                                </a>
+                                <a class="shot" href="assets/matchroom/queue.jpg" data-caption="Director Studio · Queue: what the Director must do today, with live posting status">
+                                    <img src="assets/matchroom/thumbs/queue.jpg" alt="Director queue screen" loading="lazy">
+                                    <span>Studio · Queue</span>
+                                </a>
+                                <a class="shot" href="assets/matchroom/reports.jpg" data-caption="Director Studio · Reports across all brands (fictional figures)">
+                                    <img src="assets/matchroom/thumbs/reports.jpg" alt="Reports overview screen" loading="lazy">
+                                    <span>Studio · Reports</span>
+                                </a>
+                                <a class="shot" href="assets/matchroom/deck-04.jpg" data-caption="Every piece of the Music Director system has a match in MATCHROOM">
+                                    <img src="assets/matchroom/thumbs/deck-04.jpg" alt="Slide mapping Music Director to MATCHROOM" loading="lazy">
+                                    <span>Music Director → MATCHROOM</span>
+                                </a>
+                            </div>
                         </div>
 
                         <div class="project-bottom">
                             <ul class="chip-list" aria-label="Technologies">
-                                <li>JavaScript</li><li>HTML / CSS</li><li>Node.js</li><li>Headless Chrome Tests</li><li>i18n</li>
+                                <li>System Design</li><li>JavaScript</li><li>HTML / CSS</li><li>Node.js</li><li>Headless Chrome Tests</li><li>i18n</li>
                             </ul>
                             <div class="project-links">
                                 <a href="https://github.com/SKY-TKP/APP-DEV-IE/tree/main/match_room" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bxl-github" aria-hidden="true"></i> View Code</a>
+                                <button type="button" class="btn btn-secondary btn-sm" data-open="system-design"><i class="bx bx-sitemap" aria-hidden="true"></i> View System Design</button>
                                 <button type="button" class="btn btn-secondary btn-sm" data-code="code-matchroom"><i class="bx bx-code-alt" aria-hidden="true"></i> Code Snippet</button>
                                 <a href="https://github.com/SKY-TKP/APP-DEV-IE/blob/main/match_room/MATCHROOM%20Influencer%20Director%20%C2%B7%20Pitch%20(English).pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bx-slideshow" aria-hidden="true"></i> Presentation Slides</a>
                             </div>
@@ -444,7 +400,7 @@
                     </article>
 
                     <!-- PROJECT: LINE SALES ASSISTANT · n8n -->
-                    <article class="project-card" data-category="product automation ml" data-aos="fade-up">
+                    <article class="project-card" id="project-line" data-category="product automation ml" data-aos="fade-up">
                         <div class="project-top">
                             <div class="project-icon" aria-hidden="true"><i class="bx bx-chat"></i></div>
                             <div class="project-heading">
@@ -462,14 +418,14 @@
                         </div>
 
                         <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <p class="mini-flow-label">How it flows</p>
                             <ol>
-                                <li><span>💬 Customer message</span></li>
-                                <li><span>🛡️ Guards</span></li>
-                                <li><span>🧠 Rules first, AI if needed</span></li>
-                                <li><span>📚 FAQ + live stock</span></li>
-                                <li><span>🔗 Reply + checkout link</span></li>
-                                <li><span>🗂️ Remember 30 min</span></li>
+                                <li><span>Customer message</span></li>
+                                <li><span>Guards</span></li>
+                                <li><span>Rules first, AI if needed</span></li>
+                                <li><span>FAQ + live stock</span></li>
+                                <li><span>Reply + checkout link</span></li>
+                                <li><span>Remember 30 min</span></li>
                             </ol>
                         </div>
 
@@ -493,7 +449,7 @@
                         </div>
 
                         <div class="n8n">
-                            <p class="shots-label">🧩 n8n workflow <span>· simplified sketch of the 96-node canvas</span></p>
+                            <p class="shots-label"><i class="bx bx-git-branch" aria-hidden="true"></i> n8n workflow <span>· simplified sketch of the 96-node canvas</span></p>
                             <div class="n8n-canvas">
                                 <svg viewBox="0 0 1036 300" role="img" aria-labelledby="n8n-title">
                                     <title id="n8n-title">Simplified n8n workflow: LINE webhook, guards, rules and Gemini, FAQ and live stock, reply, saved state</title>
@@ -520,16 +476,16 @@
                                     <text class="n8n-tag" x="455" y="210">only if rules can't</text>
 
                                     <!-- nodes -->
-                                    <g class="n8n-node" transform="translate(14 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">💬</text><text x="48" y="25" class="n8n-name">LINE Webhook</text><text x="48" y="41" class="n8n-sub">trigger</text></g>
-                                    <g class="n8n-node" transform="translate(186 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🛡️</text><text x="48" y="25" class="n8n-name">Guards</text><text x="48" y="41" class="n8n-sub">IF · repeat / paused</text></g>
-                                    <g class="n8n-node" transform="translate(358 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🧠</text><text x="48" y="25" class="n8n-name">Understand</text><text x="48" y="41" class="n8n-sub">Code · rules first</text></g>
-                                    <g class="n8n-node" transform="translate(530 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">✍️</text><text x="48" y="25" class="n8n-name">Compose Reply</text><text x="48" y="41" class="n8n-sub">Code · validator</text></g>
-                                    <g class="n8n-node" transform="translate(702 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🔗</text><text x="48" y="25" class="n8n-name">LINE Reply</text><text x="48" y="41" class="n8n-sub">text · photo · link</text></g>
-                                    <g class="n8n-node" transform="translate(874 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🗂️</text><text x="48" y="25" class="n8n-name">Save State</text><text x="48" y="41" class="n8n-sub">Sheets · 30 min</text></g>
-                                    <g class="n8n-node" transform="translate(444 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">📚</text><text x="48" y="25" class="n8n-name">FAQ Cache</text><text x="48" y="41" class="n8n-sub">Sheets · 60 answers</text></g>
-                                    <g class="n8n-node" transform="translate(616 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">📦</text><text x="48" y="25" class="n8n-name">Live Stock</text><text x="48" y="41" class="n8n-sub">HTTP · 3 s timeout</text></g>
-                                    <g class="n8n-node n8n-node-dim" transform="translate(186 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-grey" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">⏹️</text><text x="48" y="25" class="n8n-name">Stop</text><text x="48" y="41" class="n8n-sub">no reply</text></g>
-                                    <g class="n8n-node n8n-node-ai" transform="translate(358 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">✨</text><text x="48" y="25" class="n8n-name">Google Gemini</text><text x="48" y="41" class="n8n-sub">reads taste &amp; intent</text></g>
+                                    <g class="n8n-node" transform="translate(14 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xea40;</text><text x="48" y="25" class="n8n-name">LINE Webhook</text><text x="48" y="41" class="n8n-sub">trigger</text></g>
+                                    <g class="n8n-node" transform="translate(186 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xec08;</text><text x="48" y="25" class="n8n-name">Guards</text><text x="48" y="41" class="n8n-sub">IF · repeat / paused</text></g>
+                                    <g class="n8n-node" transform="translate(358 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xe9ff;</text><text x="48" y="25" class="n8n-name">Understand</text><text x="48" y="41" class="n8n-sub">Code · rules first</text></g>
+                                    <g class="n8n-node" transform="translate(530 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeac0;</text><text x="48" y="25" class="n8n-name">Compose Reply</text><text x="48" y="41" class="n8n-sub">Code · validator</text></g>
+                                    <g class="n8n-node" transform="translate(702 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeb3c;</text><text x="48" y="25" class="n8n-name">LINE Reply</text><text x="48" y="41" class="n8n-sub">text · photo · link</text></g>
+                                    <g class="n8n-node" transform="translate(874 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xea95;</text><text x="48" y="25" class="n8n-name">Save State</text><text x="48" y="41" class="n8n-sub">Sheets · 30 min</text></g>
+                                    <g class="n8n-node" transform="translate(444 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xe9ef;</text><text x="48" y="25" class="n8n-name">FAQ Cache</text><text x="48" y="41" class="n8n-sub">Sheets · 60 answers</text></g>
+                                    <g class="n8n-node" transform="translate(616 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeba6;</text><text x="48" y="25" class="n8n-name">Live Stock</text><text x="48" y="41" class="n8n-sub">HTTP · 3 s timeout</text></g>
+                                    <g class="n8n-node n8n-node-dim" transform="translate(186 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-grey" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xec2c;</text><text x="48" y="25" class="n8n-name">Stop</text><text x="48" y="41" class="n8n-sub">no reply</text></g>
+                                    <g class="n8n-node n8n-node-ai" transform="translate(358 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xe9fa;</text><text x="48" y="25" class="n8n-name">Google Gemini</text><text x="48" y="41" class="n8n-sub">reads taste &amp; intent</text></g>
                                 </svg>
                             </div>
                         </div>
@@ -563,13 +519,13 @@
                         </div>
 
                         <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <p class="mini-flow-label">How it flows</p>
                             <ol>
-                                <li><span>🏦 6 bank files</span></li>
-                                <li><span>🔎 Barcode decoding</span></li>
-                                <li><span>🔁 Reconciliation</span></li>
-                                <li><span>📊 Power BI dashboard</span></li>
-                                <li><span>📧 Daily to management</span></li>
+                                <li><span>6 bank files</span></li>
+                                <li><span>Barcode decoding</span></li>
+                                <li><span>Reconciliation</span></li>
+                                <li><span>Power BI dashboard</span></li>
+                                <li><span>Daily to management</span></li>
                             </ol>
                         </div>
 
@@ -592,7 +548,7 @@
                     </article>
 
                     <!-- PROJECT: TOYOTA -->
-                    <article class="project-card" data-category="optimization ml automation" data-aos="fade-up">
+                    <article class="project-card" id="project-toyota" data-category="optimization ml automation" data-aos="fade-up">
                         <div class="project-top">
                             <div class="project-icon" aria-hidden="true"><i class="bx bx-package"></i></div>
                             <div class="project-heading">
@@ -610,12 +566,12 @@
                         </div>
 
                         <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <p class="mini-flow-label">How it flows</p>
                             <ol>
-                                <li><span>📈 SARIMAX demand forecast</span></li>
-                                <li><span>🧮 Linear programming</span></li>
-                                <li><span>📦 Packaging &amp; route plan</span></li>
-                                <li><span>💰 30% cost cut</span></li>
+                                <li><span>SARIMAX demand forecast</span></li>
+                                <li><span>Linear programming</span></li>
+                                <li><span>Packaging &amp; route plan</span></li>
+                                <li><span>30% cost cut</span></li>
                             </ol>
                         </div>
 
@@ -634,8 +590,19 @@
                             </div>
                         </div>
 
+                        <div class="math-model">
+                            <p class="shots-label"><i class="bx bx-math" aria-hidden="true"></i> Math model</p>
+                            <div class="eq-row"><span class="eq-label">Model choice</span><div class="eq"><math display="block"><msub><msup><mi>k</mi><mo>*</mo></msup><mi>r</mi></msub><mo>=</mo><munder><mo>arg min</mo><mrow><mi>k</mi><mo>∈</mo><mi>M</mi></mrow></munder><msub><mi>RMSE</mi><mrow><mi>r</mi><mo>,</mo><mi>k</mi></mrow></msub></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Accuracy</span><div class="eq"><math display="block"><mi>RMSE</mi><mo>=</mo><msqrt><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo>(</mo><msub><mi>y</mi><mi>t</mi></msub><mo>−</mo><msub><mover accent="true"><mi>y</mi><mo>^</mo></mover><mi>t</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></msqrt></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Safety stock</span><div class="eq"><math display="block"><msub><mi>SS</mi><mi>r</mi></msub><mo>=</mo><msub><mi>A</mi><mi>r</mi></msub><mo>+</mo><msub><mi>B</mi><mi>r</mi></msub><mo>+</mo><msub><mi>C</mi><mi>r</mi></msub></math></div></div>
+                            <div class="eq-row"><span class="eq-label">A · Statistical</span><div class="eq"><math display="block"><msub><mi>A</mi><mi>r</mi></msub><mo>=</mo><mi>z</mi><mo>·</mo><msub><mover accent="true"><mi>σ</mi><mo>^</mo></mover><mi>r</mi></msub></math></div></div>
+                            <div class="eq-row"><span class="eq-label">B · Procedural</span><div class="eq"><math display="block"><msub><mi>B</mi><mi>r</mi></msub><mo>=</mo><mn>7</mn><mo>·</mo><msub><mover accent="true"><mi>d</mi><mo>¯</mo></mover><mi>r</mi></msub></math></div></div>
+                            <div class="eq-row"><span class="eq-label">C · Critical</span><div class="eq"><math display="block"><msub><mi>C</mi><mi>r</mi></msub><mo>=</mo><msub><mover accent="true"><mi>Q</mi><mo>¯</mo></mover><mi>r</mi></msub><mo>·</mo><mo>[</mo><msubsup><mi>N</mi><mi>r</mi><mtext>imp</mtext></msubsup><mo>≤</mo><mn>4</mn><mo>]</mo></math></div></div>
+                            <p class="eq-legend"><b>r</b> returnable-packaging type (27) · <b><i>M</i></b> candidate models: moving average, exponential smoothing, Holt / Holt-Winters, ARIMA / SARIMAX · <b>σ̂</b> forecast error (RMSE) covering demand and lead-time variability · <b>d̄</b> average daily usage, a 7-day buffer for internal delays · <b>Q̄</b> one average shipment, only for high-risk types with ≤ 4 importers ([·] is 1 when true, else 0) · recalculated every month</p>
+                        </div>
+
                         <div class="shots">
-                            <p class="shots-label">🖼️ From the co-op presentation <span>· click to enlarge</span></p>
+                            <p class="shots-label"><i class="bx bx-slideshow" aria-hidden="true"></i> From the co-op presentation <span>· click to enlarge</span></p>
                             <div class="shot-grid" data-gallery>
                                 <a class="shot" href="assets/toyota/slide-04.jpg" data-caption="What returnable packaging is, and the closed logistics loop between Thailand and overseas plants">
                                     <img src="assets/toyota/thumbs/slide-04.jpg" alt="Slide: introduction to returnable packaging" loading="lazy">
@@ -694,13 +661,13 @@
                         </div>
 
                         <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <p class="mini-flow-label">How it flows</p>
                             <ol>
-                                <li><span>🗃️ 60M+ sales records</span></li>
-                                <li><span>🧹 Memory-optimized features</span></li>
-                                <li><span>🌲 LightGBM</span></li>
-                                <li><span>🔁 Sliding-window validation</span></li>
-                                <li><span>📅 28-day forecast</span></li>
+                                <li><span>60M+ sales records</span></li>
+                                <li><span>Memory-optimized features</span></li>
+                                <li><span>LightGBM</span></li>
+                                <li><span>Sliding-window validation</span></li>
+                                <li><span>28-day forecast</span></li>
                             </ol>
                         </div>
 
@@ -720,7 +687,7 @@
                         </div>
 
                         <div class="shots">
-                            <p class="shots-label">📈 Charts &amp; dashboard <span>· click to enlarge</span></p>
+                            <p class="shots-label"><i class="bx bx-line-chart" aria-hidden="true"></i> Charts &amp; dashboard <span>· click to enlarge</span></p>
                             <div class="shot-grid" data-gallery>
                                 <a class="shot" href="assets/m5/projectpipeline.jpg" data-caption="End-to-end analytics and modeling pipeline">
                                     <img src="assets/m5/thumbs/projectpipeline.jpg" alt="Project pipeline diagram" loading="lazy">
@@ -772,24 +739,24 @@
                         <div class="project-metrics">
                             <div class="metric"><strong>28.7%</strong><span>Simulated cost reduction</span></div>
                             <div class="metric"><strong>12.01M THB</strong><span>Saved per year</span></div>
-                            <div class="metric"><strong>3,366 kW + 248 kWh</strong><span>Optimal solar + battery</span></div>
+                            <div class="metric"><strong>3,366 kW</strong><span>Optimal solar PV size</span></div>
                         </div>
 
                         <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <p class="mini-flow-label">How it flows</p>
                             <ol>
-                                <li><span>☀️ Solar radiation data</span></li>
-                                <li><span>🏭 Factory load profile</span></li>
-                                <li><span>🔢 K-Means scenarios</span></li>
-                                <li><span>🧮 Two-stage stochastic MILP</span></li>
-                                <li><span>📊 Sizing + sensitivity</span></li>
+                                <li><span>Solar radiation data</span></li>
+                                <li><span>Factory load profile</span></li>
+                                <li><span>K-Means scenarios</span></li>
+                                <li><span>Two-stage stochastic MILP</span></li>
+                                <li><span>Sizing + sensitivity</span></li>
                             </ol>
                         </div>
 
                         <div class="project-features">
                             <div class="project-feature">
                                 <h4>Two-Stage Stochastic MILP</h4>
-                                <p>Stage 1 sizes solar (in 50 kW blocks) and battery capacity; stage 2 dispatches grid, solar and battery hour by hour in every scenario, under PEA time-of-use tariffs and big-M battery logic.</p>
+                                <p>Stage 1 sizes solar and battery capacity; stage 2 dispatches grid, solar, battery and a diesel backup hour by hour in every scenario, under tiered PEA tariffs, a peak-demand charge and big-M battery logic.</p>
                             </div>
                             <div class="project-feature">
                                 <h4>Risk &amp; Sensitivity</h4>
@@ -797,8 +764,29 @@
                             </div>
                         </div>
 
+                        <div class="math-model">
+                            <p class="shots-label"><i class="bx bx-math" aria-hidden="true"></i> Math model <span>· Model 4: tiered pricing, battery wear &amp; CVaR risk</span></p>
+                            <div class="eq-row"><span class="eq-label">Objective</span><div class="eq"><math display="block"><mo>min</mo><mspace width="0.25em"/><mi>Z</mi><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>λ</mi><mo stretchy="false">)</mo><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><mi>TC</mi><mo stretchy="false">]</mo><mo>+</mo><mi>λ</mi><mo>·</mo><msub><mi>CVaR</mi><mi>α</mi></msub><mo stretchy="false">(</mo><mi>TC</mi><mo stretchy="false">)</mo></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Tail risk</span><div class="eq"><math display="block"><msub><mi>CVaR</mi><mi>α</mi></msub><mo stretchy="false">(</mo><mi>TC</mi><mo stretchy="false">)</mo><mo>=</mo><mi>ζ</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi>α</mi></mrow></mfrac><munder><mo>∑</mo><mrow><mi>ω</mi><mo>∈</mo><mi>Ω</mi></mrow></munder><msub><mi>π</mi><mi>ω</mi></msub><msub><mi>z</mi><mi>ω</mi></msub></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Expected cost</span><div class="eq"><math display="block"><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><mi>TC</mi><mo stretchy="false">]</mo><mo>=</mo><msubsup><mi>C</mi><mtext>capex</mtext><mtext>solar</mtext></msubsup><msub><mi>S</mi><mtext>solar</mtext></msub><mo>+</mo><msubsup><mi>C</mi><mtext>capex</mtext><mtext>batt</mtext></msubsup><msub><mi>S</mi><mtext>batt</mtext></msub><mo>+</mo><munder><mo>∑</mo><mrow><mi>ω</mi><mo>∈</mo><mi>Ω</mi></mrow></munder><msub><mi>π</mi><mi>ω</mi></msub><mo stretchy="false">(</mo><msub><mi>OPEX</mi><mi>ω</mi></msub><mo>+</mo><msup><mi>C</mi><mtext>demand</mtext></msup><msubsup><mi>P</mi><mi>ω</mi><mtext>peak</mtext></msubsup><mo stretchy="false">)</mo></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Operating cost</span><div class="eq"><math display="block"><msub><mi>OPEX</mi><mi>ω</mi></msub><mo>=</mo><mn>365</mn><mo>×</mo><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>T</mi></mrow></munder><mo>[</mo><munder><mo>∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>N</mi></mrow></munder><msub><mi>R</mi><mi>n</mi></msub><msubsup><mi>E</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi><mo>,</mo><mi>n</mi></mrow><mtext>grid</mtext></msubsup><mo>+</mo><msubsup><mi>C</mi><mtext>op</mtext><mtext>dg</mtext></msubsup><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>dg</mtext></msubsup><mo>+</mo><msup><mi>C</mi><mtext>deg</mtext></msup><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>dis</mtext></msubsup><mo>]</mo></math></div></div>
+                            <details class="eq-more">
+                                <summary><span class="when-closed">Show all constraints</span><span class="when-open">Hide constraints</span> <i class="bx bx-chevron-down" aria-hidden="true"></i></summary>
+                                <div class="eq-row"><span class="eq-label">Energy balance</span><div class="eq"><math display="block"><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>grid</mtext></msubsup><mo>+</mo><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>solar</mtext></msubsup><mo>+</mo><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>dis</mtext></msubsup><mo>+</mo><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>dg</mtext></msubsup><mo>=</mo><msub><mi>D</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow></msub><mo>+</mo><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>ch</mtext></msubsup><mspace width="0.8em"/><mo>∀</mo><mi>t</mi><mo>∈</mo><mi>T</mi><mo>,</mo><mo>∀</mo><mi>ω</mi><mo>∈</mo><mi>Ω</mi></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Solar limit</span><div class="eq"><math display="block"><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>solar</mtext></msubsup><mo>+</mo><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>ch</mtext></msubsup><mo>≤</mo><msub><mi>g</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow></msub><msub><mi>S</mi><mtext>solar</mtext></msub><mspace width="0.8em"/><mo>∀</mo><mi>t</mi><mo>∈</mo><mi>T</mi><mo>,</mo><mo>∀</mo><mi>ω</mi><mo>∈</mo><mi>Ω</mi></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Tiered pricing</span><div class="eq"><math display="block"><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>grid</mtext></msubsup><mo>=</mo><munder><mo>∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>N</mi></mrow></munder><msubsup><mi>E</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi><mo>,</mo><mi>n</mi></mrow><mtext>grid</mtext></msubsup><mo>,</mo><mspace width="0.5em"/><msubsup><mi>E</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi><mo>,</mo><mn>1</mn></mrow><mtext>grid</mtext></msubsup><mo>≤</mo><msub><mi>L</mi><mn>1</mn></msub></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Peak demand</span><div class="eq"><math display="block"><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>grid</mtext></msubsup><mo>≤</mo><msubsup><mi>P</mi><mi>ω</mi><mtext>peak</mtext></msubsup><mspace width="0.8em"/><mo>∀</mo><mi>t</mi><mo>∈</mo><mi>T</mi><mo>,</mo><mo>∀</mo><mi>ω</mi><mo>∈</mo><mi>Ω</mi></math></div></div>
+                                <div class="eq-row"><span class="eq-label">State of charge</span><div class="eq"><math display="block"><msub><mi>SOC</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow></msub><mo>=</mo><msub><mi>SOC</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>ω</mi></mrow></msub><mo>+</mo><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>ch</mtext></msubsup><mo>·</mo><msub><mi>η</mi><mtext>ch</mtext></msub><mo>−</mo><mfrac><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>dis</mtext></msubsup><msub><mi>η</mi><mtext>dis</mtext></msub></mfrac></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Battery limits</span><div class="eq"><math display="block"><msub><mi>SOC</mi><mtext>min</mtext></msub><mo>·</mo><msub><mi>S</mi><mtext>batt</mtext></msub><mo>≤</mo><msub><mi>SOC</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow></msub><mo>≤</mo><msub><mi>SOC</mi><mtext>max</mtext></msub><mo>·</mo><msub><mi>S</mi><mtext>batt</mtext></msub></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Big-M logic</span><div class="eq"><math display="block"><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>ch</mtext></msubsup><mo>≤</mo><mi>M</mi><mo>·</mo><msub><mi>u</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow></msub><mo>,</mo><mspace width="0.5em"/><msubsup><mi>P</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow><mtext>dis</mtext></msubsup><mo>≤</mo><mi>M</mi><mo>·</mo><mo>(</mo><mn>1</mn><mo>−</mo><msub><mi>u</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow></msub><mo>)</mo><mo>,</mo><mspace width="0.5em"/><msub><mi>u</mi><mrow><mi>t</mi><mo>,</mo><mi>ω</mi></mrow></msub><mo>∈</mo><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>}</mo></math></div></div>
+                                <div class="eq-row"><span class="eq-label">CVaR</span><div class="eq"><math display="block"><msub><mi>z</mi><mi>ω</mi></msub><mo>≥</mo><msub><mi>TC</mi><mi>ω</mi></msub><mo>−</mo><mi>ζ</mi><mo>,</mo><mspace width="0.5em"/><msub><mi>z</mi><mi>ω</mi></msub><mo>≥</mo><mn>0</mn><mspace width="0.8em"/><mo>∀</mo><mi>ω</mi><mo>∈</mo><mi>Ω</mi></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Scenario cost</span><div class="eq"><math display="block"><msub><mi>TC</mi><mi>ω</mi></msub><mo>=</mo><msubsup><mi>C</mi><mtext>capex</mtext><mtext>solar</mtext></msubsup><msub><mi>S</mi><mtext>solar</mtext></msub><mo>+</mo><msubsup><mi>C</mi><mtext>capex</mtext><mtext>batt</mtext></msubsup><msub><mi>S</mi><mtext>batt</mtext></msub><mo>+</mo><msub><mi>OPEX</mi><mi>ω</mi></msub><mo>+</mo><msup><mi>C</mi><mtext>demand</mtext></msup><msubsup><mi>P</mi><mi>ω</mi><mtext>peak</mtext></msubsup></math></div></div>
+                            </details>
+                            <p class="eq-legend"><b>t ∈ T</b> hour of the day · <b>ω ∈ Ω</b> K-Means scenario with probability π<sub>ω</sub> · <b>R<sub>n</sub></b> tiered tariff, tier 1 capped at L<sub>1</sub> · <b>g</b> solar yield · <b>dg</b> diesel generator · <b>C<sup>deg</sup></b> = 3.5 THB/kWh battery wear · <b>ζ</b> Value at Risk · <b>α</b> = 0.95 · <b>λ</b> = 0.5 risk aversion · solved with Pyomo + GLPK</p>
+                        </div>
+
                         <div class="shots">
-                            <p class="shots-label">📊 Model results <span>· click to enlarge</span></p>
+                            <p class="shots-label"><i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i> Model results <span>· click to enlarge</span></p>
                             <div class="shot-grid" data-gallery>
                                 <a class="shot" href="assets/microgrid/compare.jpg" data-caption="Annual total cost, baseline vs optimized, with a high-peak dispatch day">
                                     <img src="assets/microgrid/thumbs/compare.jpg" alt="Annual cost comparison chart" loading="lazy">
@@ -849,18 +837,18 @@
                         </div>
 
                         <div class="mini-flow">
-                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <p class="mini-flow-label">How it flows</p>
                             <ol>
-                                <li><span>📝 Raw reviews</span></li>
-                                <li><span>🧹 NLTK cleaning</span></li>
-                                <li><span>🔤 TF-IDF bigrams</span></li>
-                                <li><span>🤖 6 classifiers</span></li>
-                                <li><span>🎯 Tuned Logistic Regression</span></li>
+                                <li><span>Raw reviews</span></li>
+                                <li><span>NLTK cleaning</span></li>
+                                <li><span>TF-IDF bigrams</span></li>
+                                <li><span>6 classifiers</span></li>
+                                <li><span>Tuned Logistic Regression</span></li>
                             </ol>
                         </div>
 
                         <div class="shots">
-                            <p class="shots-label">📊 Exploration <span>· click to enlarge</span></p>
+                            <p class="shots-label"><i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i> Exploration <span>· click to enlarge</span></p>
                             <div class="shot-grid" data-gallery>
                                 <a class="shot" href="assets/sentiment/sentiment-split.jpg" data-caption="Amount of each sentiment, based on the rating given">
                                     <img src="assets/sentiment/thumbs/sentiment-split.jpg" alt="Bar chart of sentiment counts" loading="lazy">
@@ -893,7 +881,7 @@
         <section id="resume" class="section">
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
-                    <p class="section-eyebrow"><span aria-hidden="true">💼</span> Where I've Worked</p>
+                    <p class="section-eyebrow">Where I've Worked</p>
                     <h2>Experience</h2>
                 </div>
 
@@ -907,9 +895,9 @@
                             <span class="timeline-date">Nov 2026 – Present</span>
                         </div>
                         <ul class="timeline-list">
-                            <li><strong>Product Setup &amp; Optimization:</strong> Own and manage in-app product setups and asset rollouts for GrabFood. Audit, standardise, and optimize current Standard Operating Procedures (SOPs) to enhance operational efficiency across cross-functional teams.</li>
-                            <li><strong>Data Pipelines &amp; Infrastructure Management:</strong> Manage and maintain reliable data pipelines to ensure continuous data availability, high accuracy, and accessibility for business decision-making teams.</li>
-                            <li><strong>Data Analysis &amp; Business Insights:</strong> Conduct quantitative analysis to solve complex operational challenges and uncover insights for cross-functional stakeholders.</li>
+                            <li>Own and manage in-app product setups and asset rollouts for GrabFood, auditing, standardising and optimizing Standard Operating Procedures (SOPs) to improve operational efficiency across cross-functional teams.</li>
+                            <li>Manage and maintain reliable data pipelines and infrastructure, keeping data continuously available, accurate and accessible for business decision-making teams.</li>
+                            <li>Conduct quantitative analysis to solve complex operational challenges and uncover business insights for cross-functional stakeholders.</li>
                         </ul>
                     </article>
 
@@ -917,20 +905,19 @@
                         <div class="timeline-head">
                             <div>
                                 <h3>AI Developer (Part-time)</h3>
-                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> VIBES LAB · Music Director App</p>
+                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> VIBES LAB</p>
                             </div>
                             <span class="timeline-date">Oct 2026 – Nov 2026</span>
                         </div>
                         <ul class="timeline-list">
-                            <li>Designed the end-to-end system for the <strong>VIBES LAB Music Director app</strong>, a B2B service that programs brand-fit background music for hotels, restaurants and retail shops.</li>
-                            <li>Defined the core architecture: one recommendation engine behind every track pick (filter → 7-factor weighted score → rerank), with LLMs used only to translate briefs into targets, never to pick tracks.</li>
-                            <li>Designed the brand book → weekly program pipeline and the Draft → Director review → Publish workflow, so nothing AI-drafted reaches a client unapproved.</li>
-                            <li>Shaped a view-only client app (Today, Weekly schedule, Account) and the Director's Studio (Queue, Clients, Library, Reports), bilingual in Thai and English.</li>
-                            <li>Planned the data and compliance layer: multi-tenant PostgreSQL (Supabase) with Row Level Security, role-based access, PDPA-minded data minimization and MPC music licensing.</li>
+                            <li>Built the web app for the VIBES LAB Music App, a B2B service where a Music Director programs brand-fit background music for hotels, restaurants and shops: a view-only client app and a Director studio, bilingual in Thai and English.</li>
+                            <li>Designed its AI curation logic: emotion mapping (valence–arousal) and similarity search feed one recommendation engine (filter → 7-factor weighted score → rerank), cutting manual curation from 3–4 hours to seconds, with every AI draft approved by the Director first.</li>
+                            <li>Planned the data layer: multi-tenant PostgreSQL (Supabase) with Row Level Security and role-based access.</li>
+                            <li>Built n8n automation workflows, including an AI sales assistant on LINE (96 nodes, Google Sheets and Gemini) that answers product questions and guides each chat to a checkout link.</li>
                         </ul>
                         <div class="timeline-actions">
-                            <button type="button" class="btn btn-secondary btn-sm" data-open="system-design"><i class="bx bx-sitemap" aria-hidden="true"></i> View System Design</button>
-                            <a href="#project-vibeslab" class="link-arrow">See the project <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                            <a href="#project-matchroom" class="link-arrow">See MATCHROOM, the public version <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                            <a href="#project-line" class="link-arrow">See the LINE workflow <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
                         </div>
                     </article>
 
@@ -987,6 +974,9 @@
                             <li>Spearheaded supply-chain optimization initiatives combining Python, SARIMAX, and Linear Programming, achieving a <strong>30% cost reduction</strong> (~THB 3M saved).</li>
                             <li>Enhanced route planning and automated logistics workflows, cutting total transit time/cost by 17% and manual effort by 94%.</li>
                         </ul>
+                        <div class="timeline-actions">
+                            <a href="#project-toyota" class="link-arrow">See the Logistics &amp; Returnable Packaging Optimization project <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -998,7 +988,7 @@
         <section id="education" class="section section-alt">
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
-                    <p class="section-eyebrow"><span aria-hidden="true">🎓</span> Background</p>
+                    <p class="section-eyebrow">Background</p>
                     <h2>Education &amp; Activities</h2>
                 </div>
 
@@ -1029,7 +1019,7 @@
                     <article class="timeline-item" data-aos="fade-up">
                         <div class="timeline-head">
                             <div>
-                                <h3>🏆 Awards &amp; Recognitions</h3>
+                                <h3>Awards &amp; Recognitions</h3>
                             </div>
                         </div>
                         <ul class="timeline-list">
@@ -1047,35 +1037,34 @@
         <section id="hobbies" class="section">
             <div class="container">
                 <div class="section-head" data-aos="fade-up">
-                    <p class="section-eyebrow"><span aria-hidden="true">🎧</span> Beyond Work</p>
+                    <p class="section-eyebrow">Beyond Work</p>
                     <h2>Hobbies &amp; Interests</h2>
                     <p>What keeps me curious outside of spreadsheets and models.</p>
                 </div>
 
                 <div class="hobby-grid">
                     <div class="hobby-card" data-aos="fade-up" data-aos-delay="50">
-                        <span class="hobby-emoji" aria-hidden="true">🎵</span>
-                        <h3>Music</h3>
-                        <p>Building playlists for every mood and time of day, the same idea behind the VIBES LAB music system.</p>
+                        <span class="hobby-emoji" aria-hidden="true"><i class="bx bx-music"></i></span>
+                        <h3>Music &amp; Karaoke</h3>
+                        <p>I love listening to music and singing karaoke.</p>
                     </div>
                     <div class="hobby-card" data-aos="fade-up" data-aos-delay="100">
-                        <span class="hobby-emoji" aria-hidden="true">📚</span>
+                        <span class="hobby-emoji" aria-hidden="true"><i class="bx bx-book-open"></i></span>
                         <h3>Reading</h3>
                         <p>Reading widely to pick up new ideas and ways of thinking outside of work.</p>
                     </div>
                     <div class="hobby-card" data-aos="fade-up" data-aos-delay="150">
-                        <span class="hobby-emoji" aria-hidden="true">🎬</span>
+                        <span class="hobby-emoji" aria-hidden="true"><i class="bx bx-movie-play"></i></span>
                         <h3>Movies &amp; Film Reviews</h3>
                         <p>Film lover and reviewer, named Independent Movie Reviewer of the Year (2024) by the Thai Film Association.</p>
-                        <a href="https://tkp39.wordpress.com/" target="_blank" rel="noopener" class="link-arrow">Read my blog <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
                     </div>
                     <div class="hobby-card" data-aos="fade-up" data-aos-delay="200">
-                        <span class="hobby-emoji" aria-hidden="true">👨‍🏫</span>
+                        <span class="hobby-emoji" aria-hidden="true"><i class="bx bx-chalkboard"></i></span>
                         <h3>Teaching</h3>
                         <p>Batch tutor for my engineering cohort (2023 – 2026), turning hard topics into clear review sessions.</p>
                     </div>
                     <div class="hobby-card" data-aos="fade-up" data-aos-delay="250">
-                        <span class="hobby-emoji" aria-hidden="true">🛠️</span>
+                        <span class="hobby-emoji" aria-hidden="true"><i class="bx bx-wrench"></i></span>
                         <h3>Side Projects</h3>
                         <p>Building small tools and experiments with data and AI, like the forecasting and NLP notebooks above.</p>
                     </div>
@@ -1090,9 +1079,9 @@
             <div class="container">
                 <div class="contact-panel" data-aos="fade-up">
                     <div>
-                        <p class="section-eyebrow"><span aria-hidden="true">✉️</span> Get in Touch</p>
+                        <p class="section-eyebrow">Get in Touch</p>
                         <h2>Contact Me</h2>
-                        <p>I am open to new opportunities in Data Analytics, Data Science, and Business Analysis. If you have an exciting project or role in mind, feel free to reach out!</p>
+                        <p>Always happy to talk about data, analytics and AI products, whether it is a project, a collaboration or an idea worth exploring. Feel free to reach out!</p>
                     </div>
                     <div class="contact-actions">
                         <a href="mailto:thananop.klp@gmail.com" class="btn btn-primary btn-lg"><i class="bx bx-envelope" aria-hidden="true"></i> Email Me</a>
@@ -1138,80 +1127,102 @@
     <dialog class="modal" id="system-design" aria-labelledby="sd-title">
         <div class="modal-head">
             <div>
-                <p class="section-eyebrow"><span aria-hidden="true">🧭</span> System Design</p>
-                <h2 id="sd-title">VIBES LAB Music Director</h2>
-                <p class="modal-sub">How a brand book becomes the music playing in a shop: one system for the client app and the Director's studio.</p>
+                <p class="section-eyebrow">System Design</p>
+                <h2 id="sd-title">MATCHROOM · AI Influencer Director</h2>
+                <p class="modal-sub">How brand rules become a published week of creator posts, on the same architecture as the VIBES LAB Music Director system.</p>
             </div>
             <button type="button" class="modal-close" data-close aria-label="Close"><i class="bx bx-x" aria-hidden="true"></i></button>
         </div>
 
         <div class="modal-body">
-            <!-- 1. End-to-end flow -->
-            <h3 class="sd-heading">🗺️ End-to-end flow</h3>
+            <h3 class="sd-heading"><i class="bx bx-map-alt" aria-hidden="true"></i> End-to-end flow</h3>
             <div class="sd-flow">
                 <div class="sd-col">
                     <p class="sd-step">01 · Inputs</p>
                     <ul>
-                        <li><b>📘 Brand book</b><span>The client's PDF: identity, tone, audience</span></li>
-                        <li><b>🎵 Track library</b><span>Track profiles: BPM, energy 1–5, mood tags, language</span></li>
-                        <li><b>💬 Client feedback</b><span>Like · not this song · request a change</span></li>
+                        <li><b>Brand profile</b><span>VIBES, audience, signature tags and rules a computer can check</span></li>
+                        <li><b>Creator roster</b><span>Profiles: engagement rate, tone 1–5, tags, language, agency</span></li>
+                        <li><b>Brand feedback</b><span>Like · not this creator · ask the Director</span></li>
                     </ul>
                 </div>
                 <div class="sd-col sd-col-accent">
                     <p class="sd-step">02 · AI + Engine</p>
                     <ul>
-                        <li><b>🧠 LLM as translator</b><span>Brief → targets: energy by daypart, BPM, Thai share, moods</span></li>
-                        <li><b>⚙️ Recommendation engine</b><span>Filter → score 7 factors → rerank</span></li>
-                        <li><b>🗓️ Weekly draft</b><span>Day types × 1–2 hour playlists</span></li>
+                        <li><b>AI drafts the week</b><span>Day types × posting slots, one shortlist per slot</span></li>
+                        <li><b>Ranking engine</b><span>Filter → score 7 factors → rerank</span></li>
+                        <li><b>Guardrails</b><span>Roster-only picks, numbers must match, rules checked by code</span></li>
                     </ul>
                 </div>
                 <div class="sd-col">
                     <p class="sd-step">03 · Director Studio</p>
                     <ul>
-                        <li><b>📝 Draft → ✅ Review → 🚀 Publish</b><span>Edits to a published week need re-approval</span></li>
-                        <li><b>📥 Queue</b><span>Requests, reviews and offline players in one list</span></li>
-                        <li><b>📊 Reports</b><span>Play log, likes and royalties by label</span></li>
+                        <li><b>Draft → Review → Publish</b><span>Edits to a published week need re-approval</span></li>
+                        <li><b>Queue</b><span>Late posts, reviews and requests; nudge creators on LINE</span></li>
+                        <li><b>Reports</b><span>Posts, on-time rate and creator fees by agency</span></li>
                     </ul>
                 </div>
                 <div class="sd-col">
-                    <p class="sd-step">04 · Client App</p>
+                    <p class="sd-step">04 · Brand App</p>
                     <ul>
-                        <li><b>▶️ Today</b><span>Now playing + Pool mood: Normal · Softer · Livelier</span></li>
-                        <li><b>🗓️ Weekly schedule</b><span>Export to PDF or Excel</span></li>
-                        <li><b>🔊 Shop speakers</b><span>Plays on the shop's own sound system</span></li>
+                        <li><b>Today</b><span>Who is posting now; hold posting in one tap</span></li>
+                        <li><b>Weekly schedule</b><span>Export to PDF or Excel</span></li>
+                        <li><b>Pool tone (premium)</b><span>Normal · Softer · Bolder, all Director-approved</span></li>
                     </ul>
                 </div>
             </div>
-            <p class="sd-loop">↺ <b>Feedback loop:</b> likes and "not this song" flow back into the engine's history score, so next week's draft fits better.</p>
+            <p class="sd-loop"><i class="bx bx-revision" aria-hidden="true"></i> <b>Feedback loop:</b> likes and "not this creator" flow back into the engine's history score, so next week's draft fits better.</p>
 
-            <!-- 2. Engine anatomy -->
-            <h3 class="sd-heading">⚙️ Inside the recommendation engine</h3>
+            <h3 class="sd-heading"><i class="bx bx-cog" aria-hidden="true"></i> Inside the ranking engine</h3>
             <div class="sd-engine">
                 <ol class="sd-pipeline">
-                    <li><span class="sd-num">1</span><b>Target</b><span>From the slot, the client's brief and the weather</span></li>
-                    <li><span class="sd-num">2</span><b>Filter</b><span>Banned tags, explicit lyrics, songs the Director rejected</span></li>
+                    <li><span class="sd-num">1</span><b>Target</b><span>From the slot: content tags, tone, engagement goal, Thai share</span></li>
+                    <li><span class="sd-num">2</span><b>Filter</b><span>Brand rules, banned tags, "not this creator", budget cap</span></li>
                     <li><span class="sd-num">3</span><b>Score</b><span>7 parts, each 0–1, weighted mean</span></li>
-                    <li><span class="sd-num">4</span><b>Rerank</b><span>≤ 2 songs per artist, no back-to-back, Thai share</span></li>
+                    <li><span class="sd-num">4</span><b>Rerank</b><span>≤ 2 per agency, no back-to-back, keep the Thai share</span></li>
                 </ol>
                 <div class="sd-weights" aria-label="Scoring weights">
-                    <p class="sd-weights-title">Scoring weights</p>
-                    <div class="w-row"><span>Mood</span><i style="--w:3"></i><em>×3</em></div>
-                    <div class="w-row"><span>Energy</span><i style="--w:2"></i><em>×2</em></div>
-                    <div class="w-row"><span>BPM</span><i style="--w:2"></i><em>×2</em></div>
-                    <div class="w-row"><span>Scent</span><i style="--w:2"></i><em>×2</em></div>
+                    <p class="sd-weights-title">Scoring weights (same as Music Director)</p>
+                    <div class="w-row"><span>Fit</span><i style="--w:3"></i><em>×3</em></div>
+                    <div class="w-row"><span>Tone</span><i style="--w:2"></i><em>×2</em></div>
+                    <div class="w-row"><span>ER</span><i style="--w:2"></i><em>×2</em></div>
+                    <div class="w-row"><span>Brand</span><i style="--w:2"></i><em>×2</em></div>
                     <div class="w-row"><span>History</span><i style="--w:2"></i><em>×2</em></div>
                     <div class="w-row"><span>Language</span><i style="--w:1"></i><em>×1</em></div>
                     <div class="w-row"><span>Trend</span><i style="--w:1"></i><em>×1</em></div>
                 </div>
             </div>
 
-            <!-- 3. Principles -->
-            <h3 class="sd-heading">📐 Design principles</h3>
+            <div class="math-model">
+                <p class="shots-label"><i class="bx bx-math" aria-hidden="true"></i> Math model: the ranking score</p>
+                <div class="eq-row"><span class="eq-label">Score</span><div class="eq"><math display="block"><mi>Score</mi><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><munder><mo>∑</mo><mrow><mi>k</mi><mo>∈</mo><mi>K</mi></mrow></munder><msub><mi>w</mi><mi>k</mi></msub><msub><mi>s</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mrow><munder><mo>∑</mo><mrow><mi>k</mi><mo>∈</mo><mi>K</mi></mrow></munder><msub><mi>w</mi><mi>k</mi></msub></mrow></mfrac><mo>,</mo><mspace width="0.6em"/><mi>w</mi><mo>=</mo><mo>(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>)</mo></math></div></div>
+                <div class="eq-row"><span class="eq-label">Content fit</span><div class="eq"><math display="block"><msub><mi>s</mi><mtext>fit</mtext></msub><mo>=</mo><msub><mi>κ</mi><mi>c</mi></msub><mo>·</mo><mi>min</mi><mo>(</mo><mn>1</mn><mo>,</mo><mfrac><mrow><mo>|</mo><mi>T</mi><mo>∩</mo><msub><mi>tags</mi><mi>c</mi></msub><mo>|</mo></mrow><mrow><mi>min</mi><mo>(</mo><mn>3</mn><mo>,</mo><mo>|</mo><mi>T</mi><mo>|</mo><mo>)</mo></mrow></mfrac><mo>)</mo><mo>+</mo><mo>(</mo><mn>1</mn><mo>−</mo><msub><mi>κ</mi><mi>c</mi></msub><mo>)</mo><mo>·</mo><mn>0.5</mn></math></div></div>
+                <div class="eq-row"><span class="eq-label">Tone</span><div class="eq"><math display="block"><msub><mi>s</mi><mtext>tone</mtext></msub><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mo>|</mo><msub><mi>e</mi><mi>c</mi></msub><mo>−</mo><msup><mi>e</mi><mo>*</mo></msup><mo>|</mo></mrow><mn>4</mn></mfrac></math></div></div>
+                <div class="eq-row"><span class="eq-label">History</span><div class="eq"><math display="block"><msub><mi>s</mi><mtext>hist</mtext></msub><mo>=</mo><mn>0.5</mn><mo>+</mo><mn>0.5</mn><mo>·</mo><mi>tanh</mi><mo>(</mo><mfrac><msub><mi>f</mi><mi>c</mi></msub><mn>3</mn></mfrac><mo>)</mo></math></div></div>
+                <p class="eq-legend"><b>K</b> = {fit, tone, engagement rate, brand signature, history, language, trend}, each part s<sub>k</sub> ∈ [0, 1] · <b>κ</b> confidence in the creator's tags · <b>T</b> the slot's target tags · <b>e</b> content tone 1–5 · <b>f</b> Director likes − dislikes · the same weights as the Music Director engine</p>
+            </div>
+
+            <h3 class="sd-heading"><i class="bx bx-transfer-alt" aria-hidden="true"></i> Same model, new domain</h3>
+            <div class="sd-table-wrap">
+                <table class="sd-table">
+                    <thead><tr><th>Piece</th><th>Music Director (VIBES LAB)</th><th>MATCHROOM</th></tr></thead>
+                    <tbody>
+                        <tr><td>Who we serve</td><td>Shops, hotels, cafés</td><td>Brands</td></tr>
+                        <tr><td>Catalogue</td><td>Song library with track profiles</td><td>Creator roster with creator profiles</td></tr>
+                        <tr><td>One slot holds</td><td>A playlist that loops until the slot ends</td><td>A shortlist; one creator posts per day</td></tr>
+                        <tr><td>Client feedback</td><td>Like · Not this song · Ask</td><td>Like · Not this creator · Ask</td></tr>
+                        <tr><td>Pool (premium)</td><td>Normal · Softer · Livelier</td><td>Normal · Softer · Bolder</td></tr>
+                        <tr><td>Compliance</td><td>Music licence (MPC)</td><td>Content rights &amp; ad disclosure</td></tr>
+                        <tr><td>Money report</td><td>Royalties by label</td><td>Creator fees by agency</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sd-heading"><i class="bx bx-ruler" aria-hidden="true"></i> Design principles</h3>
             <div class="sd-principles">
-                <div><span aria-hidden="true">🎯</span><b>One engine for every pick</b><p>AI drafts, recommendations and the playlist builder all call the same scoring engine.</p></div>
-                <div><span aria-hidden="true">🗣️</span><b>LLMs translate, never pick</b><p>Language models turn briefs into targets; they never name tracks or see the catalogue.</p></div>
-                <div><span aria-hidden="true">🎛️</span><b>Clients listen, the Director decides</b><p>Nothing AI-drafted reaches a client without the Director's approval.</p></div>
-                <div><span aria-hidden="true">🔒</span><b>Collect only what's needed</b><p>Multi-tenant PostgreSQL with Row Level Security, role-based access and PDPA-minded data.</p></div>
+                <div><i class="bx bx-target-lock" aria-hidden="true"></i><b>One engine for every pick</b><p>AI drafts, recommendations and the shortlist picker all call the same ranking engine.</p></div>
+                <div><i class="bx bx-user-check" aria-hidden="true"></i><b>AI drafts, the Director decides</b><p>Nothing AI-drafted reaches a brand without the Director's approval.</p></div>
+                <div><i class="bx bx-message-rounded-dots" aria-hidden="true"></i><b>Reasons, never scores</b><p>Brands see plain-language reasons; the numbers stay inside the engine.</p></div>
+                <div><i class="bx bx-lock-alt" aria-hidden="true"></i><b>Collect only what's needed</b><p>Brand book, posting hours, likes and requests; no followers' personal data.</p></div>
             </div>
         </div>
     </dialog>
@@ -1232,7 +1243,7 @@
     <dialog class="modal code-modal" id="code-viewer" aria-labelledby="code-title">
         <div class="modal-head">
             <div>
-                <p class="section-eyebrow"><span aria-hidden="true">💻</span> <span id="code-lang">Code</span></p>
+                <p class="section-eyebrow"><span id="code-lang">Code</span></p>
                 <h2 id="code-title">Code</h2>
             </div>
             <div class="code-tools">
@@ -1704,7 +1715,7 @@ print(&quot;Best Parameters:&quot;, best_parameters)</template>
             document.getElementById("code-copy").addEventListener("click", async () => {
                 try {
                     await navigator.clipboard.writeText(codeText);
-                    showToast("📋 Code copied");
+                    showToast("Code copied");
                 } catch {
                     showToast("Select the code to copy it");
                 }
@@ -1713,9 +1724,9 @@ print(&quot;Best Parameters:&quot;, best_parameters)</template>
             copyBtn.addEventListener("click", async () => {
                 try {
                     await navigator.clipboard.writeText(copyBtn.dataset.email);
-                    showToast("📋 Email copied: " + copyBtn.dataset.email);
+                    showToast("Email copied: " + copyBtn.dataset.email);
                 } catch {
-                    showToast("✉️ " + copyBtn.dataset.email);
+                    showToast(copyBtn.dataset.email);
                 }
             });
 

@@ -3,139 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="theme-color" content="#070c16">
+
     <!-- Primary Meta Tags -->
-    <title>Thananop Kullapan - Data Scientist & Analyst</title>
-    <meta name="title" content="Thananop Kullapan - Data Scientist & Analyst">
-    <meta name="description" content="Portfolio of Thananop Kullapan, a Data Scientist blending Machine Learning and Operations Research to solve business problems.">
+    <title>Thananop Kullapan · Data Scientist & Business Analyst</title>
+    <meta name="title" content="Thananop Kullapan · Data Scientist & Business Analyst">
+    <meta name="description" content="Portfolio of Thananop Kullapan, a Data Scientist and Business Analyst blending Machine Learning, Operations Research and automation to solve business problems, from forecasting and optimization to AI-powered web apps.">
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://SKY-TKP.github.io/">
-    <meta property="og:title" content="Thananop Kullapan - Data Portfolio">
-    <meta property="og:description" content="Proven track record in Python, SQL, Machine Learning, and driving 30% cost reduction through optimization.">
+    <meta property="og:title" content="Thananop Kullapan · Data Portfolio">
+    <meta property="og:description" content="Python, SQL, Machine Learning and Optimization: 30% cost reduction at TOYOTA, 97% data accuracy at AIA, plus AI web apps and LINE chat automation.">
     <meta property="og:image" content="https://SKY-TKP.github.io/background.jpg">
 
-    <!-- นำเข้า Icon จาก Boxicons และระบบ AOS Animation -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="icon" href="profile.png">
+
+    <!-- Fonts, Icons (Boxicons) and AOS Animation: bundled in assets/vendor so the site works on its own -->
+    <link rel="stylesheet" href="assets/vendor/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
 
-    <!-- Mobile Navigation Toggle Button -->
-    <i class="bx bx-menu mobile-nav-toggle d-xl-none" id="mobile-nav-toggle"></i>
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <!-- Cursor trail (desktop only, see script) -->
+    <canvas id="cursor-trail" aria-hidden="true"></canvas>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- ==============================================
+         MOBILE TOP BAR (shown below 1200px)
+         ============================================== -->
+    <div class="topbar">
+        <a href="#hero" class="topbar-brand">
+            <img src="profile.png" alt="" width="32" height="32">
+            <span>Thananop Kullapan</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="header" aria-expanded="false">
+            <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
 
     <!-- ==============================================
          LEFT SIDEBAR (HEADER)
          ============================================== -->
-    <header id="header">
-        <div class="d-flex flex-column">
-            
-            <div class="profile">
-                <img src="profile.png" alt="Thananop Kullapan" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="#hero">Thananop Kullapan</a></h1>
-                
-                <!-- Open to Work Badge -->
-                <div class="open-to-work">
-                    <span class="status-dot"></span> Business Analyst @ Grab TH
-                </div>
+    <header id="header" class="sidebar">
+        <button class="nav-close" id="nav-close" type="button" aria-label="Close menu">
+            <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
 
-                <div class="social-links mt-3 text-center">
-                    <a href="https://github.com/SKY-TKP" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-                    <a href="https://linkedin.com/in/thananop-kullapan" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://tkp39.wordpress.com/" target="_blank" class="blog"><i class="bx bx-world"></i></a>
-                </div>
+        <div class="profile">
+            <div class="avatar">
+                <img src="profile.png" alt="Thananop Kullapan" width="116" height="116">
+            </div>
+            <p class="profile-name"><a href="#hero">Thananop Kullapan</a></p>
+            <p class="profile-role">Data Scientist · Business Analyst</p>
+
+            <!-- Current Role Badge -->
+            <div class="status-badge">
+                <span class="status-dot" aria-hidden="true"></span> Business Analyst @ Grab TH
             </div>
 
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-                    <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Tech Stack</span></a></li>
-                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Experience</span></a></li>
-                    <li><a href="#education" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Education</span></a></li>
-                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-                </ul>
-            </nav>
-            
-            <div class="sidebar-footer">
-                <a href="https://drive.google.com/file/d/19DB4BCYS7MgXvUIIOOG7CzUTSdguUIKy/view?usp=sharing" target="_blank" class="btn-sidebar">Resume</a>
-                <a href="https://drive.google.com/file/d/1P1sdmQiR6sK0nheJJZVZZA-sCzFoShZ4/view?usp=sharing" target="_blank" class="btn-sidebar btn-outline">Transcript</a>
+            <div class="social-links">
+                <a href="https://github.com/SKY-TKP" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                <a href="https://linkedin.com/in/thananop-kullapan" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://tkp39.wordpress.com/" target="_blank" rel="noopener" aria-label="Blog"><i class="bx bx-world"></i></a>
+                <a href="mailto:thananop.klp@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
             </div>
+        </div>
 
+        <nav id="navbar" class="nav-menu" aria-label="Main">
+            <ul>
+                <li><a href="#hero" class="nav-link active"><i class="bx bx-home" aria-hidden="true"></i> <span>Home</span></a></li>
+                <li><a href="#about" class="nav-link"><i class="bx bx-user" aria-hidden="true"></i> <span>About</span></a></li>
+                <li><a href="#skills" class="nav-link"><i class="bx bx-server" aria-hidden="true"></i> <span>Tech Stack</span></a></li>
+                <li><a href="#portfolio" class="nav-link"><i class="bx bx-book-content" aria-hidden="true"></i> <span>Projects</span></a></li>
+                <li><a href="#resume" class="nav-link"><i class="bx bx-briefcase" aria-hidden="true"></i> <span>Experience</span></a></li>
+                <li><a href="#education" class="nav-link"><i class="bx bx-award" aria-hidden="true"></i> <span>Education</span></a></li>
+                <li><a href="#hobbies" class="nav-link"><i class="bx bx-heart" aria-hidden="true"></i> <span>Hobbies</span></a></li>
+                <li><a href="#contact" class="nav-link"><i class="bx bx-envelope" aria-hidden="true"></i> <span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="https://drive.google.com/file/d/19DB4BCYS7MgXvUIIOOG7CzUTSdguUIKy/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bx-file" aria-hidden="true"></i> Resume</a>
+            <a href="https://drive.google.com/file/d/1P1sdmQiR6sK0nheJJZVZZA-sCzFoShZ4/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bx-award" aria-hidden="true"></i> Transcript</a>
         </div>
     </header>
 
-    <!-- ==============================================
-         HERO SECTION (RIGHT SIDE - FULL SCREEN)
-         ============================================== -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-start">
-        <div class="hero-container" data-aos="fade-in">
-            <h1>Thananop Kullapan</h1>
-            <p>I'm <span id="typewriter" class="typed"></span><span class="typed-cursor">|</span></p>
-            
-            <!-- CTA Buttons -->
-            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
-                <a href="#portfolio" class="btn-hero-primary scrollto"><i class="bx bx-briefcase"></i> View Projects</a>
-                <a href="#contact" class="btn-hero-outline scrollto"><i class="bx bx-envelope"></i> Contact Me</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==============================================
-         MAIN CONTENT AREA
-         ============================================== -->
     <main id="main">
 
-        <!-- ABOUT SECTION -->
-        <section id="about" class="about section-bg">
+        <!-- ==============================================
+             HERO SECTION
+             ============================================== -->
+        <section id="hero" class="hero">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="hero-inner" data-aos="fade-up">
+                    <p class="hero-eyebrow"><span class="wave" aria-hidden="true">👋</span> Data Science · Analytics · AI Products</p>
+                    <h1 class="hero-title">Thananop Kullapan</h1>
+                    <p class="hero-role">
+                        <span class="sr-only">Data Scientist, Data Analyst, Business Analyst, AI Developer and Problem Solver</span>
+                        <span aria-hidden="true">I'm a <span id="typewriter" class="typed">Data Scientist</span><span class="typed-cursor">|</span></span>
+                    </p>
+                    <p class="hero-lead">I combine machine learning, mathematical optimization and automation to turn operational data into measurable results, from a 30% logistics cost cut at TOYOTA to AI-powered web apps and chat commerce.</p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary btn-lg"><i class="bx bx-briefcase" aria-hidden="true"></i> View Projects</a>
+                        <a href="https://drive.google.com/file/d/19DB4BCYS7MgXvUIIOOG7CzUTSdguUIKy/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-secondary btn-lg"><i class="bx bx-file" aria-hidden="true"></i> View Resume</a>
+                        <a href="#contact" class="btn btn-ghost btn-lg"><i class="bx bx-envelope" aria-hidden="true"></i> Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="hero-scroll" aria-label="Scroll to About"><i class="bx bx-chevron-down" aria-hidden="true"></i></a>
+        </section>
+
+        <!-- ==============================================
+             ABOUT SECTION
+             ============================================== -->
+        <section id="about" class="section section-alt">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <p class="section-eyebrow"><span aria-hidden="true">👋</span> Who I Am</p>
                     <h2>About Me</h2>
-                    <p>Highly analytical Industrial Engineering graduate with 1st Class Honors from Chulalongkorn University, transitioning into Data Science and Analytics. Proven track record in bridging mathematical optimization (MILP, CP) and machine learning with practical business problem-solving. Delivered measurable impact including a 30% cost reduction at TOYOTA, 97% data reconciliation accuracy at AIA, and robust automated data pipelines.</p>
                 </div>
 
-                <div class="row about-stats">
-                    <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
-                        <i class="bx bx-award"></i>
-                        <h3>3.81</h3>
+                <div class="about-grid">
+                    <div class="about-text" data-aos="fade-up">
+                        <p>Highly analytical Industrial Engineering graduate with 1st Class Honors from Chulalongkorn University, transitioning into Data Science and Analytics. Proven track record in bridging mathematical optimization (MILP, CP) and machine learning with practical business problem-solving. Delivered measurable impact including a <strong>30% cost reduction at TOYOTA</strong>, <strong>97% data reconciliation accuracy at AIA</strong>, and robust automated data pipelines.</p>
+                        <p>Beyond analysis, I design and build working products: as a part-time AI Developer at <strong>VIBES LAB</strong> I designed the system behind its AI music-curation platform, alongside a bilingual influencer-matching web app and an AI sales assistant on LINE built with n8n.</p>
+                    </div>
+
+                    <aside class="facts-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>⚡ At a Glance</h3>
+                        <dl>
+                            <div><dt>Current Role</dt><dd>Business Analyst @ Grab TH</dd></div>
+                            <div><dt>Previously</dt><dd>AI Developer (Part-time) @ VIBES LAB</dd></div>
+                            <div><dt>Education</dt><dd>B.Eng. Industrial Engineering, Chulalongkorn University</dd></div>
+                            <div><dt>Honors</dt><dd>1st Class Honors · GPAX 3.81</dd></div>
+                            <div><dt>Focus</dt><dd>Analytics · Machine Learning · Optimization · Automation</dd></div>
+                        </dl>
+                    </aside>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-award" aria-hidden="true"></i>
+                        <h3 data-count="3.81" data-decimals="2">3.81</h3>
                         <p>GPAX (1st Class)</p>
                     </div>
-                    <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bx bx-line-chart-down"></i>
-                        <h3>30%</h3>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-line-chart-down" aria-hidden="true"></i>
+                        <h3 data-count="30" data-suffix="%">30%</h3>
                         <p>Max Cost Reduction</p>
                     </div>
-                    <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bx bx-check-shield"></i>
-                        <h3>97%</h3>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-check-shield" aria-hidden="true"></i>
+                        <h3 data-count="97" data-suffix="%">97%</h3>
                         <p>Data Accuracy</p>
                     </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="bx bx-time-five" aria-hidden="true"></i>
+                        <h3 data-count="94" data-suffix="%">94%</h3>
+                        <p>Manual Work Cut</p>
+                    </div>
+                </div>
+
+                <!-- How I Work -->
+                <div class="process" data-aos="fade-up">
+                    <h3 class="process-title">🛠️ How I Work</h3>
+                    <ol class="process-steps">
+                        <li>
+                            <span class="process-emoji" aria-hidden="true">🔍</span>
+                            <span class="process-num">01</span>
+                            <h4>Understand</h4>
+                            <p>Start from the business question, the process and the people who will use the result.</p>
+                        </li>
+                        <li>
+                            <span class="process-emoji" aria-hidden="true">📊</span>
+                            <span class="process-num">02</span>
+                            <h4>Analyze &amp; Model</h4>
+                            <p>Clean the data, then forecast, optimize or classify, whichever fits the problem.</p>
+                        </li>
+                        <li>
+                            <span class="process-emoji" aria-hidden="true">⚙️</span>
+                            <span class="process-num">03</span>
+                            <h4>Automate &amp; Build</h4>
+                            <p>Turn the answer into a pipeline, dashboard or app that keeps running on its own.</p>
+                        </li>
+                        <li>
+                            <span class="process-emoji" aria-hidden="true">📈</span>
+                            <span class="process-num">04</span>
+                            <h4>Measure</h4>
+                            <p>Prove the impact in numbers: cost saved, accuracy gained, hours given back.</p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
 
-        <!-- TECH STACK SECTION -->
-        <section id="skills" class="skills">
+        <!-- ==============================================
+             TECH STACK SECTION
+             ============================================== -->
+        <section id="skills" class="section">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Tech Stack & Capabilities</h2>
+                <div class="section-head" data-aos="fade-up">
+                    <p class="section-eyebrow"><span aria-hidden="true">🧰</span> What I Use</p>
+                    <h2>Tech Stack &amp; Capabilities</h2>
                 </div>
 
                 <div class="skills-grid">
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                        <h3><i class="bx bx-code-alt"></i> Proficient Tools</h3>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="bx bx-code-alt" aria-hidden="true"></i> Proficient Tools</h3>
                         <div class="tag-cloud">
                             <span>Python</span><span>SQL (CTE, Window Func)</span><span>R</span>
                             <span>Excel VBA / Power Query</span><span>Power BI</span><span>Tableau</span>
-                            <span>LightGBM & scikit-learn</span><span>Pyomo</span><span>Git</span>
+                            <span>LightGBM &amp; scikit-learn</span><span>Pyomo</span><span>Git</span>
                         </div>
                     </div>
-                    
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                        <h3><i class="bx bx-buildings"></i> Domain Expertise</h3>
+
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+                        <h3><i class="bx bx-globe" aria-hidden="true"></i> Web &amp; Automation</h3>
+                        <div class="tag-cloud">
+                            <span>HTML / CSS / JavaScript</span><span>Node.js</span><span>Supabase (PostgreSQL + RLS)</span>
+                            <span>n8n</span><span>LINE Messaging API</span><span>Google Gemini API</span>
+                            <span>Power Automate</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3><i class="bx bx-buildings" aria-hidden="true"></i> Domain Expertise</h3>
                         <div class="tag-cloud">
                             <span>Supply Chain Optimization</span><span>Retail Demand Forecasting</span>
                             <span>Financial Risk Analytics</span><span>Logistics Management</span>
@@ -143,8 +243,8 @@
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                        <h3><i class="bx bx-user-voice"></i> Soft Skills</h3>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+                        <h3><i class="bx bx-user-voice" aria-hidden="true"></i> Soft Skills</h3>
                         <div class="tag-cloud">
                             <span>Cross-functional Collaboration</span><span>Business Requirement Analysis (BRD)</span>
                             <span>Data Storytelling</span><span>Stakeholder Management</span>
@@ -152,8 +252,8 @@
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                        <h3><i class="bx bx-cloud"></i> Currently Exploring</h3>
+                    <div class="skill-card skill-card-exploring" data-aos="fade-up" data-aos-delay="300">
+                        <h3><i class="bx bx-cloud" aria-hidden="true"></i> Currently Exploring</h3>
                         <div class="tag-cloud exploring">
                             <span>Data Engineering</span><span>Big Data</span>
                             <span>Cloud Data Lake</span><span>Databricks</span><span>Spark</span>
@@ -162,340 +262,1556 @@
                 </div>
 
                 <!-- GitHub Chart -->
-                <div class="github-contribution mt-4" data-aos="fade-up" data-aos-delay="500">
-                    <h4>Open Source Contribution Matrix</h4>
-                    <img src="https://ghchart.rshah.org/149ddd/SKY-TKP" alt="GitHub Contributions">
+                <div class="github-card" data-aos="fade-up">
+                    <div class="github-card-head">
+                        <h3><i class="bx bxl-github" aria-hidden="true"></i> GitHub Contributions</h3>
+                        <a href="https://github.com/SKY-TKP" target="_blank" rel="noopener">@SKY-TKP <i class="bx bx-link-external" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="github-chart">
+                        <img src="https://ghchart.rshah.org/149ddd/SKY-TKP" alt="GitHub contribution chart for SKY-TKP" loading="lazy" onerror="this.closest('.github-card').hidden = true">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS PORTFOLIO SECTION -->
-        <section id="portfolio" class="portfolio section-bg">
+        <!-- ==============================================
+             PROJECTS PORTFOLIO SECTION
+             ============================================== -->
+        <section id="portfolio" class="section section-alt">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-head" data-aos="fade-up">
+                    <p class="section-eyebrow"><span aria-hidden="true">🚀</span> What I've Built</p>
                     <h2>Selected Projects</h2>
+                    <p>Analytics, optimization, automation and AI products, each with the measurable result behind it.</p>
                 </div>
 
-                <!-- PROJECT 1: VIBES LAB -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-info">
-                        <h3>VIBES LAB - Enterprise AI Music Curator <span>Sep 2026</span></h3>
-                        <p class="subtitle">B2B SaaS Architecture & AI Prototype</p>
-                        <p class="desc">Designed the enterprise architecture and developed a functional AI prototype for a B2B commercial music management platform. The system leverages LLMs and vector databases to automate music curation based on brand identity and psychological acoustics.</p>
-                        
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> AI Semantic Curation & Emotion Mapping:</h4>
-                            <p>Implemented Dimensional Emotion AI (Valence-Arousal) and Vector Similarity Search to automatically match audio tracks to brand vibes, reducing manual curation time from 3-4 hours to mere seconds.</p>
-                        </div>
-                        
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> Enterprise Security & Architecture:</h4>
-                            <p>Architected a multi-tenant database using PostgreSQL (Supabase) with Row Level Security (RLS) ensuring strict data isolation. Enforced Deterministic JSON payloads from the LLM for seamless frontend integration.</p>
-                        </div>
-
-                        <div class="portfolio-links mt-4">
-                            <a href="https://3950_.oneapp.dev/" target="_blank" class="btn-live-app"><i class="bx bx-link-external"></i> Try Live Prototype</a>
-                            <a href="https://github.com/SKY-TKP/PROJECT/blob/main/sql-database/vibes_lab/VIBES_LAB-presentation.pdf" target="_blank"><i class="bx bxs-file-pdf"></i> Architecture Presentation</a>
-                        </div>
-                    </div>
+                <div class="filter-bar" role="group" aria-label="Filter projects" data-aos="fade-up">
+                    <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-filter="product" aria-pressed="false">Product &amp; Web</button>
+                    <button type="button" class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
+                    <button type="button" class="filter-btn" data-filter="ml" aria-pressed="false">Data &amp; ML</button>
+                    <button type="button" class="filter-btn" data-filter="optimization" aria-pressed="false">Optimization</button>
                 </div>
 
-                <!-- PROJECT 2: AIA -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-info">
-                        <h3>Financial Data Automation & eTR Streamlining <span>May - Aug 2026</span></h3>
-                        <p class="subtitle">Contract Project &bull; AIA Investment Management (Thailand)</p>
-                        <p class="desc">Automated financial data workflows and streamlined business processes to enhance data accuracy and significantly reduce operational bottlenecks.</p>
-                        
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> Upload 6 Banks Automation:</h4>
-                            <p>Automated barcode decoding and transaction reconciliation using Excel, Power Automate, and MS Access. Increased data accuracy from ~60% to <strong>97%</strong> and reduced daily processing time from 2–3 hours to <strong>~15 minutes</strong>. Acted as a Business Analyst to create BRD, Web Development Design, and conduct UAT. Coordinated cross-functionally with IT and Customer Service to manage the project lifecycle, and integrated the automated pipeline into Power BI to generate a Summary Data Dashboard sent to Management daily.</p>
-                        </div>
-                        
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> eTR Process Streamlining:</h4>
-                            <p>Mapped transaction flows and prepared BRD/UAT materials. Streamlined processing time from 7 days to 4 days (-43%), reducing staff document workload by 23% and paper usage by 34%.</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="project-list">
 
-                <!-- PROJECT 3: TOYOTA (อัปเกรด Layout ให้ตรงกับตีมหลัก) -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-info">
-                        <h3>Logistics & Returnable Packaging Optimization <span>Jun - Nov 2025</span></h3>
-                        <p class="subtitle">Cooperative Education &bull; TOYOTA MOTOR ASIA</p>
-                        <p class="desc">Engineered mathematical optimization and SARIMAX time-series models to eliminate inventory excesses and streamline logistics networks.</p>
-                        
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> Cost & Logistics Optimization:</h4>
-                            <p>Achieved a <strong>30% cost reduction</strong> (~THB 3M/year saved on warehouse storage and logistics) by structuring advanced supply chain methodologies.</p>
+                    <!-- PROJECT: VIBES LAB (Music Director app) -->
+                    <article class="project-card project-featured" id="project-vibeslab" data-category="product ml" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-music"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">B2B SaaS Architecture &amp; AI Prototype &bull; Music Director App</p>
+                                <h3>VIBES LAB · Enterprise AI Music Curator</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge badge-live"><span class="status-dot" aria-hidden="true"></span> Live</span><span class="badge">Oct – Nov 2026</span></div>
+                        </div>
+                        <p class="project-desc">Designed the enterprise architecture and developed a functional AI prototype for a B2B commercial music management platform. The system leverages LLMs and vector databases to automate music curation based on brand identity and psychological acoustics. The product, the <strong>VIBES LAB Music Director app</strong>, lets a Music Director program brand-fit background music for hotels, restaurants and shops, while clients simply listen and follow the schedule.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>3–4 hrs → secs</strong><span>Manual curation time</span></div>
+                            <div class="metric"><strong>7-factor</strong><span>One engine for every pick</span></div>
+                            <div class="metric"><strong>Multi-tenant</strong><span>Row Level Security isolation</span></div>
+                            <div class="metric"><strong>150+</strong><span>Automated UI checks</span></div>
                         </div>
 
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> Demand Forecasting Models:</h4>
-                            <p>Improved forecasting accuracy by <strong>34.6%</strong>, reducing RMSE from 447,315 to 292,544 utilizing SARIMAX time-series.</p>
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>📘 Brand book</span></li>
+                                <li><span>🧠 VIBES profile</span></li>
+                                <li><span>⚙️ Engine builds playlists</span></li>
+                                <li><span>✅ Director approves</span></li>
+                                <li><span>🔊 Plays in the shop</span></li>
+                            </ol>
                         </div>
 
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> Workflow Automation:</h4>
-                            <p>Automated manual reporting workflows, successfully reducing workload from 30 hrs/month to 1.8 hrs/month (94% drop).</p>
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>AI Semantic Curation &amp; Emotion Mapping</h4>
+                                <p>Implemented Dimensional Emotion AI (Valence-Arousal) and Vector Similarity Search to automatically match audio tracks to brand vibes, reducing manual curation time from 3-4 hours to mere seconds.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Enterprise Security &amp; Architecture</h4>
+                                <p>Architected a multi-tenant database using PostgreSQL (Supabase) with Row Level Security (RLS) ensuring strict data isolation. Enforced Deterministic JSON payloads from the LLM for seamless frontend integration.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Brand Book → Weekly Program</h4>
+                                <p>A client's brand book (PDF) is read into a VIBES profile (brand archetype, energy by time of day, BPM range, Thai-language share), which drafts day types and a full week of 1–2 hour playlists for the Director to review.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Director-First Workflow</h4>
+                                <p>Every week moves from AI draft to Director review to publish. Clients only listen, pick a Pool mood (Normal / Softer / Livelier) on premium plans, and send likes or requests that feed back into the engine.</p>
+                            </div>
                         </div>
 
-                        <div class="portfolio-links mt-4">
-                            <a href="https://drive.google.com/file/d/1XWBnACBB75bHEkfc3Mr4rwlAe-ccgJNm/view?usp=sharing" target="_blank"><i class="bx bx-slideshow"></i> Slide</a>
-                            <a href="https://drive.google.com/file/d/1xxgIgDuLlNwpGlJQVq6u9aFEXdnlJRfW/view?usp=sharing" target="_blank"><i class="bx bx-video"></i> Video</a>
+                        <!-- Screens from the live app -->
+                        <div class="shots">
+                            <p class="shots-label">🖼️ Inside the app <span>· click to enlarge</span></p>
+                            <div class="shot-grid" data-gallery>
+                                <a class="shot" href="assets/vibeslab/today.jpg" data-caption="Client app · Today: what's playing now, mood Pool and quick requests">
+                                    <img src="assets/vibeslab/thumbs/today.jpg" alt="VIBES LAB Music Director client app, Today screen" loading="lazy" width="520" height="325">
+                                    <span>Client · Today</span>
+                                </a>
+                                <a class="shot" href="assets/vibeslab/week.jpg" data-caption="Client app · Weekly schedule by day type, with PDF / Excel export">
+                                    <img src="assets/vibeslab/thumbs/week.jpg" alt="Weekly music schedule screen" loading="lazy" width="520" height="325">
+                                    <span>Client · Weekly schedule</span>
+                                </a>
+                                <a class="shot" href="assets/vibeslab/today-mobile.jpg" data-caption="Client app on mobile">
+                                    <img src="assets/vibeslab/thumbs/today-mobile.jpg" alt="Client app on a phone" loading="lazy" width="360" height="779">
+                                    <span>Client · Mobile</span>
+                                </a>
+                                <a class="shot" href="assets/vibeslab/studio-program.jpg" data-caption="Director Studio · Program: AI draft → MD review → publish">
+                                    <img src="assets/vibeslab/thumbs/studio-program.jpg" alt="Director Studio program screen" loading="lazy" width="520" height="325">
+                                    <span>Studio · Program</span>
+                                </a>
+                                <a class="shot" href="assets/vibeslab/studio-recommend.jpg" data-caption="Director Studio · AI Recommend: songs ranked for a slot, with reasons in words">
+                                    <img src="assets/vibeslab/thumbs/studio-recommend.jpg" alt="AI song recommendation screen" loading="lazy" width="520" height="325">
+                                    <span>Studio · AI Recommend</span>
+                                </a>
+                                <a class="shot" href="assets/vibeslab/studio-reports.jpg" data-caption="Director Studio · Reports across all shops (sample figures)">
+                                    <img src="assets/vibeslab/thumbs/studio-reports.jpg" alt="Reports overview screen" loading="lazy" width="520" height="325">
+                                    <span>Studio · Reports</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- PROJECT 4: WALMART (อัปเกรด Layout ให้ตรงกับตีมหลัก) -->
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="portfolio-info">
-                        <h3>Walmart M5 Forecasting Analytics <span>May 2026</span></h3>
-                        <p class="subtitle">Personal Project &bull; Retail Demand Forecasting</p>
-                        <p class="desc">Processed 60M+ transactional records and 30,490 hierarchical time series to build an advanced LightGBM 28-day demand forecasting pipeline.</p>
-                        
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> Data Engineering & Optimization:</h4>
-                            <p>Reduced memory usage by 78.5% through optimized data type casting across large-scale datasets.</p>
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>System Design</li><li>LLM</li><li>Vector Search</li><li>Next.js</li><li>PostgreSQL</li><li>Supabase RLS</li><li>JSON Schema</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://3950_.oneapp.dev/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bx-link-external" aria-hidden="true"></i> Try Live Prototype</a>
+                                <button type="button" class="btn btn-secondary btn-sm" data-open="system-design"><i class="bx bx-sitemap" aria-hidden="true"></i> View System Design</button>
+                                <a href="https://github.com/SKY-TKP/PROJECT/blob/main/sql-database/vibes_lab/VIBES_LAB-presentation.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxs-file-pdf" aria-hidden="true"></i> Architecture Presentation</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: MATCHROOM -->
+                    <article class="project-card" data-category="product" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-group"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Web App Prototype &bull; Product Design</p>
+                                <h3>MATCHROOM · AI Influencer Director</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">Oct 2026</span></div>
+                        </div>
+                        <p class="project-desc">A bilingual (Thai / English) web app that runs a weekly influencer program for every brand: a Director picks creators with AI help, and the brand simply watches its schedule. It applies the VIBES LAB Music Director service model to a new domain to prove the model travels. All data in the prototype is fictional.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>7-factor</strong><span>Weighted ranking engine</span></div>
+                            <div class="metric"><strong>140</strong><span>Automated UI checks</span></div>
+                            <div class="metric"><strong>TH / EN</strong><span>Every screen bilingual</span></div>
                         </div>
 
-                        <div class="project-feature">
-                            <h4><i class="bx bx-chevron-right"></i> Predictive Modeling Validation:</h4>
-                            <p>Developed robust sliding-window validation metrics achieving reliable out-of-fold RMSE performance for the LightGBM model.</p>
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>🏷️ Brand rules</span></li>
+                                <li><span>🗓️ Day types × slots</span></li>
+                                <li><span>⚙️ Engine ranks creators</span></li>
+                                <li><span>✅ Director approves</span></li>
+                                <li><span>📣 Creators post in rotation</span></li>
+                            </ol>
                         </div>
 
-                        <div class="portfolio-links mt-4">
-                            <a href="https://github.com/SKY-TKP/PROJECT/tree/main/python/m5%20forecast%20acc" target="_blank"><i class="bx bxl-github"></i> Repo</a>
-                            <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/m5%20forecast%20acc/M5%20Analytics%20Report%20-%20Part%201.pdf" target="_blank"><i class="bx bxs-file-pdf"></i> Report</a>
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>One Ranking Engine</h4>
+                                <p>A single engine powers every creator choice: weekly AI drafts, recommendations and the shortlist picker. It filters by brand rules, scores 7 weighted factors (content fit, tone, engagement rate, brand signature, history, language, trend), then re-ranks for agency caps and Thai-content share.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Approval Workflow &amp; Rotation</h4>
+                                <p>Weekly programs move from AI draft to Director review to publish, and any edit to a published slot goes back for re-approval. Shortlists rotate one creator per slot per day, with no repeat in the same slot within 3 days.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>AI Guardrails &amp; Testing</h4>
+                                <p>AI can only pick creators from the roster, misquoted numbers are replaced and logged, and brands see plain-language reasons instead of scores. Built in vanilla HTML, CSS and JavaScript, covered by 140 automated click-through checks in headless Chrome.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- 2 Column Grid for smaller projects -->
-                <div class="portfolio-grid">
-                    <div class="portfolio-item-small" data-aos="fade-up" data-aos-delay="100">
-                        <h4>Optimal Microgrid Sizing</h4>
-                        <p>Stochastic MILP model in Python/Pyomo to optimize Solar PV/ESS capacities. Simulated 28.7% cost reduction (12.01M THB/year).</p>
-                        <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb" target="_blank">Notebook</a>
-                    </div>
-                    <div class="portfolio-item-small" data-aos="fade-up" data-aos-delay="200">
-                        <h4>Sentiment Analysis (NLP)</h4>
-                        <p>Built an end-to-end NLP classification pipeline using 50,000 movie reviews. Preprocessed with NLTK and vectorized via TF-IDF.</p>
-                        <a href="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb" target="_blank">Notebook</a>
-                    </div>
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>JavaScript</li><li>HTML / CSS</li><li>Node.js</li><li>Headless Chrome Tests</li><li>i18n</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/SKY-TKP/APP-DEV-IE/tree/main/match_room" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bxl-github" aria-hidden="true"></i> View Code</a>
+                                <button type="button" class="btn btn-secondary btn-sm" data-code="code-matchroom"><i class="bx bx-code-alt" aria-hidden="true"></i> Code Snippet</button>
+                                <a href="https://github.com/SKY-TKP/APP-DEV-IE/blob/main/match_room/MATCHROOM%20Influencer%20Director%20%C2%B7%20Pitch%20(English).pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bx-slideshow" aria-hidden="true"></i> Presentation Slides</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: LINE SALES ASSISTANT · n8n -->
+                    <article class="project-card" data-category="product automation ml" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-chat"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Workflow Automation &bull; Conversational AI</p>
+                                <h3>LINE Sales Assistant · AI Chat Commerce on n8n</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">Oct 2026</span></div>
+                        </div>
+                        <p class="project-desc">Upgraded an AI sales assistant on LINE for a perfume brand so every chat moves toward a purchase: it answers product questions, recommends scents and closes the sale with a checkout link. Built on n8n, Google Sheets and Google Gemini, validated in simulation and prepared for live UAT.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>96</strong><span>n8n workflow nodes</span></div>
+                            <div class="metric"><strong>80+</strong><span>Simulated chats, 0 errors</span></div>
+                            <div class="metric"><strong>60 / 60</strong><span>FAQ answers validated</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>💬 Customer message</span></li>
+                                <li><span>🛡️ Guards</span></li>
+                                <li><span>🧠 Rules first, AI if needed</span></li>
+                                <li><span>📚 FAQ + live stock</span></li>
+                                <li><span>🔗 Reply + checkout link</span></li>
+                                <li><span>🗂️ Remember 30 min</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>Checkout Inside the Chat</h4>
+                                <p>Fixed a buying loop where the bot repeated the same scent description. The new flow guides scent → size → quantity → a product link with the chosen size pre-selected, and 34 FAQ answers were rewritten to end with one question that moves the chat forward.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Live Stock Awareness</h4>
+                                <p>Added 2 nodes that read the store's public product feed on each message (~0.7 s). Sold-out sizes are named plainly and similar in-stock scents are offered, with a 3-second timeout fallback and all 24 size links verified.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Rules First, AI Second</h4>
+                                <p>Deterministic rules handle most messages; Gemini only reads taste and intent when rules can't, and never writes the reply. Guardrails enforce owner-approved prices and no fake urgency, and every copy change must pass the bot's own validator.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Safe Delivery</h4>
+                                <p>All work was done on a clone of the workflow with 12 backups. Changes were verified by the FAQ compiler (60/60 pass), 80+ simulated chats running the real workflow code, and 58 prepared UAT cases.</p>
+                            </div>
+                        </div>
+
+                        <div class="n8n">
+                            <p class="shots-label">🧩 n8n workflow <span>· simplified sketch of the 96-node canvas</span></p>
+                            <div class="n8n-canvas">
+                                <svg viewBox="0 0 1036 300" role="img" aria-labelledby="n8n-title">
+                                    <title id="n8n-title">Simplified n8n workflow: LINE webhook, guards, rules and Gemini, FAQ and live stock, reply, saved state</title>
+                                    <defs>
+                                        <pattern id="n8n-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" class="n8n-dot"/></pattern>
+                                        <marker id="n8n-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="n8n-arrowhead"/></marker>
+                                    </defs>
+                                    <rect width="1036" height="300" rx="14" fill="url(#n8n-dots)"/>
+
+                                    <!-- connections -->
+                                    <path class="n8n-wire" d="M162 148 L186 148" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire" d="M334 148 L358 148" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire" d="M506 148 L530 148" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire" d="M678 148 L702 148" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire" d="M850 148 L874 148" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire n8n-wire-dim" d="M260 176 L260 232" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire n8n-wire-ai" d="M417 176 L417 232" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire n8n-wire-ai" d="M447 232 L447 176" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire" d="M518 66 C518 95 584 95 584 120" marker-end="url(#n8n-arrow)"/>
+                                    <path class="n8n-wire" d="M690 66 C690 95 624 95 624 120" marker-end="url(#n8n-arrow)"/>
+
+                                    <text class="n8n-tag" x="336" y="139">true</text>
+                                    <text class="n8n-tag" x="267" y="210">false</text>
+                                    <text class="n8n-tag" x="455" y="210">only if rules can't</text>
+
+                                    <!-- nodes -->
+                                    <g class="n8n-node" transform="translate(14 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">💬</text><text x="48" y="25" class="n8n-name">LINE Webhook</text><text x="48" y="41" class="n8n-sub">trigger</text></g>
+                                    <g class="n8n-node" transform="translate(186 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🛡️</text><text x="48" y="25" class="n8n-name">Guards</text><text x="48" y="41" class="n8n-sub">IF · repeat / paused</text></g>
+                                    <g class="n8n-node" transform="translate(358 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🧠</text><text x="48" y="25" class="n8n-name">Understand</text><text x="48" y="41" class="n8n-sub">Code · rules first</text></g>
+                                    <g class="n8n-node" transform="translate(530 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">✍️</text><text x="48" y="25" class="n8n-name">Compose Reply</text><text x="48" y="41" class="n8n-sub">Code · validator</text></g>
+                                    <g class="n8n-node" transform="translate(702 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🔗</text><text x="48" y="25" class="n8n-name">LINE Reply</text><text x="48" y="41" class="n8n-sub">text · photo · link</text></g>
+                                    <g class="n8n-node" transform="translate(874 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">🗂️</text><text x="48" y="25" class="n8n-name">Save State</text><text x="48" y="41" class="n8n-sub">Sheets · 30 min</text></g>
+                                    <g class="n8n-node" transform="translate(444 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">📚</text><text x="48" y="25" class="n8n-name">FAQ Cache</text><text x="48" y="41" class="n8n-sub">Sheets · 60 answers</text></g>
+                                    <g class="n8n-node" transform="translate(616 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">📦</text><text x="48" y="25" class="n8n-name">Live Stock</text><text x="48" y="41" class="n8n-sub">HTTP · 3 s timeout</text></g>
+                                    <g class="n8n-node n8n-node-dim" transform="translate(186 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-grey" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">⏹️</text><text x="48" y="25" class="n8n-name">Stop</text><text x="48" y="41" class="n8n-sub">no reply</text></g>
+                                    <g class="n8n-node n8n-node-ai" transform="translate(358 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="34" class="n8n-emoji">✨</text><text x="48" y="25" class="n8n-name">Google Gemini</text><text x="48" y="41" class="n8n-sub">reads taste &amp; intent</text></g>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>n8n</li><li>JavaScript</li><li>LINE Messaging API</li><li>Google Sheets</li><li>Google Gemini</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/SKY-TKP/APP-DEV-IE/blob/main/line-assistant/LINE%20Sales%20Assistant.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bx-slideshow" aria-hidden="true"></i> Presentation Slides</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: AIA -->
+                    <article class="project-card" data-category="automation" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-spreadsheet"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Contract Project &bull; AIA Investment Management (Thailand)</p>
+                                <h3>Financial Data Automation &amp; eTR Streamlining</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">May – Aug 2026</span></div>
+                        </div>
+                        <p class="project-desc">Automated financial data workflows and streamlined business processes to enhance data accuracy and significantly reduce operational bottlenecks.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>~60% → 97%</strong><span>Data accuracy</span></div>
+                            <div class="metric"><strong>2–3 hrs → 15 min</strong><span>Daily processing time</span></div>
+                            <div class="metric"><strong>7 → 4 days</strong><span>eTR processing (−43%)</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>🏦 6 bank files</span></li>
+                                <li><span>🔎 Barcode decoding</span></li>
+                                <li><span>🔁 Reconciliation</span></li>
+                                <li><span>📊 Power BI dashboard</span></li>
+                                <li><span>📧 Daily to management</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>Upload 6 Banks Automation</h4>
+                                <p>Automated barcode decoding and transaction reconciliation using Excel, Power Automate, and MS Access. Increased data accuracy from ~60% to <strong>97%</strong> and reduced daily processing time from 2–3 hours to <strong>~15 minutes</strong>. Acted as a Business Analyst to create BRD, Web Development Design, and conduct UAT. Coordinated cross-functionally with IT and Customer Service to manage the project lifecycle, and integrated the automated pipeline into Power BI to generate a Summary Data Dashboard sent to Management daily.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>eTR Process Streamlining</h4>
+                                <p>Mapped transaction flows and prepared BRD/UAT materials. Streamlined processing time from 7 days to 4 days (-43%), reducing staff document workload by 23% and paper usage by 34%.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>Excel</li><li>Power Automate</li><li>MS Access</li><li>Power BI</li><li>BRD / UAT</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: TOYOTA -->
+                    <article class="project-card" data-category="optimization ml automation" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-package"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Cooperative Education &bull; TOYOTA MOTOR ASIA</p>
+                                <h3>Logistics &amp; Returnable Packaging Optimization</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">Jun – Nov 2025</span></div>
+                        </div>
+                        <p class="project-desc">Engineered mathematical optimization and SARIMAX time-series models to eliminate inventory excesses and streamline logistics networks.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>30%</strong><span>Cost reduction (~THB 3M / yr)</span></div>
+                            <div class="metric"><strong>+34.6%</strong><span>Forecast accuracy</span></div>
+                            <div class="metric"><strong>30 → 1.8 hrs</strong><span>Monthly reporting work</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>📈 SARIMAX demand forecast</span></li>
+                                <li><span>🧮 Linear programming</span></li>
+                                <li><span>📦 Packaging &amp; route plan</span></li>
+                                <li><span>💰 30% cost cut</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>Cost &amp; Logistics Optimization</h4>
+                                <p>Achieved a <strong>30% cost reduction</strong> (~THB 3M/year saved on warehouse storage and logistics) by structuring advanced supply chain methodologies.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Demand Forecasting Models</h4>
+                                <p>Improved forecasting accuracy by <strong>34.6%</strong>, reducing RMSE from 447,315 to 292,544 utilizing SARIMAX time-series.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Workflow Automation</h4>
+                                <p>Automated manual reporting workflows, successfully reducing workload from 30 hrs/month to 1.8 hrs/month (94% drop).</p>
+                            </div>
+                        </div>
+
+                        <div class="shots">
+                            <p class="shots-label">🖼️ From the co-op presentation <span>· click to enlarge</span></p>
+                            <div class="shot-grid" data-gallery>
+                                <a class="shot" href="assets/toyota/slide-04.jpg" data-caption="What returnable packaging is, and the closed logistics loop between Thailand and overseas plants">
+                                    <img src="assets/toyota/thumbs/slide-04.jpg" alt="Slide: introduction to returnable packaging" loading="lazy">
+                                    <span>Returnable packaging loop</span>
+                                </a>
+                                <a class="shot" href="assets/toyota/slide-13.jpg" data-caption="Overall methodology: from root-cause analysis to forecasting and semi-automatic systems">
+                                    <img src="assets/toyota/thumbs/slide-13.jpg" alt="Slide: overall methodology process" loading="lazy">
+                                    <span>Methodology</span>
+                                </a>
+                                <a class="shot" href="assets/toyota/slide-19.jpg" data-caption="The new dynamic safety stock formula: statistical, procedural and critical buffers">
+                                    <img src="assets/toyota/thumbs/slide-19.jpg" alt="Slide: dynamic safety stock formula" loading="lazy">
+                                    <span>Dynamic safety stock</span>
+                                </a>
+                                <a class="shot" href="assets/toyota/slide-23.jpg" data-caption="Semi-automatic systems cut the hours spent on each manual report">
+                                    <img src="assets/toyota/thumbs/slide-23.jpg" alt="Slide: process time reduction chart" loading="lazy">
+                                    <span>Process time saved</span>
+                                </a>
+                                <a class="shot" href="assets/toyota/slide-30.jpg" data-caption="The new forecast tracks actual usage far more closely than the old method">
+                                    <img src="assets/toyota/thumbs/slide-30.jpg" alt="Slide: forecast model comparison chart" loading="lazy">
+                                    <span>Forecast comparison</span>
+                                </a>
+                                <a class="shot" href="assets/toyota/slide-33.jpg" data-caption="Simulation: the dynamic safety stock adapts to usage while the old static level does not">
+                                    <img src="assets/toyota/thumbs/slide-33.jpg" alt="Slide: safety stock simulation" loading="lazy">
+                                    <span>Stock simulation</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>Python</li><li>SARIMAX</li><li>Linear Programming</li><li>Supply Chain</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1XWBnACBB75bHEkfc3Mr4rwlAe-ccgJNm/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bx-slideshow" aria-hidden="true"></i> Slide</a>
+                                <a href="https://drive.google.com/file/d/1xxgIgDuLlNwpGlJQVq6u9aFEXdnlJRfW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bx-video" aria-hidden="true"></i> Video</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: WALMART -->
+                    <article class="project-card" data-category="ml" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-cart"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Personal Project &bull; Retail Demand Forecasting</p>
+                                <h3>Walmart M5 Forecasting Analytics</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">May 2026</span></div>
+                        </div>
+                        <p class="project-desc">Processed 60M+ transactional records and 30,490 hierarchical time series to build an advanced LightGBM 28-day demand forecasting pipeline.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>60M+</strong><span>Records processed</span></div>
+                            <div class="metric"><strong>30,490</strong><span>Hierarchical time series</span></div>
+                            <div class="metric"><strong>−78.5%</strong><span>Memory usage</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>🗃️ 60M+ sales records</span></li>
+                                <li><span>🧹 Memory-optimized features</span></li>
+                                <li><span>🌲 LightGBM</span></li>
+                                <li><span>🔁 Sliding-window validation</span></li>
+                                <li><span>📅 28-day forecast</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>Data Engineering &amp; Optimization</h4>
+                                <p>Reduced memory usage by 78.5% through optimized data type casting across large-scale datasets.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Predictive Modeling Validation</h4>
+                                <p>Developed robust sliding-window validation metrics achieving reliable out-of-fold RMSE performance for the LightGBM model.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Interactive Dashboard</h4>
+                                <p>Built a serverless DuckDB + Streamlit dashboard that queries compressed Parquet files directly, giving sub-second analysis over 60M+ rows without loading them into memory.</p>
+                            </div>
+                        </div>
+
+                        <div class="shots">
+                            <p class="shots-label">📈 Charts &amp; dashboard <span>· click to enlarge</span></p>
+                            <div class="shot-grid" data-gallery>
+                                <a class="shot" href="assets/m5/projectpipeline.jpg" data-caption="End-to-end analytics and modeling pipeline">
+                                    <img src="assets/m5/thumbs/projectpipeline.jpg" alt="Project pipeline diagram" loading="lazy">
+                                    <span>Pipeline</span>
+                                </a>
+                                <a class="shot" href="assets/m5/featureimportance.jpg" data-caption="LightGBM feature importance, averaged over the store models">
+                                    <img src="assets/m5/thumbs/featureimportance.jpg" alt="Feature importance chart" loading="lazy">
+                                    <span>Feature importance</span>
+                                </a>
+                                <a class="shot" href="assets/m5/validation_check_store_ca_1.jpg" data-caption="Validation check for store CA_1: forecast vs actual over the last 28 days">
+                                    <img src="assets/m5/thumbs/validation_check_store_ca_1.jpg" alt="Validation chart for store CA_1" loading="lazy">
+                                    <span>Validation</span>
+                                </a>
+                                <a class="shot" href="assets/m5/seasonality_heatmap.jpg" data-caption="Average sales by month and day of week">
+                                    <img src="assets/m5/thumbs/seasonality_heatmap.jpg" alt="Seasonality heatmap" loading="lazy">
+                                    <span>Seasonality</span>
+                                </a>
+                                <a class="shot" href="assets/m5/interactivedashboard.jpg" data-caption="The DuckDB + Streamlit commercial dashboard">
+                                    <img src="assets/m5/thumbs/interactivedashboard.jpg" alt="Interactive dashboard screenshot" loading="lazy">
+                                    <span>Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>Python</li><li>LightGBM</li><li>Time Series</li><li>Sliding-Window CV</li><li>DuckDB</li><li>Streamlit</li>
+                            </ul>
+                            <div class="project-links">
+                                <button type="button" class="btn btn-secondary btn-sm" data-code="code-m5"><i class="bx bx-code-alt" aria-hidden="true"></i> Code Snippet</button>
+                                <a href="https://github.com/SKY-TKP/PROJECT/tree/main/python/m5%20forecast%20acc" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxl-github" aria-hidden="true"></i> Repo</a>
+                                <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/m5%20forecast%20acc/M5%20Analytics%20Report%20-%20Part%201.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxs-file-pdf" aria-hidden="true"></i> Report</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: MICROGRID -->
+                    <article class="project-card" data-category="optimization" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-sun"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Decision Engineering &bull; Stochastic Optimization</p>
+                                <h3>Optimal Microgrid Sizing (Solar PV + Battery)</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">Group Project</span></div>
+                        </div>
+                        <p class="project-desc">Stochastic MILP model in Python/Pyomo to optimize Solar PV/ESS capacities. Simulated 28.7% cost reduction (12.01M THB/year). Built on satellite solar data (Renewables.ninja) and a simulated factory load, with K-Means representative days as uncertainty scenarios and a risk-aware objective.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>28.7%</strong><span>Simulated cost reduction</span></div>
+                            <div class="metric"><strong>12.01M THB</strong><span>Saved per year</span></div>
+                            <div class="metric"><strong>3,366 kW + 248 kWh</strong><span>Optimal solar + battery</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>☀️ Solar radiation data</span></li>
+                                <li><span>🏭 Factory load profile</span></li>
+                                <li><span>🔢 K-Means scenarios</span></li>
+                                <li><span>🧮 Two-stage stochastic MILP</span></li>
+                                <li><span>📊 Sizing + sensitivity</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>Two-Stage Stochastic MILP</h4>
+                                <p>Stage 1 sizes solar (in 50 kW blocks) and battery capacity; stage 2 dispatches grid, solar and battery hour by hour in every scenario, under PEA time-of-use tariffs and big-M battery logic.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Risk &amp; Sensitivity</h4>
+                                <p>A risk-aversion term guards against bad scenarios, and a tornado analysis across 7 factors shows the grid price and solar CAPEX move total cost the most.</p>
+                            </div>
+                        </div>
+
+                        <div class="shots">
+                            <p class="shots-label">📊 Model results <span>· click to enlarge</span></p>
+                            <div class="shot-grid" data-gallery>
+                                <a class="shot" href="assets/microgrid/compare.jpg" data-caption="Annual total cost, baseline vs optimized, with a high-peak dispatch day">
+                                    <img src="assets/microgrid/thumbs/compare.jpg" alt="Annual cost comparison chart" loading="lazy">
+                                    <span>Cost comparison</span>
+                                </a>
+                                <a class="shot" href="assets/microgrid/operationdispatch.jpg" data-caption="Optimal hourly dispatch in each of the 3 scenarios">
+                                    <img src="assets/microgrid/thumbs/operationdispatch.jpg" alt="Operational dispatch charts" loading="lazy">
+                                    <span>Hourly dispatch</span>
+                                </a>
+                                <a class="shot" href="assets/microgrid/kmean.jpg" data-caption="Representative daily solar and demand profiles (K-Means centroids)">
+                                    <img src="assets/microgrid/thumbs/kmean.jpg" alt="K-Means representative profiles" loading="lazy">
+                                    <span>K-Means scenarios</span>
+                                </a>
+                                <a class="shot" href="assets/microgrid/tornado.jpg" data-caption="Tornado diagram: sensitivity of total cost to 7 input factors">
+                                    <img src="assets/microgrid/thumbs/tornado.jpg" alt="Tornado sensitivity diagram" loading="lazy">
+                                    <span>Sensitivity</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>Python</li><li>Pyomo</li><li>Stochastic MILP</li><li>K-Means</li><li>GLPK</li>
+                            </ul>
+                            <div class="project-links">
+                                <button type="button" class="btn btn-primary btn-sm" data-code="code-microgrid"><i class="bx bx-code-alt" aria-hidden="true"></i> Code Snippet</button>
+                                <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxl-github" aria-hidden="true"></i> Notebook</a>
+                                <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/DecisionEng_GroupAssignment_Report.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxs-file-pdf" aria-hidden="true"></i> Report</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: SENTIMENT ANALYSIS -->
+                    <article class="project-card" data-category="ml" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-comment-detail"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Personal Project &bull; NLP</p>
+                                <h3>Sentiment Analysis (NLP)</h3>
+                            </div>
+                        </div>
+                        <p class="project-desc">Built an end-to-end NLP classification pipeline on 10,261 Amazon musical-instrument reviews. Preprocessed with NLTK and vectorized via TF-IDF.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>10,261</strong><span>Product reviews</span></div>
+                            <div class="metric"><strong>5,000</strong><span>TF-IDF bigram features</span></div>
+                            <div class="metric"><strong>6</strong><span>Classifiers compared</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">⚡ How it flows</p>
+                            <ol>
+                                <li><span>📝 Raw reviews</span></li>
+                                <li><span>🧹 NLTK cleaning</span></li>
+                                <li><span>🔤 TF-IDF bigrams</span></li>
+                                <li><span>🤖 6 classifiers</span></li>
+                                <li><span>🎯 Tuned Logistic Regression</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="shots">
+                            <p class="shots-label">📊 Exploration <span>· click to enlarge</span></p>
+                            <div class="shot-grid" data-gallery>
+                                <a class="shot" href="assets/sentiment/sentiment-split.jpg" data-caption="Amount of each sentiment, based on the rating given">
+                                    <img src="assets/sentiment/thumbs/sentiment-split.jpg" alt="Bar chart of sentiment counts" loading="lazy">
+                                    <span>Sentiment split</span>
+                                </a>
+                                <a class="shot" href="assets/sentiment/wordcloud-positive.jpg" data-caption="Word cloud of the positive reviews">
+                                    <img src="assets/sentiment/thumbs/wordcloud-positive.jpg" alt="Word cloud of positive reviews" loading="lazy">
+                                    <span>Positive words</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>Python</li><li>NLTK</li><li>TF-IDF</li><li>scikit-learn</li>
+                            </ul>
+                            <div class="project-links">
+                                <button type="button" class="btn btn-secondary btn-sm" data-code="code-sentiment"><i class="bx bx-code-alt" aria-hidden="true"></i> Code Snippet</button>
+                                <a href="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxl-github" aria-hidden="true"></i> Notebook</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- EXPERIENCE SECTION -->
-        <section id="resume" class="resume">
+        <!-- ==============================================
+             EXPERIENCE SECTION
+             ============================================== -->
+        <section id="resume" class="section">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-head" data-aos="fade-up">
+                    <p class="section-eyebrow"><span aria-hidden="true">💼</span> Where I've Worked</p>
                     <h2>Experience</h2>
                 </div>
 
-                <div class="resume-timeline">
-                    
-                    <div class="resume-item" data-aos="fade-up" data-aos-delay="100">
-                        <h4>Data Analyst (Contract)</h4>
-                        <h5>May 2026 - Aug 2026</h5>
-                        <p><em>AIA Investment Management (Thailand) Limited</em></p>
-                        <ul>
+                <div class="timeline">
+                    <article class="timeline-item timeline-current" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Business Analyst (BA) <span class="badge badge-live"><span class="status-dot" aria-hidden="true"></span> Current</span></h3>
+                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> Grab Thailand · GrabFood</p>
+                            </div>
+                            <span class="timeline-date">Nov 2026 – Present</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li><strong>Product Setup &amp; Optimization:</strong> Own and manage in-app product setups and asset rollouts for GrabFood. Audit, standardise, and optimize current Standard Operating Procedures (SOPs) to enhance operational efficiency across cross-functional teams.</li>
+                            <li><strong>Data Pipelines &amp; Infrastructure Management:</strong> Manage and maintain reliable data pipelines to ensure continuous data availability, high accuracy, and accessibility for business decision-making teams.</li>
+                            <li><strong>Data Analysis &amp; Business Insights:</strong> Conduct quantitative analysis to solve complex operational challenges and uncover insights for cross-functional stakeholders.</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>AI Developer (Part-time)</h3>
+                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> VIBES LAB · Music Director App</p>
+                            </div>
+                            <span class="timeline-date">Oct 2026 – Nov 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Designed the end-to-end system for the <strong>VIBES LAB Music Director app</strong>, a B2B service that programs brand-fit background music for hotels, restaurants and retail shops.</li>
+                            <li>Defined the core architecture: one recommendation engine behind every track pick (filter → 7-factor weighted score → rerank), with LLMs used only to translate briefs into targets, never to pick tracks.</li>
+                            <li>Designed the brand book → weekly program pipeline and the Draft → Director review → Publish workflow, so nothing AI-drafted reaches a client unapproved.</li>
+                            <li>Shaped a view-only client app (Today, Weekly schedule, Account) and the Director's Studio (Queue, Clients, Library, Reports), bilingual in Thai and English.</li>
+                            <li>Planned the data and compliance layer: multi-tenant PostgreSQL (Supabase) with Row Level Security, role-based access, PDPA-minded data minimization and MPC music licensing.</li>
+                        </ul>
+                        <div class="timeline-actions">
+                            <button type="button" class="btn btn-secondary btn-sm" data-open="system-design"><i class="bx bx-sitemap" aria-hidden="true"></i> View System Design</button>
+                            <a href="#project-vibeslab" class="link-arrow">See the project <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Data Analyst (Contract)</h3>
+                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> AIA Investment Management (Thailand) Limited</p>
+                            </div>
+                            <span class="timeline-date">May 2026 – Aug 2026</span>
+                        </div>
+                        <ul class="timeline-list">
                             <li>Analyzed debtor portfolio data to provide actionable insights for business decision-making and financial risk management.</li>
                             <li>Prepared high-impact analytical reports and insights for the Credit Control Committee and executive-level meetings.</li>
                             <li>Developed dynamic dashboards and performance reports using Advanced Excel and Power BI.</li>
                             <li>Executed end-to-end data validation across COAST, CLAIM, and financial systems (premiums, shortfalls, suspense accounts) to ensure data integrity.</li>
-                            <li>Identified, investigated, and resolved data discrepancies applying strong analytical judgment.</li>
-                            <li>Validated commission data to ensure accurate 3% withholding tax calculations for brokers in compliance with financial regulations.</li>
-                            <li>Monitored and controlled the claims release process, including the preparation of claim suspension lifting reports.</li>
-                            <li>Translated business requirements into clear specifications and developed Business Requirement Documents (BRD).</li>
-                            <li>Supported User Acceptance Testing (UAT) and system validation to ensure alignment with business and financial requirements.</li>
-                            <li>Contributed to financial transformation and continuous data improvement initiatives.</li>
                         </ul>
-                    </div>
-                    
-                    <div class="resume-item" data-aos="fade-up" data-aos-delay="200">
-                        <h4>Logistics Support (Cooperative Education)</h4>
-                        <h5>Jun 2025 - Nov 2025</h5>
-                        <p><em>TOYOTA MOTOR ASIA (THAILAND)</em></p>
-                        <ul>
-                            <li>Spearheaded supply-chain optimization initiatives combining Python, SARIMAX, and Linear Programming, achieving a <strong>30% cost reduction</strong> (~THB 3M saved).</li>
-                            <li>Enhanced route planning and automated logistics workflows, cutting total transit time/cost by 17% and manual effort by 94%.</li>
-                        </ul>
-                    </div>
+                        <details class="timeline-more">
+                            <summary><span class="when-closed">Show 6 more responsibilities</span><span class="when-open">Show less</span> <i class="bx bx-chevron-down" aria-hidden="true"></i></summary>
+                            <ul class="timeline-list">
+                                <li>Identified, investigated, and resolved data discrepancies applying strong analytical judgment.</li>
+                                <li>Validated commission data to ensure accurate 3% withholding tax calculations for brokers in compliance with financial regulations.</li>
+                                <li>Monitored and controlled the claims release process, including the preparation of claim suspension lifting reports.</li>
+                                <li>Translated business requirements into clear specifications and developed Business Requirement Documents (BRD).</li>
+                                <li>Supported User Acceptance Testing (UAT) and system validation to ensure alignment with business and financial requirements.</li>
+                                <li>Contributed to financial transformation and continuous data improvement initiatives.</li>
+                            </ul>
+                        </details>
+                    </article>
 
-                    <div class="resume-item" data-aos="fade-up" data-aos-delay="300">
-                        <h4>Data Scientist Intern</h4>
-                        <h5>Dec 2025 - Feb 2026</h5>
-                        <p><em>BOTNOI Company Limited</em></p>
-                        <ul>
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Data Scientist Intern</h3>
+                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> BOTNOI Company Limited</p>
+                            </div>
+                            <span class="timeline-date">Dec 2025 – Feb 2026</span>
+                        </div>
+                        <ul class="timeline-list">
                             <li>Developed an SVM customer classification model achieving <strong>72.9% accuracy</strong>.</li>
                             <li>Extracted data via SQL and delivered interactive Power BI dashboards translating customer analytics into actionable business insights.</li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </article>
 
-        <!-- EDUCATION SECTION -->
-        <section id="education" class="resume section-bg">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Education & Activities</h2>
-                </div>
-
-                <div class="resume-timeline">
-                    <div class="resume-item" data-aos="fade-up" data-aos-delay="100">
-                        <h4>Bachelor of Engineering in Industrial Engineering</h4>
-                        <h5>2022 - 2026</h5>
-                        <p><em>Chulalongkorn University</em></p>
-                        <p><strong>1st Class Honors &bull; GPAX 3.81</strong><br>
-                        Coursework: Operations Research, Statistical Inference, AI for Engineers.</p>
-                    </div>
-                    
-                    <div class="resume-item" data-aos="fade-up" data-aos-delay="200">
-                        <h4>Chief Technology Officer</h4>
-                        <h5>Mar 2026 - May 2026</h5>
-                        <p><em>Nanoki Capstone Company (15 team members)</em></p>
-                        <p>Led Innovation, Data Analytics, and IT Infrastructure teams. Overseen System Architecture, BI Dashboards, and Data Validation to achieve ~95% adoption rate.</p>
-                    </div>
-
-                    <div class="resume-item pb-0" data-aos="fade-up" data-aos-delay="300">
-                        <h4>Awards & Recognitions</h4>
-                        <ul>
-                            <li><strong>Independent Movie Reviewer of the Year (2024):</strong> Thai Film Association.</li>
-                            <li><strong>Batch Tutor (2023 - 2026):</strong> Conducted intensive review sessions for engineering cohort.</li>
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Logistics Support (Cooperative Education)</h3>
+                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> TOYOTA MOTOR ASIA (THAILAND)</p>
+                            </div>
+                            <span class="timeline-date">Jun 2025 – Nov 2025</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Spearheaded supply-chain optimization initiatives combining Python, SARIMAX, and Linear Programming, achieving a <strong>30% cost reduction</strong> (~THB 3M saved).</li>
+                            <li>Enhanced route planning and automated logistics workflows, cutting total transit time/cost by 17% and manual effort by 94%.</li>
                         </ul>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="contact">
+        <!-- ==============================================
+             EDUCATION SECTION
+             ============================================== -->
+        <section id="education" class="section section-alt">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Contact Me</h2>
-                    <p>I am actively seeking new opportunities in Data Analytics, Data Science, and Business Analysis. If you have an exciting project or role, feel free to reach out!</p>
+                <div class="section-head" data-aos="fade-up">
+                    <p class="section-eyebrow"><span aria-hidden="true">🎓</span> Background</p>
+                    <h2>Education &amp; Activities</h2>
                 </div>
 
-                <div class="contact-info">
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
-                        <i class="bx bx-envelope"></i>
-                        <h3>Email</h3>
-                        <p><a href="mailto:thananop.klp@gmail.com">thananop.klp@gmail.com</a></p>
+                <div class="timeline">
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Bachelor of Engineering in Industrial Engineering</h3>
+                                <p class="timeline-org"><i class="bx bxs-graduation" aria-hidden="true"></i> Chulalongkorn University</p>
+                            </div>
+                            <span class="timeline-date">2022 – 2026</span>
+                        </div>
+                        <p class="timeline-text"><strong>1st Class Honors &bull; GPAX 3.81</strong><br>
+                        Coursework: Operations Research, Statistical Inference, AI for Engineers.</p>
+                    </article>
+
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Chief Technology Officer</h3>
+                                <p class="timeline-org"><i class="bx bx-group" aria-hidden="true"></i> Nanoki Capstone Company (15 team members)</p>
+                            </div>
+                            <span class="timeline-date">Mar 2026 – May 2026</span>
+                        </div>
+                        <p class="timeline-text">Led Innovation, Data Analytics, and IT Infrastructure teams. Oversaw System Architecture, BI Dashboards, and Data Validation to achieve ~95% adoption rate.</p>
+                    </article>
+
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>🏆 Awards &amp; Recognitions</h3>
+                            </div>
+                        </div>
+                        <ul class="timeline-list">
+                            <li><strong>Independent Movie Reviewer of the Year (2024):</strong> Thai Film Association.</li>
+                            <li><strong>Batch Tutor (2023 – 2026):</strong> Conducted intensive review sessions for engineering cohort.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================================
+             HOBBIES SECTION
+             ============================================== -->
+        <section id="hobbies" class="section">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <p class="section-eyebrow"><span aria-hidden="true">🎧</span> Beyond Work</p>
+                    <h2>Hobbies &amp; Interests</h2>
+                    <p>What keeps me curious outside of spreadsheets and models.</p>
+                </div>
+
+                <div class="hobby-grid">
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="50">
+                        <span class="hobby-emoji" aria-hidden="true">🎵</span>
+                        <h3>Music</h3>
+                        <p>Building playlists for every mood and time of day, the same idea behind the VIBES LAB music system.</p>
                     </div>
-                    
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bx bx-phone"></i>
-                        <h3>Phone</h3>
-                        <p><a href="tel:0887683950">(+66) 88-768-3950</a></p>
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="hobby-emoji" aria-hidden="true">📚</span>
+                        <h3>Reading</h3>
+                        <p>Reading widely to pick up new ideas and ways of thinking outside of work.</p>
                     </div>
-                    
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bx bxl-linkedin"></i>
-                        <h3>LinkedIn</h3>
-                        <p><a href="https://linkedin.com/in/thananop-kullapan" target="_blank">Connect with me</a></p>
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="150">
+                        <span class="hobby-emoji" aria-hidden="true">🎬</span>
+                        <h3>Movies &amp; Film Reviews</h3>
+                        <p>Film lover and reviewer, named Independent Movie Reviewer of the Year (2024) by the Thai Film Association.</p>
+                        <a href="https://tkp39.wordpress.com/" target="_blank" rel="noopener" class="link-arrow">Read my blog <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="hobby-emoji" aria-hidden="true">👨‍🏫</span>
+                        <h3>Teaching</h3>
+                        <p>Batch tutor for my engineering cohort (2023 – 2026), turning hard topics into clear review sessions.</p>
+                    </div>
+                    <div class="hobby-card" data-aos="fade-up" data-aos-delay="250">
+                        <span class="hobby-emoji" aria-hidden="true">🛠️</span>
+                        <h3>Side Projects</h3>
+                        <p>Building small tools and experiments with data and AI, like the forecasting and NLP notebooks above.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ==============================================
+             CONTACT SECTION
+             ============================================== -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <div class="contact-panel" data-aos="fade-up">
+                    <div>
+                        <p class="section-eyebrow"><span aria-hidden="true">✉️</span> Get in Touch</p>
+                        <h2>Contact Me</h2>
+                        <p>I am open to new opportunities in Data Analytics, Data Science, and Business Analysis. If you have an exciting project or role in mind, feel free to reach out!</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="mailto:thananop.klp@gmail.com" class="btn btn-primary btn-lg"><i class="bx bx-envelope" aria-hidden="true"></i> Email Me</a>
+                        <button type="button" class="btn btn-secondary btn-lg" id="copy-email" data-email="thananop.klp@gmail.com"><i class="bx bx-copy" aria-hidden="true"></i> Copy Email</button>
+                        <a href="https://linkedin.com/in/thananop-kullapan" target="_blank" rel="noopener" class="btn btn-ghost btn-lg"><i class="bx bxl-linkedin" aria-hidden="true"></i> Connect on LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <a class="contact-card" href="mailto:thananop.klp@gmail.com" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-envelope" aria-hidden="true"></i>
+                        <div><h3>Email</h3><p>thananop.klp@gmail.com</p></div>
+                    </a>
+                    <a class="contact-card" href="tel:+66887683950" data-aos="fade-up" data-aos-delay="150">
+                        <i class="bx bx-phone" aria-hidden="true"></i>
+                        <div><h3>Phone</h3><p>(+66) 88-768-3950</p></div>
+                    </a>
+                    <a class="contact-card" href="https://linkedin.com/in/thananop-kullapan" target="_blank" rel="noopener" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                        <div><h3>LinkedIn</h3><p>Connect with me</p></div>
+                    </a>
+                    <a class="contact-card" href="https://github.com/SKY-TKP" target="_blank" rel="noopener" data-aos="fade-up" data-aos-delay="250">
+                        <i class="bx bxl-github" aria-hidden="true"></i>
+                        <div><h3>GitHub</h3><p>github.com/SKY-TKP</p></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>&copy; <span id="year">2026</span> Thananop Kullapan. All rights reserved.</p>
+                <p>Built with HTML, CSS &amp; JavaScript.</p>
+            </div>
+        </footer>
     </main>
 
-    <!-- Script ควบคุมระบบ Typewriter, ScrollSpy และ AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Initialize AOS Animation
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true,
-                mirror: false,
-                offset: 50
-            });
+    <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
 
-            // Mobile Menu Toggle
-            const mobileToggle = document.getElementById('mobile-nav-toggle');
-            const body = document.querySelector('body');
-            
-            mobileToggle.addEventListener('click', function(e) {
-                body.classList.toggle('mobile-nav-active');
-                this.classList.toggle('bx-menu');
-                this.classList.toggle('bx-x');
-            });
+    <!-- ==============================================
+         POPUP: VIBES LAB SYSTEM DESIGN
+         ============================================== -->
+    <dialog class="modal" id="system-design" aria-labelledby="sd-title">
+        <div class="modal-head">
+            <div>
+                <p class="section-eyebrow"><span aria-hidden="true">🧭</span> System Design</p>
+                <h2 id="sd-title">VIBES LAB Music Director</h2>
+                <p class="modal-sub">How a brand book becomes the music playing in a shop: one system for the client app and the Director's studio.</p>
+            </div>
+            <button type="button" class="modal-close" data-close aria-label="Close"><i class="bx bx-x" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="modal-body">
+            <!-- 1. End-to-end flow -->
+            <h3 class="sd-heading">🗺️ End-to-end flow</h3>
+            <div class="sd-flow">
+                <div class="sd-col">
+                    <p class="sd-step">01 · Inputs</p>
+                    <ul>
+                        <li><b>📘 Brand book</b><span>The client's PDF: identity, tone, audience</span></li>
+                        <li><b>🎵 Track library</b><span>Track profiles: BPM, energy 1–5, mood tags, language</span></li>
+                        <li><b>💬 Client feedback</b><span>Like · not this song · request a change</span></li>
+                    </ul>
+                </div>
+                <div class="sd-col sd-col-accent">
+                    <p class="sd-step">02 · AI + Engine</p>
+                    <ul>
+                        <li><b>🧠 LLM as translator</b><span>Brief → targets: energy by daypart, BPM, Thai share, moods</span></li>
+                        <li><b>⚙️ Recommendation engine</b><span>Filter → score 7 factors → rerank</span></li>
+                        <li><b>🗓️ Weekly draft</b><span>Day types × 1–2 hour playlists</span></li>
+                    </ul>
+                </div>
+                <div class="sd-col">
+                    <p class="sd-step">03 · Director Studio</p>
+                    <ul>
+                        <li><b>📝 Draft → ✅ Review → 🚀 Publish</b><span>Edits to a published week need re-approval</span></li>
+                        <li><b>📥 Queue</b><span>Requests, reviews and offline players in one list</span></li>
+                        <li><b>📊 Reports</b><span>Play log, likes and royalties by label</span></li>
+                    </ul>
+                </div>
+                <div class="sd-col">
+                    <p class="sd-step">04 · Client App</p>
+                    <ul>
+                        <li><b>▶️ Today</b><span>Now playing + Pool mood: Normal · Softer · Livelier</span></li>
+                        <li><b>🗓️ Weekly schedule</b><span>Export to PDF or Excel</span></li>
+                        <li><b>🔊 Shop speakers</b><span>Plays on the shop's own sound system</span></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="sd-loop">↺ <b>Feedback loop:</b> likes and "not this song" flow back into the engine's history score, so next week's draft fits better.</p>
+
+            <!-- 2. Engine anatomy -->
+            <h3 class="sd-heading">⚙️ Inside the recommendation engine</h3>
+            <div class="sd-engine">
+                <ol class="sd-pipeline">
+                    <li><span class="sd-num">1</span><b>Target</b><span>From the slot, the client's brief and the weather</span></li>
+                    <li><span class="sd-num">2</span><b>Filter</b><span>Banned tags, explicit lyrics, songs the Director rejected</span></li>
+                    <li><span class="sd-num">3</span><b>Score</b><span>7 parts, each 0–1, weighted mean</span></li>
+                    <li><span class="sd-num">4</span><b>Rerank</b><span>≤ 2 songs per artist, no back-to-back, Thai share</span></li>
+                </ol>
+                <div class="sd-weights" aria-label="Scoring weights">
+                    <p class="sd-weights-title">Scoring weights</p>
+                    <div class="w-row"><span>Mood</span><i style="--w:3"></i><em>×3</em></div>
+                    <div class="w-row"><span>Energy</span><i style="--w:2"></i><em>×2</em></div>
+                    <div class="w-row"><span>BPM</span><i style="--w:2"></i><em>×2</em></div>
+                    <div class="w-row"><span>Scent</span><i style="--w:2"></i><em>×2</em></div>
+                    <div class="w-row"><span>History</span><i style="--w:2"></i><em>×2</em></div>
+                    <div class="w-row"><span>Language</span><i style="--w:1"></i><em>×1</em></div>
+                    <div class="w-row"><span>Trend</span><i style="--w:1"></i><em>×1</em></div>
+                </div>
+            </div>
+
+            <!-- 3. Principles -->
+            <h3 class="sd-heading">📐 Design principles</h3>
+            <div class="sd-principles">
+                <div><span aria-hidden="true">🎯</span><b>One engine for every pick</b><p>AI drafts, recommendations and the playlist builder all call the same scoring engine.</p></div>
+                <div><span aria-hidden="true">🗣️</span><b>LLMs translate, never pick</b><p>Language models turn briefs into targets; they never name tracks or see the catalogue.</p></div>
+                <div><span aria-hidden="true">🎛️</span><b>Clients listen, the Director decides</b><p>Nothing AI-drafted reaches a client without the Director's approval.</p></div>
+                <div><span aria-hidden="true">🔒</span><b>Collect only what's needed</b><p>Multi-tenant PostgreSQL with Row Level Security, role-based access and PDPA-minded data.</p></div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- POPUP: Image lightbox -->
+    <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
+        <button type="button" class="modal-close" data-close aria-label="Close"><i class="bx bx-x" aria-hidden="true"></i></button>
+        <button type="button" class="lb-nav lb-prev" aria-label="Previous image"><i class="bx bx-chevron-left" aria-hidden="true"></i></button>
+        <figure>
+            <img id="lb-img" alt="">
+            <figcaption id="lb-caption"></figcaption>
+        </figure>
+        <button type="button" class="lb-nav lb-next" aria-label="Next image"><i class="bx bx-chevron-right" aria-hidden="true"></i></button>
+    </dialog>
+
+
+    <!-- POPUP: Code viewer (snippets taken from the project notebooks / repos) -->
+    <dialog class="modal code-modal" id="code-viewer" aria-labelledby="code-title">
+        <div class="modal-head">
+            <div>
+                <p class="section-eyebrow"><span aria-hidden="true">💻</span> <span id="code-lang">Code</span></p>
+                <h2 id="code-title">Code</h2>
+            </div>
+            <div class="code-tools">
+                <button type="button" class="btn btn-secondary btn-sm" id="code-copy"><i class="bx bx-copy" aria-hidden="true"></i> Copy</button>
+                <a href="#" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" id="code-link"><i class="bx bxl-github" aria-hidden="true"></i> Full source</a>
+                <button type="button" class="modal-close" data-close aria-label="Close"><i class="bx bx-x" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <pre class="code-block"><code id="code-body"></code></pre>
+    </dialog>
+    <template id="code-microgrid" data-title="Two-stage stochastic MILP · Pyomo" data-lang="Python" data-link="https://github.com/SKY-TKP/PROJECT/blob/main/python/microgrid/Renewable%20Solar.ipynb">import pyomo.environ as pyo
+
+def solve_stochastic_microgrid(omega_scenarios):
+    print(&quot;Building Two-Stage Stochastic MILP Model...&quot;)
+    m = pyo.ConcreteModel()
+
+    # -------------------------------------------------------------
+    # 1. Sets and Indices
+    # -------------------------------------------------------------
+    # T = 24 hours (0 to 23)
+    m.T = pyo.RangeSet(0, 23)
+
+    # Omega = Scenarios from K-Means (e.g., &#x27;omega_1&#x27;, &#x27;omega_2&#x27;, &#x27;omega_3&#x27;)
+    m.Omega = pyo.Set(initialize=list(omega_scenarios.keys()))
+
+    # -------------------------------------------------------------
+    # 2. Parameters
+    # -------------------------------------------------------------
+    # Economic Parameters (Assumed Annualized Costs)
+    # Solar: ~30,000 THB/kW over 20 years -&gt; ~1,500 THB/kW/year
+    # Battery: ~15,000 THB/kWh over 10 years -&gt; ~1,500 THB/kWh/year
+    annual_capex_solar = 1500.0
+    annual_capex_batt = 1500.0
+    efficiency = 0.95
+    M = 10000.0 # Big-M constant for logical constraints
+
+    # 24-Hour PEA TOU Tariff Profile (THB)
+    # Off-Peak: 0-8 and 22-23 (2.6037), On-Peak: 9-21 (4.1839)
+    pea_price = {t: 4.1839 if 9 &lt;= t &lt; 22 else 2.6037 for t in range(24)}
+
+    # -------------------------------------------------------------
+    # 3. Decision Variables
+    # -------------------------------------------------------------
+    # Stage 1: Investment (Independent of Omega)
+    m.I_solar = pyo.Var(within=pyo.NonNegativeIntegers) # Number of 50kW blocks
+    m.S_solar = pyo.Var(within=pyo.NonNegativeReals)    # Total Solar Capacity
+    m.S_batt = pyo.Var(within=pyo.NonNegativeReals)     # Total Battery Capacity
+
+    # Stage 2: Operational Dispatch (Dependent on T and Omega)
+    m.P_grid = pyo.Var(m.T, m.Omega, within=pyo.NonNegativeReals)
+    m.P_solar_use = pyo.Var(m.T, m.Omega, within=pyo.NonNegativeReals)
+    m.P_ch = pyo.Var(m.T, m.Omega, within=pyo.NonNegativeReals)
+    m.P_dis = pyo.Var(m.T, m.Omega, within=pyo.NonNegativeReals)
+    m.SOC = pyo.Var(m.T, m.Omega, within=pyo.NonNegativeReals)
+
+    # Binary variable for mutually exclusive battery operation
+    m.u = pyo.Var(m.T, m.Omega, within=pyo.Binary)
+
+    # -------------------------------------------------------------
+    # 4. Constraints
+    # -------------------------------------------------------------
+    # Discrete Investment Sizing
+    def discrete_solar_rule(m):
+        return m.S_solar == 50 * m.I_solar
+    m.c_discrete = pyo.Constraint(rule=discrete_solar_rule)
+
+    # Scenario-Dependent Energy Balance
+    def energy_balance_rule(m, t, w):
+        demand = omega_scenarios[w][&#x27;demand_profile&#x27;][t]
+        return m.P_grid[t, w] + m.P_solar_use[t, w] + m.P_dis[t, w] == demand + m.P_ch[t, w]
+    m.c_energy = pyo.Constraint(m.T, m.Omega, rule=energy_balance_rule)
+
+    # Scenario-Dependent Solar Generation Limit
+    def solar_limit_rule(m, t, w):
+        # Convert W/m2 to yield factor (kW output per kW installed)
+        solar_yield = max(0, omega_scenarios[w][&#x27;solar_profile&#x27;][t]) / 1000.0
+        return m.P_solar_use[t, w] + m.P_ch[t, w] &lt;= m.S_solar * solar_yield
+    m.c_solar = pyo.Constraint(m.T, m.Omega, rule=solar_limit_rule)
+
+    # SOC Dynamics
+    def soc_rule(m, t, w):
+        if t == 0:
+            # Assume starting empty for simplicity, or link to end of day
+            return m.SOC[t, w] == (m.P_ch[t, w] * efficiency) - (m.P_dis[t, w] / efficiency)
+        else:
+            return m.SOC[t, w] == m.SOC[t-1, w] + (m.P_ch[t, w] * efficiency) - (m.P_dis[t, w] / efficiency)
+    m.c_soc = pyo.Constraint(m.T, m.Omega, rule=soc_rule)
+
+    # Maximum Battery Capacity Limit
+    def soc_cap_rule(m, t, w):
+        return m.SOC[t, w] &lt;= m.S_batt
+    m.c_soc_cap = pyo.Constraint(m.T, m.Omega, rule=soc_cap_rule)
+
+    # Mutually Exclusive Battery Operations (Big-M Logic)
+    def charge_mutex_rule(m, t, w):
+        return m.P_ch[t, w] &lt;= M * m.u[t, w]
+    m.c_ch_mutex = pyo.Constraint(m.T, m.Omega, rule=charge_mutex_rule)
+
+    def discharge_mutex_rule(m, t, w):
+        return m.P_dis[t, w] &lt;= M * (1 - m.u[t, w])
+    m.c_dis_mutex = pyo.Constraint(m.T, m.Omega, rule=discharge_mutex_rule)
+
+    # -------------------------------------------------------------
+    # 5. Objective Function (Minimize Expected Total Annual Cost)
+    # -------------------------------------------------------------
+    def objective_rule(m):
+        capex = (m.S_solar * annual_capex_solar) + (m.S_batt * annual_capex_batt)
+
+        # Calculate Expected Daily OPEX
+        expected_daily_opex = 0
+        for w in m.Omega:
+            prob = omega_scenarios[w][&#x27;probability&#x27;]
+            # Sum of hourly grid costs for this scenario
+            scenario_cost = sum(m.P_grid[t, w] * pea_price[t] for t in m.T)
+            expected_daily_opex += prob * scenario_cost
+
+        # Annualize OPEX by multiplying by 365 days
+        annual_opex = expected_daily_opex * 365.0
+
+        return capex + annual_opex
+
+    m.Obj = pyo.Objective(rule=objective_rule, sense=pyo.minimize)
+    # ... solve with GLPK and report the optimal sizing</template>
+    <template id="code-m5" data-title="Memory downcasting + per-store LightGBM" data-lang="Python" data-link="https://github.com/SKY-TKP/PROJECT/blob/main/python/m5%20forecast%20acc/M5%20Forecast%20Acc.ipynb">def reduce_mem_usage(df, df_name = True, verbose=True):
+    start_mem = df.memory_usage(deep=True).sum() / 1024**2
+    if verbose:
+        print(f&#x27;Dataframe: {str(df_name)}&#x27;)
+        print(f&#x27;Memory usage of dataframe: {start_mem:.2f} MB&#x27;)
+
+    for col in df.columns:
+        col_type = df[col].dtype
+        #----------------------------------------------------------------------------------------------------
+        if pd.api.types.is_integer_dtype(col_type):
+            c_min = df[col].min()
+            c_max = df[col].max()
+            if c_min &gt; np.iinfo(np.int8).min and c_max &lt; np.iinfo(np.int8).max:
+                df[col] = df[col].astype(np.int8)
+            elif c_min &gt; np.iinfo(np.int16).min and c_max &lt; np.iinfo(np.int16).max:
+                df[col] = df[col].astype(np.int16)
+            elif c_min &gt; np.iinfo(np.int32).min and c_max &lt; np.iinfo(np.int32).max:
+                df[col] = df[col].astype(np.int32)
+            else:
+                df[col] = df[col].astype(np.int64)
+        #----------------------------------------------------------------------------------------------------
+        elif pd.api.types.is_float_dtype(col_type):
+            c_min = df[col].min()
+            c_max = df[col].max()
+            if c_min &gt; np.finfo(np.float16).min and c_max &lt; np.finfo(np.float16).max:
+                df[col] = df[col].astype(np.float16)
+            elif c_min &gt; np.finfo(np.float32).min and c_max &lt; np.finfo(np.float32).max:
+                df[col] = df[col].astype(np.float32)
+            else:
+                df[col] = df[col].astype(np.float64)
+        #----------------------------------------------------------------------------------------------------
+        elif pd.api.types.is_object_dtype(col_type):
+            if col == &#x27;date&#x27;:
+                df[col] = pd.to_datetime(df[col], format=&#x27;%Y-%m-%d&#x27;, errors=&#x27;coerce&#x27;)
+            else:
+                df[col] = df[col].astype(&#x27;category&#x27;)
+        #----------------------------------------------------------------------------------------------------
+
+    end_mem = df.memory_usage(deep=True).sum() / 1024**2
+
+    if verbose:
+        print(f&#x27;Memory usage after optimization: {end_mem:.2f} MB&#x27;)
+        print(f&#x27;Decreased by {(100 * (start_mem - end_mem) / start_mem):.2f}%&#x27;)
+        print(&#x27;=&#x27; * 80)
+    return df
+
+# Apply the optimized function to your dataframes
+sales = reduce_mem_usage(sales, &#x27;sales&#x27;)
+calendar = reduce_mem_usage(calendar, &#x27;calendar&#x27;)
+prices = reduce_mem_usage(prices, &#x27;prices&#x27;)
+
+# ---- Per-store LightGBM training ----
+#Get the store ids
+stores = sales.store_id.cat.codes.unique().tolist()
+for store in stores:
+    df = data[data[&#x27;store_id&#x27;]==store]
+    
+    #Split the data
+    X_train, y_train = df[df[&#x27;d&#x27;] &lt; 1914].drop(&#x27;sold&#x27;,axis=1), df[df[&#x27;d&#x27;] &lt; 1914][&#x27;sold&#x27;]
+    X_valid, y_valid = df[(df[&#x27;d&#x27;] &gt;= 1914) &amp; (df[&#x27;d&#x27;] &lt; 1942)].drop(&#x27;sold&#x27;,axis=1), df[(df[&#x27;d&#x27;] &gt;= 1914) &amp; (df[&#x27;d&#x27;] &lt; 1942)][&#x27;sold&#x27;]
+    X_test = df[df[&#x27;d&#x27;]&gt;=1942].drop(&#x27;sold&#x27;,axis=1)
+    
+    #Train and validate
+    model = LGBMRegressor(
+        n_estimators=1000,
+        learning_rate=0.3,
+        objective=&#x27;regression&#x27;,
+        metric=&#x27;rmse&#x27;,
+        num_leaves=31,
+        min_child_weight=300
+    )
+    
+    print(&#x27;Prediction for Store: {}&#x27;.format(d_store_id[store]))
+    
+    model.fit(
+    X_train,
+    y_train,
+    eval_set=[(X_train, y_train), (X_valid, y_valid)],
+    eval_metric=&#x27;rmse&#x27;,
+    callbacks=[
+            early_stopping(stopping_rounds=20),
+            log_evaluation(period=20)
+        ]
+    )
+    
+    valid_preds[X_valid.index] = model.predict(X_valid)
+    eval_preds[X_test.index] = model.predict(X_test)
+    filename = &#x27;model&#x27;+str(d_store_id[store])+&#x27;.pkl&#x27;
+    # save model
+    joblib.dump(model, filename)
+    del model, X_train, y_train, X_valid, y_valid
+    gc.collect()</template>
+    <template id="code-sentiment" data-title="TF-IDF features + model comparison" data-lang="Python" data-link="https://github.com/SKY-TKP/Statistics-and-ML/blob/main/sentiment_analysis/Sentiment_Analysis.ipynb"># Defining our vectorizer with total words of 5000 and with bigram model
+TF_IDF = TfidfVectorizer(max_features = 5000, ngram_range = (2, 2))
+
+# Fitting and transforming our reviews into a matrix of weighed words
+# This will be our independent features
+X = TF_IDF.fit_transform(dataset[&quot;reviews&quot;])
+
+# Check our matrix shape
+X.shape
+
+DTree = DecisionTreeClassifier()
+LogReg = LogisticRegression()
+SVC = SVC()
+RForest = RandomForestClassifier()
+Bayes = BernoulliNB()
+KNN = KNeighborsClassifier()
+
+Models = [DTree, LogReg, SVC, RForest, Bayes, KNN]
+Models_Dict = {0: &quot;Decision Tree&quot;, 1: &quot;Logistic Regression&quot;, 2: &quot;SVC&quot;, 3: &quot;Random Forest&quot;, 4: &quot;Naive Bayes&quot;, 5: &quot;K-Neighbors&quot;}
+
+for i, model in enumerate(Models):
+  print(&quot;{} Test Accuracy: {}&quot;.format(Models_Dict[i], cross_val_score(model, X, y, cv = 10, scoring = &quot;accuracy&quot;).mean()))
+
+Param = {&quot;C&quot;: np.logspace(-4, 4, 50), &quot;penalty&quot;: [&#x27;l1&#x27;, &#x27;l2&#x27;]}
+grid_search = GridSearchCV(estimator = LogisticRegression(random_state = 42), param_grid = Param, scoring = &quot;accuracy&quot;, cv = 10, verbose = 0, n_jobs = -1)
+
+grid_search.fit(X_train, y_train)
+best_accuracy = grid_search.best_score_
+best_parameters = grid_search.best_params_
+
+print(&quot;Best Accuracy: {:.2f} %&quot;.format(best_accuracy*100))
+print(&quot;Best Parameters:&quot;, best_parameters)</template>
+    <template id="code-matchroom" data-title="The ranking engine: rankFor() scoring" data-lang="JavaScript" data-link="https://github.com/SKY-TKP/APP-DEV-IE/tree/main/match_room">function rankFor(target, brand, o = {}) {
+  const weights = o.weights || DEFAULT_WEIGHTS, feedback = o.feedback || {}, blocked = o.blocked || [], avoid = o.avoid || [], recent = o.recent || [];
+  // 1) hard filter: brand rules, banned tags, &quot;not this creator&quot;, budget ... (omitted)
+
+  // 2) score
+  const fPct = percentiles((c) =&gt; Math.log10(c.followers + 1));
+  const erPct = percentiles((c) =&gt; c.er);
+  const active = PARTS.filter((x) =&gt; (x === &quot;trend&quot; ? o.trend : true) &amp;&amp; weights[x] &gt; 0);
+  const wSum = active.reduce((s, x) =&gt; s + weights[x], 0) || 1;
+  const thai = brand.thaiShare != null ? brand.thaiShare : 0.5;
+  const sig = (brand.signature &amp;&amp; brand.signature.tags) || [];
+  const ranked = pool.map((c) =&gt; {
+    const hits = target.tags.filter((t) =&gt; c.tags.includes(t));
+    const fitRaw = clamp(hits.length / Math.min(3, target.tags.length || 1));
+    const conf = c.conf != null ? c.conf : 1;
+    const dist = c.er &lt; target.erMin ? target.erMin - c.er : 0; // ER is one-sided: higher than the target is fine (MD&#x27;s BPM is two-sided)
+    const langFit = c.lang === &quot;th&quot; ? thai : 1 - thai;
+    const parts = {
+      // tags are less certain than measured stats → shrink toward 0.5 by (1 − confidence)
+      fit: conf * fitRaw + (1 - conf) * 0.5,
+      energy: clamp(1 - Math.abs(c.energy - target.energy) / 4),
+      er: clamp(1 - dist / 4),
+      signature: sig.length ? clamp(sig.filter((t) =&gt; c.tags.includes(t)).length / Math.min(2, sig.length)) : 0.5,
+      // liked before → up; posting in a nearby slot the same day → 0.25 (MD: a song playing ±2 h away)
+      history: recent.includes(c.id) ? 0.25 : 0.5 + 0.5 * Math.tanh((feedback[c.id] || 0) / 3),
+      lang: 0.5 + 0.5 * (langFit / Math.max(thai, 1 - thai)),
+      trend: trendParts(c, fPct.get(c.id), erPct.get(c.id)).score,
+    };
+    let total = 0;
+    const contrib = {};
+    for (const x of PARTS) { const v = active.includes(x) ? (weights[x] * parts[x]) / wSum : 0; contrib[x] = v; total += v; }
+    return { c, parts, total, contrib, hits };
+  });
+
+  // 3) rerank: at most 2 per agency, no back-to-back, keep the Thai share ... (omitted)
+}</template>
+
+    <!-- POPUP: Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Scripts: AOS, mobile menu, typewriter, scroll spy, project filter, popups, cursor trail -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const body = document.body;
+            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            // AOS Animation (content stays visible if the library fails to load)
+            if (window.AOS) {
+                AOS.init({ duration: 700, easing: "ease-out-cubic", once: true, offset: 40, disable: reduceMotion });
+            } else {
+                document.querySelectorAll("[data-aos]").forEach(el => el.removeAttribute("data-aos"));
+            }
+
+            // Mobile Menu
+            const toggle = document.getElementById("nav-toggle");
+            const toggleIcon = toggle.querySelector("i");
+            const closeBtn = document.getElementById("nav-close");
+            const backdrop = document.getElementById("nav-backdrop");
+
+            function setNav(open) {
+                body.classList.toggle("nav-open", open);
+                toggle.setAttribute("aria-expanded", String(open));
+                toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+                toggleIcon.classList.toggle("bx-menu", !open);
+                toggleIcon.classList.toggle("bx-x", open);
+            }
+            toggle.addEventListener("click", () => setNav(!body.classList.contains("nav-open")));
+            closeBtn.addEventListener("click", () => setNav(false));
+            backdrop.addEventListener("click", () => setNav(false));
+            document.addEventListener("keydown", e => { if (e.key === "Escape") setNav(false); });
+            window.matchMedia("(min-width: 1200px)").addEventListener("change", e => { if (e.matches) setNav(false); });
+
+            const navLinks = document.querySelectorAll(".nav-menu .nav-link");
+            navLinks.forEach(link => link.addEventListener("click", () => setNav(false)));
 
             // Typewriter Effect
-            const words = ["Data Scientist", "Data Analyst", "Business Analyst", "Problem Solver"];
-            let i = 0;
-            let timer;
-            let isDeleting = false;
-            let txt = '';
-            const speed = 80;
-            const delay = 2000;
+            const words = ["Data Scientist", "Data Analyst", "Business Analyst", "AI Developer", "Problem Solver"];
             const element = document.getElementById("typewriter");
+            if (!reduceMotion) {
+                let i = 0, txt = "", isDeleting = false;
+                (function typeWriter() {
+                    const fullTxt = words[i];
+                    txt = isDeleting ? fullTxt.substring(0, txt.length - 1) : fullTxt.substring(0, txt.length + 1);
+                    element.textContent = txt;
 
-            function typeWriter() {
-                let fullTxt = words[i];
-
-                if (isDeleting) {
-                    txt = fullTxt.substring(0, txt.length - 1);
-                } else {
-                    txt = fullTxt.substring(0, txt.length + 1);
-                }
-
-                element.innerHTML = txt;
-
-                let typeSpeed = speed;
-                if (isDeleting) { typeSpeed /= 2; }
-
-                if (!isDeleting && txt === fullTxt) {
-                    typeSpeed = delay;
-                    isDeleting = true;
-                } else if (isDeleting && txt === '') {
-                    isDeleting = false;
-                    i++;
-                    if (i >= words.length) i = 0;
-                    typeSpeed = 500;
-                }
-                setTimeout(typeWriter, typeSpeed);
+                    let typeSpeed = isDeleting ? 40 : 80;
+                    if (!isDeleting && txt === fullTxt) {
+                        typeSpeed = 2000;
+                        isDeleting = true;
+                    } else if (isDeleting && txt === "") {
+                        isDeleting = false;
+                        i = (i + 1) % words.length;
+                        typeSpeed = 500;
+                    }
+                    setTimeout(typeWriter, typeSpeed);
+                })();
             }
-            typeWriter();
 
-            // Scroll Spy (Highlight menu on scroll)
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-menu .nav-link');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (scrollY >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
+            // Scroll Spy (highlight the menu item of the section in view)
+            const linkById = {};
+            navLinks.forEach(link => { linkById[link.getAttribute("href").slice(1)] = link; });
+            const spy = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    const link = linkById[entry.target.id];
+                    if (link) link.classList.add("active");
                 });
+            }, { rootMargin: "-45% 0px -50% 0px" });
+            Object.keys(linkById).forEach(id => {
+                const section = document.getElementById(id);
+                if (section) spy.observe(section);
+            });
 
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current)) {
-                        link.classList.add('active');
-                    }
+            // Project Filter
+            const filterBtns = document.querySelectorAll(".filter-btn");
+            const projects = document.querySelectorAll("#portfolio [data-category]");
+            filterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const filter = btn.dataset.filter;
+                    filterBtns.forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+                    projects.forEach(card => {
+                        const match = filter === "all" || card.dataset.category.split(" ").includes(filter);
+                        card.hidden = !match;
+                        if (match && !reduceMotion) {
+                            card.classList.remove("filter-in");
+                            void card.offsetWidth;
+                            card.classList.add("filter-in");
+                        }
+                    });
+                    if (window.AOS) AOS.refresh();
                 });
             });
 
-            // Close mobile menu on link click
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (body.classList.contains('mobile-nav-active')) {
-                        body.classList.remove('mobile-nav-active');
-                        mobileToggle.classList.add('bx-menu');
-                        mobileToggle.classList.remove('bx-x');
-                    }
+            // Popups (native <dialog>): open, close on button / backdrop click, lock page scroll
+            function openDialog(dlg) {
+                if (!dlg.open) dlg.showModal();
+                body.classList.add("modal-open");
+            }
+            document.querySelectorAll("dialog").forEach(dlg => {
+                dlg.addEventListener("close", () => body.classList.remove("modal-open"));
+                dlg.addEventListener("click", e => { if (e.target === dlg || e.target.closest("[data-close]")) dlg.close(); });
+            });
+            document.querySelectorAll("[data-open]").forEach(btn => {
+                btn.addEventListener("click", () => openDialog(document.getElementById(btn.dataset.open)));
+            });
+
+            // Screenshot lightbox
+            const lightbox = document.getElementById("lightbox");
+            const lbImg = document.getElementById("lb-img");
+            const lbCaption = document.getElementById("lb-caption");
+            let shots = [];
+            let current = 0;
+            function showShot(i) {
+                current = (i + shots.length) % shots.length;
+                const a = shots[current];
+                lbImg.src = a.getAttribute("href");
+                lbImg.alt = a.querySelector("img").alt;
+                lbCaption.textContent = a.dataset.caption || "";
+            }
+            document.querySelectorAll("[data-gallery]").forEach(gallery => {
+                const links = Array.from(gallery.querySelectorAll("a"));
+                links.forEach((a, i) => a.addEventListener("click", e => {
+                    e.preventDefault();
+                    shots = links;
+                    showShot(i);
+                    openDialog(lightbox);
+                }));
+            });
+            lightbox.querySelector(".lb-prev").addEventListener("click", () => showShot(current - 1));
+            lightbox.querySelector(".lb-next").addEventListener("click", () => showShot(current + 1));
+            lightbox.addEventListener("keydown", e => {
+                if (e.key === "ArrowLeft") showShot(current - 1);
+                if (e.key === "ArrowRight") showShot(current + 1);
+            });
+
+            // Code viewer: shows a snippet from a <template>, with light syntax colouring
+            const codeDlg = document.getElementById("code-viewer");
+            const codeBody = document.getElementById("code-body");
+            const KEYWORDS = /^(def|return|if|elif|else|for|while|in|not|and|or|import|from|as|with|lambda|None|True|False|class|try|except|function|const|let|var|new|of|typeof|null|true|false|del|print)$/;
+            function highlight(src) {
+                const esc = t => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                const token = /(#[^\n]*|\/\/[^\n]*)|((?:f|r)?"(?:[^"\\\n]|\\.)*"|(?:f|r)?'(?:[^'\\\n]|\\.)*'|`(?:[^`\\]|\\.)*`)|(\b\d+(?:\.\d+)?\b)|([A-Za-z_]\w*)/g;
+                let out = "", last = 0, m;
+                while ((m = token.exec(src))) {
+                    out += esc(src.slice(last, m.index));
+                    const [t, comment, str, num, word] = m;
+                    if (comment) out += `<span class="tk-c">${esc(t)}</span>`;
+                    else if (str) out += `<span class="tk-s">${esc(t)}</span>`;
+                    else if (num) out += `<span class="tk-n">${t}</span>`;
+                    else if (KEYWORDS.test(word)) out += `<span class="tk-k">${t}</span>`;
+                    else if (src[token.lastIndex] === "(") out += `<span class="tk-f">${t}</span>`;
+                    else out += t;
+                    last = token.lastIndex;
+                }
+                return out + esc(src.slice(last));
+            }
+            let codeText = "";
+            document.querySelectorAll("[data-code]").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const t = document.getElementById(btn.dataset.code);
+                    codeText = t.content.textContent;
+                    document.getElementById("code-title").textContent = t.dataset.title;
+                    document.getElementById("code-lang").textContent = t.dataset.lang;
+                    document.getElementById("code-link").href = t.dataset.link;
+                    codeBody.innerHTML = highlight(codeText);
+                    openDialog(codeDlg);
+                    codeDlg.querySelector(".code-block").scrollTop = 0;
                 });
             });
+
+            // Toast + copy email
+            const toast = document.getElementById("toast");
+            let toastTimer;
+            function showToast(msg) {
+                toast.textContent = msg;
+                toast.classList.add("show");
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+            }
+            document.getElementById("code-copy").addEventListener("click", async () => {
+                try {
+                    await navigator.clipboard.writeText(codeText);
+                    showToast("📋 Code copied");
+                } catch {
+                    showToast("Select the code to copy it");
+                }
+            });
+            const copyBtn = document.getElementById("copy-email");
+            copyBtn.addEventListener("click", async () => {
+                try {
+                    await navigator.clipboard.writeText(copyBtn.dataset.email);
+                    showToast("📋 Email copied: " + copyBtn.dataset.email);
+                } catch {
+                    showToast("✉️ " + copyBtn.dataset.email);
+                }
+            });
+
+            // Back to Top button
+            const backToTop = document.getElementById("back-to-top");
+            const progress = document.getElementById("scroll-progress");
+            const onScroll = () => {
+                backToTop.classList.toggle("show", window.scrollY > 600);
+                const max = document.documentElement.scrollHeight - innerHeight;
+                progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+            };
+            window.addEventListener("scroll", onScroll, { passive: true });
+            onScroll();
+
+            // Count-up numbers in the About stats
+            const counters = document.querySelectorAll("[data-count]");
+            if (!reduceMotion && "IntersectionObserver" in window) {
+                const countObs = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        countObs.unobserve(entry.target);
+                        const el = entry.target;
+                        const end = parseFloat(el.dataset.count);
+                        const decimals = +(el.dataset.decimals || 0);
+                        const suffix = el.dataset.suffix || "";
+                        const start = performance.now();
+                        const DURATION = 1400;
+                        (function tick(now) {
+                            const p = Math.min((now - start) / DURATION, 1);
+                            const eased = 1 - Math.pow(1 - p, 3);
+                            el.textContent = (end * eased).toFixed(decimals) + suffix;
+                            if (p < 1) requestAnimationFrame(tick);
+                        })(start);
+                    });
+                }, { threshold: 0.6 });
+                counters.forEach(el => countObs.observe(el));
+            }
+
+            // Spotlight hover: cards glow where the mouse is
+            document.querySelectorAll(".project-card, .skill-card, .stat-card, .hobby-card, .contact-card, .process-steps li").forEach(card => {
+                card.classList.add("spotlight");
+                card.addEventListener("pointermove", e => {
+                    const r = card.getBoundingClientRect();
+                    card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+                    card.style.setProperty("--my", `${e.clientY - r.top}px`);
+                });
+            });
+
+            // Cursor trail: a short glowing tail behind the mouse pointer (mouse / trackpad only)
+            const canvas = document.getElementById("cursor-trail");
+            if (window.matchMedia("(pointer: fine)").matches && !reduceMotion) {
+                const ctx = canvas.getContext("2d");
+                const points = [];
+                const LIFE = 420;
+                let running = false;
+
+                function resize() {
+                    const dpr = window.devicePixelRatio || 1;
+                    canvas.width = innerWidth * dpr;
+                    canvas.height = innerHeight * dpr;
+                    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                }
+                resize();
+                window.addEventListener("resize", resize);
+
+                function draw() {
+                    const now = performance.now();
+                    while (points.length && now - points[0].t > LIFE) points.shift();
+                    ctx.clearRect(0, 0, innerWidth, innerHeight);
+                    ctx.lineCap = "round";
+                    for (let i = 1; i < points.length; i++) {
+                        const life = 1 - (now - points[i].t) / LIFE;
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${life * 0.55})`;
+                        ctx.lineWidth = 1 + life * 5;
+                        ctx.beginPath();
+                        ctx.moveTo(points[i - 1].x, points[i - 1].y);
+                        ctx.lineTo(points[i].x, points[i].y);
+                        ctx.stroke();
+                    }
+                    if (points.length) {
+                        requestAnimationFrame(draw);
+                    } else {
+                        running = false;
+                    }
+                }
+                window.addEventListener("pointermove", e => {
+                    if (e.pointerType !== "mouse") return;
+                    points.push({ x: e.clientX, y: e.clientY, t: performance.now() });
+                    if (!running) { running = true; requestAnimationFrame(draw); }
+                }, { passive: true });
+            } else {
+                canvas.remove();
+            }
+
+            // Footer year
+            document.getElementById("year").textContent = new Date().getFullYear();
         });
     </script>
 </body>

@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/fonts.css">
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-    <link rel="stylesheet" href="style.css?v=19">
+    <link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
 
@@ -104,7 +104,7 @@
         <section id="hero" class="hero">
             <div class="container">
                 <div class="hero-inner" data-aos="fade-up">
-                    <p class="hero-eyebrow"><span class="wave" aria-hidden="true">👋</span> Data Science · Analytics · AI Products</p>
+                    <p class="hero-eyebrow"><span class="wave" aria-hidden="true">👋</span> Data Science · Business Analyst · AI Developer</p>
                     <h1 class="hero-title">Thananop Kullapan</h1>
                     <p class="hero-role">
                         <span class="sr-only">Data Scientist, Data Analyst, Business Analyst, AI Developer and Problem Solver</span>
@@ -143,6 +143,7 @@
                         <h3>At a Glance</h3>
                         <dl>
                             <div><dt>Current Role</dt><dd>Business Analyst @ Grab TH</dd></div>
+                            <div><dt>Part-time</dt><dd>Independent Film Reviewer</dd></div>
                             <div><dt>Previously</dt><dd>AI Developer (Part-time) @ VIBES LAB</dd></div>
                             <div><dt>Education</dt><dd>B.Eng. Industrial Engineering, Chulalongkorn University</dd></div>
                             <div><dt>Honors</dt><dd>1st Class Honors · GPAX 3.81</dd></div>
@@ -297,6 +298,272 @@
 
                 <div class="project-list">
 
+                    <!-- PROJECT: HOW MANY PRIMOGEMS ARE ENOUGH? -->
+                    <article class="project-card" id="project-primogems" data-category="optimization ml" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-diamond"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Personal Research &bull; Probability &amp; Stochastic Optimization</p>
+                                <h3>How Many Primogems Are Enough?</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">Oct 2026</span></div>
+                        </div>
+                        <p class="project-desc">A technical monograph on a question every <em>Genshin Impact</em> player faces before a new banner: how many Primogems to save for a target constellation C<sub>x</sub> plus weapon refinement R<sub>y</sub>. It fits the game's pity system to 1.20 billion public rolls from the Paimon.moe API, derives the exact probability law of the requirement, and turns it into risk-optimal budgets for all 42 targets.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>1.20B</strong><span>Public rolls analyzed (135 banners)</span></div>
+                            <div class="metric"><strong>42</strong><span>C<sub>x</sub>R<sub>y</sub> targets with exact budgets</span></div>
+                            <div class="metric"><strong>80.25%</strong><span>Success with 64,000 Primogems</span></div>
+                            <div class="metric"><strong>10<sup>6</sup></strong><span>Monte Carlo runs confirm the math</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">How it flows</p>
+                            <ol>
+                                <li><span>Paimon.moe API</span></li>
+                                <li><span>Hazard MLE</span></li>
+                                <li><span>Single 5-star PMF</span></li>
+                                <li><span>Radiance matrix M(z)</span></li>
+                                <li><span>Convolutions</span></li>
+                                <li><span>Budget &amp; risk</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>Data from 1.2 Billion Rolls</h4>
+                                <p>Pulled per-banner pity counts from the Paimon.moe public API: 68 character and 67 weapon banners (Dec 2022 – Oct 2026). Profile-likelihood MLE recovers soft pity at rolls 74 / 63 with slopes 0.060 / 0.070, and a loss-pool estimator puts the post-5.0 50/50 win rate at <strong>58.75% ± 1.03%</strong>.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>An Exact Probability Engine</h4>
+                                <p>Hazard → single-5-star PMF; a 4×4 probability generating matrix M(z) for the Capturing Radiance counter; a shifted binomial for the one-Fate-Point weapon banner; n-fold convolutions for the joint and total roll law. Every PMF sums to 1 within 10<sup>−12</sup>, and C<sub>6</sub>R<sub>5</sub> runs in about 50 ms.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Risk-Optimal Budgets</h4>
+                                <p>Chance-constrained budgets, CVaR and expected shortfall, priced in US dollars. Case study C<sub>2</sub>R<sub>1</sub> with 64,000 Primogems: expected need 53,715, success <strong>80.25%</strong> (89.48% with Starglitter), 90%-safe budget 69,920, expected top-up <strong>$17.04</strong>.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>Validated by Simulation</h4>
+                                <p>A separate roll-by-roll simulator that shares no formulas with the engine (10<sup>6</sup> runs) matches every exact result inside the 95% DKW band: P(R ≤ 400) is 80.25% exact against 80.18% simulated.</p>
+                            </div>
+                        </div>
+
+                        <div class="n8n">
+                            <p class="shots-label"><i class="bx bx-git-branch" aria-hidden="true"></i> Data pipeline <span>· from the Paimon.moe API to a Primogem budget</span></p>
+                            <div class="n8n-canvas">
+                                <svg viewBox="0 0 1036 300" role="img" aria-labelledby="gacha-title">
+                                    <title id="gacha-title">Pipeline: Paimon.moe API, pity counts, hazard MLE and loss-pool estimator, exact engine with game rules, budget and risk, report, validated by Monte Carlo</title>
+                                    <defs>
+                                        <pattern id="gacha-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" class="n8n-dot"/></pattern>
+                                        <marker id="gacha-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="n8n-arrowhead"/></marker>
+                                    </defs>
+                                    <rect width="1036" height="300" rx="14" fill="url(#gacha-dots)"/>
+
+                                    <!-- connections -->
+                                    <path class="n8n-wire" d="M162 148 L186 148" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire" d="M334 148 L358 148" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire" d="M506 148 L530 148" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire" d="M678 148 L702 148" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire" d="M850 148 L874 148" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire" d="M260 120 C260 60 300 38 358 38" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire" d="M506 38 C580 38 604 70 604 120" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire n8n-wire-dim" d="M506 260 C570 260 590 230 590 176" marker-end="url(#gacha-arrow)"/>
+                                    <path class="n8n-wire n8n-wire-ai" d="M620 176 C620 240 660 260 702 260" marker-start="url(#gacha-arrow)" marker-end="url(#gacha-arrow)"/>
+
+                                    <text class="n8n-tag" x="514" y="28">50/50 = 58.75%</text>
+                                    <text class="n8n-tag" x="636" y="214">compare</text>
+
+                                    <!-- nodes -->
+                                    <g class="n8n-node" transform="translate(14 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xea61;</text><text x="48" y="25" class="n8n-name">Paimon.moe</text><text x="48" y="41" class="n8n-sub">API · 135 banners</text></g>
+                                    <g class="n8n-node" transform="translate(186 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xea6b;</text><text x="48" y="25" class="n8n-name">Pity Counts</text><text x="48" y="41" class="n8n-sub">Code · 1.20B rolls</text></g>
+                                    <g class="n8n-node" transform="translate(358 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeb3a;</text><text x="48" y="25" class="n8n-name">Hazard MLE</text><text x="48" y="41" class="n8n-sub">profile likelihood</text></g>
+                                    <g class="n8n-node" transform="translate(530 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xe99b;</text><text x="48" y="25" class="n8n-name">Exact Engine</text><text x="48" y="41" class="n8n-sub">M(z) · convolutions</text></g>
+                                    <g class="n8n-node" transform="translate(702 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xec3d;</text><text x="48" y="25" class="n8n-name">Budget &amp; Risk</text><text x="48" y="41" class="n8n-sub">Q90 · CVaR · US$</text></g>
+                                    <g class="n8n-node" transform="translate(874 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xec39;</text><text x="48" y="25" class="n8n-name">Report</text><text x="48" y="41" class="n8n-sub">42 targets · LaTeX</text></g>
+                                    <g class="n8n-node" transform="translate(358 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeada;</text><text x="48" y="25" class="n8n-name">Loss Pool</text><text x="48" y="41" class="n8n-sub">5-star identities</text></g>
+                                    <g class="n8n-node n8n-node-dim" transform="translate(358 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-grey" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xe9ef;</text><text x="48" y="25" class="n8n-name">Game Rules</text><text x="48" y="41" class="n8n-sub">official disclosures</text></g>
+                                    <g class="n8n-node n8n-node-ai" transform="translate(702 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeaa0;</text><text x="48" y="25" class="n8n-name">Monte Carlo</text><text x="48" y="41" class="n8n-sub">10⁶ runs · DKW band</text></g>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="math-model">
+                            <p class="shots-label"><i class="bx bx-math" aria-hidden="true"></i> Math model <span>· from one roll to the whole budget</span></p>
+                            <div class="eq-row"><span class="eq-label">Pity hazard</span><div class="eq"><math display="block"><mi>h</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>min</mi><mo>{</mo><mn>1</mn><mo>,</mo><mspace width="0.2em"/><mi>p</mi><mo>+</mo><mi>δ</mi><msub><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow><mo>+</mo></msub><mo>}</mo><mo>,</mo><mspace width="0.6em"/><mi>h</mi><mo stretchy="false">(</mo><msub><mi>t</mi><mtext>max</mtext></msub><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math></div></div>
+                            <div class="eq-row"><span class="eq-label">One 5-star</span><div class="eq"><math display="block"><msub><mi>f</mi><mi>T</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>h</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></munderover><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>h</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Character 5-stars</span><div class="eq"><math display="block"><msub><mi>P</mi><msub><mi>N</mi><mi>c</mi></msub></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">[</mo><msup><mi>z</mi><mi>n</mi></msup><mo stretchy="false">]</mo><mspace width="0.25em"/><msub><mi mathvariant="bold">π</mi><mn>0</mn></msub><mspace width="0.1em"/><mi mathvariant="bold">M</mi><msup><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msup><mspace width="0.1em"/><mn mathvariant="bold">1</mn></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Weapon 5-stars</span><div class="eq"><math display="block"><msub><mi>P</mi><msub><mi>N</mi><mi>w</mi></msub></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0"><mi>y</mi><mrow><mi>n</mi><mo>−</mo><mi>y</mi></mrow></mfrac><mo>)</mo></mrow><msup><mrow><mo>(</mo><mfrac><mn>5</mn><mn>8</mn></mfrac><mo>)</mo></mrow><mrow><mi>n</mi><mo>−</mo><mi>y</mi></mrow></msup><msup><mrow><mo>(</mo><mfrac><mn>3</mn><mn>8</mn></mfrac><mo>)</mo></mrow><mrow><mn>2</mn><mi>y</mi><mo>−</mo><mi>n</mi></mrow></msup></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Total rolls</span><div class="eq"><math display="block"><msub><mi>P</mi><mi>R</mi></msub><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><msub><mi>n</mi><mi>c</mi></msub><mo>,</mo><msub><mi>n</mi><mi>w</mi></msub></mrow></munder><msub><mi>P</mi><msub><mi>N</mi><mi>c</mi></msub></msub><mo stretchy="false">(</mo><msub><mi>n</mi><mi>c</mi></msub><mo stretchy="false">)</mo><msub><mi>P</mi><msub><mi>N</mi><mi>w</mi></msub></msub><mo stretchy="false">(</mo><msub><mi>n</mi><mi>w</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msubsup><mi>f</mi><mi>c</mi><mrow><mo>∗</mo><msub><mi>n</mi><mi>c</mi></msub></mrow></msubsup><mo>∗</mo><msubsup><mi>f</mi><mi>w</mi><mrow><mo>∗</mo><msub><mi>n</mi><mi>w</mi></msub></mrow></msubsup><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></math></div></div>
+                            <div class="eq-row"><span class="eq-label">Budget</span><div class="eq"><math display="block"><msubsup><mi>B</mi><mi>α</mi><mo>⋆</mo></msubsup><mo>=</mo><mi>min</mi><mo>{</mo><mi>B</mi><mo>:</mo><mi>Pr</mi><mo stretchy="false">(</mo><mi>R</mi><mo>≤</mo><mi>B</mi><mo stretchy="false">)</mo><mo>≥</mo><mn>1</mn><mo>−</mo><mi>α</mi><mo>}</mo><mo>,</mo><mspace width="0.6em"/><mtext>Primogems</mtext><mo>=</mo><mn>160</mn><mi>B</mi></math></div></div>
+                            <details class="eq-more">
+                                <summary><span class="when-closed">Show estimation &amp; moments</span><span class="when-open">Hide</span> <i class="bx bx-chevron-down" aria-hidden="true"></i></summary>
+                                <div class="eq-row"><span class="eq-label">Log-likelihood</span><div class="eq"><math display="block"><mi>ℓ</mi><mo stretchy="false">(</mo><mi mathvariant="bold">β</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∑</mo><mi>t</mi></munder><mo>[</mo><msub><mi>d</mi><mi>t</mi></msub><mi>log</mi><msub><mi>h</mi><mi>t</mi></msub><mo>+</mo><mo stretchy="false">(</mo><msub><mi>n</mi><mi>t</mi></msub><mo>−</mo><msub><mi>d</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mi>log</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mi>h</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>]</mo><mo>,</mo><mspace width="0.5em"/><msub><mi>h</mi><mi>t</mi></msub><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mo>+</mo><msub><mi>β</mi><mn>1</mn></msub><msub><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow><mo>+</mo></msub></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Breakpoint</span><div class="eq"><math display="block"><mover accent="true"><mi>τ</mi><mo>^</mo></mover><mo>=</mo><munder><mo>arg max</mo><mi>τ</mi></munder><mspace width="0.2em"/><mi>ℓ</mi><mo stretchy="false">(</mo><mover accent="true"><mi mathvariant="bold">β</mi><mo>^</mo></mover><mo stretchy="false">(</mo><mi>τ</mi><mo stretchy="false">)</mo><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Loss pool</span><div class="eq"><math display="block"><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>=</mo><mfrac><mrow><msub><mi>N</mi><mn>5</mn></msub><mo>−</mo><mn>2</mn><mi>L</mi></mrow><mrow><msub><mi>N</mi><mn>5</mn></msub><mo>−</mo><mi>L</mi></mrow></mfrac></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Stationary 50/50</span><div class="eq"><math display="block"><msup><mi>p</mi><mo>⋆</mo></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msub><mi>q</mi><mn>0</mn></msub><mo>+</mo><msub><mi>q</mi><mn>0</mn></msub><msub><mi>q</mi><mn>1</mn></msub><mo>+</mo><msub><mi>q</mi><mn>0</mn></msub><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub></mrow></mfrac><mo>,</mo><mspace width="0.5em"/><msub><mi>q</mi><mi>s</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><msub><mi>κ</mi><mi>s</mi></msub><mo stretchy="false">)</mo></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Mean (Wald)</span><div class="eq"><math display="block"><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><mi>R</mi><mo stretchy="false">]</mo><mo>=</mo><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><msub><mi>N</mi><mi>c</mi></msub><mo stretchy="false">]</mo><msub><mi>μ</mi><mi>c</mi></msub><mo>+</mo><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><msub><mi>N</mi><mi>w</mi></msub><mo stretchy="false">]</mo><msub><mi>μ</mi><mi>w</mi></msub></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Variance</span><div class="eq"><math display="block"><mi>Var</mi><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><msub><mi>N</mi><mi>c</mi></msub><mo stretchy="false">]</mo><msubsup><mi>σ</mi><mi>c</mi><mn>2</mn></msubsup><mo>+</mo><mi>Var</mi><mo stretchy="false">(</mo><msub><mi>N</mi><mi>c</mi></msub><mo stretchy="false">)</mo><msubsup><mi>μ</mi><mi>c</mi><mn>2</mn></msubsup><mo>+</mo><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><msub><mi>N</mi><mi>w</mi></msub><mo stretchy="false">]</mo><msubsup><mi>σ</mi><mi>w</mi><mn>2</mn></msubsup><mo>+</mo><mi>Var</mi><mo stretchy="false">(</mo><msub><mi>N</mi><mi>w</mi></msub><mo stretchy="false">)</mo><msubsup><mi>μ</mi><mi>w</mi><mn>2</mn></msubsup></math></div></div>
+                                <div class="eq-row"><span class="eq-label">Shortfall</span><div class="eq"><math display="block"><mi mathvariant="normal">E</mi><mo stretchy="false">[</mo><msub><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>−</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>+</mo></msub><mo stretchy="false">]</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>r</mi><mo>&gt;</mo><mi>B</mi></mrow></munder><mo stretchy="false">(</mo><mi>r</mi><mo>−</mo><mi>B</mi><mo stretchy="false">)</mo><mspace width="0.1em"/><msub><mi>P</mi><mi>R</mi></msub><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></math></div></div>
+                            </details>
+                            <p class="eq-legend"><b>t</b> pity index (rolls since the last 5-star) · <b>p</b> base rate 0.6% / 0.7% · <b>τ</b> last roll before soft pity (73 / 62) · <b>δ</b> soft-pity slope (0.06 / 0.07) · <b>π<sub>0</sub></b> starting law of the Capturing Radiance counter s ∈ {0, 1, 2, 3} · <b>M(z)</b> 4×4 probability generating matrix, z counts 5-stars per copy · <b>f<sup>∗n</sup></b> n-fold convolution · <b>N<sub>5</sub>, L</b> 5-stars and standard (lost) 5-stars on a banner · <b>κ<sub>s</sub></b> Radiance chance at counter s · <b>μ, σ<sup>2</sup></b> mean and variance of one 5-star wait · one roll = 160 Primogems</p>
+                        </div>
+
+                        <div class="shots">
+                            <p class="shots-label"><i class="bx bx-line-chart" aria-hidden="true"></i> Figures from the paper <span>· click to enlarge</span></p>
+                            <div class="shot-grid" data-gallery>
+                                <a class="shot" href="assets/primogems/explore-fit.jpg" data-caption="From the distribution graph to a model: raw Paimon.moe histograms, empirical hazards and the profile likelihood that pins soft pity at rolls 74 and 63">
+                                    <img src="assets/primogems/thumbs/explore-fit.jpg" alt="Histograms, empirical hazards and profile likelihood" loading="lazy">
+                                    <span>Data → hazard</span>
+                                </a>
+                                <a class="shot" href="assets/primogems/hazard-pmf.jpg" data-caption="The fitted single-5-star law: hazards, PMFs and survival functions for the character and weapon banners">
+                                    <img src="assets/primogems/thumbs/hazard-pmf.jpg" alt="Fitted hazard, PMF and survival curves" loading="lazy">
+                                    <span>Single 5-star law</span>
+                                </a>
+                                <a class="shot" href="assets/primogems/cr-empirical.jpg" data-caption="Evidence for Capturing Radiance: per-banner 50/50 win rates rise after Version 5.0 and settle near 59%">
+                                    <img src="assets/primogems/thumbs/cr-empirical.jpg" alt="Per-banner 50/50 win rates before and after Version 5.0" loading="lazy">
+                                    <span>Capturing Radiance</span>
+                                </a>
+                                <a class="shot" href="assets/primogems/total-pmf-cdf.jpg" data-caption="Case study C2R1: the total-roll PMF and CDF, with 80.25% success at 400 rolls and 89.48% at 434">
+                                    <img src="assets/primogems/thumbs/total-pmf-cdf.jpg" alt="Total roll PMF and CDF for the case study" loading="lazy">
+                                    <span>Case study PMF &amp; CDF</span>
+                                </a>
+                                <a class="shot" href="assets/primogems/joint-heatmap.jpg" data-caption="Joint PMF of character and weapon rolls, with the budget lines r_c + r_w = 400 and 434">
+                                    <img src="assets/primogems/thumbs/joint-heatmap.jpg" alt="Joint PMF heatmap with budget lines" loading="lazy">
+                                    <span>Joint PMF</span>
+                                </a>
+                                <a class="shot" href="assets/primogems/budget-curves.jpg" data-caption="Budget curves: chance of success against the Primogem budget, and the budget needed for each confidence level">
+                                    <img src="assets/primogems/thumbs/budget-curves.jpg" alt="Budget curves by target and situation" loading="lazy">
+                                    <span>Budget curves</span>
+                                </a>
+                                <a class="shot" href="assets/primogems/success-heatmap.jpg" data-caption="Chance of reaching every CxRy target from the author's state, with 400 rolls and with 434 rolls after Starglitter recycling">
+                                    <img src="assets/primogems/thumbs/success-heatmap.jpg" alt="Success probability heatmap over all targets" loading="lazy">
+                                    <span>Success by target</span>
+                                </a>
+                                <a class="shot" href="assets/primogems/monte-carlo.jpg" data-caption="Independent check: 1,000,000 simulated runs against the exact PMF, inside the 95% DKW band everywhere">
+                                    <img src="assets/primogems/thumbs/monte-carlo.jpg" alt="Monte Carlo histogram and CDF error band" loading="lazy">
+                                    <span>Monte Carlo check</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>Python</li><li>NumPy / SciPy</li><li>Maximum Likelihood</li><li>Markov Chains</li><li>Stochastic Optimization</li><li>Monte Carlo</li><li>LaTeX</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/How_Many_Primogems_Are_Enough/How_Many_Primogems_Are_Enough.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bxs-file-pdf" aria-hidden="true"></i> Read the Paper</a>
+                                <button type="button" class="btn btn-secondary btn-sm" data-open="primogems-detail"><i class="bx bx-book-reader" aria-hidden="true"></i> Explore the Model</button>
+                                <button type="button" class="btn btn-secondary btn-sm" data-code="code-primogems"><i class="bx bx-code-alt" aria-hidden="true"></i> Code Snippet</button>
+                                <a href="https://github.com/SKY-TKP/PROJECT/tree/main/python/How_Many_Primogems_Are_Enough" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxl-github" aria-hidden="true"></i> Repo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT: BOM CALCULATOR (data pipeline · dummy data only) -->
+                    <article class="project-card" id="project-bom" data-category="automation ml" data-aos="fade-up">
+                        <div class="project-top">
+                            <div class="project-icon" aria-hidden="true"><i class="bx bx-spreadsheet"></i></div>
+                            <div class="project-heading">
+                                <p class="project-kicker">Data Engineering &bull; Data Modeling &amp; SQL</p>
+                                <h3>BOM Calculator · From Supplier Price Sheets to Product Cost</h3>
+                            </div>
+                            <div class="project-meta"><span class="badge">Oct 2026</span></div>
+                        </div>
+                        <p class="project-desc">An internal costing system for a fragrance business. Nine supplier price sheets, each laid out differently, are prepared and transformed into one clean price list with permanent SKUs, which then costs every product's bill of materials (BOM) with versions and approvals. It runs on Google Sheets and Apps Script, and I modeled the same data as a relational database for a planned move to PostgreSQL.</p>
+                        <p class="project-note"><i class="bx bx-info-circle" aria-hidden="true"></i> Every product, price and supplier on this card is dummy data. The real price list and the program itself stay private.</p>
+
+                        <div class="project-metrics">
+                            <div class="metric"><strong>9 → 1</strong><span>Supplier sheets into one price list</span></div>
+                            <div class="metric"><strong>1,175</strong><span>Items with permanent SKUs</span></div>
+                            <div class="metric"><strong>60 → 30</strong><span>Raw columns to one clean schema</span></div>
+                            <div class="metric"><strong>6 steps</strong><span>From a formula to cost per piece</span></div>
+                        </div>
+
+                        <div class="mini-flow">
+                            <p class="mini-flow-label">How it flows</p>
+                            <ol>
+                                <li><span>Prepare data</span></li>
+                                <li><span>Transform</span></li>
+                                <li><span>SQL</span></li>
+                                <li><span>Database</span></li>
+                                <li><span>Dashboard &amp; export</span></li>
+                            </ol>
+                        </div>
+
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <h4>1 · Prepare</h4>
+                                <p>Each sheet is pulled in as-is (60 columns). Columns are found by header name, not position, so purchasing can keep adding dated price columns, and the latest dated price wins. A sync guard stops the run if any sheet suddenly loses more than 20% of its rows.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>2 · Transform</h4>
+                                <p>Every row becomes one schema: purchase unit, pack, MOQ, lot, price tier and currency converted to THB; liquids convert to grams by density. Cross-checks flag a blank currency from a foreign supplier, one name priced 3× apart, or a pack that disagrees with the per-kg column.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>3 · SQL Logic</h4>
+                                <p>Set-based steps: an append-only registry issues SKUs that never renumber, checked overrides beat source values, and the costing query turns a formula into an order: grams per piece → need with loss → round up to MOQ and pack → THB per piece.</p>
+                            </div>
+                            <div class="project-feature">
+                                <h4>4 · Database</h4>
+                                <p>Every submit writes a new BOM version plus a price snapshot of each line, so old versions never change when prices do. Status, the active version (latest approved) and the dashboard all come from two tables: versions and lines.</p>
+                            </div>
+                        </div>
+
+                        <div class="n8n">
+                            <p class="shots-label"><i class="bx bx-git-branch" aria-hidden="true"></i> Data pipeline <span>· prepare → transform → SQL → database</span></p>
+                            <div class="n8n-canvas">
+                                <svg viewBox="0 0 1036 300" role="img" aria-labelledby="bom-title">
+                                    <title id="bom-title">Pipeline: supplier sheets, prepare, normalize with ad-hoc items, SKU registry behind a sync guard, SQL views with overrides, database, dashboard and export</title>
+                                    <defs>
+                                        <pattern id="bom-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" class="n8n-dot"/></pattern>
+                                        <marker id="bom-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="n8n-arrowhead"/></marker>
+                                    </defs>
+                                    <rect width="1036" height="300" rx="14" fill="url(#bom-dots)"/>
+                                    
+                                    <!-- connections -->
+                                    <path class="n8n-wire" d="M162 148 L186 148" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire" d="M334 148 L358 148" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire" d="M506 148 L530 148" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire" d="M678 148 L702 148" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire" d="M850 148 L874 148" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire" d="M334 38 C400 38 432 70 432 120" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire" d="M776 66 L776 120" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire n8n-wire-dim" d="M590 176 L590 232" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire n8n-wire-dim" d="M620 232 L620 176" marker-end="url(#bom-arrow)"/>
+                                    <path class="n8n-wire" d="M948 176 L948 232" marker-end="url(#bom-arrow)"/>
+                                    
+                                    <text class="n8n-tag" x="18" y="110">PREPARE</text>
+                                    <text class="n8n-tag" x="362" y="110">TRANSFORM</text>
+                                    <text class="n8n-tag" x="706" y="110">SQL</text>
+                                    <text class="n8n-tag" x="878" y="110">DATABASE</text>
+                                    <text class="n8n-tag" x="628" y="208">pass</text>
+                                    
+                                    <!-- nodes -->
+                                    <g class="n8n-node" transform="translate(14 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-sheet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xec24;</text><text x="48" y="25" class="n8n-name">Supplier Sheets</text><text x="48" y="41" class="n8n-sub">9 tabs · own layouts</text></g>
+                                    <g class="n8n-node" transform="translate(186 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xea6b;</text><text x="48" y="25" class="n8n-name">Prepare</text><text x="48" y="41" class="n8n-sub">find cols by header</text></g>
+                                    <g class="n8n-node" transform="translate(358 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xec4f;</text><text x="48" y="25" class="n8n-name">Normalize</text><text x="48" y="41" class="n8n-sub">unit · FX · MOQ</text></g>
+                                    <g class="n8n-node" transform="translate(530 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-violet" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeb28;</text><text x="48" y="25" class="n8n-name">SKU Registry</text><text x="48" y="41" class="n8n-sub">append-only keys</text></g>
+                                    <g class="n8n-node" transform="translate(702 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-blue" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xea95;</text><text x="48" y="25" class="n8n-name">SQL Views</text><text x="48" y="41" class="n8n-sub">price list · costing</text></g>
+                                    <g class="n8n-node" transform="translate(874 120)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xea95;</text><text x="48" y="25" class="n8n-name">Database</text><text x="48" y="41" class="n8n-sub">versions · snapshots</text></g>
+                                    <g class="n8n-node" transform="translate(186 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xebc1;</text><text x="48" y="25" class="n8n-name">Ad-hoc Items</text><text x="48" y="41" class="n8n-sub">not in any sheet</text></g>
+                                    <g class="n8n-node" transform="translate(702 10)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-amber" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xeabf;</text><text x="48" y="25" class="n8n-name">Overrides</text><text x="48" y="41" class="n8n-sub">checked values win</text></g>
+                                    <g class="n8n-node n8n-node-dim" transform="translate(530 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-grey" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xec08;</text><text x="48" y="25" class="n8n-name">Sync Guard</text><text x="48" y="41" class="n8n-sub">halts on 20% drop</text></g>
+                                    <g class="n8n-node" transform="translate(874 232)"><rect width="148" height="56" rx="10"/><rect class="n8n-ico n8n-green" x="8" y="12" width="32" height="32" rx="8"/><text x="24" y="29" class="n8n-glyph">&#xe9c6;</text><text x="48" y="25" class="n8n-name">Dashboard</text><text x="48" y="41" class="n8n-sub">PDF · Excel · email</text></g>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="project-bottom">
+                            <ul class="chip-list" aria-label="Technologies">
+                                <li>Data Pipeline</li><li>Data Modeling</li><li>SQL</li><li>PostgreSQL</li><li>Google Sheets</li><li>Apps Script</li>
+                            </ul>
+                            <div class="project-links">
+                                <button type="button" class="btn btn-primary btn-sm" data-open="bom-detail"><i class="bx bx-sitemap" aria-hidden="true"></i> Explore the Data Model</button>
+                                <button type="button" class="btn btn-secondary btn-sm" data-code="code-bom-sql"><i class="bx bx-code-alt" aria-hidden="true"></i> Sample SQL</button>
+                            </div>
+                        </div>
+                    </article>
+
                     <!-- PROJECT: MATCHROOM (public version of the Music Director system) -->
                     <article class="project-card project-featured" id="project-matchroom" data-category="product" data-aos="fade-up">
                         <div class="project-top">
@@ -404,7 +671,7 @@
                         <div class="project-top">
                             <div class="project-icon" aria-hidden="true"><i class="bx bx-chat"></i></div>
                             <div class="project-heading">
-                                <p class="project-kicker">Workflow Automation &bull; Conversational AI</p>
+                                <p class="project-kicker">VIBES LAB &bull; Workflow Automation &bull; Conversational AI</p>
                                 <h3>LINE Sales Assistant · AI Chat Commerce on n8n</h3>
                             </div>
                             <div class="project-meta"><span class="badge">Oct 2026</span></div>
@@ -901,6 +1168,19 @@
                         </ul>
                     </article>
 
+                    <article class="timeline-item timeline-current" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Independent Film Reviewer (Part-time) <span class="badge badge-live"><span class="status-dot" aria-hidden="true"></span> Current</span></h3>
+                                <p class="timeline-org"><i class="bx bx-movie-play" aria-hidden="true"></i> Freelance</p>
+                            </div>
+                            <span class="timeline-date">2024 – Present</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Write independent film reviews part-time, alongside my full-time Business Analyst role at Grab.</li>
+                        </ul>
+                    </article>
+
                     <article class="timeline-item" data-aos="fade-up">
                         <div class="timeline-head">
                             <div>
@@ -914,10 +1194,13 @@
                             <li>Designed its AI curation logic: emotion mapping (valence–arousal) and similarity search feed one recommendation engine (filter → 7-factor weighted score → rerank), cutting manual curation from 3–4 hours to seconds, with every AI draft approved by the Director first.</li>
                             <li>Planned the data layer: multi-tenant PostgreSQL (Supabase) with Row Level Security and role-based access.</li>
                             <li>Built n8n automation workflows, including an AI sales assistant on LINE (96 nodes, Google Sheets and Gemini) that answers product questions and guides each chat to a checkout link.</li>
+                            <li>Built the BOM Calculator on Google Sheets and Apps Script: a pipeline that prepares and normalizes 9 supplier price sheets into one SKU-keyed price list, then costs every product as versioned, approved BOMs, with a relational model designed for a move to PostgreSQL.</li>
                         </ul>
                         <div class="timeline-actions">
-                            <a href="#project-matchroom" class="link-arrow">See MATCHROOM, the public version <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
-                            <a href="#project-line" class="link-arrow">See the LINE workflow <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                            <span class="timeline-actions-label">VIBES LAB projects</span>
+                            <a href="#project-matchroom" class="link-arrow">MATCHROOM, the public version of the Music Director app <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                            <a href="#project-line" class="link-arrow">LINE Sales Assistant on n8n <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                            <a href="#project-bom" class="link-arrow">BOM Calculator data pipeline <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
                         </div>
                     </article>
 
@@ -1002,7 +1285,7 @@
                             <span class="timeline-date">2022 – 2026</span>
                         </div>
                         <p class="timeline-text"><strong>1st Class Honors &bull; GPAX 3.81</strong><br>
-                        Coursework: Operations Research, Statistical Inference, AI for Engineers.</p>
+                        Coursework: Operations Research, Statistical Inference, AI for Engineers, Decision Analytics for Engineers, Probability &amp; Statistics, Simulation Programming.</p>
                     </article>
 
                     <article class="timeline-item" data-aos="fade-up">
@@ -1023,6 +1306,7 @@
                             </div>
                         </div>
                         <ul class="timeline-list">
+                            <li><strong>Best Written Blogger (2025 – 2026)</strong></li>
                             <li><strong>Independent Movie Reviewer of the Year (2024):</strong> Thai Film Association.</li>
                             <li><strong>Batch Tutor (2023 – 2026):</strong> Conducted intensive review sessions for engineering cohort.</li>
                         </ul>
@@ -1056,7 +1340,7 @@
                     <div class="hobby-card" data-aos="fade-up" data-aos-delay="150">
                         <span class="hobby-emoji" aria-hidden="true"><i class="bx bx-movie-play"></i></span>
                         <h3>Movies &amp; Film Reviews</h3>
-                        <p>Film lover and reviewer, named Independent Movie Reviewer of the Year (2024) by the Thai Film Association.</p>
+                        <p>Film lover and part-time independent film reviewer, named Independent Movie Reviewer of the Year (2024) by the Thai Film Association.</p>
                     </div>
                     <div class="hobby-card" data-aos="fade-up" data-aos-delay="200">
                         <span class="hobby-emoji" aria-hidden="true"><i class="bx bx-chalkboard"></i></span>
@@ -1223,6 +1507,340 @@
                 <div><i class="bx bx-user-check" aria-hidden="true"></i><b>AI drafts, the Director decides</b><p>Nothing AI-drafted reaches a brand without the Director's approval.</p></div>
                 <div><i class="bx bx-message-rounded-dots" aria-hidden="true"></i><b>Reasons, never scores</b><p>Brands see plain-language reasons; the numbers stay inside the engine.</p></div>
                 <div><i class="bx bx-lock-alt" aria-hidden="true"></i><b>Collect only what's needed</b><p>Brand book, posting hours, likes and requests; no followers' personal data.</p></div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- ==============================================
+         POPUP: HOW MANY PRIMOGEMS ARE ENOUGH? (deep dive)
+         ============================================== -->
+    <dialog class="modal" id="primogems-detail" aria-labelledby="pg-title">
+        <div class="modal-head">
+            <div>
+                <p class="section-eyebrow">Deep Dive</p>
+                <h2 id="pg-title">How Many Primogems Are Enough?</h2>
+                <p class="modal-sub">Exact probability laws and risk-optimal budgets for C<sub>x</sub>R<sub>y</sub> targets under pity and Capturing Radiance. Technical monograph, version 1.0, 27 October 2026.</p>
+            </div>
+            <button type="button" class="modal-close" data-close aria-label="Close"><i class="bx bx-x" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="modal-body">
+            <h3 class="sd-heading"><i class="bx bx-map-alt" aria-hidden="true"></i> Research framework</h3>
+            <div class="sd-flow">
+                <div class="sd-col">
+                    <p class="sd-step">01 · Data</p>
+                    <ul>
+                        <li><b>Official disclosures</b><span>Base rates 0.6% / 0.7%, hard pity 90 / 80, 50/50 and 75/25, Radiance 0.018%</span></li>
+                        <li><b>Paimon.moe API</b><span>135 banners, 1.20B rolls: rolls and 5-stars at each pity, plus every 5-star's name</span></li>
+                        <li><b>Community hypotheses</b><span>Counter models for Capturing Radiance</span></li>
+                    </ul>
+                </div>
+                <div class="sd-col sd-col-accent">
+                    <p class="sd-step">02 · Explore &amp; Estimate</p>
+                    <ul>
+                        <li><b>Fit the hazard</b><span>A flat base rate, then a ramp; profile MLE finds the breakpoint and slope</span></li>
+                        <li><b>Two-stage level</b><span>Match 1/E[T] to 5-stars per roll to undo import truncation</span></li>
+                        <li><b>Loss-pool estimator</b><span>Count standard 5-stars to get the 50/50 rate, then calibrate the Radiance chance</span></li>
+                    </ul>
+                </div>
+                <div class="sd-col">
+                    <p class="sd-step">03 · Exact Engine</p>
+                    <ul>
+                        <li><b>Single 5-star PMF</b><span>Hazard → survival → f<sub>T</sub>(t)</span></li>
+                        <li><b>Radiance matrix M(z)</b><span>Exact law of the character 5-star count</span></li>
+                        <li><b>Weapon law</b><span>N<sub>w</sub> = y + Bin(y, 5/8)</span></li>
+                        <li><b>Joint &amp; total PMF</b><span>n-fold convolutions, checked by Wald's identities</span></li>
+                    </ul>
+                </div>
+                <div class="sd-col">
+                    <p class="sd-step">04 · Decisions</p>
+                    <ul>
+                        <li><b>Risk measures</b><span>Mean, SD, quantiles, CVaR, expected shortfall</span></li>
+                        <li><b>Chance-constrained budget</b><span>B* = Q<sub>1−α</sub> in rolls, Primogems and US$</span></li>
+                        <li><b>Preparation plan</b><span>Free income, top-up rule, banner order, target choice</span></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="sd-loop"><i class="bx bx-check-shield" aria-hidden="true"></i> <b>Validation:</b> an independent roll-by-roll Monte Carlo simulator (10<sup>6</sup> runs) is compared with the exact CDF and stays inside the 95% DKW band.</p>
+
+            <h3 class="sd-heading"><i class="bx bx-revision" aria-hidden="true"></i> The Capturing Radiance chain</h3>
+            <p class="sd-text">Since Version 5.0 a lost 50/50 can be rescued by Capturing Radiance, driven by a hidden counter s of consecutive losses. Each featured copy costs one 5-star (a win or a Radiance) or two (a loss, then the guarantee). Writing that cost as a power of z turns the counter into a 4×4 matrix of polynomials, and multiplying the matrices adds up the cost along every path.</p>
+            <div class="sd-engine sd-chain">
+                <div class="chain-canvas">
+                    <svg viewBox="0 0 660 260" role="img" aria-labelledby="chain-title">
+                        <title id="chain-title">Model A as a four-state chain: losses move the counter up and cost two 5-stars, wins and Radiance return it to zero and cost one</title>
+                        <defs>
+                            <marker id="chain-win-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="chain-head-win"/></marker>
+                            <marker id="chain-lose-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="chain-head-lose"/></marker>
+                        </defs>
+
+                        <!-- legend -->
+                        <g class="chain-legend">
+                            <path class="chain-win" d="M396 26 L426 26"/><text x="434" y="30">1 five-star: win or Radiance</text>
+                            <path class="chain-lose" d="M396 50 L426 50"/><text x="434" y="54">2 five-stars: loss + guarantee</text>
+                        </g>
+
+                        <!-- losses: counter moves up -->
+                        <path class="chain-lose" d="M100 100 L208 100" marker-end="url(#chain-lose-head)"/>
+                        <path class="chain-lose" d="M270 100 L378 100" marker-end="url(#chain-lose-head)"/>
+                        <path class="chain-lose" d="M440 100 L548 100" marker-end="url(#chain-lose-head)"/>
+                        <!-- wins and Radiance: back to s = 0 -->
+                        <path class="chain-win" d="M58 72 C30 18 110 18 82 72" marker-end="url(#chain-win-head)"/>
+                        <path class="chain-win" d="M228 128 C205 175 105 175 84 129" marker-end="url(#chain-win-head)"/>
+                        <path class="chain-win" d="M398 129 C360 215 100 215 74 130" marker-end="url(#chain-win-head)"/>
+                        <path class="chain-win" d="M570 129 C520 260 80 260 64 130" marker-end="url(#chain-win-head)"/>
+
+                        <text class="chain-label chain-label-win" x="70" y="22">½ z</text>
+                        <text class="chain-label chain-label-lose" x="155" y="90">½ z²</text>
+                        <text class="chain-label chain-label-lose" x="325" y="90">½ z²</text>
+                        <text class="chain-label chain-label-lose" x="495" y="90">¼ z²</text>
+                        <text class="chain-label chain-label-win" x="155" y="168">½ z</text>
+                        <text class="chain-label chain-label-win" x="232" y="198">¾ z</text>
+                        <text class="chain-label chain-label-win" x="304" y="232">z</text>
+
+                        <g class="chain-state"><circle cx="70" cy="100" r="30"/><text x="70" y="98">s = 0</text><text class="chain-sub" x="70" y="113">fresh</text></g>
+                        <g class="chain-state"><circle cx="240" cy="100" r="30"/><text x="240" y="98">s = 1</text><text class="chain-sub" x="240" y="113">1 loss</text></g>
+                        <g class="chain-state"><circle cx="410" cy="100" r="30"/><text x="410" y="98">s = 2</text><text class="chain-sub" x="410" y="113">2 losses</text></g>
+                        <g class="chain-state chain-state-due"><circle cx="580" cy="100" r="30"/><text x="580" y="98">s = 3</text><text class="chain-sub" x="580" y="113">due</text></g>
+                    </svg>
+                </div>
+                <div class="math-model">
+                    <p class="shots-label"><i class="bx bx-math" aria-hidden="true"></i> Model A as a matrix</p>
+                    <div class="eq-row"><span class="eq-label">Generating matrix</span><div class="eq"><math display="block"><msub><mi mathvariant="bold">M</mi><mi>A</mi></msub><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>z</mi></mtd><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>z</mi><mn>2</mn></msup></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>z</mi></mtd><mtd><mn>0</mn></mtd><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>z</mi><mn>2</mn></msup></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>z</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mfrac><mn>1</mn><mn>4</mn></mfrac><msup><mi>z</mi><mn>2</mn></msup></mtd></mtr><mtr><mtd><mi>z</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></math></div></div>
+                    <div class="eq-row"><span class="eq-label">Case study</span><div class="eq"><math display="block"><msub><mi mathvariant="bold">e</mi><mn>3</mn></msub><mspace width="0.1em"/><mi mathvariant="bold">M</mi><msup><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup><mspace width="0.1em"/><mn mathvariant="bold">1</mn><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><msup><mi>z</mi><mn>3</mn></msup><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>z</mi><mn>4</mn></msup><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><msup><mi>z</mi><mn>5</mn></msup></math></div></div>
+                    <div class="eq-row"><span class="eq-label">Long run</span><div class="eq"><math display="block"><msup><mi mathvariant="bold">π</mi><mo>⋆</mo></msup><mo>=</mo><mo stretchy="false">(</mo><mfrac><mn>16</mn><mn>29</mn></mfrac><mo>,</mo><mfrac><mn>8</mn><mn>29</mn></mfrac><mo>,</mo><mfrac><mn>4</mn><mn>29</mn></mfrac><mo>,</mo><mfrac><mn>1</mn><mn>29</mn></mfrac><mo stretchy="false">)</mo><mo>,</mo><mspace width="0.5em"/><msup><mi>p</mi><mo>⋆</mo></msup><mo>=</mo><mn>55.17</mn><mo>%</mo></math></div></div>
+                    <div class="eq-row"><span class="eq-label">Weapon copy</span><div class="eq"><math display="block"><msub><mi>Φ</mi><mi>G</mi></msub><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>3</mn><mn>8</mn></mfrac><mi>z</mi><mo>+</mo><mfrac><mn>5</mn><mn>8</mn></mfrac><msup><mi>z</mi><mn>2</mn></msup><mspace width="0.4em"/><mo>⇒</mo><mspace width="0.4em"/><msub><mi>N</mi><mi>w</mi></msub><mo>=</mo><mi>y</mi><mo>+</mo><mi>Bin</mi><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mfrac><mn>5</mn><mn>8</mn></mfrac><mo stretchy="false">)</mo></math></div></div>
+                    <p class="eq-legend">Rows are the counter now, columns the counter after the copy · Model A uses Radiance chances <b>κ = (0, 0, ½, 1)</b> · the data put the post-5.0 rate at <b>58.75%</b>, so Model C keeps the official κ<sub>0</sub> = 0.06 and calibrates <b>κ̂ = 0.2753</b> · Radiance lowers the expected cost of a featured copy by 3.0% to 5.8%</p>
+                </div>
+            </div>
+
+            <h3 class="sd-heading"><i class="bx bx-target-lock" aria-hidden="true"></i> Case study: C<sub>2</sub>R<sub>1</sub> with 64,000 Primogems</h3>
+            <p class="sd-text">The author's own plan for a banner opening on 4 November 2026: three copies of the character and one signature weapon, from a reserve of exactly 400 rolls, with the Radiance counter at s = 3 so the next lost 50/50 is rescued for sure.</p>
+            <div class="project-metrics sd-metrics">
+                <div class="metric"><strong>53,715</strong><span>Expected Primogems (335.72 rolls, SD 75.28)</span></div>
+                <div class="metric"><strong>80.25%</strong><span>Success with the 400-roll reserve</span></div>
+                <div class="metric"><strong>89.48%</strong><span>With Starglitter recycling (434 rolls)</span></div>
+                <div class="metric"><strong>69,920</strong><span>90%-safe budget (437 rolls)</span></div>
+                <div class="metric"><strong>$17.04</strong><span>Expected top-up (1,312 Primogems)</span></div>
+                <div class="metric"><strong>99.96%</strong><span>Chance C<sub>2</sub> is secured by pulling the character first</span></div>
+            </div>
+
+            <h3 class="sd-heading"><i class="bx bx-table" aria-hidden="true"></i> Risk profile of standard targets</h3>
+            <div class="sd-table-wrap">
+                <table class="sd-table sd-table-num">
+                    <thead><tr><th>Target</th><th>E[5-stars]</th><th>E[rolls]</th><th>Q<sub>90</sub> rolls</th><th>E Primogems</th><th>90%-safe Primogems</th></tr></thead>
+                    <tbody>
+                        <tr><td>C<sub>0</sub>R<sub>0</sub></td><td>1.448</td><td>90.22</td><td>155</td><td>14,436</td><td>24,800</td></tr>
+                        <tr><td>C<sub>0</sub>R<sub>1</sub></td><td>3.073</td><td>176.76</td><td>252</td><td>28,281</td><td>40,320</td></tr>
+                        <tr><td>C<sub>1</sub>R<sub>0</sub></td><td>2.897</td><td>180.45</td><td>244</td><td>28,872</td><td>39,040</td></tr>
+                        <tr><td>C<sub>1</sub>R<sub>1</sub></td><td>4.522</td><td>266.98</td><td>361</td><td>42,717</td><td>57,760</td></tr>
+                        <tr><td>C<sub>2</sub>R<sub>0</sub></td><td>4.345</td><td>270.67</td><td>364</td><td>43,307</td><td>58,240</td></tr>
+                        <tr><td>C<sub>2</sub>R<sub>1</sub></td><td>5.970</td><td>357.20</td><td>456</td><td>57,152</td><td>72,960</td></tr>
+                        <tr><td>C<sub>3</sub>R<sub>1</sub></td><td>7.418</td><td>447.43</td><td>559</td><td>71,588</td><td>89,440</td></tr>
+                        <tr><td>C<sub>4</sub>R<sub>1</sub></td><td>8.866</td><td>537.65</td><td>660</td><td>86,024</td><td>105,600</td></tr>
+                        <tr><td>C<sub>6</sub>R<sub>0</sub></td><td>10.138</td><td>631.57</td><td>763</td><td>101,051</td><td>122,080</td></tr>
+                        <tr><td>C<sub>6</sub>R<sub>1</sub></td><td>11.763</td><td>718.10</td><td>857</td><td>114,896</td><td>137,120</td></tr>
+                        <tr><td>C<sub>6</sub>R<sub>5</sub></td><td>18.263</td><td>1,064.23</td><td>1,233</td><td>170,276</td><td>197,280</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="sd-note">Baseline hazard, Model A, unknown counter history (stationary start). Each character copy adds about 14.4k Primogems on average and each weapon copy about 13.8k, but the 90% safety margin is not additive: it sits about 15k above the mean for mid-sized targets.</p>
+
+            <h3 class="sd-heading"><i class="bx bx-check-shield" aria-hidden="true"></i> Exact engine vs Monte Carlo</h3>
+            <div class="sd-table-wrap">
+                <table class="sd-table sd-table-num">
+                    <thead><tr><th>C<sub>2</sub>R<sub>1</sub>, counter s = 3</th><th>Exact</th><th>Monte Carlo (10<sup>6</sup> runs)</th></tr></thead>
+                    <tbody>
+                        <tr><td>Expected rolls</td><td>335.721</td><td>335.863</td></tr>
+                        <tr><td>Standard deviation</td><td>75.277</td><td>75.299</td></tr>
+                        <tr><td>Q<sub>50</sub> / Q<sub>90</sub> / Q<sub>99</sub></td><td>336 / 437 / 509</td><td>336 / 437 / 509</td></tr>
+                        <tr><td>P(R ≤ 400)</td><td>80.25%</td><td>80.18%</td></tr>
+                        <tr><td>P(R ≤ 434)</td><td>89.48%</td><td>89.45%</td></tr>
+                        <tr><td>Largest CDF gap</td><td colspan="2">0.00116, inside the 95% DKW bound of 0.00136</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sd-heading"><i class="bx bx-images" aria-hidden="true"></i> More figures &amp; the data source</h3>
+            <div class="shot-grid" data-gallery>
+                <a class="shot" href="assets/primogems/nc.jpg" data-caption="Character 5-stars needed for C2 under four starting conditions, and the extra 5-stars lost to the 50/50 by target">
+                    <img src="assets/primogems/thumbs/nc.jpg" alt="PMF of the number of character 5-stars" loading="lazy">
+                    <span>5-stars needed</span>
+                </a>
+                <a class="shot" href="assets/primogems/primogems-bars.jpg" data-caption="Expected vs 90%- and 99%-safe Primogems by target; the dotted line is the 64,000 reserve">
+                    <img src="assets/primogems/thumbs/primogems-bars.jpg" alt="Bar chart of expected and safe Primogems by target" loading="lazy">
+                    <span>Expected vs safe</span>
+                </a>
+                <a class="shot" href="assets/primogems/general.jpg" data-caption="Primogem requirements over the whole CxRy grid in the best, neutral and worst situations">
+                    <img src="assets/primogems/thumbs/general.jpg" alt="Requirements over the CxRy grid by situation" loading="lazy">
+                    <span>Whole grid</span>
+                </a>
+                <a class="shot" href="assets/primogems/3d-grid.jpg" data-caption="3D view of the grid: expected Primogems, and the chance of reaching each target with 64,000 Primogems">
+                    <img src="assets/primogems/thumbs/3d-grid.jpg" alt="3D bar charts over the CxRy grid" loading="lazy">
+                    <span>3D grid</span>
+                </a>
+                <a class="shot" href="assets/primogems/3d-joint.jpg" data-caption="3D joint distributions of the case study: 5-star counts and rolls on the two banners">
+                    <img src="assets/primogems/thumbs/3d-joint.jpg" alt="3D joint PMF of the case study" loading="lazy">
+                    <span>3D joint PMF</span>
+                </a>
+                <a class="shot" href="assets/primogems/situations.jpg" data-caption="Expected and 90%-safe Primogems for C2R1 in each starting situation">
+                    <img src="assets/primogems/thumbs/situations.jpg" alt="Primogems by starting situation" loading="lazy">
+                    <span>By situation</span>
+                </a>
+                <a class="shot" href="assets/primogems/sensitivity.jpg" data-caption="Robustness: the success estimate under five model specifications, with and without Starglitter recycling">
+                    <img src="assets/primogems/thumbs/sensitivity.jpg" alt="Sensitivity of the success probability" loading="lazy">
+                    <span>Sensitivity</span>
+                </a>
+                <a class="shot" href="assets/primogems/paimon-summary.jpg" data-caption="Data source: Paimon.moe statistics page for character banner 300106 (screenshot of paimon.moe)">
+                    <img src="assets/primogems/thumbs/paimon-summary.jpg" alt="Paimon.moe banner statistics page" loading="lazy">
+                    <span>Paimon.moe page</span>
+                </a>
+                <a class="shot" href="assets/primogems/paimon-pity.jpg" data-caption="Paimon.moe pity chart in the soft-pity region: 5-stars jump at pity 74 (screenshot of paimon.moe)">
+                    <img src="assets/primogems/thumbs/paimon-pity.jpg" alt="Paimon.moe pity chart around soft pity" loading="lazy">
+                    <span>Paimon.moe pity</span>
+                </a>
+            </div>
+            <p class="sd-note">Screenshots and aggregate wish statistics from Paimon.moe. Game names and mechanics belong to HoYoverse; this is non-commercial analysis.</p>
+
+            <h3 class="sd-heading"><i class="bx bx-ruler" aria-hidden="true"></i> Risk-management strategies</h3>
+            <div class="sd-principles">
+                <div><i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i><b>Budget to a quantile</b><p>Save to Q<sub>90</sub> for a firm target and Q<sub>75</sub> for a flexible one; the mean understates the 90% budget by about 100 rolls.</p></div>
+                <div><i class="bx bx-revision" aria-hidden="true"></i><b>Track the Radiance counter</b><p>The starting state moves C<sub>2</sub>R<sub>1</sub> success from 67.6% to 92.9%, more than any modeling choice.</p></div>
+                <div><i class="bx bx-user-check" aria-hidden="true"></i><b>Character banner first</b><p>When the constellation matters more, pull it first: it secures C<sub>2</sub> in 99.96% of outcomes at no cost to full success.</p></div>
+                <div><i class="bx bx-wallet" aria-hidden="true"></i><b>Top up only when needed</b><p>Never pre-purchase, and redeem Starglitter before the banner; recycling is worth 5 to 34 extra rolls.</p></div>
+            </div>
+
+            <div class="project-links sd-actions">
+                <a href="https://github.com/SKY-TKP/PROJECT/blob/main/python/How_Many_Primogems_Are_Enough/How_Many_Primogems_Are_Enough.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="bx bxs-file-pdf" aria-hidden="true"></i> Read the Paper</a>
+                <button type="button" class="btn btn-secondary btn-sm" data-code="code-primogems-data"><i class="bx bx-code-alt" aria-hidden="true"></i> API Data → Hazard MLE</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-code="code-primogems"><i class="bx bx-code-alt" aria-hidden="true"></i> Exact Engine</button>
+                <a href="https://github.com/SKY-TKP/PROJECT/tree/main/python/How_Many_Primogems_Are_Enough" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="bx bxl-github" aria-hidden="true"></i> Repo</a>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- ==============================================
+         POPUP: BOM CALCULATOR DATA MODEL (dummy data)
+         ============================================== -->
+    <dialog class="modal" id="bom-detail" aria-labelledby="bom-dlg-title">
+        <div class="modal-head">
+            <div>
+                <p class="section-eyebrow">Data Model</p>
+                <h2 id="bom-dlg-title">BOM Calculator · From Supplier Price Sheets to Product Cost</h2>
+                <p class="modal-sub">How messy supplier sheets become one clean price list, how the data is modeled for PostgreSQL, and what a costing query returns. All values are dummy data.</p>
+            </div>
+            <button type="button" class="modal-close" data-close aria-label="Close"><i class="bx bx-x" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="modal-body">
+            <h3 class="sd-heading"><i class="bx bx-transfer-alt" aria-hidden="true"></i> Transform example</h3>
+            <p class="sd-text">Dummy rows from two differently shaped sheets. Prepare finds the columns by header and keeps the latest dated price; transform fixes units, pack, MOQ and currency, then the registry issues a permanent SKU.</p>
+            <div class="xf">
+                <div class="xf-before">
+                    <div>
+                        <p class="xf-cap">Before · Fragrance sheet</p>
+                        <div class="xf-scroll"><table class="xf-table">
+                            <thead><tr><th>Item</th><th>Pack</th><th>Price 06/2025</th><th>Price 01/2026</th><th>Cur.</th></tr></thead>
+                            <tbody>
+                                <tr><td>Citrus Accord A</td><td>kg (min 5)</td><td>1,750</td><td>1,800</td><td></td></tr>
+                                <tr><td>Musk Base B</td><td>1 kg</td><td>58</td><td>60</td><td>usd</td></tr>
+                                <tr><td>Rose Accord C</td><td>1 kg</td><td>ask supplier</td><td></td><td></td></tr>
+                            </tbody>
+                        </table></div>
+                    </div>
+                    <div>
+                        <p class="xf-cap">Before · Raw Material sheet</p>
+                        <div class="xf-scroll"><table class="xf-table">
+                            <thead><tr><th>Product</th><th>Unit</th><th>Pack size</th><th>Price / unit</th><th>MOQ</th></tr></thead>
+                            <tbody>
+                                <tr><td>Deionized water</td><td>kg</td><td>20 kg</td><td>10.00</td><td>20</td></tr>
+                                <tr><td>Ethanol 96% </td><td>L</td><td>20 L</td><td>60.00</td><td>20</td></tr>
+                            </tbody>
+                        </table></div>
+                    </div>
+                </div>
+                <p class="xf-arrow"><i class="bx bx-down-arrow-alt" aria-hidden="true"></i> prepare · transform · issue SKU</p>
+                <p class="xf-cap">After · one schema, a permanent SKU, every price in THB</p>
+                <div class="xf-scroll"><table class="xf-table xf-clean">
+                    <thead><tr><th>SKU</th><th>Name</th><th>Unit</th><th>Pack</th><th>MOQ</th><th>Source price</th><th>THB / unit</th><th>Check</th></tr></thead>
+                    <tbody>
+                        <tr><td>FRG-0001</td><td>Citrus Accord A</td><td>kg</td><td>1</td><td>5</td><td>1,800 THB · 01/2026</td><td>1,800.00</td><td class="xf-ok">✓ latest of 2 prices</td></tr>
+                        <tr><td>FRG-0002</td><td>Musk Base B</td><td>kg</td><td>1</td><td>1</td><td>60 USD · 01/2026</td><td>2,100.00</td><td class="xf-ok">✓ × 35.00 THB/USD</td></tr>
+                        <tr><td>FRG-0003</td><td>Rose Accord C</td><td>kg</td><td>1</td><td>1</td><td>—</td><td>—</td><td class="xf-warn">⚠ no price</td></tr>
+                        <tr><td>RAW-0001</td><td>Deionized water</td><td>kg</td><td>20</td><td>20</td><td>10.00 THB</td><td>10.00</td><td class="xf-ok">✓</td></tr>
+                        <tr><td>RAW-0002</td><td>Ethanol 96%</td><td>L</td><td>20</td><td>20</td><td>60.00 THB</td><td>60.00</td><td class="xf-ok">✓ density 0.80 g/mL</td></tr>
+                    </tbody>
+                </table></div>
+            </div>
+
+            <h3 class="sd-heading"><i class="bx bx-data" aria-hidden="true"></i> ER diagram</h3>
+            <p class="sd-text">The relational model designed for the PostgreSQL move: price data on top, BOMs, versions and approvals below. A version's lines keep a price snapshot, so approved costs never change when prices do.</p>
+            <div class="n8n">
+                <div class="n8n-canvas">
+                    <svg viewBox="0 0 1036 470" role="img" aria-labelledby="er-title" class="er-svg">
+                        <title id="er-title">Entity relationship diagram: supplier sheets, raw price rows, SKU registry, price list view and overrides with exchange rates; projects, BOMs, versions, lines and approvers</title>
+                        <defs>
+                            <pattern id="er-dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" class="n8n-dot"/></pattern>
+                            <marker id="er-one" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="er-mark" d="M6 1 L6 11 M9 1 L9 11"/></marker>
+                            <marker id="er-many" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path class="er-mark" d="M3 1 L3 11 M5 6 L12 1 M5 6 L12 6 M5 6 L12 11"/></marker>
+                            <marker id="er-zone" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><circle class="er-mark er-mark-hole" cx="4" cy="6" r="2.6"/><path class="er-mark" d="M9 1 L9 11"/></marker>
+                        </defs>
+                        <rect width="1036" height="470" rx="14" fill="url(#er-dots)"/>
+                        <text class="er-band" x="14" y="22">PREPARE &amp; TRANSFORM · PRICE DATA</text>
+                        <text class="er-band" x="14" y="262">DATABASE · BOMS, VERSIONS, APPROVALS</text>
+                        <path class="er-link" d="M194 86 L222 86" marker-start="url(#er-one)" marker-end="url(#er-many)"/>
+                        <path class="er-link" d="M402 86 L430 86" marker-start="url(#er-one)" marker-end="url(#er-zone)"/>
+                        <path class="er-link" d="M610 86 L638 86" marker-start="url(#er-one)" marker-end="url(#er-one)"/>
+                        <path class="er-link" d="M818 86 L846 86" marker-start="url(#er-one)" marker-end="url(#er-zone)"/>
+                        <path class="er-link" d="M728 202 L728 272" marker-start="url(#er-one)" marker-end="url(#er-many)"/>
+                        <path class="er-link" d="M936 202 L936 272" marker-start="url(#er-many)" marker-end="url(#er-one)"/>
+                        <path class="er-link" d="M194 324 L222 324" marker-start="url(#er-one)" marker-end="url(#er-many)"/>
+                        <path class="er-link" d="M402 324 L430 324" marker-start="url(#er-one)" marker-end="url(#er-many)"/>
+                        <path class="er-link" d="M610 324 L638 324" marker-start="url(#er-one)" marker-end="url(#er-many)"/>
+                        <path class="er-link" d="M194 400 L430 400" marker-start="url(#er-one)" marker-end="url(#er-many)"/>
+                        <g><rect class="er-box" x="14" y="34" width="180" height="100" rx="8"/><path class="er-head" d="M22 34 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="26" y="51">supplier_sheet</text><text class="er-pk" x="24" y="73">PK</text><text class="er-col" x="60" y="73">sheet_id</text><text class="er-col" x="60" y="90">name</text><text class="er-col" x="60" y="107">sku_prefix</text><text class="er-col" x="60" y="124">header_row</text></g>
+                        <g><rect class="er-box" x="222" y="34" width="180" height="185" rx="8"/><path class="er-head" d="M230 34 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="234" y="51">raw_price_row</text><text class="er-pk" x="232" y="73">PK</text><text class="er-col" x="268" y="73">source_key</text><text class="er-fk" x="232" y="90">FK</text><text class="er-col" x="268" y="90">sheet_id</text><text class="er-col" x="268" y="107">item_name</text><text class="er-col" x="268" y="124">unit_text</text><text class="er-col" x="268" y="141">pack_qty</text><text class="er-col" x="268" y="158">moq</text><text class="er-col" x="268" y="175">price_cols[]</text><text class="er-col" x="268" y="192">price_dates[]</text><text class="er-col" x="268" y="209">currency</text></g>
+                        <g><rect class="er-box" x="430" y="34" width="180" height="100" rx="8"/><path class="er-head" d="M438 34 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="442" y="51">sku</text><text class="er-pk" x="440" y="73">PK</text><text class="er-col" x="476" y="73">sku</text><text class="er-fk" x="440" y="90">FK</text><text class="er-col" x="476" y="90">source_key (unique)</text><text class="er-col" x="476" y="107">category</text><text class="er-col" x="476" y="124">issued_at</text></g>
+                        <g><rect class="er-box er-view" x="638" y="34" width="180" height="168" rx="8"/><path class="er-head er-view" d="M646 34 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="650" y="51">price_item · view</text><text class="er-pk" x="648" y="73">PK</text><text class="er-col" x="684" y="73">sku</text><text class="er-col" x="684" y="90">name</text><text class="er-col" x="684" y="107">unit</text><text class="er-col" x="684" y="124">pack_qty</text><text class="er-col" x="684" y="141">moq</text><text class="er-col" x="684" y="158">price_thb</text><text class="er-col" x="684" y="175">density_g_ml</text><text class="er-col" x="684" y="192">flags</text></g>
+                        <g><rect class="er-box" x="846" y="34" width="180" height="168" rx="8"/><path class="er-head" d="M854 34 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="858" y="51">price_override</text><text class="er-pk" x="856" y="73">PK</text><text class="er-fk" x="873" y="73">FK</text><text class="er-col" x="892" y="73">sku</text><text class="er-col" x="892" y="90">unit</text><text class="er-col" x="892" y="107">pack_qty</text><text class="er-col" x="892" y="124">moq</text><text class="er-col" x="892" y="141">price</text><text class="er-fk" x="856" y="158">FK</text><text class="er-col" x="892" y="158">currency</text><text class="er-col" x="892" y="175">density_g_ml</text><text class="er-col" x="892" y="192">locked</text></g>
+                        <g><rect class="er-box" x="14" y="272" width="180" height="66" rx="8"/><path class="er-head" d="M22 272 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="26" y="289">project</text><text class="er-pk" x="24" y="311">PK</text><text class="er-col" x="60" y="311">project_id</text><text class="er-col" x="60" y="328">name</text></g>
+                        <g><rect class="er-box" x="14" y="362" width="180" height="83" rx="8"/><path class="er-head" d="M22 362 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="26" y="379">approver</text><text class="er-pk" x="24" y="401">PK</text><text class="er-col" x="60" y="401">approver_id</text><text class="er-col" x="60" y="418">name</text><text class="er-col" x="60" y="435">role</text></g>
+                        <g><rect class="er-box" x="222" y="272" width="180" height="100" rx="8"/><path class="er-head" d="M230 272 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="234" y="289">bom</text><text class="er-pk" x="232" y="311">PK</text><text class="er-col" x="268" y="311">bom_no</text><text class="er-fk" x="232" y="328">FK</text><text class="er-col" x="268" y="328">project_id</text><text class="er-col" x="268" y="345">product_name</text><text class="er-col" x="268" y="362">product_type</text></g>
+                        <g><rect class="er-box" x="430" y="272" width="180" height="168" rx="8"/><path class="er-head" d="M438 272 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="442" y="289">bom_version</text><text class="er-pk" x="440" y="311">PK</text><text class="er-col" x="476" y="311">record_id</text><text class="er-fk" x="440" y="328">FK</text><text class="er-col" x="476" y="328">bom_no</text><text class="er-col" x="476" y="345">version</text><text class="er-col" x="476" y="362">qty</text><text class="er-col" x="476" y="379">status</text><text class="er-col" x="476" y="396">cost_per_unit</text><text class="er-fk" x="440" y="413">FK</text><text class="er-col" x="476" y="413">approver_id</text><text class="er-col" x="476" y="430">submitted_at</text></g>
+                        <g><rect class="er-box" x="638" y="272" width="180" height="185" rx="8"/><path class="er-head" d="M646 272 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="650" y="289">bom_line</text><text class="er-pk" x="648" y="311">PK</text><text class="er-fk" x="665" y="311">FK</text><text class="er-col" x="684" y="311">record_id</text><text class="er-pk" x="648" y="328">PK</text><text class="er-col" x="684" y="328">line_no</text><text class="er-fk" x="648" y="345">FK</text><text class="er-col" x="684" y="345">sku</text><text class="er-col" x="684" y="362">grp</text><text class="er-col" x="684" y="379">pct_in_group</text><text class="er-col" x="684" y="396">grams</text><text class="er-col" x="684" y="413">qty_per_pc</text><text class="er-col" x="684" y="430">loss_pct</text><text class="er-col" x="684" y="447">price_snapshot</text></g>
+                        <g><rect class="er-box" x="846" y="272" width="180" height="66" rx="8"/><path class="er-head" d="M854 272 h164 a8 8 0 0 1 8 8 v18 h-180 v-18 a8 8 0 0 1 8 -8 z"/><text class="er-name" x="858" y="289">fx_rate</text><text class="er-pk" x="856" y="311">PK</text><text class="er-col" x="892" y="311">currency</text><text class="er-col" x="892" y="328">rate_to_thb</text></g>
+                        <path class="er-link" d="M846 362 L890 362" marker-end="url(#er-one)"/><text class="er-legend" x="900" y="366">exactly one</text>
+                        <path class="er-link" d="M846 382 L890 382" marker-end="url(#er-many)"/><text class="er-legend" x="900" y="386">many</text>
+                        <path class="er-link" d="M846 402 L890 402" marker-end="url(#er-zone)"/><text class="er-legend" x="900" y="406">zero or one</text>
+                        <text class="er-legend" x="846" y="428"><tspan class="er-pk">PK</tspan> key · <tspan class="er-fk">FK</tspan> reference</text>
+                        <text class="er-legend" x="846" y="448">dashed = view</text>
+                    </svg>
+                </div>
+            </div>
+
+            <h3 class="sd-heading"><i class="bx bx-calculator" aria-hidden="true"></i> Costing query result</h3>
+            <p class="sd-text">Citrus Room Spray 100 ml × 1,000 pieces · 80 g of liquid per piece: solvent 85% (ethanol 95%, water 5%) and fragrance 15% (accord A 70%, musk B 30%) · loss 5% on liquids, 3% on the rest · dummy data</p>
+            <div class="sd-table-wrap">
+                <table class="sd-table sd-table-num">
+                    <thead><tr><th>Line</th><th>Per piece</th><th>Need (+ loss)</th><th>Order (MOQ · pack)</th><th>THB / unit</th><th>Order THB</th><th>THB / piece</th></tr></thead>
+                    <tbody>
+                        <tr><td>RAW-0002 · Ethanol 96%</td><td>64.6 g = 0.0808 L</td><td>84.79 L</td><td>100 L</td><td>60.00</td><td>6,000.00</td><td>5.0873</td></tr>
+                        <tr><td>RAW-0001 · Deionized water</td><td>3.4 g = 0.0034 kg</td><td>3.57 kg</td><td>20 kg</td><td>10.00</td><td>200.00</td><td>0.0357</td></tr>
+                        <tr><td>FRG-0001 · Citrus Accord A</td><td>8.4 g = 0.0084 kg</td><td>8.82 kg</td><td>9 kg</td><td>1,800.00</td><td>16,200.00</td><td>15.8760</td></tr>
+                        <tr><td>FRG-0002 · Musk Base B</td><td>3.6 g = 0.0036 kg</td><td>3.78 kg</td><td>4 kg</td><td>2,100.00</td><td>8,400.00</td><td>7.9380</td></tr>
+                        <tr><td>PKG-0002 · Glass bottle 100 ml</td><td>1 pc</td><td>1,030</td><td>1,100</td><td>12.00</td><td>13,200.00</td><td>12.3600</td></tr>
+                        <tr><td>PKG-0003 · Spray pump 24/410</td><td>1 pc</td><td>1,030</td><td>1,500</td><td>4.50</td><td>6,750.00</td><td>4.6350</td></tr>
+                        <tr><td>PKG-0001 · Gift box</td><td>1 pc</td><td>1,030</td><td>1,050</td><td>6.00</td><td>6,300.00</td><td>6.1800</td></tr>
+                        <tr class="xf-sum"><td>Materials</td><td></td><td></td><td></td><td></td><td>57,050.00</td><td>52.11</td></tr>
+                        <tr><td>Production fee (variable)</td><td>5.00 per piece</td><td>1,000</td><td></td><td></td><td>5,000.00</td><td>5.00</td></tr>
+                        <tr><td>Registration (fixed)</td><td>3,000 per lot</td><td></td><td></td><td></td><td>3,000.00</td><td>3.00</td></tr>
+                        <tr class="xf-sum"><td>Total</td><td></td><td></td><td></td><td></td><td>65,050.00</td><td>60.11</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="project-links sd-actions">
+                <button type="button" class="btn btn-primary btn-sm" data-code="code-bom-sql"><i class="bx bx-code-alt" aria-hidden="true"></i> Sample SQL</button>
             </div>
         </div>
     </dialog>
@@ -1528,6 +2146,213 @@ print(&quot;Best Parameters:&quot;, best_parameters)</template>
   // 3) rerank: at most 2 per agency, no back-to-back, keep the Thai share ... (omitted)
 }</template>
 
+    <template id="code-primogems" data-title="Exact engine: hazard → PMF → M(z) → convolutions" data-lang="Python" data-link="https://github.com/SKY-TKP/PROJECT/blob/main/python/How_Many_Primogems_Are_Enough/paper_source/code/gacha_model.py">import numpy as np
+from scipy import stats
+
+# 1) hazard -&gt; single-5-star PMF:  f(t) = h(t) * S(t-1)
+def hazard(p0, delta, tau, tmax):
+    t = np.arange(1, tmax + 1)
+    h = np.minimum(1.0, p0 + delta * np.maximum(0, t - tau))   # clamped hazard
+    h[-1] = 1.0                                                # hard pity
+    return h
+def pmf_from_hazard(h):
+    surv_before = np.concatenate(([1.0], np.cumprod(1.0 - h)[:-1]))   # S(t-1)
+    f = np.zeros(len(h) + 1); f[1:] = h * surv_before                  # f(t) = h(t) S(t-1)
+    return f
+f_c = pmf_from_hazard(hazard(0.006, 0.06, 73, 90))
+f_w = pmf_from_hazard(hazard(0.007, 0.07, 62, 80))
+assert abs(f_c.sum() - 1) &lt; 1e-12 and abs(f_w.sum() - 1) &lt; 1e-12
+
+# 2) Capturing Radiance: probability generating matrix M(z), [z^n] pi0 M(z)^(x+1) 1
+MODEL_A = {0: [(.50, 1, 0), (.50, 2, 1)], 1: [(.50, 1, 0), (.50, 2, 2)],
+           2: [(.75, 1, 0), (.25, 2, 3)], 3: [(1.0, 1, 0)]}      # (prob, 5-stars, next state)
+def pgm(model):                      # M[i, j, g] = coefficient of z^g in M_ij(z)
+    M = np.zeros((4, 4, 3))
+    for i, row in model.items():
+        for p, g, j in row: M[i, j, g] += p
+    return M
+def polymat_mul(A, B):               # product of polynomial matrices
+    C = np.zeros((4, 4, A.shape[2] + B.shape[2] - 1))
+    for i in range(4):
+        for j in range(4):
+            for l in range(4): C[i, j] += np.convolve(A[i, l], B[l, j])
+    return C
+def pmf_Nc(model, x, pi0):           # [z^n] pi0 M(z)^(x+1) 1
+    R = np.eye(4)[:, :, None]
+    for _ in range(x + 1): R = polymat_mul(R, pgm(model))
+    return np.einsum(&#x27;i,ijg-&gt;g&#x27;, np.asarray(pi0), R)
+print(pmf_Nc(MODEL_A, 2, np.eye(4)[3]))   # [0 0 0 .25 .5 .25 0], the case study
+
+# 3) weapon: shifted binomial; compound sums; joint and total PMFs
+def pmf_Nw(y, p=0.375):
+    out = np.zeros(2 * y + 1); k = np.arange(y + 1)
+    out[y + k] = stats.binom.pmf(k, y, 1 - p); return out
+def compound(p_n, f):                # sum over n of P(N = n) f^{*n}
+    out, power = np.zeros(len(f) * len(p_n)), np.array([1.0])
+    for n, pn in enumerate(p_n):
+        out[:len(power)] += pn * power; power = np.convolve(power, f)
+    return out
+p_Rc = compound(pmf_Nc(MODEL_A, 2, np.eye(4)[3]), f_c)
+p_Rw = compound(pmf_Nw(1), f_w)
+J = np.outer(p_Rc, p_Rw)             # joint PMF table J[i, j] = P(R_c = i, R_w = j)
+p_R = np.convolve(p_Rc, p_Rw)        # total-roll PMF
+print(p_R[:401].sum())               # 0.80252595... = P(R &lt;= 400)</template>
+    <template id="code-primogems-data" data-title="Paimon.moe API data → hazard MLE" data-lang="Python" data-link="https://github.com/SKY-TKP/PROJECT/blob/main/python/How_Many_Primogems_Are_Enough/paper_source/code/01_estimate_parameters.py"># Raw JSON from https://api.paimon.moe/wish?banner=&lt;id&gt;  (snapshot 2026-10-23)
+# character banners 300040-300107, weapon banners 400040-400106
+def load(banner_id):
+    path = os.path.join(RAW, f&quot;x_{banner_id}.json&quot;)
+    if not os.path.exists(path):
+        return None
+    d = json.load(open(path))
+    return d if &quot;total&quot; in d else None
+
+
+def start_date(d):
+    return date.fromisoformat(d[&quot;pullByDay&quot;][0][&quot;day&quot;][:10])
+
+
+def banners(base, lo, hi):
+    for i in range(lo, hi + 1):
+        d = load(base + i)
+        if d is not None:
+            yield base + i, d
+
+
+# ---------------------------------------------------------------- hazard data
+def hazard_counts(base, lo, hi):
+    acc = {&quot;pre&quot;: [np.zeros(91), np.zeros(91)], &quot;post&quot;: [np.zeros(91), np.zeros(91)]}
+    for bid, d in banners(base, lo, hi):
+        era = &quot;post&quot; if start_date(d) &gt;= V50 else &quot;pre&quot;
+        pc = np.array(d[&quot;pityCount&quot;][&quot;legendary&quot;][:91], float)
+        cep = np.array(d[&quot;countEachPity&quot;], float)
+        acc[era][0][1:] += pc[1:91]
+        acc[era][1][1:1 + len(cep)] += cep
+    return acc
+
+
+def negloglik(beta, t, n, d, tau):
+    h = beta[0] + beta[1] * np.maximum(0, t - tau)
+    if np.any(h &lt;= 0) or np.any(h &gt;= 1):
+        return 1e30
+    return -np.sum(d * np.log(h) + (n - d) * np.log1p(-h))
+
+
+def fit_hazard(t, n, d, tau_grid, beta0):
+    prof = {}
+    best = None
+    for tau in tau_grid:
+        X = np.column_stack([np.ones_like(t), np.maximum(0, t - tau)])
+        rank = np.linalg.matrix_rank(X)
+        res = optimize.minimize(negloglik, beta0, args=(t, n, d, tau),
+                                method=&quot;Nelder-Mead&quot;,
+                                options=dict(xatol=1e-12, fatol=1e-6, maxiter=20000))
+        prof[int(tau)] = -res.fun
+        if best is None or -res.fun &gt; best[&quot;loglik&quot;]:
+            best = dict(tau=int(tau), beta=res.x, loglik=-res.fun, rank=int(rank),
+                        cond=float(np.linalg.cond(X)))
+    tau = best[&quot;tau&quot;]
+    X = np.column_stack([np.ones_like(t), np.maximum(0, t - tau)])
+    h = X @ best[&quot;beta&quot;]
+    W = d / h ** 2 + (n - d) / (1 - h) ** 2          # observed information weights
+    info = X.T @ (W[:, None] * X)                    # = -Hessian = X^T W X
+    cov = np.linalg.inv(info)
+    best[&quot;se&quot;] = np.sqrt(np.diag(cov))
+    best[&quot;cov&quot;] = cov
+    best[&quot;corr&quot;] = float(cov[0, 1] / np.sqrt(cov[0, 0] * cov[1, 1]))
+    # ... profile, Pearson goodness-of-fit (omitted)
+    return best</template>
+
+    <template id="code-bom-sql" data-title="Prepare → transform → SQL → database (dummy data)" data-lang="SQL · PostgreSQL" data-link="">-- BOM Calculator: the Sheets pipeline written as PostgreSQL for the planned move.
+-- Today these steps run as sheet formulas + Apps Script. All values are dummy data.
+
+-- 1) PREPARE: one staging row per source line; the latest dated price wins
+CREATE VIEW stg_price AS
+SELECT r.source_key,
+       s.sku_prefix                              AS category,
+       trim(r.item_name)                         AS name,
+       lower(r.unit_text)                        AS unit,
+       coalesce(r.pack_qty, 1)                   AS pack_qty,
+       coalesce(r.moq, r.pack_qty, 1)            AS moq,
+       q.price,                                  -- NULL = no price yet: kept and flagged
+       upper(coalesce(nullif(trim(r.currency), &#x27;&#x27;), &#x27;THB&#x27;)) AS currency,
+       q.quoted_on
+FROM   raw_price_row r
+JOIN   supplier_sheet s USING (sheet_id)
+LEFT   JOIN LATERAL (
+         SELECT u.price, u.quoted_on
+         FROM   unnest(r.price_cols, r.price_dates) AS u(price, quoted_on)
+         WHERE  u.price IS NOT NULL
+         ORDER  BY u.quoted_on DESC
+         LIMIT  1
+       ) q ON true;
+
+-- 2) TRANSFORM: issue permanent SKUs, append-only (a source key never gets a new number)
+INSERT INTO sku (sku, source_key, category)
+SELECT p.category || &#x27;-&#x27; || lpad((coalesce(m.max_no, 0)
+         + row_number() OVER (PARTITION BY p.category ORDER BY p.source_key))::text, 4, &#x27;0&#x27;),
+       p.source_key, p.category
+FROM   stg_price p
+LEFT   JOIN (SELECT category, max(split_part(sku, &#x27;-&#x27;, 2)::int) AS max_no
+             FROM sku GROUP BY category) m USING (category)
+WHERE  NOT EXISTS (SELECT 1 FROM sku k WHERE k.source_key = p.source_key);
+
+-- 3) PRICE LIST: a locked (checked) override beats the source; every price in THB
+CREATE VIEW price_item AS
+SELECT k.sku,
+       p.name,
+       coalesce(o.unit,     p.unit)              AS unit,
+       coalesce(o.pack_qty, p.pack_qty)          AS pack_qty,
+       coalesce(o.moq,      p.moq)               AS moq,
+       coalesce(o.price,    p.price) * fx.rate_to_thb AS price_thb,
+       coalesce(o.density_g_ml, 1.0)             AS density_g_ml,  -- missing density: use 1.0 and warn
+       concat_ws(&#x27; · &#x27;,
+         CASE WHEN coalesce(o.price, p.price) IS NULL THEN &#x27;no price&#x27; END,
+         CASE WHEN coalesce(o.unit, p.unit) = &#x27;l&#x27; AND o.density_g_ml IS NULL THEN &#x27;no density&#x27; END) AS flags
+FROM   sku k
+JOIN   stg_price p USING (source_key)
+LEFT   JOIN price_override o ON o.sku = k.sku AND o.locked
+JOIN   fx_rate fx ON fx.currency = coalesce(o.currency, p.currency);
+
+-- 4) COST ONE VERSION: grams per piece -&gt; purchase units -&gt; need with loss -&gt; order to MOQ and pack
+--    grams = bulk g per piece x group % x % in group   (80 g x 85% x 95% = 64.6 g of ethanol)
+WITH v AS (
+  SELECT record_id, qty FROM bom_version WHERE record_id = &#x27;BOM-RS-0001-V2&#x27;
+), l AS (
+  SELECT b.line_no, b.sku, i.name, i.price_thb, i.pack_qty, i.moq, v.qty,
+         CASE i.unit WHEN &#x27;kg&#x27; THEN b.grams / 1000
+                     WHEN &#x27;l&#x27;  THEN b.grams / (1000 * i.density_g_ml)
+                     ELSE b.qty_per_pc END                AS use_per_pc,
+         b.loss_pct
+  FROM   bom_line b
+  JOIN   v USING (record_id)
+  JOIN   price_item i USING (sku)
+), n AS (
+  SELECT l.*, use_per_pc * qty * (1 + loss_pct) AS need FROM l
+)
+SELECT line_no, sku, name,
+       round(need, 4)                                          AS need,
+       ceil(greatest(need, moq) / pack_qty) * pack_qty         AS order_qty,
+       ceil(greatest(need, moq) / pack_qty) * pack_qty * price_thb AS order_thb,
+       round(need * price_thb / qty, 4)                        AS thb_per_pc
+FROM   n
+ORDER  BY line_no;
+
+--  line_no |   sku    |        name         |   need    | order_qty | order_thb | thb_per_pc
+-- ---------+----------+---------------------+-----------+-----------+-----------+------------
+--        1 | RAW-0002 | Ethanol 96%         |   84.7875 |       100 |   6000.00 |     5.0873
+--        2 | RAW-0001 | Deionized water     |    3.5700 |        20 |    200.00 |     0.0357
+--        3 | FRG-0001 | Citrus Accord A     |    8.8200 |         9 |     16200 |    15.8760
+--        4 | FRG-0002 | Musk Base B         |    3.7800 |         4 |      8400 |     7.9380
+--        5 | PKG-0002 | Glass bottle 100 ml | 1030.0000 |      1100 |  13200.00 |    12.3600
+--        6 | PKG-0003 | Spray pump 24/410   | 1030.0000 |      1500 |   6750.00 |     4.6350
+--        7 | PKG-0001 | Gift box            | 1030.0000 |      1050 |   6300.00 |     6.1800
+-- materials 52.11 + production fee 5.00 + registration 3,000 / 1,000 pcs = 60.11 THB per piece
+
+-- 5) DASHBOARD: the active version is the latest approved one of each BOM
+SELECT DISTINCT ON (bom_no) bom_no, record_id, cost_per_unit
+FROM   bom_version
+WHERE  status = &#x27;approved&#x27;
+ORDER  BY bom_no, version DESC;</template>
     <!-- POPUP: Toast -->
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -1632,7 +2457,7 @@ print(&quot;Best Parameters:&quot;, best_parameters)</template>
                 body.classList.add("modal-open");
             }
             document.querySelectorAll("dialog").forEach(dlg => {
-                dlg.addEventListener("close", () => body.classList.remove("modal-open"));
+                dlg.addEventListener("close", () => { if (!document.querySelector("dialog[open]")) body.classList.remove("modal-open"); });  // a popup can open another (deep dive → figure / code)
                 dlg.addEventListener("click", e => { if (e.target === dlg || e.target.closest("[data-close]")) dlg.close(); });
             });
             document.querySelectorAll("[data-open]").forEach(btn => {
@@ -1671,10 +2496,10 @@ print(&quot;Best Parameters:&quot;, best_parameters)</template>
             // Code viewer: shows a snippet from a <template>, with light syntax colouring
             const codeDlg = document.getElementById("code-viewer");
             const codeBody = document.getElementById("code-body");
-            const KEYWORDS = /^(def|return|if|elif|else|for|while|in|not|and|or|import|from|as|with|lambda|None|True|False|class|try|except|function|const|let|var|new|of|typeof|null|true|false|del|print)$/;
+            const KEYWORDS = /^(def|return|if|elif|else|for|while|in|not|and|or|import|from|as|with|lambda|None|True|False|class|try|except|function|const|let|var|new|of|typeof|null|true|false|del|print|SELECT|FROM|WHERE|JOIN|LEFT|CROSS|LATERAL|ON|USING|GROUP|BY|ORDER|DESC|LIMIT|WITH|AS|CASE|WHEN|THEN|ELSE|END|INSERT|INTO|CREATE|VIEW|DISTINCT|NOT|EXISTS|IS|NULL|OVER|PARTITION|AND|OR)$/;
             function highlight(src) {
                 const esc = t => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                const token = /(#[^\n]*|\/\/[^\n]*)|((?:f|r)?"(?:[^"\\\n]|\\.)*"|(?:f|r)?'(?:[^'\\\n]|\\.)*'|`(?:[^`\\]|\\.)*`)|(\b\d+(?:\.\d+)?\b)|([A-Za-z_]\w*)/g;
+                const token = /(#[^\n]*|\/\/[^\n]*|(?<![\w-])--[^\n]*)|((?:f|r)?"(?:[^"\\\n]|\\.)*"|(?:f|r)?'(?:[^'\\\n]|\\.)*'|`(?:[^`\\]|\\.)*`)|(\b\d+(?:\.\d+)?\b)|([A-Za-z_]\w*)/g;
                 let out = "", last = 0, m;
                 while ((m = token.exec(src))) {
                     out += esc(src.slice(last, m.index));
@@ -1696,7 +2521,9 @@ print(&quot;Best Parameters:&quot;, best_parameters)</template>
                     codeText = t.content.textContent;
                     document.getElementById("code-title").textContent = t.dataset.title;
                     document.getElementById("code-lang").textContent = t.dataset.lang;
-                    document.getElementById("code-link").href = t.dataset.link;
+                    const srcLink = document.getElementById("code-link");
+                    srcLink.style.display = t.dataset.link ? "" : "none";  // private projects have no public source
+                    if (t.dataset.link) srcLink.href = t.dataset.link;
                     codeBody.innerHTML = highlight(codeText);
                     openDialog(codeDlg);
                     codeDlg.querySelector(".code-block").scrollTop = 0;

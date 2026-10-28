@@ -7,7 +7,7 @@ Personal portfolio of **Thananop Kullapan**, a Business Analyst and Data Scienti
 ## What's inside
 
 - **About & Tech Stack:** background, key results and tools
-- **Projects:** MATCHROOM (AI Influencer Director), LINE Sales Assistant on n8n, AIA data automation, TOYOTA logistics optimization, Walmart M5 forecasting, microgrid sizing (stochastic MILP) and sentiment analysis, with charts, code snippets and math models
+- **Projects:** How Many Primogems Are Enough? (probability laws and risk-optimal budgets), BOM Calculator data pipeline (prepare → transform → SQL → database, dummy data), MATCHROOM (AI Influencer Director), LINE Sales Assistant on n8n, AIA data automation, TOYOTA logistics optimization, Walmart M5 forecasting, microgrid sizing (stochastic MILP) and sentiment analysis, with charts, code snippets and math models
 - **Experience, Education, Hobbies & Contact**
 
 ## How it's built

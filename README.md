@@ -7,7 +7,7 @@ Personal portfolio of **Thananop Kullapan**, a Business Analyst and Data Scienti
 ## What's inside
 
 - **About & Tech Stack:** background, key results and tools
-- **Projects:** How Many Primogems Are Enough? (probability laws and risk-optimal budgets), BOM Calculator data pipeline (prepare → transform → SQL → database, dummy data), MATCHROOM (AI Influencer Director), LINE Sales Assistant on n8n, AIA data automation, TOYOTA logistics optimization, Walmart M5 forecasting, microgrid sizing (stochastic MILP) and sentiment analysis, with charts, code snippets and math models
+- **Projects:** How Many Primogems Are Enough? (probability laws, risk-optimal budgets and an in-browser budget calculator), BOM Calculator data pipeline (prepare → transform → SQL → database, with a cost calculator on dummy data), MATCHROOM (AI Influencer Director), LINE Sales Assistant on n8n, AIA data automation, TOYOTA logistics optimization, Walmart M5 forecasting, microgrid sizing (stochastic MILP) and sentiment analysis, with charts, code snippets and math models
 - **Experience, Education, Hobbies & Contact**
 
 ## How it's built
@@ -21,7 +21,10 @@ A static site in plain HTML, CSS and JavaScript, with no build step and no frame
 ```
 index.html        page content
 style.css         styles, animations and responsive layout
+assets/calculators.js  Primogem budget and BOM cost calculators (pure engines + popup UI)
 404.html          "page not found" screen in the same theme
+sitemap.xml       one-page sitemap for search engines
+robots.txt        allows crawling and points to the sitemap
 assets/           project images, thumbnails, hero sky (assets/img) and bundled vendor files
 profile.png       profile photo
 background.jpg    link-preview image

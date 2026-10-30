@@ -75,7 +75,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/fonts.css">
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-    <link rel="stylesheet" href="style.css?v=21">
+    <link rel="stylesheet" href="style.css?v=22">
 </head>
 <body>
 
@@ -375,6 +375,12 @@
                         </div>
                         <p class="project-desc">A technical monograph on a question every <em>Genshin Impact</em> player faces before a new banner: how many Primogems to save for a target constellation C<sub>x</sub> plus weapon refinement R<sub>y</sub>. It fits the game's pity system to 1.20 billion public rolls from the Paimon.moe API, derives the exact probability law of the requirement, and turns it into risk-optimal budgets for all 42 targets.</p>
 
+                        <div class="project-preview shot-grid" data-gallery>
+                            <a class="shot" href="assets/primogems/total-pmf-cdf.jpg" data-caption="Case study C2R1: the total-roll PMF and CDF, with 80.25% success at 400 rolls and 89.48% at 434"><img src="assets/primogems/thumbs/total-pmf-cdf.jpg" alt="Total roll PMF and CDF for the case study" loading="lazy"></a>
+                            <a class="shot" href="assets/primogems/budget-curves.jpg" data-caption="Budget curves: chance of success against the Primogem budget, and the budget needed for each confidence level"><img src="assets/primogems/thumbs/budget-curves.jpg" alt="Budget curves by target and situation" loading="lazy"></a>
+                            <a class="shot" href="assets/primogems/joint-heatmap.jpg" data-caption="Joint PMF of character and weapon rolls, with the budget lines r_c + r_w = 400 and 434"><img src="assets/primogems/thumbs/joint-heatmap.jpg" alt="Joint PMF heatmap with budget lines" loading="lazy"></a>
+                        </div>
+
                         <div class="project-metrics">
                             <div class="metric"><strong>1.20B</strong><span>Public rolls analyzed (135 banners)</span></div>
                             <div class="metric"><strong>42</strong><span>C<sub>x</sub>R<sub>y</sub> targets with exact budgets</span></div>
@@ -421,6 +427,8 @@
                         <p class="project-desc">An internal costing system for a fragrance business. Nine supplier price sheets, each laid out differently, are prepared and transformed into one clean price list with permanent SKUs, which then costs every product's bill of materials (BOM) with versions and approvals. It runs on Google Sheets and Apps Script, and I modeled the same data as a relational database for a planned move to PostgreSQL.</p>
                         <p class="project-note"><i class="bx bx-info-circle" aria-hidden="true"></i> Every product, price and supplier on this card is dummy data. The real price list and the program itself stay private.</p>
 
+                        <button type="button" class="project-preview project-preview-diagram" data-open="bom-detail" data-preview-svg="bom-title" aria-label="Data pipeline: open the full diagram"></button>
+
                         <div class="project-metrics">
                             <div class="metric"><strong>9 → 1</strong><span>Supplier sheets into one price list</span></div>
                             <div class="metric"><strong>1,175</strong><span>Items with permanent SKUs</span></div>
@@ -462,7 +470,13 @@
                             <div class="project-meta"><span class="badge">Oct 2026</span></div>
                         </div>
                         <p class="project-desc">A bilingual (Thai / English) web app that runs a weekly influencer program for every brand: a Director picks creators with AI help, and the brand simply watches its schedule. It applies the VIBES LAB Music Director service model to a new domain to prove the model travels. All data in the prototype is fictional.</p>
-                        <p class="project-note"><i class="bx bx-info-circle" aria-hidden="true"></i> MATCHROOM is the public version of the system behind the B2B music app I built at VIBES LAB: the same engine and the same Director workflow, applied to matching creators with brands.</p>
+                        <p class="project-note"><i class="bx bx-info-circle" aria-hidden="true"></i> MATCHROOM is the public version of the system behind the B2B music app I built at VIBES LAB: the same engine and the same Director workflow, applied to matching creators with brands. Every brand, creator and screen here is dummy data. The VIBES LAB Music Director app and its client data stay private.</p>
+
+                        <div class="project-preview shot-grid" data-gallery>
+                            <a class="shot" href="assets/matchroom/today.jpg" data-caption="Brand app · Today: who is posting now, the slot's tone and recent posts"><img src="assets/matchroom/thumbs/today.jpg" alt="MATCHROOM brand app, Today screen" loading="lazy"></a>
+                            <a class="shot" href="assets/matchroom/program.jpg" data-caption="Director Studio · Program: AI draft → Director review → publish"><img src="assets/matchroom/thumbs/program.jpg" alt="Director Studio program screen" loading="lazy"></a>
+                            <a class="shot" href="assets/matchroom/today-mobile.jpg" data-caption="Brand app on mobile"><img src="assets/matchroom/thumbs/today-mobile.jpg" alt="Brand app on a phone" loading="lazy"></a>
+                        </div>
 
                         <div class="project-metrics">
                             <div class="metric"><strong>7-factor</strong><span>Weighted ranking engine</span></div>
@@ -506,6 +520,9 @@
                             <div class="project-meta"><span class="badge">Oct 2026</span></div>
                         </div>
                         <p class="project-desc">Upgraded an AI sales assistant on LINE for a perfume brand so every chat moves toward a purchase: it answers product questions, recommends scents and closes the sale with a checkout link. Built on n8n, Google Sheets and Google Gemini, validated in simulation and prepared for live UAT.</p>
+                        <p class="project-note"><i class="bx bx-info-circle" aria-hidden="true"></i> Every product, chat and number shown on this card is dummy data. The real workflow, product catalog and customer chats stay private.</p>
+
+                        <button type="button" class="project-preview project-preview-diagram" data-open="line-detail" data-preview-svg="n8n-title" aria-label="n8n workflow: open the full diagram"></button>
 
                         <div class="project-metrics">
                             <div class="metric"><strong>96</strong><span>n8n workflow nodes</span></div>
@@ -587,6 +604,12 @@
                         </div>
                         <p class="project-desc">Engineered mathematical optimization and SARIMAX time-series models to eliminate inventory excesses and streamline logistics networks.</p>
 
+                        <div class="project-preview shot-grid" data-gallery>
+                            <a class="shot" href="assets/toyota/slide-30.jpg" data-caption="The new forecast tracks actual usage far more closely than the old method"><img src="assets/toyota/thumbs/slide-30.jpg" alt="Slide: forecast model comparison chart" loading="lazy"></a>
+                            <a class="shot" href="assets/toyota/slide-19.jpg" data-caption="The new dynamic safety stock formula: statistical, procedural and critical buffers"><img src="assets/toyota/thumbs/slide-19.jpg" alt="Slide: dynamic safety stock formula" loading="lazy"></a>
+                            <a class="shot" href="assets/toyota/slide-33.jpg" data-caption="Simulation: the dynamic safety stock adapts to usage while the old static level does not"><img src="assets/toyota/thumbs/slide-33.jpg" alt="Slide: safety stock simulation" loading="lazy"></a>
+                        </div>
+
                         <div class="project-metrics">
                             <div class="metric"><strong>30%</strong><span>Cost reduction (~THB 3M / yr)</span></div>
                             <div class="metric"><strong>+34.6%</strong><span>Forecast accuracy</span></div>
@@ -626,6 +649,12 @@
                             <div class="project-meta"><span class="badge">May 2026</span></div>
                         </div>
                         <p class="project-desc">Processed 60M+ transactional records and 30,490 hierarchical time series to build an advanced LightGBM 28-day demand forecasting pipeline.</p>
+
+                        <div class="project-preview shot-grid" data-gallery>
+                            <a class="shot" href="assets/m5/projectpipeline.jpg" data-caption="End-to-end analytics and modeling pipeline"><img src="assets/m5/thumbs/projectpipeline.jpg" alt="Project pipeline diagram" loading="lazy"></a>
+                            <a class="shot" href="assets/m5/validation_check_store_ca_1.jpg" data-caption="Validation check for store CA_1: forecast vs actual over the last 28 days"><img src="assets/m5/thumbs/validation_check_store_ca_1.jpg" alt="Validation chart for store CA_1" loading="lazy"></a>
+                            <a class="shot" href="assets/m5/interactivedashboard.jpg" data-caption="The DuckDB + Streamlit commercial dashboard"><img src="assets/m5/thumbs/interactivedashboard.jpg" alt="Interactive dashboard screenshot" loading="lazy"></a>
+                        </div>
 
                         <div class="project-metrics">
                             <div class="metric"><strong>60M+</strong><span>Records processed</span></div>
@@ -669,6 +698,12 @@
                         </div>
                         <p class="project-desc">Stochastic MILP model in Python/Pyomo to optimize Solar PV/ESS capacities. Simulated 28.7% cost reduction (12.01M THB/year). Built on satellite solar data (Renewables.ninja) and a simulated factory load, with K-Means representative days as uncertainty scenarios and a risk-aware objective.</p>
 
+                        <div class="project-preview shot-grid" data-gallery>
+                            <a class="shot" href="assets/microgrid/compare.jpg" data-caption="Annual total cost, baseline vs optimized, with a high-peak dispatch day"><img src="assets/microgrid/thumbs/compare.jpg" alt="Annual cost comparison chart" loading="lazy"></a>
+                            <a class="shot" href="assets/microgrid/operationdispatch.jpg" data-caption="Optimal hourly dispatch in each of the 3 scenarios"><img src="assets/microgrid/thumbs/operationdispatch.jpg" alt="Operational dispatch charts" loading="lazy"></a>
+                            <a class="shot" href="assets/microgrid/tornado.jpg" data-caption="Tornado diagram: sensitivity of total cost to 7 input factors"><img src="assets/microgrid/thumbs/tornado.jpg" alt="Tornado sensitivity diagram" loading="lazy"></a>
+                        </div>
+
                         <div class="project-metrics">
                             <div class="metric"><strong>28.7%</strong><span>Simulated cost reduction</span></div>
                             <div class="metric"><strong>12.01M THB</strong><span>Saved per year</span></div>
@@ -709,6 +744,11 @@
                             </div>
                         </div>
                         <p class="project-desc">Built an end-to-end NLP classification pipeline on 10,261 Amazon musical-instrument reviews. Preprocessed with NLTK and vectorized via TF-IDF.</p>
+
+                        <div class="project-preview shot-grid" data-gallery>
+                            <a class="shot" href="assets/sentiment/sentiment-split.jpg" data-caption="Amount of each sentiment, based on the rating given"><img src="assets/sentiment/thumbs/sentiment-split.jpg" alt="Bar chart of sentiment counts" loading="lazy"></a>
+                            <a class="shot" href="assets/sentiment/wordcloud-positive.jpg" data-caption="Word cloud of the positive reviews"><img src="assets/sentiment/thumbs/wordcloud-positive.jpg" alt="Word cloud of positive reviews" loading="lazy"></a>
+                        </div>
 
                         <div class="project-metrics">
                             <div class="metric"><strong>10,261</strong><span>Product reviews</span></div>
@@ -859,6 +899,27 @@
                         </ul>
                         <div class="timeline-actions">
                             <a href="#project-toyota" class="link-arrow">See the Logistics &amp; Returnable Packaging Optimization project <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-head">
+                            <div>
+                                <h3>Batch Tutor / Teacher Assistant</h3>
+                                <p class="timeline-org"><i class="bx bx-buildings" aria-hidden="true"></i> Industrial Engineering, Chulalongkorn University</p>
+                            </div>
+                            <span class="timeline-date">2023 – 2026</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Conducted intensive review sessions for my engineering cohort, turning hard topics into clear, step-by-step explanations.</li>
+                            <li>Helped write a Thai textbook, <em>Probability and Statistics for Engineers</em>, and its teaching materials: 18 chapters from descriptive statistics to regression, plus worked examples, exercises and real-world case studies.</li>
+                            <li>Built it so every number, exercise, answer and figure is computed by Python and set in LaTeX, so one build prints all three books and they never disagree.</li>
+                        </ul>
+                        <div class="book-shelf" aria-label="One build, three books">
+                            <span class="book book-main"><b>1,100</b> pages · Main text</span>
+                            <span class="book book-lab"><b>80</b> pages · Chapter labs</span>
+                            <span class="book book-key"><b>74</b> pages · Answer key</span>
+                            <span class="book-shelf-note"><i class="bx bx-code-alt" aria-hidden="true"></i> Python → LaTeX → one build</span>
                         </div>
                     </article>
                 </div>
@@ -2783,6 +2844,20 @@ ORDER  BY bom_no, version DESC;</template>
             document.addEventListener("keydown", e => { if (e.key === "Escape") setTimeout(syncLock, 0); });
             document.querySelectorAll("[data-open]").forEach(btn => {
                 btn.addEventListener("click", () => openDialog(document.getElementById(btn.dataset.open)));
+            });
+
+            // Card previews: copy a popup's diagram into its card (ids renamed so the copy's markers resolve to itself)
+            document.querySelectorAll("[data-preview-svg]").forEach((box, i) => {
+                const src = document.getElementById(box.dataset.previewSvg)?.closest("svg");
+                if (!src) return;
+                let svg = src.outerHTML;
+                src.querySelectorAll("[id]").forEach(el => {
+                    svg = svg.split(`"${el.id}"`).join(`"pv${i}-${el.id}"`).split(`#${el.id})`).join(`#pv${i}-${el.id})`);
+                });
+                box.innerHTML = svg + '<span class="project-preview-hint"><i class="bx bx-expand-alt" aria-hidden="true"></i> Open full diagram</span>';
+                const copy = box.querySelector("svg");
+                copy.removeAttribute("aria-labelledby");
+                copy.setAttribute("aria-hidden", "true");
             });
 
             // Screenshot lightbox
